@@ -27,9 +27,10 @@ Available Goodies
 Pandoc HTML5 Templates
 ----------------------
 
-Currently, the only template available is:
+Currently, the only template current available is:
 
 -   [GitHub Pandoc HTML5 Template](./templates/html5/github/)
+-   HTML Preview: [Local](./templates/html5/github/GitHub-Template-Preview.html) | [via HTMLPreview.GitHub.io](http://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/templates/html5/github/GitHub-Template-Preview.html)
 
 PP Macros
 ---------
