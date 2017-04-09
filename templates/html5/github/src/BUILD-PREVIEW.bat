@@ -1,5 +1,5 @@
 :: \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-::  GitHub HTML5 Pandoc Template Preview builder v1.0 (2017-04-08)
+::  GitHub HTML5 Pandoc Template Preview builder v1.1 (2017-04-09)
 ::  (c) Tristano Ajmone, 2017. MIT License (MIT).
 ::  https://github.com/tajmone/pandoc-goodies
 :: //////////////////////////////////////////////////////////////////////////////
@@ -7,7 +7,7 @@
 :: SCRIPT REQUIREMENTS:
 :: -- pandoc must be available on the system %PATH%:
 ::    http://pandoc.org
-:: -- pp v. >= 1.3 must be available on the system %PATH%:
+:: -- pp v. >= 1.4 must be available on the system %PATH%:
 ::    http://cdsoft.fr/pp/
 :: ------------------------------------------------------------------------------
 @ECHO OFF
@@ -46,7 +46,7 @@ ECHO 2) Initalizing pp-macros environment.
 :: ------------------------------------------------------------------------------
 CALL ..\..\..\..\pp\macros\INIT-ENV.bat
 ECHO 3) Invoking pp preprocessor and piping output to pandoc.
-pp  %PP_MACROS_PATH%macros.pp ^
+pp  -import %PP_MACROS_PATH%macros.pp ^
     PREVIEW.yaml ^
     PREVIEW.md ^
   | pandoc  -f markdown ^

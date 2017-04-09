@@ -2,10 +2,22 @@
                          PP-Macros Library CHANGELOG                          
 ==============================================================================
 ------------------------------------------------------------------------------
-                                  2017-04-09                                  
+                                2017-04-09 (B)                                
+------------------------------------------------------------------------------
+Updated all macros files to PP v1.4 (new features).
+All macros now have comments with version info and description.
+The "macros.pp" module now loads the other macros via the new !import() macro,
+instead of the old !include().
+
+- "macros.pp" v1.0.1
+- "GFM-Alert.pp" v1.0.1
+- "GFM-TaskList.pp" v1.0.1
+- "Highlight.pp" v1.0.1
+------------------------------------------------------------------------------
+                                2017-04-09 (A)                                
 ------------------------------------------------------------------------------
 First release, PP v1.3.
-- macros.pp
-- GFM-Alert.pp
-- GFM-TaskList.pp
-- Highlight.pp
+- "macros.pp" v1.0
+- "GFM-Alert.pp" v1.0
+- "GFM-TaskList.pp" v1.0
+- "Highlight.pp" v1.0

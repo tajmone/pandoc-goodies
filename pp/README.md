@@ -47,7 +47,7 @@ For some introductiory tutorials on using PP, see:
 Requirements
 ============
 
-The current macros library requires PP version &gt;= 1.3.
+The current macros library requires PP version &gt;= 1.4.
 
 PP is evolving rapidly thanks to Christophe’s kind dedication to users features requests. Future versions of PP might break backward compatibility of some macros, but great effort is taken to ensure that the macros of ths library should always work with the latest release of PP.
 
