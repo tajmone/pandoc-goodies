@@ -13,6 +13,7 @@ A pandoc html5 template mimicking GitHub’s documents preview. Supports extende
 -   [Credits](#credits)
     -   [GitHub Markdown CSS](#github-markdown-css)
     -   [Primer CSS](#primer-css)
+-   [Changelog](#changelog)
 
 <!-- /toc -->
 
@@ -91,4 +92,12 @@ Primer CSS
 These template files are derivatives from the **Primer CSS** project’s modules:
 
 -   [`src/alerts.css`](./src/alerts.css) (taken from [`flash.scss`](https://github.com/primer/primer-alerts/blob/master/lib/flash.scss))
+
+Changelog
+=========
+
+-   **v1.1** (2017-04-10)
+    -   Added new custom Alert class “`flash-plain`” with greyish colors. (pp-macro: `!GFMAlertPlain()`).
+-   **v1.0** (2017-04-09)
+    -   First release.
 

@@ -2,6 +2,24 @@
                          PP-Macros Library CHANGELOG                          
 ==============================================================================
 ------------------------------------------------------------------------------
+                                  2017-04-10                                  
+------------------------------------------------------------------------------
+Now a "test" folder has been created for testing the various macros modules.
+
+CHANGED:
+- "GFM-Alert.pp" -> "GFM-Alerts.pp"
+- "GFM-Alerts.pp" v1.0.2:
+  - Now description instructs using the included CSS file "GFM-Alerts.css".
+  - Added "!GFMAlertsInlineCSS" macro to import "GFM-Alerts.css" as inline CSS.
+  - Added "!GFMAlertPlain()" macro, with grey colors.
+- "macros.pp" v1.0.2:
+  - "!import(GFM-Alert.pp)" -> "!import(GFM-Alerts.pp)"
+ADDED:
+- "GFM-Alerts.css":
+  - reduced version of Primer CSS's module "flash.scss":
+    https://github.com/primer/primer-alerts/blob/master/lib/flash.scss
+    Copyright (c) 2016 GitHub Inc. Released under The MIT License (MIT).
+------------------------------------------------------------------------------
                                 2017-04-09 (B)                                
 ------------------------------------------------------------------------------
 Updated all macros files to PP v1.4 (new features).

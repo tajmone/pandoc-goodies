@@ -1,0 +1,48 @@
+/*  ==============================================================================
+                                 Primer CSS by GitHub                             
+    ==============================================================================
+    This file was adapted from the Primer CSS project:
+
+    -- https://github.com/primer/primer-alerts/blob/master/lib/flash.scss
+
+    Copyright (c) 2016 GitHub Inc. Released under The MIT License (MIT).
+    ============================================================================== */
+
+.flash {
+    position: relative;
+    padding: 16px;
+    color: #246;
+    background-color: #e2eef9;
+    border: 1px solid #bac6d3;
+    border-radius: 3px;
+}
+.flash p:last-child {
+    margin-bottom: 0;
+}
+.flash-messages {
+    margin-bottom: 24px;
+}
+.flash-warn {
+    color: #4c4a42;
+    background-color: #fff9ea;
+    border-color: #dfd8c2;
+}
+.flash-error {
+    color: #911;
+    background-color: #fcdede;
+    border-color: #d2b2b2;
+}
+.flash-success {
+    color: #22662c;
+    background-color: #e2f9e5;
+    border-color: #bad3be;
+}
+/* Custom additions not present in "flash.scss" ... */
+.flash-plain {
+    color: #4c4a42;
+    background-color: #f5f5f5;
+    border-color: #c1c1c1;
+}
+.flash p {
+    margin-top: 0;
+}

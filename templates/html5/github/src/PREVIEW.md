@@ -1,6 +1,6 @@
 --------------------------------
 
-This is a preview of “GitHub Pandoc HTML5 Template”, © Tristano Ajmone 2017, MIT License (MIT).
+This is a preview of “_GitHub Pandoc HTML5 Template_” __v1.1__, © Tristano Ajmone 2017, MIT License (MIT).
 
 __CSS Styling__: This template supports styling for all the standard markdown elements, some GitHub flavored markdown elements (task lists, etc.), and some of GitHub's advanced CSS styling (alerts) via the custom pp macros of the [Pandoc-Goodies](https://github.com/tajmone/pandoc-goodies) project.
 
@@ -129,13 +129,17 @@ Alerts (aka _flash messages_) are part of GitHub's __Primer CSS__, and they are 
 
 These are the different type of alerts available, along with the custom pp-macros to generate them inside markdown source:
 
-!GFMAlert(Default alert. Created with the `!raw(!GFMAlert(TEXT))` pp macro.)
+!GFMAlert(__Default alert__ — Created with the `!raw(!GFMAlert(TEXT))` pp macro.)
 
-!GFMWarn(Warning alert. Created with the `!raw(!GFMWarn(TEXT))` pp macro.)
+!GFMWarn(__Warning alert__ — Created with the `!raw(!GFMWarn(TEXT))` pp macro.)
 
-!GFMError(Error alert. Created with the `!raw(!GFMError(TEXT))` pp macro.)
+!GFMError(__Error alert__ — Created with the `!raw(!GFMError(TEXT))` pp macro.)
 
-!GFMSuccess(Success alert. Created with the `!raw(!GFMSuccess(TEXT))` pp macro.)
+!GFMSuccess(__Success alert__ — Created with the `!raw(!GFMSuccess(TEXT))` pp macro.)
+
+!GFMAlertPlain(__Plain alert__ — Created with the `!raw(!GFMAlertPlain(TEXT))` pp macro.
+
+This alert is not part of the original set of GitHub Alerts, it's a custom addition.)
 
 The macro's parameter will be treated as markdown content if pandoc's `markdown_in_html_blocks` extension is enabled (default in pandoc markdown):
 

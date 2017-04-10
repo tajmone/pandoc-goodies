@@ -79,3 +79,17 @@
     background-color: #fffccc;
 }
 <<< END COMMENT OUT (UNUSED) <<< */
+.flash-plain {
+    color: #4c4a42;
+    background-color: #f5f5f5;
+    border-color: #c1c1c1;
+}
+/*  ==============================================================================
+                                      CHANGELOG                                   
+    ==============================================================================
+    v1.1 (2017-04-10)
+         - Added custom Alert class "flash-plain" with greyish colors.
+    v1.0 (2017-04-09)
+         - Adapated Primer-CSS' "flash.scss" by commenting out unsed classes.
+
+*/

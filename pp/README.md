@@ -113,7 +113,8 @@ See [GitHub Pandoc HTML5 Template Preview](../templates/html5/github/GitHub-Temp
 GitHub Alerts
 -------------
 
-    GFM-Alert.pp
+    GFM-Alerts.pp
+    GFM-Alerts.css
 
 A set of macros to create GitHub alerts (aka flash messages) within pandoc documents:
 
@@ -121,10 +122,20 @@ A set of macros to create GitHub alerts (aka flash messages) within pandoc docum
 
 macros:
 
--   `!GFMAlert(CONTENTS)`
--   `!GFMWarn(CONTENTS)`
--   `!GFMError(CONTENTS)`
--   `!GFMSuccess(CONTENTS)`
+-   `!GFMAlertsInlineCSS` — Inject required CSS
+-   `!GFMAlert(CONTENTS)` — Default alert (blue)
+-   `!GFMAlertPlain(CONTENTS)` — Plain alert (grey)
+-   `!GFMError(CONTENTS)` — Error alert (red)
+-   `!GFMWarn(CONTENTS)` — Warning alert (yellow)
+-   `!GFMSuccess(CONTENTS)` — Success alert (green)
+
+> **NOTE**: The “Plain” alert (`!GFMAlertPlain`) isn’t part of the original Primer-CSS alerts set. It was added to provide a more neutral, less appariscent alert box.
+
+To render the alerts properly you’ll need the definitions found in “[`GFM-Alerts.css`](./macros/GFM-Alerts.css)”. You can either:
+
+1.  Include “`GFM-Alerts.css`” in the final document via pandoc’s `--css` option — you can exploit the `%PP_MACROS_PATH%` env var: `--css %PP_MACROS_PATH%GFM-Alerts.css`
+2.  Add the contents of “`GFM-Alerts.css`” to your pandoc template stylesheet.
+3.  Use the `!GFMAlertsInlineCSS` macro to inject “`GFM-Alerts.css`” as an inline CSS definition in the final document.
 
 See [GitHub Pandoc HTML5 Template Preview](../templates/html5/github/GitHub-Template-Preview.html) for an example.
 

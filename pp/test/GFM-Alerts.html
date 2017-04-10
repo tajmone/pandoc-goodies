@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="gfm-alerts-pp-macros-test">GFM-Alerts PP-Macros Test</h1>
+<p>This is a run test of the GFM-Alerts pp-macros set.</p>
+<pre><code>macros module: GFM-Alerts.pp
+related files: GFM-Alerts.css</code></pre>
+<p>Macros list:</p>
+<ul>
+<li><code>!GFMAlertsInlineCSS</code> — Inject required CSS</li>
+<li><code>!GFMAlert(CONTENTS)</code> — Default alert (blue)</li>
+<li><code>!GFMAlertPlain(CONTENTS)</code> — Plain alert (grey)</li>
+<li><code>!GFMError(CONTENTS)</code> — Error alert (red)</li>
+<li><code>!GFMWarn(CONTENTS)</code> — Warning alert (yellow)</li>
+<li><code>!GFMSuccess(CONTENTS)</code> — Success alert (green)</li>
+</ul>
+<h1 id="add-alerts-css">Add Alerts CSS</h1>
+<p>We need the CSS definition for viewing alerts. We’ll use the <code>!GFMAlertsInlineCSS</code> macro to inject the contents of <code>GFM-Alerts.css</code> as inline stylesheet:</p>
+<pre><code>!GFMAlertsInlineCSS()</code></pre>
+<p>this macro emits the following raw html:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
+<span class="co">/*  ==============================================================================</span>
+<span class="co">                                 Primer CSS by GitHub                             </span>
+<span class="co">    ==============================================================================</span>
+<span class="co">    This file was adapted from the Primer CSS project:</span>
+
+<span class="co">    -- https://github.com/primer/primer-alerts/blob/master/lib/flash.scss</span>
+
+<span class="co">    Copyright (c) 2016 GitHub Inc. Released under The MIT License (MIT).</span>
+<span class="co">    ============================================================================== */</span>
+
+<span class="fl">.flash</span> <span class="kw">{</span>
+    <span class="kw">position:</span> <span class="dt">relative</span><span class="kw">;</span>
+    <span class="kw">padding:</span> <span class="dt">16px</span><span class="kw">;</span>
+    <span class="kw">color:</span> <span class="dt">#246</span><span class="kw">;</span>
+    <span class="kw">background-color:</span> <span class="dt">#e2eef9</span><span class="kw">;</span>
+    <span class="kw">border:</span> <span class="dt">1px</span> <span class="dt">solid</span> <span class="dt">#bac6d3</span><span class="kw">;</span>
+    <span class="kw">border-radius:</span> <span class="dt">3px</span><span class="kw">;</span>
+<span class="kw">}</span>
+<span class="fl">.flash</span> p<span class="dv">:last-child</span> <span class="kw">{</span>
+    <span class="kw">margin-bottom:</span> <span class="dt">0</span><span class="kw">;</span>
+<span class="kw">}</span>
+<span class="fl">.flash-messages</span> <span class="kw">{</span>
+    <span class="kw">margin-bottom:</span> <span class="dt">24px</span><span class="kw">;</span>
+<span class="kw">}</span>
+<span class="fl">.flash-warn</span> <span class="kw">{</span>
+    <span class="kw">color:</span> <span class="dt">#4c4a42</span><span class="kw">;</span>
+    <span class="kw">background-color:</span> <span class="dt">#fff9ea</span><span class="kw">;</span>
+    <span class="kw">border-color:</span> <span class="dt">#dfd8c2</span><span class="kw">;</span>
+<span class="kw">}</span>
+<span class="fl">.flash-error</span> <span class="kw">{</span>
+    <span class="kw">color:</span> <span class="dt">#911</span><span class="kw">;</span>
+    <span class="kw">background-color:</span> <span class="dt">#fcdede</span><span class="kw">;</span>
+    <span class="kw">border-color:</span> <span class="dt">#d2b2b2</span><span class="kw">;</span>
+<span class="kw">}</span>
+<span class="fl">.flash-success</span> <span class="kw">{</span>
+    <span class="kw">color:</span> <span class="dt">#22662c</span><span class="kw">;</span>
+    <span class="kw">background-color:</span> <span class="dt">#e2f9e5</span><span class="kw">;</span>
+    <span class="kw">border-color:</span> <span class="dt">#bad3be</span><span class="kw">;</span>
+<span class="kw">}</span>
+<span class="co">/* Custom additions not present in &quot;flash.scss&quot; ... */</span>
+<span class="fl">.flash-plain</span> <span class="kw">{</span>
+    <span class="kw">color:</span> <span class="dt">#4c4a42</span><span class="kw">;</span>
+    <span class="kw">background-color:</span> <span class="dt">#f5f5f5</span><span class="kw">;</span>
+    <span class="kw">border-color:</span> <span class="dt">#c1c1c1</span><span class="kw">;</span>
+<span class="kw">}</span>
+<span class="fl">.flash</span> p <span class="kw">{</span>
+    <span class="kw">margin-top:</span> <span class="dt">0</span><span class="kw">;</span>
+<span class="kw">}</span>
+<span class="kw">&lt;/style&gt;</span></code></pre></div>
+<style type="text/css">
+/*  ==============================================================================
+                                 Primer CSS by GitHub                             
+    ==============================================================================
+    This file was adapted from the Primer CSS project:
+
+    -- https://github.com/primer/primer-alerts/blob/master/lib/flash.scss
+
+    Copyright (c) 2016 GitHub Inc. Released under The MIT License (MIT).
+    ============================================================================== */
+
+.flash {
+    position: relative;
+    padding: 16px;
+    color: #246;
+    background-color: #e2eef9;
+    border: 1px solid #bac6d3;
+    border-radius: 3px;
+}
+.flash p:last-child {
+    margin-bottom: 0;
+}
+.flash-messages {
+    margin-bottom: 24px;
+}
+.flash-warn {
+    color: #4c4a42;
+    background-color: #fff9ea;
+    border-color: #dfd8c2;
+}
+.flash-error {
+    color: #911;
+    background-color: #fcdede;
+    border-color: #d2b2b2;
+}
+.flash-success {
+    color: #22662c;
+    background-color: #e2f9e5;
+    border-color: #bad3be;
+}
+/* Custom additions not present in "flash.scss" ... */
+.flash-plain {
+    color: #4c4a42;
+    background-color: #f5f5f5;
+    border-color: #c1c1c1;
+}
+.flash p {
+    margin-top: 0;
+}
+</style>
+<h2 id="default-alert">Default Alert</h2>
+<p>macro used:</p>
+<pre><code>!GFMAlert(__Default__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
+<p>raw html output:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;flash-messages&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;flash &quot;</span><span class="kw">&gt;</span>
+__Default__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.
+<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
+<p>result preview:</p>
+<div class="flash-messages">
+<div class="flash">
+<p><strong>Default</strong> — Lorem ipsum dolor sit amet, pri cu libris dicunt.</p>
+</div>
+</div>
+<h2 id="warning-alert">Warning Alert</h2>
+<p>macro used:</p>
+<pre><code>!GFMWarn(__Warning__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
+<p>raw html output:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;flash-messages&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;flash flash-warn&quot;</span><span class="kw">&gt;</span>
+__Warning__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.
+<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
+<p>result preview:</p>
+<div class="flash-messages">
+<div class="flash flash-warn">
+<p><strong>Warning</strong> — Lorem ipsum dolor sit amet, pri cu libris dicunt.</p>
+</div>
+</div>
+<h2 id="error-alert">Error Alert</h2>
+<p>macro used:</p>
+<pre><code>!GFMError(__Error__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
+<p>raw html output:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;flash-messages&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;flash flash-error&quot;</span><span class="kw">&gt;</span>
+__Error__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.
+<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
+<p>result preview:</p>
+<div class="flash-messages">
+<div class="flash flash-error">
+<p><strong>Error</strong> — Lorem ipsum dolor sit amet, pri cu libris dicunt.</p>
+</div>
+</div>
+<h2 id="success-alert">Success Alert</h2>
+<p>macro used:</p>
+<pre><code>!GFMSuccess(__Success__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
+<p>raw html output:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;flash-messages&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;flash flash-success&quot;</span><span class="kw">&gt;</span>
+__Success__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.
+<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
+<p>result preview:</p>
+<div class="flash-messages">
+<div class="flash flash-success">
+<p><strong>Success</strong> — Lorem ipsum dolor sit amet, pri cu libris dicunt.</p>
+</div>
+</div>
+<h2 id="plain-alert">Plain Alert</h2>
+<p>macro used:</p>
+<pre><code>!GFMAlertPlain(__Plain__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
+<p>raw html output:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;flash-messages&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;flash flash-plain&quot;</span><span class="kw">&gt;</span>
+__Plain__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.
+<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
+<p>result preview:</p>
+<div class="flash-messages">
+<div class="flash flash-plain">
+<p><strong>Plain</strong> — Lorem ipsum dolor sit amet, pri cu libris dicunt.</p>
+</div>
+</div>
+</body>
+</html>
