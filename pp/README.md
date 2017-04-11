@@ -12,9 +12,10 @@ Copyright © Tristano Ajmone 2017, [MIT License](../LICENSE).
     -   [About PP](#about-pp)
 -   [Requirements](#requirements)
 -   [Available Macros](#available-macros)
-    -   [Highlight](#highlight)
     -   [GFM Task Lists](#gfm-task-lists)
     -   [GitHub Alerts](#github-alerts)
+    -   [Highlight](#highlight)
+    -   [Inline Formatting](#inline-formatting)
 -   [Macros Documentation](#macros-documentation)
 
 <!-- /toc -->
@@ -63,27 +64,6 @@ Available Macros
 ================
 
 Currently, only macros for HTML output are available. Some macros work only on Windows, but they will soon be fixed to work cross-platform.
-
-Highlight
----------
-
-    Highlight.pp
-
-A set of macros for using André Simon’s Highlight tool:
-
--   <http://www.andre-simon.de/>
--   <https://github.com/andre-simon/highlight>
-
-macros:
-
--   `!HighlightFile(FILE)(LANG)[(OPTIONS)]` — imports and syntax-highlights and external file. Output is a raw html `<pre><code>` block.
--   `!HighlightInlineTheme(THEME)` — retrives a Highlight theme and injects its CSS version into the documents. A quick solution for theming Highlight code withouth having to import an external CSS file via pandoc.
-
-> **NOTES**: You can use Highlight along with pandoc’s built in syntax highlighter — pandoc only highlights markdown code blocks (fenced, or backticked) and will ignore the `<pre><code>` raw html blocks produced by Highlight.
->
-> Pandoc automatically adds its own stylesheet for its highlighted code, the Highlight macro doesn’t.
->
-> Pandoc highlighted source code uses different tags from Highlight, so their stylesheets won’t clash nor overlap.
 
 GFM Task Lists
 --------------
@@ -137,14 +117,55 @@ To render the alerts properly you’ll need the definitions found in “[`GFM-Al
 2.  Add the contents of “`GFM-Alerts.css`” to your pandoc template stylesheet.
 3.  Use the `!GFMAlertsInlineCSS` macro to inject “`GFM-Alerts.css`” as an inline CSS definition in the final document.
 
-See [GitHub Pandoc HTML5 Template Preview](../templates/html5/github/GitHub-Template-Preview.html) for an example.
+See:
+
+-   [`/test/GFM-Alerts.md`](./test/GFM-Alerts.md)
+-   [`/test/GFM-Alerts.html`](./test/GFM-Alerts.html)
+-   [GitHub Pandoc HTML5 Template Preview](../templates/html5/github/GitHub-Template-Preview.html)
+
+Highlight
+---------
+
+    Highlight.pp
+
+A set of macros for using André Simon’s Highlight tool:
+
+-   <http://www.andre-simon.de/>
+-   <https://github.com/andre-simon/highlight>
+
+macros:
+
+-   `!HighlightFile(FILE)(LANG)[(OPTIONS)]` — imports and syntax-highlights and external file. Output is a raw html `<pre><code>` block.
+-   `!HighlightInlineTheme(THEME)` — retrives a Highlight theme and injects its CSS version into the documents. A quick solution for theming Highlight code withouth having to import an external CSS file via pandoc.
+
+> **NOTES**: You can use Highlight along with pandoc’s built in syntax highlighter — pandoc only highlights markdown code blocks (fenced, or backticked) and will ignore the `<pre><code>` raw html blocks produced by Highlight.
+>
+> Pandoc automatically adds its own stylesheet for its highlighted code, the Highlight macro doesn’t.
+>
+> Pandoc highlighted source code uses different tags from Highlight, so their stylesheets won’t clash nor overlap.
+
+Inline Formatting
+-----------------
+
+    InlineFormatting.pp
+    kbd_GitHub.css
+
+A convenience set of shortcut-macros for various standard html inline elements:
+
+-   `!kbd(KEY1)[(KEY2)(KEY3)(KEY4)]` — keystrokes in `<kbd>` tags.
+-   `!kbdInlineCSS` — Inject required CSS (“`kbd_GitHub.css`”)
+
+See:
+
+-   [`/test/InlineFormatting.md`](./test/InlineFormatting.md)
+-   [`/test/InlineFormatting.html`](./test/InlineFormatting.html)
 
 Macros Documentation
 ====================
 
 *WIP! Coming soon…*
 
-Documentation and usage examples for the macros library is still work in progress. Right now, to gain insight into the macros you can peek at the markdown source of the template preview, and the batch files used to convert it:
+Documentation and usage examples for the macros library is still work in progress. Right now, to gain insight into the macros you should refer to the [`/test/`](./test/) folder, an peek at the markdown source of the template preview and the batch files used to convert it:
 
 -   [`../templates/html5/github/src/`](../templates/html5/github/src/)
 

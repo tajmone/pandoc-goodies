@@ -1,6 +1,18 @@
 ==============================================================================
                          PP-Macros Library CHANGELOG                          
 ==============================================================================
+NOTE: Obviously assumed changes will not be logged -- eg: addition of newly
+      created macros modules to "macros.pp" as "!import" statements is given
+      for granted and not worth mentioning.
+------------------------------------------------------------------------------
+                                  2017-04-11                                  
+------------------------------------------------------------------------------
+ADDED:
+- "InlineFormatting.pp": A set of shortcut-macros for various standard html 
+   inline elements:
+   - "!kbd(KEY1)[(KEY2)(KEY3)(KEY4)]"
+   - "!kbdInlineCSS": imports "kbd_GitHub.css" as inline CSS.
+- "kbd_GitHub.css": GitHub's <kbd> styling.
 ------------------------------------------------------------------------------
                                   2017-04-10                                  
 ------------------------------------------------------------------------------

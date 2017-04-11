@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="inlineformatting-pp-macros-test">InlineFormatting PP-Macros Test</h1>
+<h1 id="keystrokes-kbd">Keystrokes (<code>&lt;kbd&gt;</code>)</h1>
+<pre><code>!kbd(KEY1)[(KEY2)(KEY3)(KEY4)]</code></pre>
+<p><kbd>KEY1</kbd>+<kbd>KEY2</kbd>+<kbd>KEY3</kbd>+<kbd>KEY4</kbd></p>
+<p>We need the CSS definition for viewing alerts. We’ll use the <code>!kbdInlineCSS</code> macro to inject the contents of <code>kbd_GitHub.css</code> as inline stylesheet:</p>
+<pre><code>!kbdInlineCSS()</code></pre>
+<p>this macro emits the following raw html:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
+<span class="co">/*  ==============================================================================</span>
+<span class="co">    Adapted from &quot;GitHub Markdown CSS&quot; (c) Sindre Sorhus, MIT License (MIT):</span>
+<span class="co">    -- https://github.com/sindresorhus/github-markdown-css</span>
+<span class="co">    ============================================================================== */</span>
+kbd <span class="kw">{</span>
+  <span class="kw">display:</span> <span class="dt">inline-block</span><span class="kw">;</span>
+  <span class="kw">padding:</span> <span class="dt">3px</span> <span class="dt">5px</span><span class="kw">;</span>
+  <span class="kw">font-family:</span> <span class="dt">monospace</span>, <span class="dt">monospace</span><span class="kw">;</span>
+  <span class="kw">font-size:</span> <span class="dt">11px</span><span class="kw">;</span> 
+  <span class="kw">line-height:</span> <span class="dt">10px</span><span class="kw">;</span>
+  <span class="kw">color:</span> <span class="dt">#444d56</span><span class="kw">;</span>
+  <span class="kw">vertical-align:</span> <span class="dt">middle</span><span class="kw">;</span>
+  <span class="kw">background-color:</span> <span class="dt">#fafbfc</span><span class="kw">;</span>
+  <span class="kw">border:</span> <span class="dt">solid</span> <span class="dt">1px</span> <span class="dt">#c6cbd1</span><span class="kw">;</span>
+  <span class="kw">border-bottom-color:</span> <span class="dt">#959da5</span><span class="kw">;</span>
+  <span class="kw">border-radius:</span> <span class="dt">3px</span><span class="kw">;</span>
+  <span class="kw">box-shadow:</span> <span class="dt">inset</span> <span class="dt">0</span> <span class="dt">-1px</span> <span class="dt">0</span> <span class="dt">#959da5</span><span class="kw">;</span>
+<span class="kw">}</span>
+<span class="kw">&lt;/style&gt;</span></code></pre></div>
+<style type="text/css">
+/*  ==============================================================================
+    Adapted from "GitHub Markdown CSS" (c) Sindre Sorhus, MIT License (MIT):
+    -- https://github.com/sindresorhus/github-markdown-css
+    ============================================================================== */
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-family: monospace, monospace;
+  font-size: 11px; 
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: solid 1px #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+}
+</style>
+<h2 id="single-key">Single Key</h2>
+<p>macro used:</p>
+<pre><code>!kbd(CANC)</code></pre>
+<p>raw html output:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;kbd&gt;</span>CANC<span class="kw">&lt;/kbd&gt;</span></code></pre></div>
+<p>result preview:</p>
+<p><kbd>CANC</kbd></p>
+<h2 id="two-keys">Two Keys</h2>
+<p>macro used:</p>
+<pre><code>!kbd(Ctr)(Z)</code></pre>
+<p>raw html output:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;kbd&gt;</span>Ctr<span class="kw">&lt;/kbd&gt;</span>+<span class="kw">&lt;kbd&gt;</span>Z<span class="kw">&lt;/kbd&gt;</span></code></pre></div>
+<p>result preview:</p>
+<p><kbd>Ctr</kbd>+<kbd>Z</kbd></p>
+<h2 id="three-keys">Three Keys</h2>
+<p>macro used:</p>
+<pre><code>!kbd(Ctr)(SHIFT)(S)</code></pre>
+<p>raw html output:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;kbd&gt;</span>Ctr<span class="kw">&lt;/kbd&gt;</span>+<span class="kw">&lt;kbd&gt;</span>SHIFT<span class="kw">&lt;/kbd&gt;</span>+<span class="kw">&lt;kbd&gt;</span>S<span class="kw">&lt;/kbd&gt;</span></code></pre></div>
+<p>result preview:</p>
+<p><kbd>Ctr</kbd>+<kbd>SHIFT</kbd>+<kbd>S</kbd></p>
+<h2 id="four-keys">Four Keys</h2>
+<p>macro used:</p>
+<pre><code>!kbd(Ctrl)(SHIFT)(Alt-GR)(j)</code></pre>
+<p>raw html output:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;kbd&gt;</span>Ctrl<span class="kw">&lt;/kbd&gt;</span>+<span class="kw">&lt;kbd&gt;</span>SHIFT<span class="kw">&lt;/kbd&gt;</span>+<span class="kw">&lt;kbd&gt;</span>Alt-GR<span class="kw">&lt;/kbd&gt;</span>+<span class="kw">&lt;kbd&gt;</span>j<span class="kw">&lt;/kbd&gt;</span></code></pre></div>
+<p>result preview:</p>
+<p><kbd>Ctrl</kbd>+<kbd>SHIFT</kbd>+<kbd>Alt-GR</kbd>+<kbd>j</kbd></p>
+</body>
+</html>
