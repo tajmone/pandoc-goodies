@@ -3,6 +3,8 @@ PP-Macros TODO List
 
 Annotated list of pending macros changes and incubating ideas for the future…
 
+Feel free to add to this list new features you'd like to see implemented.
+
 High Priority
 =============
 

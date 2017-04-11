@@ -3,7 +3,8 @@
 ==============================================================================
 NOTE: Obviously assumed changes will not be logged -- eg: addition of newly
       created macros modules to "macros.pp" as "!import" statements is given
-      for granted and not worth mentioning.
+      for granted and not worth mentioning. Minor changes will not be logged
+	  either, because life is to short...
 ------------------------------------------------------------------------------
                                   2017-04-11                                  
 ------------------------------------------------------------------------------

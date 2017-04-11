@@ -12,16 +12,16 @@ We need the CSS definition for viewing alerts.
 We'll use the `!raw(!kbdInlineCSS)` macro to inject the contents of `kbd_GitHub.css` as inline stylesheet:
 
 ```
-!raw(!kbdInlineCSS())
+!raw(!kbdInlineCSS)
 ```
 
 this macro emits the following raw html:
 
 ``` html
-!kbdInlineCSS()
+!kbdInlineCSS
 ```
 
-!kbdInlineCSS()
+!kbdInlineCSS
 
 ## Single Key
 

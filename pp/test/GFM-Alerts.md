@@ -24,16 +24,16 @@ We need the CSS definition for viewing alerts.
 We'll use the `!raw(!GFMAlertsInlineCSS)` macro to inject the contents of `GFM-Alerts.css` as inline stylesheet:
 
 ```
-!raw(!GFMAlertsInlineCSS())
+!raw(!GFMAlertsInlineCSS)
 ```
 
 this macro emits the following raw html:
 
 ``` html
-!GFMAlertsInlineCSS()
+!GFMAlertsInlineCSS
 ```
 
-!GFMAlertsInlineCSS()
+!GFMAlertsInlineCSS
 
 
 ## Default Alert
