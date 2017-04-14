@@ -6,6 +6,13 @@ NOTE: Obviously assumed changes will not be logged -- eg: addition of newly
       for granted and not worth mentioning. Minor changes will not be logged
 	  either, because life is to short...
 ------------------------------------------------------------------------------
+                                  2017-04-14                                  
+------------------------------------------------------------------------------
+CHANGED:
+- "Highlight.pp" v1.1: Added "--validate-input" option to Highlight invocation
+  (ie: test if input is text, and remove Unicode BOM). This prevents BOM chars
+  from showing up in the highlighted code when importing a file that has BOM. 
+------------------------------------------------------------------------------
                                   2017-04-11                                  
 ------------------------------------------------------------------------------
 ADDED:
