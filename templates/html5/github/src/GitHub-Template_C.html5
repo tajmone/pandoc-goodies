@@ -1,5 +1,4 @@
 </style>
-  <link rel="stylesheet" href="___github-markdown.cleancss.css">
   <style type="text/css">code{white-space: pre;}</style>
 $if(quotes)$
   <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
