@@ -6,6 +6,14 @@ NOTE: Obviously assumed changes will not be logged -- eg: addition of newly
       for granted and not worth mentioning. Minor changes will not be logged
 	  either, because life is to short...
 ------------------------------------------------------------------------------
+                                  2017-04-16                                  
+------------------------------------------------------------------------------
+PP VERSION v1.7-2
+
+CHANGED:
+- "Highlight.pp" v1.2: Now cross-platform thanks to "!exec" built-in macro
+  in PP v1.7-2 (used instead of "!cmd")
+------------------------------------------------------------------------------
                                   2017-04-14                                  
 ------------------------------------------------------------------------------
 CHANGED:

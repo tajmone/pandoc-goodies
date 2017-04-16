@@ -48,7 +48,7 @@ For some introductiory tutorials on using PP, see:
 Requirements
 ============
 
-The current macros library requires PP version &gt;= 1.4.
+The current macros library requires PP version &gt;= 1.7-2.
 
 PP is evolving rapidly thanks to Christophe’s kind dedication to users features requests. Future versions of PP might break backward compatibility of some macros, but great effort is taken to ensure that the macros of ths library should always work with the latest release of PP.
 
@@ -63,7 +63,9 @@ Or you can download and compile the sources (Haskell) of specific PP releases fr
 Available Macros
 ================
 
-Currently, only macros for HTML output are available. Some macros work only on Windows, but they will soon be fixed to work cross-platform.
+Currently, only macros for HTML output are available.
+
+With the release of PP 1.7-2 macros that were Windows-only are now cross-platform.
 
 GFM Task Lists
 --------------
