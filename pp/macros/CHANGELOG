@@ -6,6 +6,13 @@ NOTE: Obviously assumed changes will not be logged -- eg: addition of newly
       for granted and not worth mentioning. Minor changes will not be logged
 	  either, because life is to short...
 ------------------------------------------------------------------------------
+                                  2017-04-18                                  
+------------------------------------------------------------------------------
+ADDED:
+- "GFM-TaskList.pp" v1.1.0:
+  - Added "GFM-TaskList.css" stylesheet.
+  - Added "!TaskListInlineCSS" macro to import "GFM-TaskList.css" as inline CSS.
+------------------------------------------------------------------------------
                                   2017-04-16                                  
 ------------------------------------------------------------------------------
 PP VERSION v1.7-2

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="gfm-tasklist-pp-macros-test">GFM-TaskList PP-Macros Test</h1>
+<p>This is a run test of the GFM-TaskList pp-macros set.</p>
+<pre><code>macros module: GFM-TaskList.pp
+related files: GFM-TaskList.css
+
+Macros list:</code></pre>
+<ul>
+<li><code>!TaskList(LIST ELEMENTS)</code> — Genreated Task List enclosing tags.</li>
+<li><code>!Task(x | )(ELEMENT CONTENTS)</code> — Generate a Task element.</li>
+<li><code>!TaskListInlineCSS</code> — Inject required CSS</li>
+</ul>
+<h1 id="example">Example</h1>
+<h2 id="inject-required-css">Inject Required CSS</h2>
+<p>We need some CSS definitions for viewing task lists correctly. We’ll use the <code>!TaskListInlineCSS</code> macro to inject the contents of <code>GFM-TaskList.css</code> as an inline stylesheet:</p>
+<pre><code>!TaskListInlineCSS</code></pre>
+<p>this macro emits the following raw html:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
+<span class="fl">.task-list-item</span> input <span class="kw">{</span>
+  <span class="kw">margin:</span> <span class="dt">0</span> <span class="dt">0.2em</span> <span class="dt">0.25em</span> <span class="dt">-1.6em</span><span class="kw">;</span>
+  <span class="kw">vertical-align:</span> <span class="dt">middle</span><span class="kw">;</span>
+<span class="kw">}</span>
+<span class="dv">:checked</span>+<span class="fl">.radio-label</span> <span class="kw">{</span>
+  <span class="kw">position:</span> <span class="dt">relative</span><span class="kw">;</span>
+  <span class="kw">z-index:</span> <span class="dt">1</span><span class="kw">;</span>
+  <span class="kw">border-color:</span> <span class="dt">#0366d6</span><span class="kw">;</span>
+<span class="kw">}</span>
+
+<span class="fl">.task-list-item</span> <span class="kw">{</span>
+  <span class="kw">list-style-type:</span> <span class="dt">none</span><span class="kw">;</span>
+<span class="kw">}</span>
+
+<span class="fl">.task-list-item</span>+<span class="fl">.task-list-item</span> <span class="kw">{</span>
+  <span class="kw">margin-top:</span> <span class="dt">3px</span><span class="kw">;</span>
+<span class="kw">}</span>
+<span class="kw">&lt;/style&gt;</span></code></pre></div>
+<style type="text/css">
+.task-list-item input {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+:checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+
+.task-list-item {
+  list-style-type: none;
+}
+
+.task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+</style>
+<h2 id="create-task-list">Create Task List</h2>
+<p>And now a task list.</p>
+<pre><code>
+!TaskList(
+!Task[x][I&#39;m a _checked_ task]
+!Task[ ][I&#39;m an _unchecked_ task]
+)
+</code></pre>
+<ul class="task-list">
+<li class="task-list-item">
+<input type="checkbox" disabled=""checked="">I’m a <em>checked</em> task
+</li>
+<li class="task-list-item">
+<input type="checkbox" disabled="">I’m an <em>unchecked</em> task
+</li>
+</ul>
+</body>
+</html>

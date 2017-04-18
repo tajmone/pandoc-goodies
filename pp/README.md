@@ -77,7 +77,8 @@ A set of macros to enable GitHub [Task Lists](https://help.github.com/articles/b
 macros:
 
 -   `!TaskList(LIST ELEMENTS)` — Genreated Task List enclosing tags.
--   `!(Task)(x)(ELEMENT CONTENTS)` — Generate a Task element.
+-   `!Task(x| )(ELEMENT CONTENTS)` — Generate a Task element.
+-   `!TaskListInlineCSS` — Inject required CSS
 
 Example usage:
 
@@ -85,6 +86,14 @@ Example usage:
     !Task[x][I'm a _checked_ task]
     !Task[ ][I'm an _unchecked_ task]
     )
+
+In order to hyde the list items' bullet, so that only the checkbox is shown, you'll need the CSS definitions found in the `GFM-TaskList.css` file. You have different options:
+
+1. Add its contents to your custom stylesheet.
+2. Tell pandoc to import it via the `--css` option — you can exploit the `%PP_MACROS_PATH%` env var: `--css %PP_MACROS_PATH%GFM-TaskList.css`
+3. Inject it as an inline stylesheet via the `!raw(!TaskListInlineCSS)` macro (a quick and universal solution, if you don't mind CSS definitions within the document body).
+
+Without these CSS definitions the task list will still look acceptable, but having both a bullet and a checkbox for each entry is redundant.
 
 > **NOTES**: Markdown syntax within Task’s `ELEMENT CONTENTS` will be rendered correctly, provided pandoc’s `markdown_in_html_blocks` extension is enabled (default in pandoc markdown).
 >

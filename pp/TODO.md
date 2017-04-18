@@ -11,10 +11,6 @@ High Priority
 Change Existing Macros
 ----------------------
 
--   **GFM Task Lists**
-    -   add `TaskList.css`
-    -   and new macro `!TaskListInlineCSS` to create on-the-fly styling.
-
 New Macros
 ----------
 
@@ -36,4 +32,6 @@ Wishlist
 -   Highlight.js highlighting — via Node cli, not in-browser.
 -   Inegrate [RegEx Colorizer](https://github.com/slevithan/regex-colorizer) (JS flavored RegExes highlighter)
 -   AsciiDoctor integration
+-   Font Awesome "on demand" — a macro to include a FA icon as inline CSS, another macro to actually display (via CSS).
+-   [emoji](https://github.com/WebpageFX/emoji-cheat-sheet.com/) macros (GitHub compliant)
 

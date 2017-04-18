@@ -21,7 +21,7 @@ Macros list:
 # Add Alerts CSS
 
 We need the CSS definition for viewing alerts.
-We'll use the `!raw(!GFMAlertsInlineCSS)` macro to inject the contents of `GFM-Alerts.css` as inline stylesheet:
+We'll use the `!raw(!GFMAlertsInlineCSS)` macro to inject the contents of `GFM-Alerts.css` as an inline stylesheet:
 
 ```
 !raw(!GFMAlertsInlineCSS)

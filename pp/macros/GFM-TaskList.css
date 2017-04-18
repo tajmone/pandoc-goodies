@@ -1,0 +1,17 @@
+.task-list-item input {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+:checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+
+.task-list-item {
+  list-style-type: none;
+}
+
+.task-list-item+.task-list-item {
+  margin-top: 3px;
+}
