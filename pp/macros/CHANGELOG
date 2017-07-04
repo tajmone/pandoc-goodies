@@ -6,6 +6,19 @@ NOTE: Obviously assumed changes will not be logged -- eg: addition of newly
       for granted and not worth mentioning. Minor changes will not be logged
 	  either, because life is to short...
 ------------------------------------------------------------------------------
+                                  2017-07-04                                  
+------------------------------------------------------------------------------
+PP VERSION v1.9.3
+
+ADDED:
+- "Highlight.pp" v1.3:
+  - Added "!Highlight" macro to syntax-highlight a block of code passed as
+    macro parameter within lines of tildas. NOTE: Currently this macro needs
+	to write a temporary file in the macros folder for each macro invocation,
+	then deletes the temporary files. Couldn't find a better solution. Tested
+	on Windows but should also work on Linux.
+- "Highlight.pp" test files.
+------------------------------------------------------------------------------
                                   2017-04-18                                  
 ------------------------------------------------------------------------------
 ADDED:

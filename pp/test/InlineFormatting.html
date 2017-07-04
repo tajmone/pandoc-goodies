@@ -49,10 +49,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </head>
 <body>
 <h1 id="inlineformatting-pp-macros-test">InlineFormatting PP-Macros Test</h1>
+<p>This is a run test of the GFM-TaskList pp-macros set.</p>
+<pre><code>macros module: InlineFormatting.pp
+related files: kbd_GitHub.css
+
+Macros list:</code></pre>
+<ul>
+<li><code>!kbd(KEY1)[(KEY2)(KEY3)(KEY4)]</code> — keystrokes in <code>&lt;kbd&gt;</code> tags.</li>
+<li><code>!kbdInlineCSS</code> — Inject required CSS (“<code>kbd_GitHub.css</code>”)</li>
+</ul>
 <h1 id="keystrokes-kbd">Keystrokes (<code>&lt;kbd&gt;</code>)</h1>
+<p>The <code>!kbd</code> macro is a fast way to represent up to four Keystrokes. It has the following syntax:</p>
 <pre><code>!kbd(KEY1)[(KEY2)(KEY3)(KEY4)]</code></pre>
+<p>… where only the first parameter is mandatory.</p>
+<p>Example:</p>
 <p><kbd>KEY1</kbd>+<kbd>KEY2</kbd>+<kbd>KEY3</kbd>+<kbd>KEY4</kbd></p>
-<p>We need the CSS definition for viewing alerts. We’ll use the <code>!kbdInlineCSS</code> macro to inject the contents of <code>kbd_GitHub.css</code> as inline stylesheet:</p>
+<h2 id="keystrokes-css">Keystrokes CSS</h2>
+<p>We need a custom CSS definition for viewing Keystrokes properly. We’ll use the <code>!kbdInlineCSS</code> macro to inject the contents of <code>kbd_GitHub.css</code> as inline stylesheet:</p>
 <pre><code>!kbdInlineCSS</code></pre>
 <p>this macro emits the following raw html:</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
@@ -95,6 +108,8 @@ kbd {
   box-shadow: inset 0 -1px 0 #959da5;
 }
 </style>
+<p>Now the CSS definition is available document-wide and you’ll see it aplied to the Keystroke examples herein.</p>
+<p>Of course, you can use your own CSS definitions instead of the one produced by the <code>!kbdInlineCSS</code> macro. This macro is just a convenient quick solution.</p>
 <h2 id="single-key">Single Key</h2>
 <p>macro used:</p>
 <pre><code>!kbd(CANC)</code></pre>

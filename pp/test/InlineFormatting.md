@@ -2,13 +2,32 @@
 
 # InlineFormatting PP-Macros Test
 
+This is a run test of the GFM-TaskList pp-macros set.
+
+    macros module: InlineFormatting.pp
+    related files: kbd_GitHub.css
+
+    Macros list:
+!raw{
+-   `!kbd(KEY1)[(KEY2)(KEY3)(KEY4)]` — keystrokes in `<kbd>` tags.
+-   `!kbdInlineCSS` — Inject required CSS (“`kbd_GitHub.css`”)
+}
+
 # Keystrokes (`<kbd>`)
+
+The `!raw(!kbd)` macro is a fast way to represent up to four Keystrokes. It has the following syntax:
 
     !raw(!kbd(KEY1)[(KEY2)(KEY3)(KEY4)])
 
+... where only the first parameter is mandatory.
+
+Example:
+
 !kbd(KEY1)(KEY2)(KEY3)(KEY4)
 
-We need the CSS definition for viewing alerts.
+## Keystrokes CSS
+
+We need a custom CSS definition for viewing Keystrokes properly.
 We'll use the `!raw(!kbdInlineCSS)` macro to inject the contents of `kbd_GitHub.css` as inline stylesheet:
 
 ```
@@ -22,6 +41,10 @@ this macro emits the following raw html:
 ```
 
 !kbdInlineCSS
+
+Now the CSS definition is available document-wide and you'll see it aplied to the Keystroke examples herein.
+
+Of course, you can use your own CSS definitions instead of the one produced by the `!raw(!kbdInlineCSS)` macro. This macro is just a convenient quick solution.
 
 ## Single Key
 

@@ -1,6 +1,6 @@
 !comment(Highlight pp-macros set)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"Highlight.pp" v1.2 (2017-04-16)
+"Highlight.pp" v1.3 (2017-07-04)
 
 A set of macros for integrating André Simon's Highlight syntax highlighter with
 pandoc documents:
@@ -26,3 +26,16 @@ REQUIREMENTS: Highlight cli tool must be available on system %PATH%.
 !exec[highlight.exe --print-style --style=\1 --stdout]
 </style>
 )
+
+
+!define(Highlight)(
+!add(HLCounter)
+!quiet[!lit(!env(PP_MACROS_PATH)_pp-tempfile!HLCounter.tmp)()(\3)]
+!quiet[!flushlit]
+<pre class="hl"><code class="\1">!exec[highlight.exe -f -S \1 --no-trailing-nl --validate-input !ifdef(2)(\2) !env(PP_MACROS_PATH)_pp-tempfile!HLCounter.tmp]</code></pre>
+!ifeq[!os][windows]
+[!exec(DEL !env(PP_MACROS_PATH)_pp-tempfile!HLCounter.tmp)]
+[!exec(rm !env(PP_MACROS_PATH)_pp-tempfile!HLCounter.tmp)]
+)
+
+!define(HLCounter)(0)

@@ -48,7 +48,7 @@ For some introductiory tutorials on using PP, see:
 Requirements
 ============
 
-The current macros library requires PP version &gt;= 1.7-2.
+The current macros library requires PP version &gt;= 1.9.3.
 
 PP is evolving rapidly thanks to Christophe’s kind dedication to users features requests. Future versions of PP might break backward compatibility of some macros, but great effort is taken to ensure that the macros of ths library should always work with the latest release of PP.
 
@@ -128,7 +128,7 @@ To render the alerts properly you’ll need the definitions found in “[`GFM-Al
 2.  Add the contents of “`GFM-Alerts.css`” to your pandoc template stylesheet.
 3.  Use the `!GFMAlertsInlineCSS` macro to inject “`GFM-Alerts.css`” as an inline CSS definition in the final document.
 
-See:
+Examples:
 
 -   [`/test/GFM-Alerts.md`](./test/GFM-Alerts.md)
 -   [`/test/GFM-Alerts.html`](./test/GFM-Alerts.html)
@@ -147,13 +147,37 @@ A set of macros for using André Simon’s Highlight tool:
 macros:
 
 -   `!HighlightFile(FILE)(LANG)[(OPTIONS)]` — imports and syntax-highlights and external file. Output is a raw html `<pre><code>` block.
+-   `!Highlight(LANG)([OPTIONS])(CODE)` — syntax-higlights the block of source code  passed as `CODE` parameter (using lines of tildas instread of brackets; see Note below).
 -   `!HighlightInlineTheme(THEME)` — retrives a Highlight theme and injects its CSS version into the documents. A quick solution for theming Highlight code withouth having to import an external CSS file via pandoc.
 
-> **NOTES**: You can use Highlight along with pandoc’s built in syntax highlighter — pandoc only highlights markdown code blocks (fenced, or backticked) and will ignore the `<pre><code>` raw html blocks produced by Highlight.
+> __NOTE 1__: The `CODE` parameter is passed between lines of tildas instead of brackets:
+> 
+>       !Highlight(LANG)(OPTIONS)
+>       ~~~~~
+>       CODE
+>       ~~~~~
+>       }
+> 
+> From PP's documentation:
+> 
+> > The last argument can be enclosed between lines of tildas or backquotes (of the same length) instead of parenthesis, brackets or braces and. This is useful for literate programming, diagrams or scripts (see examples). Code block arguments are not stripped: spaces and blank lines are preserved.
+
+<!-- -->
+
+> __NOTE 2__: This macro creates and deletes a temporary file (named "`_pp-tempfileX.tmp`", where `X` is a numeric counter) in the macros folder (`/pp/macros/`) for each macro call in the document, to temporarily store the code to highlight. The `X` counter is reset at each PP invocation.
+
+<!-- -->
+
+> __NOTE 3__: You can use Highlight along with pandoc’s built in syntax highlighter — pandoc only highlights markdown code blocks (fenced, or backticked) and will ignore the `<pre><code>` raw html blocks produced by Highlight.
 >
 > Pandoc automatically adds its own stylesheet for its highlighted code, the Highlight macro doesn’t.
 >
 > Pandoc highlighted source code uses different tags from Highlight, so their stylesheets won’t clash nor overlap.
+
+Examples:
+
+-   [`/test/Highlight.md`](./test/Highlight.md)
+-   [`/test/Highlight.html`](./test/Highlight.html)
 
 Inline Formatting
 -----------------
@@ -166,7 +190,9 @@ A convenience set of shortcut-macros for various standard html inline elements:
 -   `!kbd(KEY1)[(KEY2)(KEY3)(KEY4)]` — keystrokes in `<kbd>` tags.
 -   `!kbdInlineCSS` — Inject required CSS (“`kbd_GitHub.css`”)
 
-See:
+The `!kbd` macro can take from 1 to 4 parameters, each representing the text to show in the Keystroke.
+
+Examples:
 
 -   [`/test/InlineFormatting.md`](./test/InlineFormatting.md)
 -   [`/test/InlineFormatting.html`](./test/InlineFormatting.html)
