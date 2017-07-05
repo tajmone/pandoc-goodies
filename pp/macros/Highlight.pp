@@ -1,4 +1,4 @@
-!comment(Highlight pp-macros set)
+!comment( "Highlight" pp-macros set )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "Highlight.pp" v1.4 (2017-07-05)
 

@@ -1,4 +1,4 @@
-!comment(GitHub Alerts pp-macros set)
+!comment( "GitHub Alerts" pp-macros set )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "GFM-Alerts.pp" v1.0.2 (2017-04-10)
 

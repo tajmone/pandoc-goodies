@@ -1,4 +1,4 @@
-!comment(  InlineFormatting  )
+!comment( "Inline Formatting" pp-macros set )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "InlineFormatting.pp" v1.0.1 (2017-04-11)
 

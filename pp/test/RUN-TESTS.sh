@@ -7,11 +7,12 @@
 
 for i in *.md;do
   echo "-- NOW PROCESSING: $i"
-  pp ../macros/macros.pp $i \
-  | pandoc  -f markdown     \
-            -t html5        \
-            --standalone    \
-            --smart         \
-            --normalize     \
+  pp ../macros/macros.pp $i  \
+  | pandoc  -f markdown      \
+            -t html5         \
+            --css=github.css \
+            --standalone     \
+            --smart          \
+            --normalize      \
             -o ${i%.*}.html
 done

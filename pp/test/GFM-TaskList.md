@@ -1,17 +1,22 @@
 !import(RUN-TESTS.pp)
 
-
 # GFM-TaskList PP-Macros Test
 
 This is a run test of the GFM-TaskList pp-macros set.
 
-    macros module: GFM-TaskList.pp
-    related files: GFM-TaskList.css
+## Files List
 
-    Macros list:
+- macros files:
+    + [`GFM-TaskList.pp`](../macros/GFM-TaskList.pp) — macros definition module.
+    + [`GFM-TaskList.css`](../macros/GFM-TaskList.css) — CSS style for Task List elements.
+- extra files:
+    + [`github.css`](./github.css) — basic document CSS styling.
+
+## Macros list
+
 !raw{
 -   `!TaskList(LIST ELEMENTS)` — Genreated Task List enclosing tags.
--   `!Task(x | )(ELEMENT CONTENTS)` — Generate a Task element.
+-   `!Task(x| )(ELEMENT CONTENTS)` — Generate a Task element.
 -   `!TaskListInlineCSS` — Inject required CSS
 }
 

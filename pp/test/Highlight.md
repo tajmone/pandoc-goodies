@@ -4,18 +4,25 @@
 
 This is a run test of the GFM-TaskList pp-macros set.
 
-    macros module: Highlight.pp
-    related files: code-example.pb
+## Files List
 
-    Macros list:
+- macros files:
+    + [`Highlight.pp`](../macros/Highlight.pp) — macros definition module.
+- extra files:
+    + [`github.css`](./github.css) — basic document CSS styling.
+    + [`code-example.pb`](./code-example.pb) — PureBASIC code example.
+
+## Macros list
+
 !raw{
 -   `!HighlightFile(FILE)(LANG)[(OPTIONS)]` — imports and syntax-highlights and external file.
+-   `!Highlight(LANG)([OPTIONS])(CODE)` — syntax-highlights the code block defined in `CODE`.
 -   `!HighlightInlineTheme(THEME)` — retrives a Highlight theme and injects its CSS into the documents.
 }
 
 # Add Highlight Color Theme
 
-For these examples we'll import Highlight's `edit-purebasic` theme into the document via the !raw(!HighlightInlineTheme) macro:
+For these examples we'll import Highlight's `edit-purebasic` theme into the document via the `!raw(!HighlightInlineTheme)` macro:
 
 ```
 !raw(!HighlightInlineTheme(edit-purebasic))
@@ -37,7 +44,7 @@ The `!raw(!HighlightFile)` macro takes an external source code file, passes it t
 
 The syntax is:
 
-!raw{!HighlightFile(FILE)(LANG)[(OPTIONS)]}
+    !raw{!HighlightFile(FILE)(LANG)[(OPTIONS)]}
 
 ... taking the following parameters:
 
@@ -57,11 +64,7 @@ We import the PureBASIC example file "`code-example.pb`" without passing any ext
 
 Now we import the same file, this time passing some extra options to Highlight in order to show line numbers:
 
-!HighlightFile(code-example.pb)(purebasic)(--line-numbers --line-length=1)
-
---------------
-
-!def(TEST)(!HighlightFile(code-example.pb)(purebasic)(--line-numbers --line-length=1))
+!def(TEST)(!HighlightFile(code-example.pb)(purebasic)(--line-numbers --line-number-length=1))
 
 !RUNTEST
 
@@ -97,20 +100,8 @@ The syntax is:
 
 We now define a block of PureBASIC code and pass it to Highlight without any extra options:
 
-```
-!raw{!Highlight(purebasic)()
-~~~~~~~~~~
-; PureBASIC 5.60
-For i=1 To 10
-  Debug("Counting " + Str(i))
-Next
-~~~~~~~~~~
-)}
-```
 
-... which produces:
-
-!Highlight(purebasic)()
+!def(TEST)(!Highlight(purebasic)()
 ~~~~~~~~~~
 ; PureBASIC 5.60
 For i=1 To 10
@@ -118,25 +109,15 @@ For i=1 To 10
 Next
 ~~~~~~~~~~
 )
+
+!RUNSIMPLETEST
 
 ## Example Using Options
 
 We now define a block of PureBASIC code and pass it to Highlight, this time providing some extra options to Highlight in order to show line numbers:
 
-```
-!raw{!Highlight(purebasic)(--line-numbers --line-length=1)
-~~~~~~~~~~
-; PureBASIC 5.60
-For i=1 To 10
-  Debug("Counting " + Str(i))
-Next
-~~~~~~~~~~
-)}
-```
 
-... which produces:
-
-!Highlight(purebasic)(--line-numbers --line-length=1)
+!def(TEST)(!Highlight(purebasic)(--line-numbers --line-number-length=1)
 ~~~~~~~~~~
 ; PureBASIC 5.60
 For i=1 To 10
@@ -144,3 +125,5 @@ For i=1 To 10
 Next
 ~~~~~~~~~~
 )
+
+!RUNSIMPLETEST

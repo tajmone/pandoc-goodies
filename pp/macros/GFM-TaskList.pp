@@ -1,4 +1,4 @@
-!comment(Highlight pp-macros set)
+!comment( "GFM-TaskList" pp-macros set )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "GFM-TaskList.pp" v1.1.0 (2017-04-18)
 

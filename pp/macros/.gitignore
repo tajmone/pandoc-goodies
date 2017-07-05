@@ -1,0 +1,8 @@
+# ==============================================================================
+#                              PP-Macros Temp Files                             
+# ==============================================================================
+# Exclude temporary files created by PP-macros execution.
+# NOTE: They should alway be deleted by the macros themselves, but this is a
+#       precaution to handle eventual residue files due to macros failures.
+
+_pp-tempfile*.tmp

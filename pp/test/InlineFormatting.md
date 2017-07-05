@@ -2,12 +2,18 @@
 
 # InlineFormatting PP-Macros Test
 
-This is a run test of the GFM-TaskList pp-macros set.
+This is a run test of the __Inline Formatting__ pp-macros set.
 
-    macros module: InlineFormatting.pp
-    related files: kbd_GitHub.css
+## Files List
 
-    Macros list:
+- macros files:
+    + [`InlineFormatting.pp`](../macros/InlineFormatting.pp) — macros definition module.
+    + [`kbd_GitHub.css`](../macros/kbd_GitHub.css) — CSS style for keystrokes.
+- extra files:
+    + [`github.css`](./github.css) — basic document CSS styling.
+
+## Macros list
+
 !raw{
 -   `!kbd(KEY1)[(KEY2)(KEY3)(KEY4)]` — keystrokes in `<kbd>` tags.
 -   `!kbdInlineCSS` — Inject required CSS (“`kbd_GitHub.css`”)

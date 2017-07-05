@@ -43,6 +43,7 @@ code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Ann
 code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
 code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
   </style>
+  <link rel="stylesheet" href="github.css">
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -50,13 +51,22 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <body>
 <h1 id="gfm-tasklist-pp-macros-test">GFM-TaskList PP-Macros Test</h1>
 <p>This is a run test of the GFM-TaskList pp-macros set.</p>
-<pre><code>macros module: GFM-TaskList.pp
-related files: GFM-TaskList.css
-
-Macros list:</code></pre>
+<h2 id="files-list">Files List</h2>
+<ul>
+<li>macros files:
+<ul>
+<li><a href="../macros/GFM-TaskList.pp"><code>GFM-TaskList.pp</code></a> — macros definition module.</li>
+<li><a href="../macros/GFM-TaskList.css"><code>GFM-TaskList.css</code></a> — CSS style for Task List elements.</li>
+</ul></li>
+<li>extra files:
+<ul>
+<li><a href="./github.css"><code>github.css</code></a> — basic document CSS styling.</li>
+</ul></li>
+</ul>
+<h2 id="macros-list">Macros list</h2>
 <ul>
 <li><code>!TaskList(LIST ELEMENTS)</code> — Genreated Task List enclosing tags.</li>
-<li><code>!Task(x | )(ELEMENT CONTENTS)</code> — Generate a Task element.</li>
+<li><code>!Task(x| )(ELEMENT CONTENTS)</code> — Generate a Task element.</li>
 <li><code>!TaskListInlineCSS</code> — Inject required CSS</li>
 </ul>
 <h1 id="example">Example</h1>

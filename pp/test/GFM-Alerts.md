@@ -1,14 +1,19 @@
 !import(RUN-TESTS.pp)
 
-
 # GFM-Alerts PP-Macros Test
 
-This is a run test of the GFM-Alerts pp-macros set.
+This is a run test of the __GFM-Alerts__ pp-macros set.
 
-    macros module: GFM-Alerts.pp
-    related files: GFM-Alerts.css
+## Files List
 
-Macros list:
+- macros files:
+    + [`GFM-Alerts.pp`](../macros/GFM-Alerts.pp) — macros definition module.
+    + [`GFM-Alerts.css`](../macros/GFM-Alerts.css) — CSS style for GFM-Alerts elements.
+- extra files:
+    + [`github.css`](./github.css) — basic document CSS styling.
+
+## Macros list
+
 !raw{
 -   `!GFMAlertsInlineCSS` — Inject required CSS
 -   `!GFMAlert(CONTENTS)` — Default alert (blue)
