@@ -5,6 +5,14 @@ NOTE: Obviously assumed changes will not be logged -- eg: addition of newly
       created macros modules to "macros.pp" as "!import" statements is given
       for granted and not worth mentioning. Minor changes will not be logged
 	  either, because life is to short...
+
+------------------------------------------------------------------------------
+                                  2017-07-05                                  
+------------------------------------------------------------------------------
+FIXED:
+- "Highlight.pp" v1.4 (2017-07-05): The macros were invoking "highlight.exe",
+  now changed to "highlight" for cross platformness (thanks to @bpj for
+  pointing it out).
 ------------------------------------------------------------------------------
                                   2017-07-04                                  
 ------------------------------------------------------------------------------
