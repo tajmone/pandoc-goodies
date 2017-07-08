@@ -16,27 +16,27 @@
 	==============================================================================-->
 <html$if(lang)$ lang="$lang$"$endif$$if(dir)$ dir="$dir$"$endif$>
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 $if(docmeta-author)$
 $for(docmeta-author)$
-  <meta name="author" content="$docmeta-author$">
+  <meta name="author" content="$docmeta-author$" />
 $endfor$
 $else$
 $for(author-meta)$
-  <meta name="author" content="$author-meta$">
+  <meta name="author" content="$author-meta$" />
 $endfor$
 $endif$
 $if(docmeta-date)$
-  <meta name="dcterms.date" content="$docmeta-date$">
+  <meta name="dcterms.date" content="$docmeta-date$" />
 $else$
 $if(date-meta)$
-  <meta name="dcterms.date" content="$date-meta$">
+  <meta name="dcterms.date" content="$date-meta$" />
 $endif$
 $endif$
 $if(keywords)$
-  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$">
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
 $endif$
   <title>$if(docmeta-title)$$docmeta-title$$else$$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$$endif$</title>
   <style type="text/css">

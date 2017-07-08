@@ -41,10 +41,10 @@ These elements can be integrated in pandoc source documents via our custom pp-ma
 ``` html
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled="" checked="">I’m a <em>checked</em> task
+<input type="checkbox" disabled="" checked="" />I’m a <em>checked</em> task
 </li>
 <li class="task-list-item">
-<input type="checkbox" disabled="">I’m an <em>unchecked</em> task
+<input type="checkbox" disabled="" />I’m an <em>unchecked</em> task
 </li>
 </ul>
 ```
@@ -53,10 +53,10 @@ These elements can be integrated in pandoc source documents via our custom pp-ma
 
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled="" checked="">I’m a <em>checked</em> task
+<input type="checkbox" disabled="" checked="" />I’m a <em>checked</em> task
 </li>
 <li class="task-list-item">
-<input type="checkbox" disabled="">I’m an <em>unchecked</em> task
+<input type="checkbox" disabled="" />I’m an <em>unchecked</em> task
 </li>
 </ul>
 License
