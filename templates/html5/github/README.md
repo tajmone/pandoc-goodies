@@ -7,6 +7,8 @@ A pandoc html5 template mimicking GitHub’s documents preview. Supports extende
 
 ------------------------------------------------------------------------
 
+**Table of Contents**
+
 <!-- #toc -->
 -   [Features](#features)
 -   [License](#license)

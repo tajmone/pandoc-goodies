@@ -3,7 +3,7 @@ PP-Macros TODO List
 
 Annotated list of pending macros changes and incubating ideas for the future…
 
-Feel free to add to this list new features you'd like to see implemented.
+Feel free to add to this list new features you’d like to see implemented.
 
 High Priority
 =============
@@ -32,6 +32,6 @@ Wishlist
 -   Highlight.js highlighting — via Node cli, not in-browser.
 -   Inegrate [RegEx Colorizer](https://github.com/slevithan/regex-colorizer) (JS flavored RegExes highlighter)
 -   AsciiDoctor integration
--   Font Awesome "on demand" — a macro to include a FA icon as inline CSS, another macro to actually display (via CSS).
+-   Font Awesome “on demand” — a macro to include a FA icon as inline CSS, another macro to actually display (via CSS).
 -   [emoji](https://github.com/WebpageFX/emoji-cheat-sheet.com/) macros (GitHub compliant)
 

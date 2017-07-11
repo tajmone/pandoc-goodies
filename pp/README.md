@@ -7,6 +7,8 @@ Copyright © Tristano Ajmone 2017, [MIT License](../LICENSE).
 
 ------------------------------------------------------------------------
 
+**Table of Contents**
+
 <!-- #toc -->
 -   [Introduction](#introduction)
     -   [About PP](#about-pp)
@@ -87,11 +89,11 @@ Example usage:
     !Task[ ][I'm an _unchecked_ task]
     )
 
-In order to hyde the list items' bullet, so that only the checkbox is shown, you'll need the CSS definitions found in the `GFM-TaskList.css` file. You have different options:
+In order to hyde the list items’ bullet, so that only the checkbox is shown, you’ll need the CSS definitions found in the `GFM-TaskList.css` file. You have different options:
 
-1. Add its contents to your custom stylesheet.
-2. Tell pandoc to import it via the `--css` option — you can exploit the `%PP_MACROS_PATH%` env var: `--css %PP_MACROS_PATH%GFM-TaskList.css`
-3. Inject it as an inline stylesheet via the `!raw(!TaskListInlineCSS)` macro (a quick and universal solution, if you don't mind CSS definitions within the document body).
+1.  Add its contents to your custom stylesheet.
+2.  Tell pandoc to import it via the `--css` option — you can exploit the `%PP_MACROS_PATH%` env var: `--css %PP_MACROS_PATH%GFM-TaskList.css`
+3.  Inject it as an inline stylesheet via the `!raw(!TaskListInlineCSS)` macro (a quick and universal solution, if you don’t mind CSS definitions within the document body).
 
 Without these CSS definitions the task list will still look acceptable, but having both a bullet and a checkbox for each entry is redundant.
 
@@ -147,28 +149,26 @@ A set of macros for using André Simon’s Highlight tool:
 macros:
 
 -   `!HighlightFile(FILE)(LANG)[(OPTIONS)]` — imports and syntax-highlights and external file. Output is a raw html `<pre><code>` block.
--   `!Highlight(LANG)([OPTIONS])(CODE)` — syntax-higlights the block of source code  passed as `CODE` parameter (using lines of tildas instread of brackets; see Note below).
+-   `!Highlight(LANG)([OPTIONS])(CODE)` — syntax-higlights the block of source code passed as `CODE` parameter (using lines of tildas instread of brackets; see Note below).
 -   `!HighlightInlineTheme(THEME)` — retrives a Highlight theme and injects its CSS version into the documents. A quick solution for theming Highlight code withouth having to import an external CSS file via pandoc.
 
-> __NOTE 1__: The `CODE` parameter is passed between lines of tildas instead of brackets:
-> 
+> **NOTE 1**: The `CODE` parameter is passed between lines of tildas instead of brackets:
+>
 >       !Highlight(LANG)(OPTIONS)
 >       ~~~~~
 >       CODE
 >       ~~~~~
 >       }
-> 
-> From PP's documentation:
-> 
+>
+> From PP’s documentation:
+>
 > > The last argument can be enclosed between lines of tildas or backquotes (of the same length) instead of parenthesis, brackets or braces and. This is useful for literate programming, diagrams or scripts (see examples). Code block arguments are not stripped: spaces and blank lines are preserved.
 
 <!-- -->
-
-> __NOTE 2__: This macro creates and deletes a temporary file (named "`_pp-tempfileX.tmp`", where `X` is a numeric counter) in the macros folder (`/pp/macros/`) for each macro call in the document, to temporarily store the code to highlight. The `X` counter is reset at each PP invocation.
+> **NOTE 2**: This macro creates and deletes a temporary file (named “`_pp-tempfileX.tmp`”, where `X` is a numeric counter) in the macros folder (`/pp/macros/`) for each macro call in the document, to temporarily store the code to highlight. The `X` counter is reset at each PP invocation.
 
 <!-- -->
-
-> __NOTE 3__: You can use Highlight along with pandoc’s built in syntax highlighter — pandoc only highlights markdown code blocks (fenced, or backticked) and will ignore the `<pre><code>` raw html blocks produced by Highlight.
+> **NOTE 3**: You can use Highlight along with pandoc’s built in syntax highlighter — pandoc only highlights markdown code blocks (fenced, or backticked) and will ignore the `<pre><code>` raw html blocks produced by Highlight.
 >
 > Pandoc automatically adds its own stylesheet for its highlighted code, the Highlight macro doesn’t.
 >

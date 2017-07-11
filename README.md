@@ -7,15 +7,22 @@ A tresure-box of resources for pandoc, pp and the Texts word processor.
 
 Copyright © Tristano Ajmone 2017, [MIT License](./LICENSE).
 
-The project is still WIP and in its early stages, but a pandoc html5 template is ready for use, along with some pp-macros.
+The project is still WIP and in its early stages, but a pandoc html5 template is ready for use, along with a growing pp-macros library.
 
 ------------------------------------------------------------------------
+
+**Table of Contents**
 
 <!-- #toc -->
 -   [Available Goodies](#available-goodies)
     -   [Pandoc HTML5 Templates](#pandoc-html5-templates)
     -   [PP Macros](#pp-macros)
+    -   [Skylighting CSS](#skylighting-css)
 -   [Third Party Code Credits](#third-party-code-credits)
+-   [Notes About Pandoc License](#notes-about-pandoc-license)
+    -   [GPLv2 vs BSD-3](#gplv2-vs-bsd-3)
+        -   [GNU General Public License v2.0](#gnu-general-public-license-v20)
+        -   [BSD 3-clause “New” or “Revised” License](#bsd-3-clause-new-or-revised-license)
 
 <!-- /toc -->
 
@@ -45,6 +52,13 @@ The pp-macros section is an ongoing effort to create a collection of pp macros t
 > -   <http://cdsoft.fr/pp/>
 > -   <https://github.com/tajmone/markdown-guide/tree/master/pp>
 
+Skylighting CSS
+---------------
+
+The skylighting CSS section contains resources for styling code blocks in HTML format.
+
+-   [Skylighting CSS](./skylighting-css)
+
 Third Party Code Credits
 ========================
 
@@ -54,3 +68,54 @@ The “Pandoc-Goodies” project reuses third party source code from the followi
 -   [Primer CSS](https://github.com/primer/primer-css) — © 2016 GitHub Inc., MIT License.
 
 You’ll find more details and license information in the documentation of the subfolders.
+
+Notes About Pandoc License
+==========================
+
+Some legal stuff you should be aware regarding the license terms governing pandoc and some of its built-in resources.
+
+Pandoc is (c) 2006-2017 John MacFarlane, released under the **GPL v2** (or greater) license.
+
+The built-in styles (aka syntax themes) that pandoc injects into the final documents also fall under the same **GPL v2** license as pandoc.
+
+Pandoc’s built-in default templates are dual-licensed — under both the **GPL** (**v2** or higher, same as pandoc) and the **BSD 3-clause** (“New” or “Revised”) license:
+
+-   <https://github.com/jgm/pandoc-templates>
+
+You should be aware that the built-in syntax highlighting styles are not part of the templates, and therefore are not subject to dual-licensing. Styles are added at conversion time (for those format that support highlighting). Since pandoc’s default templates rely on the built-in styles, syntax highlighting might (depending on output format) automatically include into the final document a built-in style (“pygments”, by default). Since highligthing-styles are governed by the **GPL v2** license (which demands same licensing), opting for the **BSD 3-clause** license might no longer apply to the final document if the template and the styling are woven together into a single file.
+
+For a more detailed explanation regarding HTML templates and CSS styles, see:
+
+-   [/skylighting-css/built-in-styles/README.md](./skylighting-css/built-in-styles/README.md#license)
+
+GPLv2 vs BSD-3
+--------------
+
+A quick reference summary of both **GPL v2** and **BSD 3-clause** licenses — Text excerpts and tables taken from [choosealicense.com](https://choosealicense.com/) (license: [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)):
+
+-   <https://choosealicense.com/licenses/gpl-2.0/>
+-   <https://choosealicense.com/licenses/bsd-3-clause/>
+
+### GNU General Public License v2.0
+
+The GNU GPL is the most widely used free software license and has a strong copyleft requirement. When distributing derived works, the source code of the work must be made available under the same license. There are multiple variants of the GNU GPL, each with different requirements.
+
+| Permissions      | Conditions                     | Limitations |
+|------------------|--------------------------------|-------------|
+| ✔ Commercial use | ✔ Disclose source              | ✘ Liability |
+| ✔ Distribution   | ✔ License and copyright notice | ✘ Warranty  |
+| ✔ Modification   | ✔ Same license                 |             |
+| ✔ Private use    | ✔ State changes                |             |
+
+### BSD 3-clause “New” or “Revised” License
+
+A permissive license similar to the [BSD 2-Clause License](https://choosealicense.com/licenses/bsd-2-clause/), but with a 3rd clause that prohibits others from using the name of the project or its contributors to promote derived products without written consent.
+
+| Permissions      | Conditions                     | Limitations |
+|------------------|--------------------------------|-------------|
+| ✔ Commercial use | ✔ License and copyright notice | ✘ Liability |
+| ✔ Distribution   |                                | ✘ Warranty  |
+| ✔ Modification   |                                |             |
+| ✔ Private use    |                                |             |
+
+
