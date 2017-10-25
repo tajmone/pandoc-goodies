@@ -77,10 +77,10 @@ Currently, our PP macros library offers only macros targetting HTML output.
 “**The Pandoc-Goodies PP-Macros Library**” is organized into separate module files (“pp-macros sets”), stored in the [`/macros/`](./macros/) folder:
 
 -   `macros.pp` — the main module that loads all other modules:
-    -   [`GFM-Alerts.pp`](#github-alerts)
-    -   [`GFM-TaskList.pp`](#gfm-task-lists)
-    -   [`Highlight.pp`](#highlight)
-    -   [`InlineFormatting.pp`](#inline-formatting)
+    -   [`GFM-Alerts.pp`](#github-alerts) — [Live Demo Preview][Live GFM-Alerts]
+    -   [`GFM-TaskList.pp`](#gfm-task-lists) — [Live Demo Preview][Live GFM-TaskList]
+    -   [`Highlight.pp`](#highlight) — [Live Demo Preview][Live Highlight]
+    -   [`InlineFormatting.pp`](#inline-formatting) — [Live Demo Preview][Live InlineFormatting]
 
 > **NOTE**: Since the release of PP `v1.7-2` macros that were Windows-only are now cross-platform.
 
@@ -145,7 +145,11 @@ Without these CSS definitions the task list will still look acceptable, but havi
 >
 > Since “`GFM-TaskList.pp`” v2.0, nested Task Lists are rendered in the final HTML the proper way — ie: `<ul>` and `<li>` tags are nested in a syntactically correct manner.
 
-See [GitHub Pandoc HTML5 Template Preview](../templates/html5/github/GitHub-Template-Preview.html) for an example.
+Examples:
+
+-   [`/test/GFM-TaskList.md`](./test/GFM-TaskList.md)
+-   [`/test/GFM-TaskList.html`](./test/GFM-TaskList.html) — [Live Demo Preview][Live GFM-TaskList]
+-   [GitHub Pandoc HTML5 Template Preview](../templates/html5/github/GitHub-Template-Preview.html)
 
 GitHub Alerts
 -------------
@@ -177,7 +181,7 @@ To render the alerts properly you’ll need the definitions found in “[`GFM-Al
 Examples:
 
 -   [`/test/GFM-Alerts.md`](./test/GFM-Alerts.md)
--   [`/test/GFM-Alerts.html`](./test/GFM-Alerts.html)
+-   [`/test/GFM-Alerts.html`](./test/GFM-Alerts.html) — [Live Demo Preview][Live GFM-Alerts]
 -   [GitHub Pandoc HTML5 Template Preview](../templates/html5/github/GitHub-Template-Preview.html)
 
 Highlight
@@ -223,7 +227,7 @@ macros:
 Examples:
 
 -   [`/test/Highlight.md`](./test/Highlight.md)
--   [`/test/Highlight.html`](./test/Highlight.html)
+-   [`/test/Highlight.html`](./test/Highlight.html) — [Live Demo Preview][Live Highlight]
 
 Inline Formatting
 -----------------
@@ -241,7 +245,7 @@ The `!kbd` macro can take from 1 to 4 parameters, each representing the text to 
 Examples:
 
 -   [`/test/InlineFormatting.md`](./test/InlineFormatting.md)
--   [`/test/InlineFormatting.html`](./test/InlineFormatting.html)
+-   [`/test/InlineFormatting.html`](./test/InlineFormatting.html) — [Live Demo Preview][Live InlineFormatting]
 
 Macros Documentation
 ====================
@@ -252,3 +256,7 @@ Documentation and usage examples for the macros library is still work in progres
 
 -   [`../templates/html5/github/src/`](../templates/html5/github/src/)
 
+[Live Highlight]: http://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/pp/test/Highlight.html "HTML Live Preview of Highlight PP-Macros Test"
+[Live InlineFormatting]: http://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/pp/test/InlineFormatting.html "HTML Live Preview of Inline Formatting PP-Macros Test"
+[Live GFM-TaskList]: http://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/pp/test/GFM-TaskList.html "HTML Live Preview of GFM-TaskList PP-Macros Test"
+[Live GFM-Alerts]: http://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/pp/test/GFM-Alerts.html "HTML Live Preview of GFM-Alerts PP-Macros Test"
