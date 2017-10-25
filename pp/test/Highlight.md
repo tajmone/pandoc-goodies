@@ -1,4 +1,12 @@
 !import(RUN-TESTS.pp)
+!GFMAlertsInlineCSS
+
+!comment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Remove temporary files created by the !Highlight macro.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!CleanUp
+
 
 # Highlight PP-Macros Test
 
@@ -15,9 +23,9 @@ This is a run test of the GFM-TaskList pp-macros set.
 ## Macros list
 
 !raw{
--   `!HighlightFile(FILE)(LANG)[(OPTIONS)]` — imports and syntax-highlights and external file.
--   `!Highlight(LANG)([OPTIONS])(CODE)` — syntax-highlights the code block defined in `CODE`.
--   `!HighlightInlineTheme(THEME)` — retrives a Highlight theme and injects its CSS into the documents.
+-   `!HighlightFile( FILE )( LANG )[( OPTIONS )]` — imports and syntax-highlights and external file.
+-   `!Highlight( LANG )([ OPTIONS] )( CODE )` — syntax-highlights the code block defined in `CODE`.
+-   `!HighlightInlineTheme( THEME NAME )` — retrives a Highlight theme and injects its CSS into the documents.
 }
 
 # Add Highlight Color Theme
@@ -44,13 +52,25 @@ The `!raw(!HighlightFile)` macro takes an external source code file, passes it t
 
 The syntax is:
 
-    !raw{!HighlightFile(FILE)(LANG)[(OPTIONS)]}
+    !raw{!HighlightFile( FILE )( LANG )[( OPTIONS )]}
 
 ... taking the following parameters:
 
 - `FILE` (mandatory) — The source file to syntax-color.
 - `LANG` (mandatory) — The language of the source (eg: HTML, Python, etc.).
 - `OPTIONS` (facultative) — Further options to pass to Highlight during invocation.
+
+!GFMAlertPlain
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+__NOTE__: The Highlight macros will also add the string passed as the `LANG` param to the class of both  the `<pre>` and `<code>` tags in the final HTML result:
+
+``` html
+<pre class="hl LANG"><code class="LANG">
+```
+
+This allows finer control of how the code should look like, via custom CSS.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 ## Basic Example
 
@@ -64,7 +84,11 @@ We import the PureBASIC example file "`code-example.pb`" without passing any ext
 
 Now we import the same file, this time passing some extra options to Highlight in order to show line numbers:
 
-!def(TEST)(!HighlightFile(code-example.pb)(purebasic)(--line-numbers --line-number-length=1))
+!def(TEST)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!HighlightFile(code-example.pb)(purebasic)(--line-numbers --line-number-length=1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 !RUNTEST
 
@@ -76,7 +100,7 @@ It's similar to the `!raw(!HighlightFile)` macro, except it relies on source cod
 
 The syntax is:
 
-    !raw{!Highlight(LANG)(OPTIONS)
+    !raw{!Highlight( LANG )( OPTIONS )
     ~~~~~
     CODE
     ~~~~~
@@ -94,7 +118,7 @@ The syntax is:
 
 <!-- -->
 
-> __NOTE 2__: This macro creates and deletes a temporary file (named "`_pp-tempfileX.tmp`", where `X` is a numeric counter) in the macros folder (`/pp/macros/`) for each macro call in the document, to temporarily store the code to highlight. The `X` counter is reset at each PP invocation.
+> **NOTE 2**: This macro creates a temporary file (named “`_pp-tempfileX.tmp`”, where `X` is a numeric counter) in the macros folder (`/pp/macros/`) for each macro call in the document, to temporarily store the code to highlight. At each PP invocation the `X` counter is reset, and the previous temp files are written over. These temporary files are set to be ignored by Git, so you shouldn't worry about them.
 
 ## Basic Example
 
@@ -117,13 +141,17 @@ Next
 We now define a block of PureBASIC code and pass it to Highlight, this time providing some extra options to Highlight in order to show line numbers:
 
 
-!def(TEST)(!Highlight(purebasic)(--line-numbers --line-number-length=1)
+!def(TEST)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!Highlight(purebasic)(--line-numbers --line-number-length=1)
 ~~~~~~~~~~
 ; PureBASIC 5.60
 For i=1 To 10
   Debug("Counting " + Str(i))
 Next
 ~~~~~~~~~~
-)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 !RUNSIMPLETEST
+
+

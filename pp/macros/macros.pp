@@ -1,8 +1,12 @@
-!comment(pp-macros loader module)
+!comment(   pp-macros loader module   )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"macros.pp v1.0.3 (2017-04-11)
+"macros.pp v2.0 (2017-10-25) | PP v2.0
 
-The main macro that imports all other macros.
+The main macro that imports all other macro definition files.
+
+--------------------------------------------------------------------------------
+This file is part of "The Pandoc-Goodies PP-Macros Library":
+ -- https://github.com/tajmone/pandoc-goodies/tree/master/pp
 
 (c) Tristano Ajmone 2017, MIT License.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -66,11 +66,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2 id="macros-list">Macros list</h2>
 <ul>
 <li><code>!GFMAlertsInlineCSS</code> — Inject required CSS</li>
-<li><code>!GFMAlert(CONTENTS)</code> — Default alert (blue)</li>
-<li><code>!GFMAlertPlain(CONTENTS)</code> — Plain alert (grey)</li>
-<li><code>!GFMError(CONTENTS)</code> — Error alert (red)</li>
-<li><code>!GFMWarn(CONTENTS)</code> — Warning alert (yellow)</li>
-<li><code>!GFMSuccess(CONTENTS)</code> — Success alert (green)</li>
+<li><code>!GFMAlert( CONTENTS )</code> — Default alert (blue)</li>
+<li><code>!GFMError( CONTENTS )</code> — Error alert (red)</li>
+<li><code>!GFMWarn( CONTENTS )</code> — Warning alert (yellow)</li>
+<li><code>!GFMSuccess( CONTENTS )</code> — Success alert (green)</li>
+<li><code>!GFMAlertPlain( CONTENTS )</code> — Plain alert (grey)</li>
 </ul>
 <h1 id="add-alerts-css">Add Alerts CSS</h1>
 <p>We need the CSS definition for viewing alerts. We’ll use the <code>!GFMAlertsInlineCSS</code> macro to inject the contents of <code>GFM-Alerts.css</code> as an inline stylesheet:</p>
@@ -237,6 +237,7 @@ __Success__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.
 </div>
 </div>
 <h2 id="plain-alert">Plain Alert</h2>
+<p><strong>NOTE</strong>: This Alert is not part of GitHub’s original set of Alerts; I’ve added it.</p>
 <p>macro used:</p>
 <pre><code>!GFMAlertPlain(__Plain__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
 <p>raw html output:</p>

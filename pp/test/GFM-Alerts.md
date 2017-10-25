@@ -16,11 +16,11 @@ This is a run test of the __GFM-Alerts__ pp-macros set.
 
 !raw{
 -   `!GFMAlertsInlineCSS` — Inject required CSS
--   `!GFMAlert(CONTENTS)` — Default alert (blue)
--   `!GFMAlertPlain(CONTENTS)` — Plain alert (grey)
--   `!GFMError(CONTENTS)` — Error alert (red)
--   `!GFMWarn(CONTENTS)` — Warning alert (yellow)
--   `!GFMSuccess(CONTENTS)` — Success alert (green)
+-   `!GFMAlert( CONTENTS )` — Default alert (blue)
+-   `!GFMError( CONTENTS )` — Error alert (red)
+-   `!GFMWarn( CONTENTS )` — Warning alert (yellow)
+-   `!GFMSuccess( CONTENTS )` — Success alert (green)
+-   `!GFMAlertPlain( CONTENTS )` — Plain alert (grey)
 }
 
 # Add Alerts CSS
@@ -66,6 +66,8 @@ this macro emits the following raw html:
 !RUNTEST
 
 ## Plain Alert
+
+__NOTE__: This Alert is not part of GitHub's original set of Alerts; I've added it.
 
 !def(TEST)(!GFMAlertPlain(__Plain__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.))
 

@@ -1,11 +1,34 @@
 ==============================================================================
                          PP-Macros Library CHANGELOG                          
 ==============================================================================
-NOTE: Obviously assumed changes will not be logged -- eg: addition of newly
-      created macros modules to "macros.pp" as "!import" statements is given
-      for granted and not worth mentioning. Minor changes will not be logged
-	  either, because life is to short...
+NOTE: Obvious changes won't be logged -- eg: addition of "!import" statements
+      of newly created macros modules to "macros.pp" is given for granted.
+      Minor changes will not be logged either, because life is too short...
 
+------------------------------------------------------------------------------
+                                  2017-10-25                                  
+------------------------------------------------------------------------------
+PP VERSION v2.0
+
+This is a major update. PP v1.11 already introduced some macros behaviour
+changes (bug fixes in nested parameters); PP v2.0 drops support for the "\"
+macro character: only the "!" syntax is supported by default, even though the
+new built-in "!macrochars" allows defining multiple custom macro chars
+(so "!macrochars(!\)" allows backward compatible behaviour).
+
+- All macros updated to use only the "!" syntax.
+- All macros version bumped up to 2.0 to align with PP version.
+- Macros end-user usage syntax remain unchanged (apart from PP not longer
+  supporting the "\" macro char syntax).
+
+CHANGES:
+- "Highlight.pp" 2.0:
+  - THe passed LANG is now added also to <pre> tag, to allow finer styling
+    control with custom CSS: <pre class="hl LANG"><code class="LANG">
+    (before it was added only to the <pre> tag).
+- "GFM-TaskList.pp" v2.0:
+  - Added support for nested Task Lists via optional third parameter
+    (doesn't break backward compatibility with older version).
 ------------------------------------------------------------------------------
                                   2017-07-05                                  
 ------------------------------------------------------------------------------

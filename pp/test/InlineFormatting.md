@@ -15,7 +15,7 @@ This is a run test of the __Inline Formatting__ pp-macros set.
 ## Macros list
 
 !raw{
--   `!kbd(KEY1)[(KEY2)(KEY3)(KEY4)]` — keystrokes in `<kbd>` tags.
+-   `!kbd( KEY1 )[( KEY2 )( KEY3 )( KEY4 )]` — keystrokes in `<kbd>` tags.
 -   `!kbdInlineCSS` — Inject required CSS (“`kbd_GitHub.css`”)
 }
 
@@ -23,7 +23,7 @@ This is a run test of the __Inline Formatting__ pp-macros set.
 
 The `!raw(!kbd)` macro is a fast way to represent up to four Keystrokes. It has the following syntax:
 
-    !raw(!kbd(KEY1)[(KEY2)(KEY3)(KEY4)])
+    !raw(!kbd( KEY1 )[( KEY2 )( KEY3 )( KEY4 )])
 
 ... where only the first parameter is mandatory.
 

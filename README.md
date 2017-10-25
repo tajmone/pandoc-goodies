@@ -1,6 +1,8 @@
 Pandoc-Goodies
 ==============
 
+    pandoc v1.19.x | PP v2.0
+
 A tresure-box of resources for pandoc, pp and the Texts word processor.
 
 -   <https://github.com/tajmone/pandoc-goodies>
