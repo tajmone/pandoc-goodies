@@ -65,24 +65,24 @@ Or you can download and compile the sources (Haskell) of specific PP releases fr
 
 -   <https://github.com/CDSoft/pp/releases>
 
-If you are looking for binaries of a specific release of PP, you can visit PP's _Download Archive_ page: 
+If you are looking for binaries of a specific release of PP, you can visit PP’s *Download Archive* page:
 
--   <http://cdsoft.fr/pp/download.html> 
+-   <http://cdsoft.fr/pp/download.html>
 
 Available Macros
 ================
 
 Currently, our PP macros library offers only macros targetting HTML output.
 
-“__The Pandoc-Goodies PP-Macros Library__” is organized into separate module files ("pp-macros sets"), stored in the [`/macros/`](./macros/) folder:
+“**The Pandoc-Goodies PP-Macros Library**” is organized into separate module files (“pp-macros sets”), stored in the [`/macros/`](./macros/) folder:
 
-- `macros.pp` --- the main module that loads all other modules:
-    + [`GFM-Alerts.pp`](#github-alerts)
-    + [`GFM-TaskList.pp`](#gfm-task-lists)
-    + [`Highlight.pp`](#highlight)
-    + [`InlineFormatting.pp`](#inline-formatting)
+-   `macros.pp` — the main module that loads all other modules:
+    -   [`GFM-Alerts.pp`](#github-alerts)
+    -   [`GFM-TaskList.pp`](#gfm-task-lists)
+    -   [`Highlight.pp`](#highlight)
+    -   [`InlineFormatting.pp`](#inline-formatting)
 
-> __NOTE__: Since the release of PP `v1.7-2` macros that were Windows-only are now cross-platform.
+> **NOTE**: Since the release of PP `v1.7-2` macros that were Windows-only are now cross-platform.
 
 GFM Task Lists
 --------------
@@ -97,7 +97,7 @@ macros:
 -   `!Task(x| )( TASK TEXT )[( SUB-TASKLIST )]` — Generate a Task element and (optionally) initiate a sub-list.
 -   `!TaskListInlineCSS` — Inject required CSS.
 
-> __NOTE__: Using square brackets for `!Task` parameters is adviced since it resembles the GFM syntax.
+> **NOTE**: Using square brackets for `!Task` parameters is adviced since it resembles the GFM syntax.
 
 Example usage:
 
@@ -118,7 +118,7 @@ Example of a nested Task List:
     !Task[x][Task 2]
     ~~~~~~~~~~~~~~~~~~~~~~~
 
-... or, using fences to wrap last parameters, instead of brackets:
+… or, using fences to wrap last parameters, instead of brackets:
 
     !TaskList
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -143,7 +143,7 @@ Without these CSS definitions the task list will still look acceptable, but havi
 
 > **NOTES**: Markdown syntax within Task’s `TASK TEXT` will be rendered correctly, provided pandoc’s `markdown_in_html_blocks` extension is enabled (default in pandoc markdown).
 >
-> Since "`GFM-TaskList.pp`" v2.0, nested Task Lists are rendered in the final HTML the proper way --- ie: `<ul>` and `<li>` tags are nested in a syntactically correct manner.
+> Since “`GFM-TaskList.pp`” v2.0, nested Task Lists are rendered in the final HTML the proper way — ie: `<ul>` and `<li>` tags are nested in a syntactically correct manner.
 
 See [GitHub Pandoc HTML5 Template Preview](../templates/html5/github/GitHub-Template-Preview.html) for an example.
 
@@ -209,7 +209,9 @@ macros:
 > > The last argument can be enclosed between lines of tildas or backquotes (of the same length) instead of parenthesis, brackets or braces and. This is useful for literate programming, diagrams or scripts (see examples). Code block arguments are not stripped: spaces and blank lines are preserved.
 
 <!-- -->
-> **NOTE 2**: This macro creates a temporary file (named “`_pp-tempfileX.tmp`”, where `X` is a numeric counter) in the macros folder (`/pp/macros/`) for each macro call in the document, to temporarily store the code to highlight. At each PP invocation the `X` counter is reset, and the previous temp files are written over. These temporary files are set to be ignored by Git, so you shouldn't worry about them.
+> **NOTE 2**: This macro, when run inside Windows CMD, creates a temporary file (named “`_pp-tempfileX.tmp`”, where `X` is a numeric counter) in the macros folder (`/pp/macros/`) for each macro call in the document, to temporarily store the code to highlight. At each PP invocation the `X` counter is reset, and the previous temp files are written over. These temporary files are set to be ignored by Git, so you shouldn’t worry about them.
+>
+> When run inside Shell/Bash (including Git Bash for Windows) it doesn’t write any temporary files to disk.
 
 <!-- -->
 > **NOTE 3**: You can use Highlight along with pandoc’s built in syntax highlighter — pandoc only highlights markdown code blocks (fenced, or backticked) and will ignore the `<pre><code>` raw html blocks produced by Highlight.

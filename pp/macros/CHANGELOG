@@ -22,7 +22,11 @@ new built-in "!macrochars" allows defining multiple custom macro chars
   supporting the "\" macro char syntax).
 
 CHANGES:
-- "Highlight.pp" 2.0:
+- "Highlight.pp" v2.1:
+  - The "!Highlight" macro now detects the current context running PP:
+    - if Shell/Bash: it invokes !HighlightSh    (even under Git Bash for Win)
+    - if Win CMD:    it invokes !HighlightCMD
+- "Highlight.pp" v2.0:
   - THe passed LANG is now added also to <pre> tag, to allow finer styling
     control with custom CSS: <pre class="hl LANG"><code class="LANG">
     (before it was added only to the <pre> tag).
@@ -45,9 +49,9 @@ ADDED:
 - "Highlight.pp" v1.3:
   - Added "!Highlight" macro to syntax-highlight a block of code passed as
     macro parameter within lines of tildas. NOTE: Currently this macro needs
-	to write a temporary file in the macros folder for each macro invocation,
-	then deletes the temporary files. Couldn't find a better solution. Tested
-	on Windows but should also work on Linux.
+    to write a temporary file in the macros folder for each macro invocation,
+    then deletes the temporary files. Couldn't find a better solution. Tested
+    on Windows but should also work on Linux.
 - "Highlight.pp" test files.
 ------------------------------------------------------------------------------
                                   2017-04-18                                  

@@ -40,11 +40,11 @@ USAGE:
 !comment{  !kbdInlineCSS                                     v2.0 | 2017-10-25 }
 ````````````````````````````````````````````````````````````````````````````````
 DECRIPTION: Provide GitHub-like CSS styling for <kbd> tags by importing the file
-			"kbd_GitHub.css" as an inline stylesheet.
+            "kbd_GitHub.css" as an inline stylesheet.
 
 USAGE: Include (once) in your markdown document:
 
-		!kbdInlineCSS
+        !kbdInlineCSS
 
 REQUIREMENTS:
   -- Env var PP_MACROS_PATH must be set to the path of this folder in order for

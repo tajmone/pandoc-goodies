@@ -16,11 +16,11 @@ MACROS LIST:
   OUT FORMAT: html
   OS SUPPORT: all
 REQUIREMENTS: CSS defs of "task-list" and "task-list-item" classes (recommended):
-			  - Copy/include "GFM-TaskList.css" manually, or
-			  - Use "!TaskListInlineCSS" macro to inject CSS
-			  These classes only hide the items' original bullets, therefore
-			  task lists will work even without them: checkboxes will be shown
-			  next to the bullet, and look a bit hugly.
+              - Copy/include "GFM-TaskList.css" manually, or
+              - Use "!TaskListInlineCSS" macro to inject CSS
+              These classes only hide the items' original bullets, therefore
+              task lists will work even without them: checkboxes will be shown
+              next to the bullet, and look a bit hugly.
 --------------------------------------------------------------------------------
 This file is part of "The Pandoc-Goodies PP-Macros Library":
  -- https://github.com/tajmone/pandoc-goodies/tree/master/pp
@@ -121,11 +121,11 @@ USAGE: !Task( TASK STATE )( TASK TEXT )[( A SUB-TASKS LIST )]
 !comment{  !TaskListInlineCSS                                v2.0 | 2017-10-25 }
 ````````````````````````````````````````````````````````````````````````````````
 DECRIPTION: Provide GitHub-like CSS styling for GFM Task Lists by importing the
-			file "GFM-TaskList.css" as an inline stylesheet.
+            file "GFM-TaskList.css" as an inline stylesheet.
 
 USAGE: Include (once) in your markdown document:
 
-		!TaskListInlineCSS
+        !TaskListInlineCSS
 
 REQUIREMENTS:
   -- Env var PP_MACROS_PATH must be set to the path of this folder in order for

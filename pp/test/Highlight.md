@@ -118,7 +118,9 @@ The syntax is:
 
 <!-- -->
 
-> **NOTE 2**: This macro creates a temporary file (named “`_pp-tempfileX.tmp`”, where `X` is a numeric counter) in the macros folder (`/pp/macros/`) for each macro call in the document, to temporarily store the code to highlight. At each PP invocation the `X` counter is reset, and the previous temp files are written over. These temporary files are set to be ignored by Git, so you shouldn't worry about them.
+> **NOTE 2**: This macro, when run inside Windows CMD, creates a temporary file (named “`_pp-tempfileX.tmp`”, where `X` is a numeric counter) in the macros folder (`/pp/macros/`) for each macro call in the document, to temporarily store the code to highlight. At each PP invocation the `X` counter is reset, and the previous temp files are written over. These temporary files are set to be ignored by Git, so you shouldn't worry about them.
+> 
+> When run inside Shell/Bash (including Git Bash for Windows) it doesn't write any temporary files to disk.
 
 ## Basic Example
 

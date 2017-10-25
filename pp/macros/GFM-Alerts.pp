@@ -24,7 +24,7 @@ INTERNAL-USE MACROS:
   OS SUPPORT: all
 REQUIREMENTS:
   -- "GFM-Alerts.css" must be included in final document's stylesheet.
-	 (Adapted from GitHub's Prime-CSS "flash.scss" module:)
+     (Adapted from GitHub's Prime-CSS "flash.scss" module:)
      https://github.com/primer/primer-alerts/blob/master/lib/flash.scss
   -- Env var PP_MACROS_PATH must be set to the path of this folder in order for
      !GFMAlertsInlineCSS to be able to include "GFM-Alerts.css".
@@ -57,8 +57,8 @@ This file is part of "The Pandoc-Goodies PP-Macros Library":
 !comment{   !GFMAlert                                        v2.0 | 2017-10-25 }
 ````````````````````````````````````````````````````````````````````````````````
 DECRIPTION: Wraps the contents of the macro's parameter in GitHub style Alert
-			<div>s (aka "Flash messages").
-			Contents will be processed as markdown.
+            <div>s (aka "Flash messages").
+            Contents will be processed as markdown.
 USAGE:
 
     !Alert
@@ -120,11 +120,11 @@ Same usage, different output colors.
 !comment{  !GFMAlertsInlineCSS                               v2.0 | 2017-10-25 }
 ````````````````````````````````````````````````````````````````````````````````
 DECRIPTION: Provide GitHub-like CSS styling for Alerts by importing the file
-			"GFM-Alerts.css" as an inline stylesheet.
+            "GFM-Alerts.css" as an inline stylesheet.
 
 USAGE: Include (once) in your markdown document:
 
-		!GFMAlertsInlineCSS
+        !GFMAlertsInlineCSS
 
 REQUIREMENTS:
   -- Env var PP_MACROS_PATH must be set to the path of this folder in order for
