@@ -1,13 +1,6 @@
 !import(RUN-TESTS.pp)
 !GFMAlertsInlineCSS
 
-!comment
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Remove temporary files created by the !Highlight macro.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-!CleanUp
-
-
 # Highlight PP-Macros Test
 
 This is a run test of the GFM-TaskList pp-macros set.
