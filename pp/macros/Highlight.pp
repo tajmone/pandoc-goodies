@@ -1,6 +1,6 @@
 !comment(   "Highlight" pp-macros set   )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"Highlight.pp" v2.1 (2017-10-25) | PP v2.0
+"Highlight.pp" v2.1.1 (2017-10-26) | PP v2.0
 
 A set of macros for integrating André Simon's Highlight syntax highlighter with
 pandoc documents:
@@ -12,6 +12,7 @@ MACROS LIST:
 
 -- !HighlightFile
 -- !Highlight
+-- !HighlightInlineTheme
 
 INTERNAL-USE MACROS:
 
