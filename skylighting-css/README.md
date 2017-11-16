@@ -31,7 +31,7 @@ Pandoc features a [built-in syntax highlighter](#pandocs-syntax-highlighting-eng
 
 Highlighted code blocks can optionally have line numbers, and it’s also possible to specify the starting line number.
 
-As of pandoc 1.19, it’s not possible to load dynamically custom syntax definitions and styles for highlighting, but this feature is WIP and will be available in future releases (see [\#3334](https://github.com/jgm/pandoc/issues/3334)).
+As of pandoc v2, it’s now possible to load dynamically custom syntax definitions and styles for highlighting, via the new `--syntax-definition=FILE` and `--highlight-style=STYLE|FILE` options.
 
 # Appendixes
 
