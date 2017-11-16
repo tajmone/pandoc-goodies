@@ -1,6 +1,8 @@
 GitHub Pandoc HTML5 Template
 ============================
 
+    pandoc v1.19.2
+
 A pandoc html5 template mimicking GitHub’s documents preview. Supports extended GitHub Flavored Markdown features through custom pp-macros that leverage Raw HTML and GitHub’s CSS.
 
 -   [Live GitHub HTML Preview](http://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/templates/html5/github/GitHub-Template-Preview.html)

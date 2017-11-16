@@ -5,39 +5,55 @@
 
 		https://www.haskell.org/haddock/
 
-	This stylesheet was produced using Pandoc v1.19.2.
+	This stylesheet was produced using Pandoc v2.0.2.
 
 	Pandoc is (c) 2006-2017 John MacFarlane (jgm@berkeley.edu).
 	Released under the GPL, version 2 or greater. 
 	------------------------------------------------------------------------------
 */
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #0000ff; } /* Keyword */
-code > span.ch { color: #008080; } /* Char */
-code > span.st { color: #008080; } /* String */
-code > span.co { color: #008000; } /* Comment */
-code > span.ot { color: #ff4000; } /* Other */
-code > span.al { color: #ff0000; } /* Alert */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #008000; font-weight: bold; } /* Warning */
-code > span.cn { } /* Constant */
-code > span.sc { color: #008080; } /* SpecialChar */
-code > span.vs { color: #008080; } /* VerbatimString */
-code > span.ss { color: #008080; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { } /* Variable */
-code > span.cf { color: #0000ff; } /* ControlFlow */
-code > span.op { } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #ff4000; } /* Preprocessor */
-code > span.do { color: #008000; } /* Documentation */
-code > span.an { color: #008000; } /* Annotation */
-code > span.cv { color: #008000; } /* CommentVar */
-code > span.at { } /* Attribute */
-code > span.in { color: #008000; } /* Information */
+div.sourceLine, a.sourceLine { display: inline-block; min-height: 1.25em; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; }
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+div.sourceLine, a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource div.sourceLine, .numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource div.sourceLine::before, .numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; color: #aaaaaa;  padding-left: 4px; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; color: initial; }
+}
+code span.kw { color: #0000ff; } /* Keyword */
+code span.ch { color: #008080; } /* Char */
+code span.st { color: #008080; } /* String */
+code span.co { color: #008000; } /* Comment */
+code span.ot { color: #ff4000; } /* Other */
+code span.al { color: #ff0000; } /* Alert */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.wa { color: #008000; font-weight: bold; } /* Warning */
+code span.cn { } /* Constant */
+code span.sc { color: #008080; } /* SpecialChar */
+code span.vs { color: #008080; } /* VerbatimString */
+code span.ss { color: #008080; } /* SpecialString */
+code span.im { } /* Import */
+code span.va { } /* Variable */
+code span.cf { color: #0000ff; } /* ControlFlow */
+code span.op { } /* Operator */
+code span.bu { } /* BuiltIn */
+code span.ex { } /* Extension */
+code span.pp { color: #ff4000; } /* Preprocessor */
+code span.do { color: #008000; } /* Documentation */
+code span.an { color: #008000; } /* Annotation */
+code span.cv { color: #008000; } /* CommentVar */
+code span.at { } /* Attribute */
+code span.in { color: #008000; } /* Information */

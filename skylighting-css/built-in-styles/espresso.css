@@ -5,44 +5,60 @@
 
 		https://github.com/spox/ultraviolet/
 
-	This stylesheet was produced using Pandoc v1.19.2.
+	This stylesheet was produced using Pandoc v2.0.2.
 
 	Pandoc is (c) 2006-2017 John MacFarlane (jgm@berkeley.edu).
 	Released under the GPL, version 2 or greater. 
 	------------------------------------------------------------------------------
 */
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; background-color: #2a211c; color: #bdae9d; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #2a211c; color: #bdae9d; border-right: 1px solid #bdae9d; }
-td.sourceCode { padding-left: 5px; }
+div.sourceLine, a.sourceLine { display: inline-block; min-height: 1.25em; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; }
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+div.sourceLine, a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource div.sourceLine, .numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource div.sourceLine::before, .numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d; background-color: #2a211c; color: #bdae9d;  padding-left: 4px; }
 pre, code { color: #bdae9d; background-color: #2a211c; }
-code > span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
-code > span.dt { text-decoration: underline; } /* DataType */
-code > span.dv { color: #44aa43; } /* DecVal */
-code > span.bn { color: #44aa43; } /* BaseN */
-code > span.fl { color: #44aa43; } /* Float */
-code > span.ch { color: #049b0a; } /* Char */
-code > span.st { color: #049b0a; } /* String */
-code > span.co { color: #0066ff; font-style: italic; } /* Comment */
-code > span.al { color: #ffff00; } /* Alert */
-code > span.fu { color: #ff9358; font-weight: bold; } /* Function */
-code > span.er { color: #ffff00; font-weight: bold; } /* Error */
-code > span.wa { color: #ffff00; font-weight: bold; } /* Warning */
-code > span.cn { } /* Constant */
-code > span.sc { color: #049b0a; } /* SpecialChar */
-code > span.vs { color: #049b0a; } /* VerbatimString */
-code > span.ss { color: #049b0a; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { } /* Variable */
-code > span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
-code > span.op { } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { font-weight: bold; } /* Preprocessor */
-code > span.at { } /* Attribute */
-code > span.do { color: #0066ff; font-style: italic; } /* Documentation */
-code > span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
-code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+@media screen {
+a.sourceLine::before { text-decoration: underline; color: initial; }
+}
+code span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #44aa43; } /* DecVal */
+code span.bn { color: #44aa43; } /* BaseN */
+code span.fl { color: #44aa43; } /* Float */
+code span.ch { color: #049b0a; } /* Char */
+code span.st { color: #049b0a; } /* String */
+code span.co { color: #0066ff; font-style: italic; } /* Comment */
+code span.al { color: #ffff00; } /* Alert */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+code span.cn { } /* Constant */
+code span.sc { color: #049b0a; } /* SpecialChar */
+code span.vs { color: #049b0a; } /* VerbatimString */
+code span.ss { color: #049b0a; } /* SpecialString */
+code span.im { } /* Import */
+code span.va { } /* Variable */
+code span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code span.op { } /* Operator */
+code span.bu { } /* BuiltIn */
+code span.ex { } /* Extension */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.at { } /* Attribute */
+code span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */

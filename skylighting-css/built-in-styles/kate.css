@@ -3,47 +3,63 @@
 	==============================================================================
 	Style based on Kate's default colors.
 
-	This stylesheet was produced using Pandoc v1.19.2.
+	This stylesheet was produced using Pandoc v2.0.2.
 
 	Pandoc is (c) 2006-2017 John MacFarlane (jgm@berkeley.edu).
 	Released under the GPL, version 2 or greater. 
 	------------------------------------------------------------------------------
 */
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; background-color: #ffffff; color: #1f1c1b; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #ffffff; color: #a0a0a0; border-right: 1px solid #a0a0a0; }
-td.sourceCode { padding-left: 5px; }
+div.sourceLine, a.sourceLine { display: inline-block; min-height: 1.25em; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; }
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+div.sourceLine, a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource div.sourceLine, .numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource div.sourceLine::before, .numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0; background-color: #ffffff; color: #a0a0a0;  padding-left: 4px; }
 pre, code { color: #1f1c1b; background-color: #ffffff; }
-code > span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
-code > span.dt { color: #0057ae; } /* DataType */
-code > span.dv { color: #b08000; } /* DecVal */
-code > span.bn { color: #b08000; } /* BaseN */
-code > span.fl { color: #b08000; } /* Float */
-code > span.cn { color: #aa5500; } /* Constant */
-code > span.ch { color: #924c9d; } /* Char */
-code > span.sc { color: #3daee9; } /* SpecialChar */
-code > span.st { color: #bf0303; } /* String */
-code > span.vs { color: #bf0303; } /* VerbatimString */
-code > span.ss { color: #ff5500; } /* SpecialString */
-code > span.im { color: #ff5500; } /* Import */
-code > span.co { color: #898887; } /* Comment */
-code > span.do { color: #607880; } /* Documentation */
-code > span.an { color: #ca60ca; } /* Annotation */
-code > span.cv { color: #0095ff; } /* CommentVar */
-code > span.ot { color: #006e28; } /* Other */
-code > span.fu { color: #644a9b; } /* Function */
-code > span.va { color: #0057ae; } /* Variable */
-code > span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #1f1c1b; } /* Operator */
-code > span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
-code > span.ex { color: #0095ff; font-weight: bold; } /* Extension */
-code > span.pp { color: #006e28; } /* Preprocessor */
-code > span.at { color: #0057ae; } /* Attribute */
-code > span.re { color: #0057ae; } /* RegionMarker */
-code > span.in { color: #b08000; } /* Information */
-code > span.wa { color: #bf0303; } /* Warning */
-code > span.al { color: #bf0303; font-weight: bold; } /* Alert */
-code > span.er { color: #bf0303; text-decoration: underline; } /* Error */
-code > span. { color: #1f1c1b; } /* Normal */
+@media screen {
+a.sourceLine::before { text-decoration: underline; color: initial; }
+}
+code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+code span.dt { color: #0057ae; } /* DataType */
+code span.dv { color: #b08000; } /* DecVal */
+code span.bn { color: #b08000; } /* BaseN */
+code span.fl { color: #b08000; } /* Float */
+code span.cn { color: #aa5500; } /* Constant */
+code span.ch { color: #924c9d; } /* Char */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.st { color: #bf0303; } /* String */
+code span.vs { color: #bf0303; } /* VerbatimString */
+code span.ss { color: #ff5500; } /* SpecialString */
+code span.im { color: #ff5500; } /* Import */
+code span.co { color: #898887; } /* Comment */
+code span.do { color: #607880; } /* Documentation */
+code span.an { color: #ca60ca; } /* Annotation */
+code span.cv { color: #0095ff; } /* CommentVar */
+code span.ot { color: #006e28; } /* Other */
+code span.fu { color: #644a9b; } /* Function */
+code span.va { color: #0057ae; } /* Variable */
+code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+code span.op { color: #1f1c1b; } /* Operator */
+code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+code span.pp { color: #006e28; } /* Preprocessor */
+code span.at { color: #0057ae; } /* Attribute */
+code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+code span.in { color: #b08000; } /* Information */
+code span.wa { color: #bf0303; } /* Warning */
+code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+code span. { color: #1f1c1b; } /* Normal */

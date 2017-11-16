@@ -1,6 +1,8 @@
 Sass Highlighting Templates for Pandoc
 ======================================
 
+    pandoc v1.19.2
+
 Sass templates for creating custom pandoc syntax highlighting themes.
 
 ------------------------------------------------------------------------
