@@ -1,13 +1,13 @@
-/*	==============================================================================
-	                      Breezedark (pandoc built-in style)                      
-	==============================================================================
-	Style from the "Breeze Dark" KDE syntax highlighting theme.
-
-	This stylesheet was produced using Pandoc v2.0.2.
-
-	Pandoc is (c) 2006-2017 John MacFarlane (jgm@berkeley.edu).
-	Released under the GPL, version 2 or greater. 
-	------------------------------------------------------------------------------
+/*  ==============================================================================
+                        Breezedark (pandoc built-in style)                      
+    ==============================================================================
+    Style from the "Breeze Dark" KDE syntax highlighting theme.
+  
+    This stylesheet was produced using Pandoc v2.0.2.
+  
+    Pandoc is (c) 2006-2017 John MacFarlane (jgm@berkeley.edu).
+    Released under the GPL, version 2 or greater. 
+    ------------------------------------------------------------------------------
 */
 div.sourceLine, a.sourceLine { display: inline-block; min-height: 1.25em; }
 a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }

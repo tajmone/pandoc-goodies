@@ -1,15 +1,15 @@
-/*	==============================================================================
-	                       Espresso (pandoc built-in style)                       
-	==============================================================================
-	Style based on ultraviolet's "espresso_libre.css" (dark background):
+/*  ==============================================================================
+                           Espresso (pandoc built-in style)                       
+    ==============================================================================
+    Style based on ultraviolet's "espresso_libre.css" (dark background):
 
-		https://github.com/spox/ultraviolet/
+        https://github.com/spox/ultraviolet/
 
-	This stylesheet was produced using Pandoc v2.0.2.
+    This stylesheet was produced using Pandoc v2.0.2.
 
-	Pandoc is (c) 2006-2017 John MacFarlane (jgm@berkeley.edu).
-	Released under the GPL, version 2 or greater. 
-	------------------------------------------------------------------------------
+    Pandoc is (c) 2006-2017 John MacFarlane (jgm@berkeley.edu).
+    Released under the GPL, version 2 or greater. 
+    ------------------------------------------------------------------------------
 */
 div.sourceLine, a.sourceLine { display: inline-block; min-height: 1.25em; }
 a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }

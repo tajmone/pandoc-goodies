@@ -1,15 +1,15 @@
-/*	==============================================================================
-	                       Haddock (pandoc built-in style)                        
-	==============================================================================
-	Style based on Haddock's source highlighting:
+/*  ==============================================================================
+                           Haddock (pandoc built-in style)                        
+    ==============================================================================
+    Style based on Haddock's source highlighting:
 
-		https://www.haskell.org/haddock/
+        https://www.haskell.org/haddock/
 
-	This stylesheet was produced using Pandoc v1.19.2.
+    This stylesheet was produced using Pandoc v1.19.2.
 
-	Pandoc is (c) 2006-2017 John MacFarlane (jgm@berkeley.edu).
-	Released under the GPL, version 2 or greater. 
-	------------------------------------------------------------------------------
+    Pandoc is (c) 2006-2017 John MacFarlane (jgm@berkeley.edu).
+    Released under the GPL, version 2 or greater. 
+    ------------------------------------------------------------------------------
 */
 div.sourceCode { overflow-x: auto; }
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
