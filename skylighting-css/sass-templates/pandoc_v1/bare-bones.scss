@@ -1,0 +1,156 @@
+/*
+    ==============================================================================
+                         Bare-Bones Pandoc Highlighting Theme                     
+    ==============================================================================
+    "bare-bones.scss" v1.0.1 (2017-11-16) | pandoc v1.19.2 | by Tristano Ajmone.
+
+    This Sass template emulates the definitions and structure of pandoc's (v1.x)
+    built-in CSS styles (skylighting themes for syntax highlighting).
+    
+    All possible syntax tokens are covered.
+    
+    Use it as a starting point for your custom themes: adjust it to your needs and
+    delete tokens that don't apply to the language/syntax you're targeting.
+
+    Released into the public domain according to the Unlicense terms:
+
+        http://unlicense.org/
+    
+    Credits and mentioning are not mandatory -- but they'd be highly appreciated!
+    ------------------------------------------------------------------------------
+*/
+div.sourceCode {
+    overflow-x: auto;
+}
+
+table.sourceCode,
+tr.sourceCode,
+td.lineNumbers,
+td.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none;
+}
+
+pre,
+code,
+table.sourceCode {
+    background-color: #dddddd;
+    color: #000000;
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%;
+}
+
+td {
+    &.lineNumbers {
+        text-align: right;
+        padding-right: 4px;
+        padding-left: 4px;
+        color: #aaaaaa;
+        border-right: 1px solid #aaaaaa;
+    }
+    &.sourceCode {
+        padding-left: 5px;
+    }
+}
+
+code {
+    & > span {
+        &.al { /* Alert */
+            color: #000000;
+        }
+        &.an { /* Annotation */
+            color: #000000;
+        }
+        &.at { /* Attribute */
+            color: #000000;
+        }
+        &.bn { /* BaseN */
+            color: #000000;
+        }
+        &.bu { /* BuiltIn */
+            color: #000000;
+        }
+        &.cf { /* Control Flow */
+            color: #000000;
+        }
+        &.ch { /* Char */
+            color: #000000;
+        }
+        &.cn { /* Constant */
+            color: #000000;
+        }
+        &.co { /* Comment */
+            color: #000000;
+        }
+        &.cv { /* Comment Var */
+            color: #000000;
+        }
+        &.do { /* Documentation */
+            color: #000000;
+        }
+        &.dt { /* DataType */
+            color: #000000;
+        }
+        &.dv { /* DecVal */
+            color: #000000;
+        }
+        &.er { /* Error */
+            color: #000000;
+        }
+        &.ex { /* Extension */
+            color: #000000;
+        }
+        &.fl { /* Float */
+            color: #000000;
+        }
+        &.fu { /* Function */
+            color: #000000;
+        }
+        &.im { /* Import */
+            color: #000000;
+        }
+        &.in { /* Information */
+            color: #000000;
+        }
+        &.kw { /* Keyword */
+            color: #000000;
+        }
+        &.op { /* Operator */
+            color: #000000;
+        }
+        &.ot { /* Other */
+            color: #000000;
+        }
+        &.pp { /* Preprocessor */
+            color: #000000;
+        }
+        &.re { /* Region Marker */
+            color: #000000;
+        }
+        &.sc { /* Special Char */
+            color: #000000;
+        }
+        &.ss { /* Special String */
+            color: #000000;
+        }
+        &.st { /* String */
+            color: #000000;
+        }
+        &.va { /* Variable */
+            color: #000000;
+        }
+        &.vs { /* Verbatim String */
+            color: #000000;
+        }
+        &.wa { /* Warning */
+            color: #000000;
+        }
+    }
+}
+
+ 

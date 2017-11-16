@@ -21,7 +21,13 @@ They are intended as a examples and quick reference when developing custom style
 
   - [`/pandoc_v1/`](./pandoc_v1/)
 
-In the “[`/pandoc_v1/`](./pandoc_v1/)” you’ll’ find the equivalent files for pandoc v1 (version 2 introduced some changes in the themes’ CSS, so they are kept for projects that still require pandoc v1.x).
+In the “[`/pandoc_v1/`](./pandoc_v1/)” you’ll’ find the equivalent files for pandoc v1 — version 2 introduced some changes in syntax highlighting HTML tags and built-in styles’ CSS, so the old files are kept for projects that still require pandoc `v1.x`.
+
+From [pandoc v2.0 release notes](https://github.com/jgm/pandoc/releases/tag/2.0):
+
+> The way highlighted code blocks are formatted in HTML has been changed (David Baynard), in ways that may require changes in hard-coded CSS affecting highlighting. (If you haven’t included hard-coded highlighting CSS in your template, you needn’t change anything.)
+
+Most notably, line-numbered code dosen’t use HTML tables anymore.
 
 # About The Styles
 

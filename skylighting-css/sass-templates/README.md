@@ -1,35 +1,46 @@
-Sass Highlighting Templates for Pandoc
-======================================
+# Sass Highlighting Templates for Pandoc
 
-    pandoc v1.19.2
+    pandoc v2.0.2 | v1.19.2
 
-Sass templates for creating custom pandoc syntax highlighting themes.
+Sass templates for creating custom syntax highlighting themes for pandoc v2.
 
-------------------------------------------------------------------------
+-----
 
 **Table of Contents**
 
 <!-- #toc -->
--   [Resources List](#resources-list)
--   [Introduction](#introduction)
+
+  - [Resources List](#resources-list)
+      - [Pandoc v1 Styles](#pandoc-v1-styles)
+  - [Introduction](#introduction)
 
 <!-- /toc -->
 
-------------------------------------------------------------------------
+-----
 
-Resources List
-==============
+# Resources List
 
--   [`bare-bones.scss`](./bare-bones.scss) — Basic Sass boilerplate replicating pandoc’s built-in sytles.
--   [`build-n-watch.bat`](./build-n-watch.bat) — Batch script for building and watching SCSS files in this folder.
--   [`UNLICENSE`](./UNLICENSE) — The Unlicense terms (pulic domain) for the SCSS files.
+  - [`bare-bones.scss`](./bare-bones.scss) — Basic Sass boilerplate replicating pandoc’s built-in sytles.
+  - [`build-n-watch.bat`](./build-n-watch.bat) — Batch script for building and watching SCSS files in this folder.
+  - [`UNLICENSE`](./UNLICENSE) — The Unlicense terms (pulic domain) for the SCSS files.
 
-Introduction
-============
+## Pandoc v1 Styles
+
+  - [`/pandoc_v1/`](./pandoc_v1/)
+
+In the “[`/pandoc_v1/`](./pandoc_v1/)” you’ll’ find the equivalent files for pandoc v1 — version 2 introduced some changes in syntax highlighting HTML tags and built-in styles’ CSS, so the old files are kept for projects that still require pandoc `v1.x`.
+
+From [pandoc v2.0 release notes](https://github.com/jgm/pandoc/releases/tag/2.0):
+
+> The way highlighted code blocks are formatted in HTML has been changed (David Baynard), in ways that may require changes in hard-coded CSS affecting highlighting. (If you haven’t included hard-coded highlighting CSS in your template, you needn’t change anything.)
+
+Most notably, line-numbered code dosen’t use HTML tables anymore.
+
+# Introduction
 
 Sass (syntactically awesome stylesheets) is a great tool for creating CSS stylesheets:
 
--   <http://sass-lang.com/>
+  - <http://sass-lang.com/>
 
 Especially so if you’re planning to create a stylesheet that applies different color themes for each language — then Sass will save you time and let you work with smaller and less entangled source files.
 
