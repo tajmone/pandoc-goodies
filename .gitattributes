@@ -1,0 +1,134 @@
+# ==============================================================================
+#                            Line Endings Conversion                            
+# ==============================================================================
+# Set Git's default behaviour to text-files autodetection, in case users don't
+# have `core.autocrlf` set:
+* text=auto
+
+# ------------------------------------------------------------------------------
+#                    Text Files (EOL Normalization Settings)                    
+# ------------------------------------------------------------------------------
+
+## =================
+## SOURCE CODE FILES
+## =================
+
+## PP Macros
+## ---------
+*.pp           text
+
+## Pandoc Templates
+## ----------------
+*.html5        text
+
+## Shell scripts
+## -------------
+*.bat          text eol=crlf
+*.com          text eol=crlf
+*.sh           text eol=lf
+
+## Scripts
+## -------
+*.lua          text
+*.php          text
+*.pl           text
+*.py           text
+*.rb           text
+*.tcl          text
+
+## ==================
+## MISC. DATA FORMATS
+## ==================
+*.json         text
+*.xml          text
+*.xhtml        text
+
+## ===========================
+## HIGHLIGHT LANGDEFS & THEMES
+## ===========================
+*.lang         text
+*.theme        text
+
+# =================
+## WEB-RELATED FILES
+## =================
+*.htm          text
+*.html         text
+*.css          text
+*.js           text
+*.sass         text
+*.scss         text
+
+## ===================
+## DOCUMENTATION FILES
+## ===================
+*.txt          text
+*COPYRIGHT*    text
+*README*       text
+AUTHORS        text
+CHANGELOG      text
+CHANGES        text
+CONTRIBUTING   text
+COPYING        text
+copyright      text
+INSTALL        text
+license        text
+LICENSE        text
+NEWS           text
+readme         text
+TODO           text
+
+## ===================
+## CONFIGURATION FILES
+## ===================
+
+## Git settings
+## ----------
+.gitattributes text
+.gitconfig     text
+.gitignore     text
+
+# ------------------------------------------------------------------------------
+#                                  Binary Files                                 
+# ------------------------------------------------------------------------------
+# Explicitly declare all files that are binary and shouldn't be modified by Git:
+
+## ========
+## GRAPHICS
+## ========
+*.bmp          binary
+*.gif          binary
+*.icns         binary
+*.ico          binary
+*.jpeg         binary
+*.jpg          binary
+*.png          binary
+
+## ========
+## ARCHIVES
+## ========
+*.7z           binary
+*.gz           binary
+*.jar          binary
+*.rar          binary
+*.tar          binary
+*.zip          binary
+
+# ==============================================================================
+#                                GitHub Linguist                                
+# ==============================================================================
+#  -- https://github.com/github/linguist
+# Manually define/override some extension so that GitHub's Linguist library can
+# 1) correctly gather statistics on source files, and
+# 2) use proper syntax highlighting on GitHub's WebUI.
+
+## ================
+## PANDOC TEMPLATES
+## ================
+*.html5        linguist-language=HTML
+
+## ===========================
+## HIGHLIGHT LANGDEFS & THEMES
+## ===========================
+*.lang         linguist-language=Lua
+*.theme        linguist-language=Lua
