@@ -73,7 +73,7 @@ COPYING        text
 copyright      text
 INSTALL        text
 license        text
-LICENSE        text
+*LICENSE*      text
 NEWS           text
 readme         text
 TODO           text
