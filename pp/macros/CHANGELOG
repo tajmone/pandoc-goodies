@@ -28,6 +28,10 @@ CHANGES:
   - The new stylesheet reflects the changes in GFM-Alerts.pp" v2.1:
     - outer div ".flash-messages" removed
     - class names have changed
+- "GFM-TaskList.css" v1.1:
+  - Added a few CSS lines to ensure that when Task-List entries are wrapped
+    in <p> tags they have top- and bottom-margin of "0". (looks like with
+    pandoc v2 paragraphs are sneaking-in when using the Task-List macro).
 
 ADDED:
 - "GFM-Alerts.scss" v2.0:

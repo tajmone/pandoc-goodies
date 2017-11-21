@@ -10,8 +10,8 @@ High Priority
 
 ## CSS Problems
 
-- [ ] `GFM-TaskList.css`:
-    - [ ] fix `<p>` styles --- Pandoc v2 is forcing paragraphs in list elements, which is causing too much spacing between list elements.
+- [x] `GFM-TaskList.css`:
+    - [x] fix `<p>` styles --- Pandoc v2 is forcing paragraphs in list elements, which is causing too much spacing between list elements.
 
 Change Existing Macros
 ----------------------

@@ -1,3 +1,7 @@
+/*	"GFM-TaskList.css" v1.1 (2017/11/21)
+	by Tristano Ajmone:
+	https://github.com/tajmone/pandoc-goodies
+*/
 .task-list-item input {
   margin: 0 0.2em 0.25em -1.6em;
   vertical-align: middle;
@@ -14,4 +18,11 @@
 
 .task-list-item+.task-list-item {
   margin-top: 3px;
+}
+
+li.task-list-item > p,
+li.task-list-item ~ p,
+li.task-list-item ~ p {
+	margin-top: 0;
+	margin-bottom: 0;
 }
