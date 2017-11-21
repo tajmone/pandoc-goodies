@@ -1,4 +1,4 @@
-/*	"GFM-TaskList.css" v1.1 (2017/11/21)
+/*	"GFM-TaskList.css" v1.2 (2017/11/21)
 	by Tristano Ajmone:
 	https://github.com/tajmone/pandoc-goodies
 */
@@ -21,7 +21,6 @@
 }
 
 li.task-list-item > p,
-li.task-list-item ~ p,
 li.task-list-item ~ p {
 	margin-top: 0;
 	margin-bottom: 0;

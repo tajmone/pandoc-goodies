@@ -32,7 +32,8 @@ CHANGES:
   - Added a few CSS lines to ensure that when Task-List entries are wrapped
     in <p> tags they have top- and bottom-margin of "0". (looks like with
     pandoc v2 paragraphs are sneaking-in when using the Task-List macro).
-
+- "GFM-TaskList.css" v1.2:
+  - Fixed a duplicate CSS line (just redundant, no behaviour changes).
 ADDED:
 - "GFM-Alerts.scss" v2.0:
   - First release (starts from v2.0 to mirror current project status).
