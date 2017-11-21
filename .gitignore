@@ -5,11 +5,16 @@
 #  -- https://github.com/tajmone/pandoc-goodies
 # ------------------------------------------------------------------------------
 
+### Sass ###
+# Cache Folder
+.sass-cache
+
 # ==============================================================================
 #                                    Node.js                                    
 # ==============================================================================
-# Some build/batch/bash files require Node apps; some users might rather install
-# them locally to the project instead of globally.
+# Some build/batch/bash files require Node apps; since some users might rather
+# install them locally to the project instead of globally, these settings might
+# be useful to cover for such cases.
 # ------------------------------------------------------------------------------
 # Created by https://www.gitignore.io/api/node
 

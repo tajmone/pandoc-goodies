@@ -1,7 +1,10 @@
+---
+title:      Highlight PP-Macros Test
+pagetitle:  Highlight Test
+...
+
 !import(RUN-TESTS.pp)
 !GFMAlertsInlineCSS
-
-# Highlight PP-Macros Test
 
 This is a run test of the GFM-TaskList pp-macros set.
 

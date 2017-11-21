@@ -1,48 +1,141 @@
-/*  ==============================================================================
-                                 Primer CSS by GitHub                             
-    ==============================================================================
-    This file was adapted from the Primer CSS project:
+/*! "GFM-Alerts.css" v2.0 | 2017/11/21 | MIT License (MIT)
+    Adapted by Tristano Ajmone from "flash.scss" of Primer CSS by GitHub Inc.:
 
-    -- https://github.com/primer/primer-alerts/blob/master/lib/flash.scss
+    https://github.com/primer/primer/blob/master/modules/primer-alerts/lib/flash.scss
+    http://primercss.io/archive/alerts/
 
-    Copyright (c) 2016 GitHub Inc. Released under The MIT License (MIT).
-    ============================================================================== */
+    Copyright (c) 2017 Tristano Ajmone.
+    Copyright (c) 2017 GitHub Inc.
+*/
+.Alert,
+.Warning,
+.Error,
+.Success,
+.Note {
+  padding: 11px;
+  margin-bottom: 24px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px; }
+  .Alert p,
+  .Warning p,
+  .Error p,
+  .Success p,
+  .Note p {
+    margin-top: 0; }
+    .Alert p:last-child,
+    .Warning p:last-child,
+    .Error p:last-child,
+    .Success p:last-child,
+    .Note p:last-child {
+      margin-bottom: 0; }
 
-.flash {
-    position: relative;
-    padding: 16px;
-    color: #246;
-    background-color: #e2eef9;
-    border: 1px solid #bac6d3;
-    border-radius: 3px;
-}
-.flash p:last-child {
-    margin-bottom: 0;
-}
-.flash-messages {
-    margin-bottom: 24px;
-}
-.flash-warn {
-    color: #4c4a42;
-    background-color: #fff9ea;
-    border-color: #dfd8c2;
-}
-.flash-error {
-    color: #911;
-    background-color: #fcdede;
-    border-color: #d2b2b2;
-}
-.flash-success {
-    color: #22662c;
-    background-color: #e2f9e5;
-    border-color: #bad3be;
-}
-/* Custom additions not present in "flash.scss" ... */
-.flash-plain {
-    color: #4c4a42;
-    background-color: #f5f5f5;
-    border-color: #c1c1c1;
-}
-.flash p {
-    margin-top: 0;
-}
+.Alert {
+  color: #224466;
+  background-color: #E2EEF9;
+  border-color: #BAC6D3; }
+
+.Warning {
+  color: #4C4A42;
+  background-color: #FFF9EA;
+  border-color: #DFD8C2; }
+
+.Error {
+  color: #991111;
+  background-color: #FCDEDE;
+  border-color: #D2B2B2; }
+
+.Success {
+  color: #22662C;
+  background-color: #E2F9E5;
+  border-color: #BAD3BE; }
+
+.Note {
+  color: #2F363D;
+  background-color: #F6F8FA;
+  border-color: #D5D8DA; }
+
+.Alert h1,
+.Alert h2,
+.Alert h3,
+.Alert h4,
+.Alert h5,
+.Alert h6 {
+  color: #224466;
+  margin-bottom: 0; }
+
+.Warning h1,
+.Warning h2,
+.Warning h3,
+.Warning h4,
+.Warning h5,
+.Warning h6 {
+  color: #4C4A42;
+  margin-bottom: 0; }
+
+.Error h1,
+.Error h2,
+.Error h3,
+.Error h4,
+.Error h5,
+.Error h6 {
+  color: #991111;
+  margin-bottom: 0; }
+
+.Success h1,
+.Success h2,
+.Success h3,
+.Success h4,
+.Success h5,
+.Success h6 {
+  color: #22662C;
+  margin-bottom: 0; }
+
+.Note h1,
+.Note h2,
+.Note h3,
+.Note h4,
+.Note h5,
+.Note h6 {
+  color: #2F363D;
+  margin-bottom: 0; }
+
+.Alert h1:first-child,
+.Alert h2:first-child,
+.Alert h3:first-child,
+.Alert h4:first-child,
+.Alert h5:first-child,
+.Alert h6:first-child {
+  margin-top: 0; }
+
+.Warning h1:first-child,
+.Warning h2:first-child,
+.Warning h3:first-child,
+.Warning h4:first-child,
+.Warning h5:first-child,
+.Warning h6:first-child {
+  margin-top: 0; }
+
+.Error h1:first-child,
+.Error h2:first-child,
+.Error h3:first-child,
+.Error h4:first-child,
+.Error h5:first-child,
+.Error h6:first-child {
+  margin-top: 0; }
+
+.Success h1:first-child,
+.Success h2:first-child,
+.Success h3:first-child,
+.Success h4:first-child,
+.Success h5:first-child,
+.Success h6:first-child {
+  margin-top: 0; }
+
+.Note h1:first-child,
+.Note h2:first-child,
+.Note h3:first-child,
+.Note h4:first-child,
+.Note h5:first-child,
+.Note h6:first-child {
+  margin-top: 0; }

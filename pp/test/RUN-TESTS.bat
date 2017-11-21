@@ -3,6 +3,8 @@ CLS
 ECHO ==============================================================================
 ECHO                            RUNNING PP-MACROS TESTS                            
 ECHO ==============================================================================
+::   REQUIRES: PANDOC >= v2.0 | PP >= v2.0
+
 
 :: Load the required env-var...
 CALL ..\macros\INIT-ENV.bat
@@ -28,10 +30,8 @@ EXIT /B
 
 pp  %PP_MACROS_PATH%macros.pp ^
     %1 ^
-  | pandoc  -f markdown ^
+  | pandoc  -f markdown+smart ^
             -t html5 ^
             --css=github.css ^
             --standalone ^
-            --smart ^
-            --normalize ^
             -o %~n1.html

@@ -1,0 +1,192 @@
+/*! "GFM-Alerts.css" v2.0 | 2017/11/21 | MIT License (MIT)
+    Adapted by Tristano Ajmone from "flash.scss" of Primer CSS by GitHub Inc.:
+
+    https://github.com/primer/primer/blob/master/modules/primer-alerts/lib/flash.scss
+    http://primercss.io/archive/alerts/
+
+    Copyright (c) 2017 Tristano Ajmone.
+    Copyright (c) 2017 GitHub Inc.
+*/
+// ==============================================================================
+//                                   GFM ALERTS                                  
+// ==============================================================================
+// "GFM-Alerts.scss" v2.0 | 2017/11/21 | by Tristano Ajmone | MIT License (MIT)
+// 
+// This file was freely adapted from the Primer CSS project by GitHub Inc.:
+// 
+// -- https://github.com/primer/primer-css/blob/master/modules/primer-alerts/lib/flash.scss
+// 
+// Copyright (c) 2016 GitHub Inc. Released under The MIT License (MIT).
+// ------------------------------------------------------------------------------
+//                              Alerts Color Palette                             
+// ------------------------------------------------------------------------------
+// These colors are from the older GitHub color scheme (the new Alerts are too
+// bright for my tastes, I preferr the older colors which are most pastel-like)
+// The gray tones of '.Note' (which isn't part of Primer's Alerts) were added
+// by me, using Primer's color scheme as a reference.
+
+// Alert (Default) » Blue
+$Alert-Text:          #224466;
+$Alert-BG:            #E2EEF9;
+$Alert-Border:        #BAC6D3;
+
+// Alert Warn » Yellow
+$AlertWarn-Text:      #4C4A42;
+$AlertWarn-BG:        #FFF9EA;
+$AlertWarn-Border:    #DFD8C2;
+
+// Alert Error » Red
+$AlertError-Text:     #991111;
+$AlertError-BG:       #FCDEDE;
+$AlertError-Border:   #D2B2B2;
+
+// Alert Success » Green
+$AlertSuccess-Text:   #22662C;
+$AlertSuccess-BG:     #E2F9E5;
+$AlertSuccess-Border: #BAD3BE;
+
+// Alert Note » Gray (not part of Primer CSS)
+$AlertNote-Text:      #2F363D;
+$AlertNote-BG:        #F6F8FA;
+$AlertNote-Border:    #D5D8DA;
+
+// ------------------------------------------------------------------------------
+
+// NOTE: baseline is 24px
+
+.Alert,
+.Warning,
+.Error,
+.Success,
+.Note {
+    padding: 11px; // ie: (baseline/2)-border => (24px/2)-1px
+    margin-bottom: 24px;
+    border-style:  solid;
+    border-width:  1px;
+    border-radius: 4px;
+    p {
+        margin-top: 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.Alert {
+    color:            $Alert-Text;
+    background-color: $Alert-BG;
+    border-color:     $Alert-Border;
+}
+.Warning {
+    color:            $AlertWarn-Text;
+    background-color: $AlertWarn-BG;
+    border-color:     $AlertWarn-Border;
+}
+.Error {
+    color:            $AlertError-Text;
+    background-color: $AlertError-BG;
+    border-color:     $AlertError-Border;
+}
+.Success {
+    color:            $AlertSuccess-Text;
+    background-color: $AlertSuccess-BG;
+    border-color:     $AlertSuccess-Border;
+}
+.Note {
+    color:            $AlertNote-Text;
+    background-color: $AlertNote-BG;
+    border-color:     $AlertNote-Border;
+}
+
+// ==============================================================================
+//                           Headings 1-6 Inside Alerts                          
+// ==============================================================================
+// ALL HEADINGS: Set right Alert color, and remove margin:
+.Alert h1,
+.Alert h2,
+.Alert h3,
+.Alert h4,
+.Alert h5,
+.Alert h6 {
+    color:            $Alert-Text;
+    margin-bottom: 0;
+}
+.Warning h1,
+.Warning h2,
+.Warning h3,
+.Warning h4,
+.Warning h5,
+.Warning h6 {
+    color:            $AlertWarn-Text;
+    margin-bottom: 0;
+}
+.Error h1,
+.Error h2,
+.Error h3,
+.Error h4,
+.Error h5,
+.Error h6 {
+    color:            $AlertError-Text;
+    margin-bottom: 0;
+}
+.Success h1,
+.Success h2,
+.Success h3,
+.Success h4,
+.Success h5,
+.Success h6 {
+    color:            $AlertSuccess-Text;
+    margin-bottom: 0;
+}
+.Note h1,
+.Note h2,
+.Note h3,
+.Note h4,
+.Note h5,
+.Note h6 {
+    color:            $AlertNote-Text;
+    margin-bottom: 0;
+}
+// ------------------------------------------------------------------------------
+// 1st HEADINGS: Remove top margin in first H1-6 occuring inside Alerts:
+.Alert h1:first-child,
+.Alert h2:first-child,
+.Alert h3:first-child,
+.Alert h4:first-child,
+.Alert h5:first-child,
+.Alert h6:first-child {
+    margin-top: 0;
+}
+.Warning h1:first-child,
+.Warning h2:first-child,
+.Warning h3:first-child,
+.Warning h4:first-child,
+.Warning h5:first-child,
+.Warning h6:first-child {
+    margin-top: 0;
+}
+.Error h1:first-child,
+.Error h2:first-child,
+.Error h3:first-child,
+.Error h4:first-child,
+.Error h5:first-child,
+.Error h6:first-child {
+    margin-top: 0;
+}
+.Success h1:first-child,
+.Success h2:first-child,
+.Success h3:first-child,
+.Success h4:first-child,
+.Success h5:first-child,
+.Success h6:first-child {
+    margin-top: 0;
+}
+.Note h1:first-child,
+.Note h2:first-child,
+.Note h3:first-child,
+.Note h4:first-child,
+.Note h5:first-child,
+.Note h6:first-child {
+    margin-top: 0;
+}

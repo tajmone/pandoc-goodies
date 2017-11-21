@@ -6,6 +6,36 @@ NOTE: Obvious changes won't be logged -- eg: addition of "!import" statements
       Minor changes will not be logged either, because life is too short...
 
 ------------------------------------------------------------------------------
+                                  2017-11-21                                  
+------------------------------------------------------------------------------
+PP VERSION v2.1.5
+
+CHANGES:
+- "GFM-Alerts.pp" v2.1:
+  - Now Alerts are wrapped in a single <div> (outer <div class="flash-messages">
+    is gone).
+  - Alerts' class names have changed:
+      flash         => Alert
+      flash-warn    => Warning
+      flash-error   => Error
+      flash-success => Success
+      flash-plain   => Note
+  - "!GFMAlertNote" is the new preferred syntax replacing "!GFMAlertPlain"
+    (it better matches the new ".Note" class-name).
+  - "!GFMAlertPlain" now becomes just an alias of "!GFMAlertNote".
+- "GFM-Alerts.css" v2.0:
+  - Now "GFM-Alerts.css" is build from a Sass source file ("GFM-Alerts.scss").
+  - The new stylesheet reflects the changes in GFM-Alerts.pp" v2.1:
+    - outer div ".flash-messages" removed
+    - class names have changed
+
+ADDED:
+- "GFM-Alerts.scss" v2.0:
+  - First release (starts from v2.0 to mirror current project status).
+    This is the Sass/SCSS source file from which "GFM-Alerts.css" is now built
+    from. In the future all CSS files will be compiled from Sass sources
+    because of easier maintainance.
+------------------------------------------------------------------------------
                                   2017-10-25                                  
 ------------------------------------------------------------------------------
 PP VERSION v2.0

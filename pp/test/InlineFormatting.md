@@ -1,6 +1,9 @@
-!import(RUN-TESTS.pp)
+---
+title:      InlineFormatting PP-Macros Test
+pagetitle:  InlineFormatting Test
+...
 
-# InlineFormatting PP-Macros Test
+!import(RUN-TESTS.pp)
 
 This is a run test of the __Inline Formatting__ pp-macros set.
 

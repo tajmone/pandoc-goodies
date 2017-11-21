@@ -1,47 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title></title>
-  <style type="text/css">code{white-space: pre;}</style>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>GFM-Alerts Test</title>
   <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      div.line-block{white-space: pre-line;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+div.sourceLine, a.sourceLine { display: inline-block; min-height: 1.25em; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; }
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+div.sourceLine, a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource div.sourceLine, .numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource div.sourceLine::before, .numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; color: #aaaaaa;  padding-left: 4px; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; color: initial; }
+}
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.bn { color: #40a070; } /* BaseN */
+code span.fl { color: #40a070; } /* Float */
+code span.ch { color: #4070a0; } /* Char */
+code span.st { color: #4070a0; } /* String */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.ot { color: #007020; } /* Other */
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.fu { color: #06287e; } /* Function */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code span.cn { color: #880000; } /* Constant */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.im { } /* Import */
+code span.va { color: #19177c; } /* Variable */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.op { color: #666666; } /* Operator */
+code span.bu { } /* BuiltIn */
+code span.ex { } /* Extension */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.at { color: #7d9029; } /* Attribute */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
   </style>
   <link rel="stylesheet" href="github.css">
   <!--[if lt IE 9]>
@@ -49,9 +70,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   <![endif]-->
 </head>
 <body>
-<h1 id="gfm-alerts-pp-macros-test">GFM-Alerts PP-Macros Test</h1>
+<header>
+<h1 class="title">GFM-Alerts PP-Macros Test</h1>
+</header>
 <p>This is a run test of the <strong>GFM-Alerts</strong> pp-macros set.</p>
-<h2 id="files-list">Files List</h2>
+<h1 id="files-list">Files List</h1>
 <ul>
 <li>macros files:
 <ul>
@@ -63,194 +86,414 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="./github.css"><code>github.css</code></a> — basic document CSS styling.</li>
 </ul></li>
 </ul>
-<h2 id="macros-list">Macros list</h2>
+<h1 id="macros-list">Macros list</h1>
 <ul>
 <li><code>!GFMAlertsInlineCSS</code> — Inject required CSS</li>
-<li><code>!GFMAlert( CONTENTS )</code> — Default alert (blue)</li>
-<li><code>!GFMError( CONTENTS )</code> — Error alert (red)</li>
-<li><code>!GFMWarn( CONTENTS )</code> — Warning alert (yellow)</li>
-<li><code>!GFMSuccess( CONTENTS )</code> — Success alert (green)</li>
-<li><code>!GFMAlertPlain( CONTENTS )</code> — Plain alert (grey)</li>
+<li><code>!GFMAlert( CONTENTS )</code> — <strong>Alert</strong> (blue)</li>
+<li><code>!GFMError( CONTENTS )</code> — <strong>Warning</strong> (red)</li>
+<li><code>!GFMWarn( CONTENTS )</code> — <strong>Error</strong> (yellow)</li>
+<li><code>!GFMSuccess( CONTENTS )</code> — <strong>Success</strong> (green)</li>
+<li><code>!GFMAlertNote( CONTENTS )</code> — <strong>Note</strong> (grey)</li>
+<li><code>!GFMAlertPlain( CONTENTS )</code> — same as Note (alias of <code>!GFMAlertNote</code>)</li>
 </ul>
 <h1 id="add-alerts-css">Add Alerts CSS</h1>
 <p>We need the CSS definition for viewing alerts. We’ll use the <code>!GFMAlertsInlineCSS</code> macro to inject the contents of <code>GFM-Alerts.css</code> as an inline stylesheet:</p>
 <pre><code>!GFMAlertsInlineCSS</code></pre>
 <p>this macro emits the following raw html:</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
-<span class="co">/*  ==============================================================================</span>
-<span class="co">                                 Primer CSS by GitHub                             </span>
-<span class="co">    ==============================================================================</span>
-<span class="co">    This file was adapted from the Primer CSS project:</span>
-
-<span class="co">    -- https://github.com/primer/primer-alerts/blob/master/lib/flash.scss</span>
-
-<span class="co">    Copyright (c) 2016 GitHub Inc. Released under The MIT License (MIT).</span>
-<span class="co">    ============================================================================== */</span>
-
-<span class="fl">.flash</span> <span class="kw">{</span>
-    <span class="kw">position:</span> <span class="dt">relative</span><span class="kw">;</span>
-    <span class="kw">padding:</span> <span class="dt">16px</span><span class="kw">;</span>
-    <span class="kw">color:</span> <span class="dt">#246</span><span class="kw">;</span>
-    <span class="kw">background-color:</span> <span class="dt">#e2eef9</span><span class="kw">;</span>
-    <span class="kw">border:</span> <span class="dt">1px</span> <span class="dt">solid</span> <span class="dt">#bac6d3</span><span class="kw">;</span>
-    <span class="kw">border-radius:</span> <span class="dt">3px</span><span class="kw">;</span>
-<span class="kw">}</span>
-<span class="fl">.flash</span> p<span class="dv">:last-child</span> <span class="kw">{</span>
-    <span class="kw">margin-bottom:</span> <span class="dt">0</span><span class="kw">;</span>
-<span class="kw">}</span>
-<span class="fl">.flash-messages</span> <span class="kw">{</span>
-    <span class="kw">margin-bottom:</span> <span class="dt">24px</span><span class="kw">;</span>
-<span class="kw">}</span>
-<span class="fl">.flash-warn</span> <span class="kw">{</span>
-    <span class="kw">color:</span> <span class="dt">#4c4a42</span><span class="kw">;</span>
-    <span class="kw">background-color:</span> <span class="dt">#fff9ea</span><span class="kw">;</span>
-    <span class="kw">border-color:</span> <span class="dt">#dfd8c2</span><span class="kw">;</span>
-<span class="kw">}</span>
-<span class="fl">.flash-error</span> <span class="kw">{</span>
-    <span class="kw">color:</span> <span class="dt">#911</span><span class="kw">;</span>
-    <span class="kw">background-color:</span> <span class="dt">#fcdede</span><span class="kw">;</span>
-    <span class="kw">border-color:</span> <span class="dt">#d2b2b2</span><span class="kw">;</span>
-<span class="kw">}</span>
-<span class="fl">.flash-success</span> <span class="kw">{</span>
-    <span class="kw">color:</span> <span class="dt">#22662c</span><span class="kw">;</span>
-    <span class="kw">background-color:</span> <span class="dt">#e2f9e5</span><span class="kw">;</span>
-    <span class="kw">border-color:</span> <span class="dt">#bad3be</span><span class="kw">;</span>
-<span class="kw">}</span>
-<span class="co">/* Custom additions not present in &quot;flash.scss&quot; ... */</span>
-<span class="fl">.flash-plain</span> <span class="kw">{</span>
-    <span class="kw">color:</span> <span class="dt">#4c4a42</span><span class="kw">;</span>
-    <span class="kw">background-color:</span> <span class="dt">#f5f5f5</span><span class="kw">;</span>
-    <span class="kw">border-color:</span> <span class="dt">#c1c1c1</span><span class="kw">;</span>
-<span class="kw">}</span>
-<span class="fl">.flash</span> p <span class="kw">{</span>
-    <span class="kw">margin-top:</span> <span class="dt">0</span><span class="kw">;</span>
-<span class="kw">}</span>
-<span class="kw">&lt;/style&gt;</span></code></pre></div>
+<pre class="sourceCode html" id="cb2"><code class="sourceCode html"><div class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span></div>
+<div class="sourceLine" id="cb2-2" data-line-number="2"><span class="co">/*! &quot;GFM-Alerts.css&quot; v2.0 | 2017/11/21 | MIT License (MIT)</span></div>
+<div class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">    Adapted by Tristano Ajmone from &quot;flash.scss&quot; of Primer CSS by GitHub Inc.:</span></div>
+<div class="sourceLine" id="cb2-4" data-line-number="4"></div>
+<div class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">    https://github.com/primer/primer/blob/master/modules/primer-alerts/lib/flash.scss</span></div>
+<div class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">    http://primercss.io/archive/alerts/</span></div>
+<div class="sourceLine" id="cb2-7" data-line-number="7"></div>
+<div class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">    Copyright (c) 2017 Tristano Ajmone.</span></div>
+<div class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">    Copyright (c) 2017 GitHub Inc.</span></div>
+<div class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">*/</span></div>
+<div class="sourceLine" id="cb2-11" data-line-number="11"><span class="fu">.Alert</span>,</div>
+<div class="sourceLine" id="cb2-12" data-line-number="12"><span class="fu">.Warning</span>,</div>
+<div class="sourceLine" id="cb2-13" data-line-number="13"><span class="fu">.Error</span>,</div>
+<div class="sourceLine" id="cb2-14" data-line-number="14"><span class="fu">.Success</span>,</div>
+<div class="sourceLine" id="cb2-15" data-line-number="15"><span class="fu">.Note</span> {</div>
+<div class="sourceLine" id="cb2-16" data-line-number="16">  <span class="kw">padding</span>: <span class="dv">11px</span>;</div>
+<div class="sourceLine" id="cb2-17" data-line-number="17">  <span class="kw">margin-bottom</span>: <span class="dv">24px</span>;</div>
+<div class="sourceLine" id="cb2-18" data-line-number="18">  <span class="kw">border-style</span>: <span class="dv">solid</span>;</div>
+<div class="sourceLine" id="cb2-19" data-line-number="19">  <span class="kw">border-width</span>: <span class="dv">1px</span>;</div>
+<div class="sourceLine" id="cb2-20" data-line-number="20">  <span class="kw">border-radius</span>: <span class="dv">4px</span>; }</div>
+<div class="sourceLine" id="cb2-21" data-line-number="21">  <span class="fu">.Alert</span> p,</div>
+<div class="sourceLine" id="cb2-22" data-line-number="22">  <span class="fu">.Warning</span> p,</div>
+<div class="sourceLine" id="cb2-23" data-line-number="23">  <span class="fu">.Error</span> p,</div>
+<div class="sourceLine" id="cb2-24" data-line-number="24">  <span class="fu">.Success</span> p,</div>
+<div class="sourceLine" id="cb2-25" data-line-number="25">  <span class="fu">.Note</span> p {</div>
+<div class="sourceLine" id="cb2-26" data-line-number="26">    <span class="kw">margin-top</span>: <span class="dv">0</span>; }</div>
+<div class="sourceLine" id="cb2-27" data-line-number="27">    <span class="fu">.Alert</span> p<span class="in">:last-child</span>,</div>
+<div class="sourceLine" id="cb2-28" data-line-number="28">    <span class="fu">.Warning</span> p<span class="in">:last-child</span>,</div>
+<div class="sourceLine" id="cb2-29" data-line-number="29">    <span class="fu">.Error</span> p<span class="in">:last-child</span>,</div>
+<div class="sourceLine" id="cb2-30" data-line-number="30">    <span class="fu">.Success</span> p<span class="in">:last-child</span>,</div>
+<div class="sourceLine" id="cb2-31" data-line-number="31">    <span class="fu">.Note</span> p<span class="in">:last-child</span> {</div>
+<div class="sourceLine" id="cb2-32" data-line-number="32">      <span class="kw">margin-bottom</span>: <span class="dv">0</span>; }</div>
+<div class="sourceLine" id="cb2-33" data-line-number="33"></div>
+<div class="sourceLine" id="cb2-34" data-line-number="34"><span class="fu">.Alert</span> {</div>
+<div class="sourceLine" id="cb2-35" data-line-number="35">  <span class="kw">color</span>: <span class="dv">#224466</span>;</div>
+<div class="sourceLine" id="cb2-36" data-line-number="36">  <span class="kw">background-color</span>: <span class="dv">#E2EEF9</span>;</div>
+<div class="sourceLine" id="cb2-37" data-line-number="37">  <span class="kw">border-color</span>: <span class="dv">#BAC6D3</span>; }</div>
+<div class="sourceLine" id="cb2-38" data-line-number="38"></div>
+<div class="sourceLine" id="cb2-39" data-line-number="39"><span class="fu">.Warning</span> {</div>
+<div class="sourceLine" id="cb2-40" data-line-number="40">  <span class="kw">color</span>: <span class="dv">#4C4A42</span>;</div>
+<div class="sourceLine" id="cb2-41" data-line-number="41">  <span class="kw">background-color</span>: <span class="dv">#FFF9EA</span>;</div>
+<div class="sourceLine" id="cb2-42" data-line-number="42">  <span class="kw">border-color</span>: <span class="dv">#DFD8C2</span>; }</div>
+<div class="sourceLine" id="cb2-43" data-line-number="43"></div>
+<div class="sourceLine" id="cb2-44" data-line-number="44"><span class="fu">.Error</span> {</div>
+<div class="sourceLine" id="cb2-45" data-line-number="45">  <span class="kw">color</span>: <span class="dv">#991111</span>;</div>
+<div class="sourceLine" id="cb2-46" data-line-number="46">  <span class="kw">background-color</span>: <span class="dv">#FCDEDE</span>;</div>
+<div class="sourceLine" id="cb2-47" data-line-number="47">  <span class="kw">border-color</span>: <span class="dv">#D2B2B2</span>; }</div>
+<div class="sourceLine" id="cb2-48" data-line-number="48"></div>
+<div class="sourceLine" id="cb2-49" data-line-number="49"><span class="fu">.Success</span> {</div>
+<div class="sourceLine" id="cb2-50" data-line-number="50">  <span class="kw">color</span>: <span class="dv">#22662C</span>;</div>
+<div class="sourceLine" id="cb2-51" data-line-number="51">  <span class="kw">background-color</span>: <span class="dv">#E2F9E5</span>;</div>
+<div class="sourceLine" id="cb2-52" data-line-number="52">  <span class="kw">border-color</span>: <span class="dv">#BAD3BE</span>; }</div>
+<div class="sourceLine" id="cb2-53" data-line-number="53"></div>
+<div class="sourceLine" id="cb2-54" data-line-number="54"><span class="fu">.Note</span> {</div>
+<div class="sourceLine" id="cb2-55" data-line-number="55">  <span class="kw">color</span>: <span class="dv">#2F363D</span>;</div>
+<div class="sourceLine" id="cb2-56" data-line-number="56">  <span class="kw">background-color</span>: <span class="dv">#F6F8FA</span>;</div>
+<div class="sourceLine" id="cb2-57" data-line-number="57">  <span class="kw">border-color</span>: <span class="dv">#D5D8DA</span>; }</div>
+<div class="sourceLine" id="cb2-58" data-line-number="58"></div>
+<div class="sourceLine" id="cb2-59" data-line-number="59"><span class="fu">.Alert</span> h1,</div>
+<div class="sourceLine" id="cb2-60" data-line-number="60"><span class="fu">.Alert</span> h2,</div>
+<div class="sourceLine" id="cb2-61" data-line-number="61"><span class="fu">.Alert</span> h3,</div>
+<div class="sourceLine" id="cb2-62" data-line-number="62"><span class="fu">.Alert</span> h4,</div>
+<div class="sourceLine" id="cb2-63" data-line-number="63"><span class="fu">.Alert</span> h5,</div>
+<div class="sourceLine" id="cb2-64" data-line-number="64"><span class="fu">.Alert</span> h6 {</div>
+<div class="sourceLine" id="cb2-65" data-line-number="65">  <span class="kw">color</span>: <span class="dv">#224466</span>;</div>
+<div class="sourceLine" id="cb2-66" data-line-number="66">  <span class="kw">margin-bottom</span>: <span class="dv">0</span>; }</div>
+<div class="sourceLine" id="cb2-67" data-line-number="67"></div>
+<div class="sourceLine" id="cb2-68" data-line-number="68"><span class="fu">.Warning</span> h1,</div>
+<div class="sourceLine" id="cb2-69" data-line-number="69"><span class="fu">.Warning</span> h2,</div>
+<div class="sourceLine" id="cb2-70" data-line-number="70"><span class="fu">.Warning</span> h3,</div>
+<div class="sourceLine" id="cb2-71" data-line-number="71"><span class="fu">.Warning</span> h4,</div>
+<div class="sourceLine" id="cb2-72" data-line-number="72"><span class="fu">.Warning</span> h5,</div>
+<div class="sourceLine" id="cb2-73" data-line-number="73"><span class="fu">.Warning</span> h6 {</div>
+<div class="sourceLine" id="cb2-74" data-line-number="74">  <span class="kw">color</span>: <span class="dv">#4C4A42</span>;</div>
+<div class="sourceLine" id="cb2-75" data-line-number="75">  <span class="kw">margin-bottom</span>: <span class="dv">0</span>; }</div>
+<div class="sourceLine" id="cb2-76" data-line-number="76"></div>
+<div class="sourceLine" id="cb2-77" data-line-number="77"><span class="fu">.Error</span> h1,</div>
+<div class="sourceLine" id="cb2-78" data-line-number="78"><span class="fu">.Error</span> h2,</div>
+<div class="sourceLine" id="cb2-79" data-line-number="79"><span class="fu">.Error</span> h3,</div>
+<div class="sourceLine" id="cb2-80" data-line-number="80"><span class="fu">.Error</span> h4,</div>
+<div class="sourceLine" id="cb2-81" data-line-number="81"><span class="fu">.Error</span> h5,</div>
+<div class="sourceLine" id="cb2-82" data-line-number="82"><span class="fu">.Error</span> h6 {</div>
+<div class="sourceLine" id="cb2-83" data-line-number="83">  <span class="kw">color</span>: <span class="dv">#991111</span>;</div>
+<div class="sourceLine" id="cb2-84" data-line-number="84">  <span class="kw">margin-bottom</span>: <span class="dv">0</span>; }</div>
+<div class="sourceLine" id="cb2-85" data-line-number="85"></div>
+<div class="sourceLine" id="cb2-86" data-line-number="86"><span class="fu">.Success</span> h1,</div>
+<div class="sourceLine" id="cb2-87" data-line-number="87"><span class="fu">.Success</span> h2,</div>
+<div class="sourceLine" id="cb2-88" data-line-number="88"><span class="fu">.Success</span> h3,</div>
+<div class="sourceLine" id="cb2-89" data-line-number="89"><span class="fu">.Success</span> h4,</div>
+<div class="sourceLine" id="cb2-90" data-line-number="90"><span class="fu">.Success</span> h5,</div>
+<div class="sourceLine" id="cb2-91" data-line-number="91"><span class="fu">.Success</span> h6 {</div>
+<div class="sourceLine" id="cb2-92" data-line-number="92">  <span class="kw">color</span>: <span class="dv">#22662C</span>;</div>
+<div class="sourceLine" id="cb2-93" data-line-number="93">  <span class="kw">margin-bottom</span>: <span class="dv">0</span>; }</div>
+<div class="sourceLine" id="cb2-94" data-line-number="94"></div>
+<div class="sourceLine" id="cb2-95" data-line-number="95"><span class="fu">.Note</span> h1,</div>
+<div class="sourceLine" id="cb2-96" data-line-number="96"><span class="fu">.Note</span> h2,</div>
+<div class="sourceLine" id="cb2-97" data-line-number="97"><span class="fu">.Note</span> h3,</div>
+<div class="sourceLine" id="cb2-98" data-line-number="98"><span class="fu">.Note</span> h4,</div>
+<div class="sourceLine" id="cb2-99" data-line-number="99"><span class="fu">.Note</span> h5,</div>
+<div class="sourceLine" id="cb2-100" data-line-number="100"><span class="fu">.Note</span> h6 {</div>
+<div class="sourceLine" id="cb2-101" data-line-number="101">  <span class="kw">color</span>: <span class="dv">#2F363D</span>;</div>
+<div class="sourceLine" id="cb2-102" data-line-number="102">  <span class="kw">margin-bottom</span>: <span class="dv">0</span>; }</div>
+<div class="sourceLine" id="cb2-103" data-line-number="103"></div>
+<div class="sourceLine" id="cb2-104" data-line-number="104"><span class="fu">.Alert</span> h1<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-105" data-line-number="105"><span class="fu">.Alert</span> h2<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-106" data-line-number="106"><span class="fu">.Alert</span> h3<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-107" data-line-number="107"><span class="fu">.Alert</span> h4<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-108" data-line-number="108"><span class="fu">.Alert</span> h5<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-109" data-line-number="109"><span class="fu">.Alert</span> h6<span class="in">:first-child</span> {</div>
+<div class="sourceLine" id="cb2-110" data-line-number="110">  <span class="kw">margin-top</span>: <span class="dv">0</span>; }</div>
+<div class="sourceLine" id="cb2-111" data-line-number="111"></div>
+<div class="sourceLine" id="cb2-112" data-line-number="112"><span class="fu">.Warning</span> h1<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-113" data-line-number="113"><span class="fu">.Warning</span> h2<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-114" data-line-number="114"><span class="fu">.Warning</span> h3<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-115" data-line-number="115"><span class="fu">.Warning</span> h4<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-116" data-line-number="116"><span class="fu">.Warning</span> h5<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-117" data-line-number="117"><span class="fu">.Warning</span> h6<span class="in">:first-child</span> {</div>
+<div class="sourceLine" id="cb2-118" data-line-number="118">  <span class="kw">margin-top</span>: <span class="dv">0</span>; }</div>
+<div class="sourceLine" id="cb2-119" data-line-number="119"></div>
+<div class="sourceLine" id="cb2-120" data-line-number="120"><span class="fu">.Error</span> h1<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-121" data-line-number="121"><span class="fu">.Error</span> h2<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-122" data-line-number="122"><span class="fu">.Error</span> h3<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-123" data-line-number="123"><span class="fu">.Error</span> h4<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-124" data-line-number="124"><span class="fu">.Error</span> h5<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-125" data-line-number="125"><span class="fu">.Error</span> h6<span class="in">:first-child</span> {</div>
+<div class="sourceLine" id="cb2-126" data-line-number="126">  <span class="kw">margin-top</span>: <span class="dv">0</span>; }</div>
+<div class="sourceLine" id="cb2-127" data-line-number="127"></div>
+<div class="sourceLine" id="cb2-128" data-line-number="128"><span class="fu">.Success</span> h1<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-129" data-line-number="129"><span class="fu">.Success</span> h2<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-130" data-line-number="130"><span class="fu">.Success</span> h3<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-131" data-line-number="131"><span class="fu">.Success</span> h4<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-132" data-line-number="132"><span class="fu">.Success</span> h5<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-133" data-line-number="133"><span class="fu">.Success</span> h6<span class="in">:first-child</span> {</div>
+<div class="sourceLine" id="cb2-134" data-line-number="134">  <span class="kw">margin-top</span>: <span class="dv">0</span>; }</div>
+<div class="sourceLine" id="cb2-135" data-line-number="135"></div>
+<div class="sourceLine" id="cb2-136" data-line-number="136"><span class="fu">.Note</span> h1<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-137" data-line-number="137"><span class="fu">.Note</span> h2<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-138" data-line-number="138"><span class="fu">.Note</span> h3<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-139" data-line-number="139"><span class="fu">.Note</span> h4<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-140" data-line-number="140"><span class="fu">.Note</span> h5<span class="in">:first-child</span>,</div>
+<div class="sourceLine" id="cb2-141" data-line-number="141"><span class="fu">.Note</span> h6<span class="in">:first-child</span> {</div>
+<div class="sourceLine" id="cb2-142" data-line-number="142">  <span class="kw">margin-top</span>: <span class="dv">0</span>; }</div>
+<div class="sourceLine" id="cb2-143" data-line-number="143"></div>
+<div class="sourceLine" id="cb2-144" data-line-number="144"><span class="kw">&lt;/style&gt;</span></div></code></pre>
 <style type="text/css">
-/*  ==============================================================================
-                                 Primer CSS by GitHub                             
-    ==============================================================================
-    This file was adapted from the Primer CSS project:
+/*! "GFM-Alerts.css" v2.0 | 2017/11/21 | MIT License (MIT)
+    Adapted by Tristano Ajmone from "flash.scss" of Primer CSS by GitHub Inc.:
 
-    -- https://github.com/primer/primer-alerts/blob/master/lib/flash.scss
+    https://github.com/primer/primer/blob/master/modules/primer-alerts/lib/flash.scss
+    http://primercss.io/archive/alerts/
 
-    Copyright (c) 2016 GitHub Inc. Released under The MIT License (MIT).
-    ============================================================================== */
+    Copyright (c) 2017 Tristano Ajmone.
+    Copyright (c) 2017 GitHub Inc.
+*/
+.Alert,
+.Warning,
+.Error,
+.Success,
+.Note {
+  padding: 11px;
+  margin-bottom: 24px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px; }
+  .Alert p,
+  .Warning p,
+  .Error p,
+  .Success p,
+  .Note p {
+    margin-top: 0; }
+    .Alert p:last-child,
+    .Warning p:last-child,
+    .Error p:last-child,
+    .Success p:last-child,
+    .Note p:last-child {
+      margin-bottom: 0; }
 
-.flash {
-    position: relative;
-    padding: 16px;
-    color: #246;
-    background-color: #e2eef9;
-    border: 1px solid #bac6d3;
-    border-radius: 3px;
-}
-.flash p:last-child {
-    margin-bottom: 0;
-}
-.flash-messages {
-    margin-bottom: 24px;
-}
-.flash-warn {
-    color: #4c4a42;
-    background-color: #fff9ea;
-    border-color: #dfd8c2;
-}
-.flash-error {
-    color: #911;
-    background-color: #fcdede;
-    border-color: #d2b2b2;
-}
-.flash-success {
-    color: #22662c;
-    background-color: #e2f9e5;
-    border-color: #bad3be;
-}
-/* Custom additions not present in "flash.scss" ... */
-.flash-plain {
-    color: #4c4a42;
-    background-color: #f5f5f5;
-    border-color: #c1c1c1;
-}
-.flash p {
-    margin-top: 0;
-}
+.Alert {
+  color: #224466;
+  background-color: #E2EEF9;
+  border-color: #BAC6D3; }
+
+.Warning {
+  color: #4C4A42;
+  background-color: #FFF9EA;
+  border-color: #DFD8C2; }
+
+.Error {
+  color: #991111;
+  background-color: #FCDEDE;
+  border-color: #D2B2B2; }
+
+.Success {
+  color: #22662C;
+  background-color: #E2F9E5;
+  border-color: #BAD3BE; }
+
+.Note {
+  color: #2F363D;
+  background-color: #F6F8FA;
+  border-color: #D5D8DA; }
+
+.Alert h1,
+.Alert h2,
+.Alert h3,
+.Alert h4,
+.Alert h5,
+.Alert h6 {
+  color: #224466;
+  margin-bottom: 0; }
+
+.Warning h1,
+.Warning h2,
+.Warning h3,
+.Warning h4,
+.Warning h5,
+.Warning h6 {
+  color: #4C4A42;
+  margin-bottom: 0; }
+
+.Error h1,
+.Error h2,
+.Error h3,
+.Error h4,
+.Error h5,
+.Error h6 {
+  color: #991111;
+  margin-bottom: 0; }
+
+.Success h1,
+.Success h2,
+.Success h3,
+.Success h4,
+.Success h5,
+.Success h6 {
+  color: #22662C;
+  margin-bottom: 0; }
+
+.Note h1,
+.Note h2,
+.Note h3,
+.Note h4,
+.Note h5,
+.Note h6 {
+  color: #2F363D;
+  margin-bottom: 0; }
+
+.Alert h1:first-child,
+.Alert h2:first-child,
+.Alert h3:first-child,
+.Alert h4:first-child,
+.Alert h5:first-child,
+.Alert h6:first-child {
+  margin-top: 0; }
+
+.Warning h1:first-child,
+.Warning h2:first-child,
+.Warning h3:first-child,
+.Warning h4:first-child,
+.Warning h5:first-child,
+.Warning h6:first-child {
+  margin-top: 0; }
+
+.Error h1:first-child,
+.Error h2:first-child,
+.Error h3:first-child,
+.Error h4:first-child,
+.Error h5:first-child,
+.Error h6:first-child {
+  margin-top: 0; }
+
+.Success h1:first-child,
+.Success h2:first-child,
+.Success h3:first-child,
+.Success h4:first-child,
+.Success h5:first-child,
+.Success h6:first-child {
+  margin-top: 0; }
+
+.Note h1:first-child,
+.Note h2:first-child,
+.Note h3:first-child,
+.Note h4:first-child,
+.Note h5:first-child,
+.Note h6:first-child {
+  margin-top: 0; }
+
 </style>
+<h1 id="alerts-tests">Alerts Tests</h1>
 <h2 id="default-alert">Default Alert</h2>
 <p>macro used:</p>
-<pre><code>!GFMAlert(__Default__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
+<pre><code>!GFMAlert(**Default** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
 <p>raw html output:</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;flash-messages&quot;</span><span class="kw">&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;flash &quot;</span><span class="kw">&gt;</span>
-__Default__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.
-<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;/div&gt;</span></code></pre></div>
+<pre class="sourceCode html" id="cb4"><code class="sourceCode html"><div class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;Alert&quot;</span><span class="kw">&gt;</span></div>
+<div class="sourceLine" id="cb4-2" data-line-number="2">**Default** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.</div>
+<div class="sourceLine" id="cb4-3" data-line-number="3"><span class="kw">&lt;/div&gt;</span></div></code></pre>
 <p>result preview:</p>
-<div class="flash-messages">
-<div class="flash">
+<div class="Alert">
 <p><strong>Default</strong> — Lorem ipsum dolor sit amet, pri cu libris dicunt.</p>
-</div>
 </div>
 <h2 id="warning-alert">Warning Alert</h2>
 <p>macro used:</p>
-<pre><code>!GFMWarn(__Warning__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
+<pre><code>!GFMWarn(**Warning** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
 <p>raw html output:</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;flash-messages&quot;</span><span class="kw">&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;flash flash-warn&quot;</span><span class="kw">&gt;</span>
-__Warning__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.
-<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;/div&gt;</span></code></pre></div>
+<pre class="sourceCode html" id="cb6"><code class="sourceCode html"><div class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;Warning&quot;</span><span class="kw">&gt;</span></div>
+<div class="sourceLine" id="cb6-2" data-line-number="2">**Warning** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.</div>
+<div class="sourceLine" id="cb6-3" data-line-number="3"><span class="kw">&lt;/div&gt;</span></div></code></pre>
 <p>result preview:</p>
-<div class="flash-messages">
-<div class="flash flash-warn">
+<div class="Warning">
 <p><strong>Warning</strong> — Lorem ipsum dolor sit amet, pri cu libris dicunt.</p>
-</div>
 </div>
 <h2 id="error-alert">Error Alert</h2>
 <p>macro used:</p>
-<pre><code>!GFMError(__Error__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
+<pre><code>!GFMError(**Error** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
 <p>raw html output:</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;flash-messages&quot;</span><span class="kw">&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;flash flash-error&quot;</span><span class="kw">&gt;</span>
-__Error__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.
-<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;/div&gt;</span></code></pre></div>
+<pre class="sourceCode html" id="cb8"><code class="sourceCode html"><div class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;Error&quot;</span><span class="kw">&gt;</span></div>
+<div class="sourceLine" id="cb8-2" data-line-number="2">**Error** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.</div>
+<div class="sourceLine" id="cb8-3" data-line-number="3"><span class="kw">&lt;/div&gt;</span></div></code></pre>
 <p>result preview:</p>
-<div class="flash-messages">
-<div class="flash flash-error">
+<div class="Error">
 <p><strong>Error</strong> — Lorem ipsum dolor sit amet, pri cu libris dicunt.</p>
-</div>
 </div>
 <h2 id="success-alert">Success Alert</h2>
 <p>macro used:</p>
-<pre><code>!GFMSuccess(__Success__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
+<pre><code>!GFMSuccess(**Success** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
 <p>raw html output:</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;flash-messages&quot;</span><span class="kw">&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;flash flash-success&quot;</span><span class="kw">&gt;</span>
-__Success__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.
-<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;/div&gt;</span></code></pre></div>
+<pre class="sourceCode html" id="cb10"><code class="sourceCode html"><div class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;Success&quot;</span><span class="kw">&gt;</span></div>
+<div class="sourceLine" id="cb10-2" data-line-number="2">**Success** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.</div>
+<div class="sourceLine" id="cb10-3" data-line-number="3"><span class="kw">&lt;/div&gt;</span></div></code></pre>
 <p>result preview:</p>
-<div class="flash-messages">
-<div class="flash flash-success">
+<div class="Success">
 <p><strong>Success</strong> — Lorem ipsum dolor sit amet, pri cu libris dicunt.</p>
 </div>
+<h2 id="note-alert">Note Alert</h2>
+<blockquote>
+<p><strong>NOTE</strong>: This Alert is not part of GitHub’s original set of Alerts; I’ve added it.</p>
+</blockquote>
+<p>macro used:</p>
+<pre><code>!GFMAlertNote(**Note** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
+<p>raw html output:</p>
+<pre class="sourceCode html" id="cb12"><code class="sourceCode html"><div class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;Note&quot;</span><span class="kw">&gt;</span></div>
+<div class="sourceLine" id="cb12-2" data-line-number="2">**Note** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.</div>
+<div class="sourceLine" id="cb12-3" data-line-number="3"><span class="kw">&lt;/div&gt;</span></div></code></pre>
+<p>result preview:</p>
+<div class="Note">
+<p><strong>Note</strong> — Lorem ipsum dolor sit amet, pri cu libris dicunt.</p>
 </div>
 <h2 id="plain-alert">Plain Alert</h2>
-<p><strong>NOTE</strong>: This Alert is not part of GitHub’s original set of Alerts; I’ve added it.</p>
+<blockquote>
+<p><strong>NOTE</strong>: <code>!GFMAlertPlain</code> is just an alias of <code>!GFMAlertNote</code>! The latter is the preferred syntax because it resembles the actual class name used in the <code>&lt;div&gt;</code> tag.</p>
+</blockquote>
 <p>macro used:</p>
-<pre><code>!GFMAlertPlain(__Plain__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
+<pre><code>!GFMAlertPlain(**Plain** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
 <p>raw html output:</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;flash-messages&quot;</span><span class="kw">&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;flash flash-plain&quot;</span><span class="kw">&gt;</span>
-__Plain__ — Lorem ipsum dolor sit amet, pri cu libris dicunt.
-<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;/div&gt;</span></code></pre></div>
+<pre class="sourceCode html" id="cb14"><code class="sourceCode html"><div class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;Note&quot;</span><span class="kw">&gt;</span></div>
+<div class="sourceLine" id="cb14-2" data-line-number="2">**Plain** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.</div>
+<div class="sourceLine" id="cb14-3" data-line-number="3"><span class="kw">&lt;/div&gt;</span></div></code></pre>
 <p>result preview:</p>
-<div class="flash-messages">
-<div class="flash flash-plain">
+<div class="Note">
 <p><strong>Plain</strong> — Lorem ipsum dolor sit amet, pri cu libris dicunt.</p>
 </div>
+<hr />
+<h1 id="pandoc-new-fenced-divs">Pandoc New Fenced Divs</h1>
+<p>Pandoc 2.0 introduced the <a href="http://pandoc.org/MANUAL.html#extension-fenced_divs" title="Link to pandoc documentation on &#39;fenced-divs&#39;"><code>fenced_divs</code></a> extension which allows special fenced syntax for native Div blocks. Pandoc markdown flavour supports this extension by default, and it can optionally be enabled for other markdown flavours too.</p>
+<p>Fenced divs can be used instead of PP Alert macros, achieving the same effect:</p>
+<p>macro used:</p>
+<pre><code>::: Warning ::::::
+**Warning** --- This is a Warning-Alert.
+::::::::::::::::::
+</code></pre>
+<p>result preview:</p>
+<div class="Warning">
+<p><strong>Warning</strong> — This is a Warning-Alert.</p>
 </div>
+<p>… where you only need to insert after the opening <code>:::</code> the class name of the desired GFM-Alert — ie: one of:</p>
+<ul>
+<li><code>.Alert</code></li>
+<li><code>.Warning</code></li>
+<li><code>.Error</code></li>
+<li><code>.Success</code></li>
+<li><code>.Note</code></li>
+</ul>
+<h2 id="advantages">Advantages</h2>
+<p>Using fenced divs has the advantage of not injecting raw HTML into the document, allowing conversion to other formats too. Furthermore, the fenced divs syntax allows to specify multiple classes and an identifier:</p>
+<p>macro used:</p>
+<pre><code>::: { .Success #custom-id .other-class } ::::::
+**Success** --- This is a Success-Alert.
+::::::::::::::::::
+</code></pre>
+<p>result preview:</p>
+<div id="custom-id" class="Success other-class">
+<p><strong>Success</strong> — This is a Success-Alert.</p>
+</div>
+<p>… which in the final HTML produces the following <code>&lt;div&gt;</code> tag:</p>
+<pre class="sourceCode html" id="cb17"><code class="sourceCode html"><div class="sourceLine" id="cb17-1" data-line-number="1"><span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;custom-id&quot;</span><span class="ot"> class=</span><span class="st">&quot;Success other-class&quot;</span><span class="kw">&gt;</span></div></code></pre>
 </body>
 </html>

@@ -1,47 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title></title>
-  <style type="text/css">code{white-space: pre;}</style>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Highlight Test</title>
   <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      div.line-block{white-space: pre-line;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+div.sourceLine, a.sourceLine { display: inline-block; min-height: 1.25em; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; }
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+div.sourceLine, a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource div.sourceLine, .numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource div.sourceLine::before, .numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; color: #aaaaaa;  padding-left: 4px; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; color: initial; }
+}
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.bn { color: #40a070; } /* BaseN */
+code span.fl { color: #40a070; } /* Float */
+code span.ch { color: #4070a0; } /* Char */
+code span.st { color: #4070a0; } /* String */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.ot { color: #007020; } /* Other */
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.fu { color: #06287e; } /* Function */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code span.cn { color: #880000; } /* Constant */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.im { } /* Import */
+code span.va { color: #19177c; } /* Variable */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.op { color: #666666; } /* Operator */
+code span.bu { } /* BuiltIn */
+code span.ex { } /* Extension */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.at { color: #7d9029; } /* Attribute */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
   </style>
   <link rel="stylesheet" href="github.css">
   <!--[if lt IE 9]>
@@ -49,57 +70,153 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   <![endif]-->
 </head>
 <body>
+<header>
+<h1 class="title">Highlight PP-Macros Test</h1>
+</header>
 <style type="text/css">
-/*  ==============================================================================
-                                 Primer CSS by GitHub                             
-    ==============================================================================
-    This file was adapted from the Primer CSS project:
+/*! "GFM-Alerts.css" v2.0 | 2017/11/21 | MIT License (MIT)
+    Adapted by Tristano Ajmone from "flash.scss" of Primer CSS by GitHub Inc.:
 
-    -- https://github.com/primer/primer-alerts/blob/master/lib/flash.scss
+    https://github.com/primer/primer/blob/master/modules/primer-alerts/lib/flash.scss
+    http://primercss.io/archive/alerts/
 
-    Copyright (c) 2016 GitHub Inc. Released under The MIT License (MIT).
-    ============================================================================== */
+    Copyright (c) 2017 Tristano Ajmone.
+    Copyright (c) 2017 GitHub Inc.
+*/
+.Alert,
+.Warning,
+.Error,
+.Success,
+.Note {
+  padding: 11px;
+  margin-bottom: 24px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px; }
+  .Alert p,
+  .Warning p,
+  .Error p,
+  .Success p,
+  .Note p {
+    margin-top: 0; }
+    .Alert p:last-child,
+    .Warning p:last-child,
+    .Error p:last-child,
+    .Success p:last-child,
+    .Note p:last-child {
+      margin-bottom: 0; }
 
-.flash {
-    position: relative;
-    padding: 16px;
-    color: #246;
-    background-color: #e2eef9;
-    border: 1px solid #bac6d3;
-    border-radius: 3px;
-}
-.flash p:last-child {
-    margin-bottom: 0;
-}
-.flash-messages {
-    margin-bottom: 24px;
-}
-.flash-warn {
-    color: #4c4a42;
-    background-color: #fff9ea;
-    border-color: #dfd8c2;
-}
-.flash-error {
-    color: #911;
-    background-color: #fcdede;
-    border-color: #d2b2b2;
-}
-.flash-success {
-    color: #22662c;
-    background-color: #e2f9e5;
-    border-color: #bad3be;
-}
-/* Custom additions not present in "flash.scss" ... */
-.flash-plain {
-    color: #4c4a42;
-    background-color: #f5f5f5;
-    border-color: #c1c1c1;
-}
-.flash p {
-    margin-top: 0;
-}
+.Alert {
+  color: #224466;
+  background-color: #E2EEF9;
+  border-color: #BAC6D3; }
+
+.Warning {
+  color: #4C4A42;
+  background-color: #FFF9EA;
+  border-color: #DFD8C2; }
+
+.Error {
+  color: #991111;
+  background-color: #FCDEDE;
+  border-color: #D2B2B2; }
+
+.Success {
+  color: #22662C;
+  background-color: #E2F9E5;
+  border-color: #BAD3BE; }
+
+.Note {
+  color: #2F363D;
+  background-color: #F6F8FA;
+  border-color: #D5D8DA; }
+
+.Alert h1,
+.Alert h2,
+.Alert h3,
+.Alert h4,
+.Alert h5,
+.Alert h6 {
+  color: #224466;
+  margin-bottom: 0; }
+
+.Warning h1,
+.Warning h2,
+.Warning h3,
+.Warning h4,
+.Warning h5,
+.Warning h6 {
+  color: #4C4A42;
+  margin-bottom: 0; }
+
+.Error h1,
+.Error h2,
+.Error h3,
+.Error h4,
+.Error h5,
+.Error h6 {
+  color: #991111;
+  margin-bottom: 0; }
+
+.Success h1,
+.Success h2,
+.Success h3,
+.Success h4,
+.Success h5,
+.Success h6 {
+  color: #22662C;
+  margin-bottom: 0; }
+
+.Note h1,
+.Note h2,
+.Note h3,
+.Note h4,
+.Note h5,
+.Note h6 {
+  color: #2F363D;
+  margin-bottom: 0; }
+
+.Alert h1:first-child,
+.Alert h2:first-child,
+.Alert h3:first-child,
+.Alert h4:first-child,
+.Alert h5:first-child,
+.Alert h6:first-child {
+  margin-top: 0; }
+
+.Warning h1:first-child,
+.Warning h2:first-child,
+.Warning h3:first-child,
+.Warning h4:first-child,
+.Warning h5:first-child,
+.Warning h6:first-child {
+  margin-top: 0; }
+
+.Error h1:first-child,
+.Error h2:first-child,
+.Error h3:first-child,
+.Error h4:first-child,
+.Error h5:first-child,
+.Error h6:first-child {
+  margin-top: 0; }
+
+.Success h1:first-child,
+.Success h2:first-child,
+.Success h3:first-child,
+.Success h4:first-child,
+.Success h5:first-child,
+.Success h6:first-child {
+  margin-top: 0; }
+
+.Note h1:first-child,
+.Note h2:first-child,
+.Note h3:first-child,
+.Note h4:first-child,
+.Note h5:first-child,
+.Note h6:first-child {
+  margin-top: 0; }
+
 </style>
-<h1 id="highlight-pp-macros-test">Highlight PP-Macros Test</h1>
 <p>This is a run test of the GFM-TaskList pp-macros set.</p>
 <h2 id="files-list">Files List</h2>
 <ul>
@@ -123,30 +240,30 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>For these examples we’ll import Highlight’s <code>edit-purebasic</code> theme into the document via the <code>!HighlightInlineTheme</code> macro:</p>
 <pre><code>!HighlightInlineTheme(edit-purebasic)</code></pre>
 <p>this macro emits the following raw html:</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
-<span class="co">/* Style definition file generated by highlight 3.39, http://www.andre-simon.de/ */</span>
-<span class="co">/* highlight theme: PureBASIC */</span>
-body<span class="fl">.hl</span> <span class="kw">{</span> <span class="kw">background-color:</span><span class="dt">#ffffdf</span><span class="kw">;</span> <span class="kw">}</span>
-pre<span class="fl">.hl</span>  <span class="kw">{</span> <span class="kw">color:</span><span class="dt">#000000</span><span class="kw">;</span> <span class="kw">background-color:</span><span class="dt">#ffffdf</span><span class="kw">;</span> <span class="kw">font-size:</span><span class="dt">10pt</span><span class="kw">;</span> <span class="kw">font-family:</span><span class="st">&#39;Courier New&#39;</span>,<span class="dt">monospace</span><span class="kw">;}</span>
-<span class="fl">.hl.num</span> <span class="kw">{</span> <span class="kw">color:</span><span class="dt">#000000</span><span class="kw">;</span> <span class="kw">}</span>
-<span class="fl">.hl.esc</span> <span class="kw">{</span> <span class="kw">color:</span><span class="dt">#0080ff</span><span class="kw">;</span> <span class="kw">}</span>
-<span class="fl">.hl.str</span> <span class="kw">{</span> <span class="kw">color:</span><span class="dt">#0080ff</span><span class="kw">;</span> <span class="kw">}</span>
-<span class="fl">.hl.pps</span> <span class="kw">{</span> <span class="kw">color:</span><span class="dt">#0080ff</span><span class="kw">;</span> <span class="kw">}</span>
-<span class="fl">.hl.slc</span> <span class="kw">{</span> <span class="kw">color:</span><span class="dt">#00aaaa</span><span class="kw">;</span> <span class="kw">}</span>
-<span class="fl">.hl.com</span> <span class="kw">{</span> <span class="kw">color:</span><span class="dt">#00aaaa</span><span class="kw">;</span> <span class="kw">}</span>
-<span class="fl">.hl.ppc</span> <span class="kw">{</span> <span class="kw">color:</span><span class="dt">#924b72</span><span class="kw">;</span> <span class="kw">}</span>
-<span class="fl">.hl.opt</span> <span class="kw">{</span> <span class="kw">color:</span><span class="dt">#000000</span><span class="kw">;</span> <span class="kw">}</span>
-<span class="fl">.hl.ipl</span> <span class="kw">{</span> <span class="kw">color:</span><span class="dt">#0080ff</span><span class="kw">;</span> <span class="kw">}</span>
-<span class="fl">.hl.lin</span> <span class="kw">{</span> <span class="kw">color:</span><span class="dt">#808080</span><span class="kw">;</span> <span class="kw">}</span>
-<span class="fl">.hl.kwa</span> <span class="kw">{</span> <span class="kw">color:</span><span class="dt">#006666</span><span class="kw">;</span> <span class="kw">font-weight:</span><span class="dt">bold</span><span class="kw">;</span> <span class="kw">}</span>
-<span class="fl">.hl.kwb</span> <span class="kw">{</span> <span class="kw">color:</span><span class="dt">#924b72</span><span class="kw">;</span> <span class="kw">}</span>
-<span class="fl">.hl.kwc</span> <span class="kw">{</span> <span class="kw">color:</span><span class="dt">#006666</span><span class="kw">;</span> <span class="kw">}</span>
-<span class="fl">.hl.kwd</span> <span class="kw">{</span> <span class="kw">color:</span><span class="dt">#0080ff</span><span class="kw">;</span> <span class="kw">}</span>
-
-
-<span class="kw">&lt;/style&gt;</span></code></pre></div>
+<pre class="sourceCode html" id="cb2"><code class="sourceCode html"><div class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span></div>
+<div class="sourceLine" id="cb2-2" data-line-number="2"><span class="co">/* Style definition file generated by highlight 3.40, http://www.andre-simon.de/ */</span></div>
+<div class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">/* highlight theme: PureBASIC */</span></div>
+<div class="sourceLine" id="cb2-4" data-line-number="4">body<span class="fu">.hl</span> { <span class="kw">background-color</span>:<span class="dv">#ffffdf</span>; }</div>
+<div class="sourceLine" id="cb2-5" data-line-number="5">pre<span class="fu">.hl</span>  { <span class="kw">color</span>:<span class="dv">#000000</span>; <span class="kw">background-color</span>:<span class="dv">#ffffdf</span>; <span class="kw">font-size</span>:<span class="dv">10pt</span>; <span class="kw">font-family</span>:<span class="st">&#39;Courier New&#39;</span>,<span class="dv">monospace</span>;}</div>
+<div class="sourceLine" id="cb2-6" data-line-number="6"><span class="fu">.hl.num</span> { <span class="kw">color</span>:<span class="dv">#000000</span>; }</div>
+<div class="sourceLine" id="cb2-7" data-line-number="7"><span class="fu">.hl.esc</span> { <span class="kw">color</span>:<span class="dv">#0080ff</span>; }</div>
+<div class="sourceLine" id="cb2-8" data-line-number="8"><span class="fu">.hl.str</span> { <span class="kw">color</span>:<span class="dv">#0080ff</span>; }</div>
+<div class="sourceLine" id="cb2-9" data-line-number="9"><span class="fu">.hl.pps</span> { <span class="kw">color</span>:<span class="dv">#0080ff</span>; }</div>
+<div class="sourceLine" id="cb2-10" data-line-number="10"><span class="fu">.hl.slc</span> { <span class="kw">color</span>:<span class="dv">#00aaaa</span>; }</div>
+<div class="sourceLine" id="cb2-11" data-line-number="11"><span class="fu">.hl.com</span> { <span class="kw">color</span>:<span class="dv">#00aaaa</span>; }</div>
+<div class="sourceLine" id="cb2-12" data-line-number="12"><span class="fu">.hl.ppc</span> { <span class="kw">color</span>:<span class="dv">#924b72</span>; }</div>
+<div class="sourceLine" id="cb2-13" data-line-number="13"><span class="fu">.hl.opt</span> { <span class="kw">color</span>:<span class="dv">#000000</span>; }</div>
+<div class="sourceLine" id="cb2-14" data-line-number="14"><span class="fu">.hl.ipl</span> { <span class="kw">color</span>:<span class="dv">#0080ff</span>; }</div>
+<div class="sourceLine" id="cb2-15" data-line-number="15"><span class="fu">.hl.lin</span> { <span class="kw">color</span>:<span class="dv">#808080</span>; }</div>
+<div class="sourceLine" id="cb2-16" data-line-number="16"><span class="fu">.hl.kwa</span> { <span class="kw">color</span>:<span class="dv">#006666</span>; <span class="kw">font-weight</span>:<span class="dv">bold</span>; }</div>
+<div class="sourceLine" id="cb2-17" data-line-number="17"><span class="fu">.hl.kwb</span> { <span class="kw">color</span>:<span class="dv">#924b72</span>; }</div>
+<div class="sourceLine" id="cb2-18" data-line-number="18"><span class="fu">.hl.kwc</span> { <span class="kw">color</span>:<span class="dv">#006666</span>; }</div>
+<div class="sourceLine" id="cb2-19" data-line-number="19"><span class="fu">.hl.kwd</span> { <span class="kw">color</span>:<span class="dv">#0080ff</span>; }</div>
+<div class="sourceLine" id="cb2-20" data-line-number="20"></div>
+<div class="sourceLine" id="cb2-21" data-line-number="21"></div>
+<div class="sourceLine" id="cb2-22" data-line-number="22"><span class="kw">&lt;/style&gt;</span></div></code></pre>
 <style type="text/css">
-/* Style definition file generated by highlight 3.39, http://www.andre-simon.de/ */
+/* Style definition file generated by highlight 3.40, http://www.andre-simon.de/ */
 /* highlight theme: PureBASIC */
 body.hl { background-color:#ffffdf; }
 pre.hl  { color:#000000; background-color:#ffffdf; font-size:10pt; font-family:'Courier New',monospace;}
@@ -178,27 +295,25 @@ pre.hl  { color:#000000; background-color:#ffffdf; font-size:10pt; font-family:'
 <li><code>LANG</code> (mandatory) — The language of the source (eg: HTML, Python, etc.).</li>
 <li><code>OPTIONS</code> (facultative) — Further options to pass to Highlight during invocation.</li>
 </ul>
-<div class="flash-messages">
-<div class="flash flash-plain">
+<div class="Note">
 <p><strong>NOTE</strong>: The Highlight macros will also add the string passed as the <code>LANG</code> param to the class of both the <code>&lt;pre&gt;</code> and <code>&lt;code&gt;</code> tags in the final HTML result:</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;pre</span><span class="ot"> class=</span><span class="st">&quot;hl LANG&quot;</span><span class="kw">&gt;&lt;code</span><span class="ot"> class=</span><span class="st">&quot;LANG&quot;</span><span class="kw">&gt;</span></code></pre></div>
+<pre class="sourceCode html" id="cb4"><code class="sourceCode html"><div class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">&lt;pre</span><span class="ot"> class=</span><span class="st">&quot;hl LANG&quot;</span><span class="kw">&gt;&lt;code</span><span class="ot"> class=</span><span class="st">&quot;LANG&quot;</span><span class="kw">&gt;</span></div></code></pre>
 <p>This allows finer control of how the code should look like, via custom CSS.</p>
-</div>
 </div>
 <h2 id="basic-example">Basic Example</h2>
 <p>We import the PureBASIC example file “<code>code-example.pb</code>” without passing any extra options to Highlight:</p>
 <p>macro used:</p>
 <pre><code>!HighlightFile(code-example.pb)(purebasic)</code></pre>
 <p>raw html output:</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;pre</span><span class="ot"> class=</span><span class="st">&quot;hl purebasic&quot;</span><span class="kw">&gt;&lt;code</span><span class="ot"> class=</span><span class="st">&quot;purebasic&quot;</span><span class="kw">&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl slc&quot;</span><span class="kw">&gt;</span>; PureBASIC 5.60 Example<span class="kw">&lt;/span&gt;</span>
-
-<span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>For<span class="kw">&lt;/span&gt;</span> i<span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>=<span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl num&quot;</span><span class="kw">&gt;</span>5<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>To<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl num&quot;</span><span class="kw">&gt;</span>1<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>Step<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>-<span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl num&quot;</span><span class="kw">&gt;</span>1<span class="kw">&lt;/span&gt;</span>
-  TEXT$ <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>=<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl str&quot;</span><span class="kw">&gt;</span><span class="dv">&amp;quot;</span>Iteration number: <span class="dv">&amp;quot;</span><span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>+<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwc&quot;</span><span class="kw">&gt;</span>Str<span class="kw">&lt;/span&gt;</span>(i) <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>+<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl str&quot;</span><span class="kw">&gt;</span>~<span class="dv">&amp;quot;</span><span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl esc&quot;</span><span class="kw">&gt;</span>\n\n<span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl str&quot;</span><span class="kw">&gt;</span>Do you wish to continue?<span class="dv">&amp;quot;</span><span class="kw">&lt;/span&gt;</span>
-  UserChoice <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>=<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwc&quot;</span><span class="kw">&gt;</span>MessageRequester<span class="kw">&lt;/span&gt;</span>(<span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl str&quot;</span><span class="kw">&gt;</span><span class="dv">&amp;quot;</span>Countdown Dialog<span class="dv">&amp;quot;</span><span class="kw">&lt;/span&gt;</span>, TEXT$, <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwb&quot;</span><span class="kw">&gt;</span>#PB_MessageRequester_YesNo<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>|<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwb&quot;</span><span class="kw">&gt;</span>#PB_MessageRequester_Info<span class="kw">&lt;/span&gt;</span>)
-  <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>If<span class="kw">&lt;/span&gt;</span> UserChoice <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>=<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwb&quot;</span><span class="kw">&gt;</span>#PB_MessageRequester_No<span class="kw">&lt;/span&gt;</span>
-    <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>Break<span class="kw">&lt;/span&gt;</span>
-  <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>EndIf<span class="kw">&lt;/span&gt;</span>
-<span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>Next<span class="kw">&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</span></code></pre></div>
+<pre class="sourceCode html" id="cb6"><code class="sourceCode html"><div class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">&lt;pre</span><span class="ot"> class=</span><span class="st">&quot;hl purebasic&quot;</span><span class="kw">&gt;&lt;code</span><span class="ot"> class=</span><span class="st">&quot;purebasic&quot;</span><span class="kw">&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl slc&quot;</span><span class="kw">&gt;</span>; PureBASIC 5.60 Example<span class="kw">&lt;/span&gt;</span></div>
+<div class="sourceLine" id="cb6-2" data-line-number="2"></div>
+<div class="sourceLine" id="cb6-3" data-line-number="3"><span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>For<span class="kw">&lt;/span&gt;</span> i<span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>=<span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl num&quot;</span><span class="kw">&gt;</span>5<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>To<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl num&quot;</span><span class="kw">&gt;</span>1<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>Step<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>-<span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl num&quot;</span><span class="kw">&gt;</span>1<span class="kw">&lt;/span&gt;</span></div>
+<div class="sourceLine" id="cb6-4" data-line-number="4">  TEXT$ <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>=<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl str&quot;</span><span class="kw">&gt;</span><span class="dv">&amp;quot;</span>Iteration number: <span class="dv">&amp;quot;</span><span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>+<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwc&quot;</span><span class="kw">&gt;</span>Str<span class="kw">&lt;/span&gt;</span>(i) <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>+<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl str&quot;</span><span class="kw">&gt;</span>~<span class="dv">&amp;quot;</span><span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl esc&quot;</span><span class="kw">&gt;</span>\n\n<span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl str&quot;</span><span class="kw">&gt;</span>Do you wish to continue?<span class="dv">&amp;quot;</span><span class="kw">&lt;/span&gt;</span></div>
+<div class="sourceLine" id="cb6-5" data-line-number="5">  UserChoice <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>=<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwc&quot;</span><span class="kw">&gt;</span>MessageRequester<span class="kw">&lt;/span&gt;</span>(<span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl str&quot;</span><span class="kw">&gt;</span><span class="dv">&amp;quot;</span>Countdown Dialog<span class="dv">&amp;quot;</span><span class="kw">&lt;/span&gt;</span>, TEXT$, <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwb&quot;</span><span class="kw">&gt;</span>#PB_MessageRequester_YesNo<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>|<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwb&quot;</span><span class="kw">&gt;</span>#PB_MessageRequester_Info<span class="kw">&lt;/span&gt;</span>)</div>
+<div class="sourceLine" id="cb6-6" data-line-number="6">  <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>If<span class="kw">&lt;/span&gt;</span> UserChoice <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>=<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwb&quot;</span><span class="kw">&gt;</span>#PB_MessageRequester_No<span class="kw">&lt;/span&gt;</span></div>
+<div class="sourceLine" id="cb6-7" data-line-number="7">    <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>Break<span class="kw">&lt;/span&gt;</span></div>
+<div class="sourceLine" id="cb6-8" data-line-number="8">  <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>EndIf<span class="kw">&lt;/span&gt;</span></div>
+<div class="sourceLine" id="cb6-9" data-line-number="9"><span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>Next<span class="kw">&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</span></div></code></pre>
 <p>result preview:</p>
 <pre class="hl purebasic"><code class="purebasic"><span class="hl slc">; PureBASIC 5.60 Example</span>
 
@@ -215,16 +330,16 @@ pre.hl  { color:#000000; background-color:#ffffdf; font-size:10pt; font-family:'
 <pre><code>!HighlightFile(code-example.pb)(purebasic)(--line-numbers --line-number-length=1)
 </code></pre>
 <p>raw html output:</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;pre</span><span class="ot"> class=</span><span class="st">&quot;hl purebasic&quot;</span><span class="kw">&gt;&lt;code</span><span class="ot"> class=</span><span class="st">&quot;purebasic&quot;</span><span class="kw">&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl lin&quot;</span><span class="kw">&gt;</span>1 <span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl slc&quot;</span><span class="kw">&gt;</span>; PureBASIC 5.60 Example<span class="kw">&lt;/span&gt;</span>
-<span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl lin&quot;</span><span class="kw">&gt;</span>2 <span class="kw">&lt;/span&gt;</span>
-<span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl lin&quot;</span><span class="kw">&gt;</span>3 <span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>For<span class="kw">&lt;/span&gt;</span> i<span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>=<span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl num&quot;</span><span class="kw">&gt;</span>5<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>To<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl num&quot;</span><span class="kw">&gt;</span>1<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>Step<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>-<span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl num&quot;</span><span class="kw">&gt;</span>1<span class="kw">&lt;/span&gt;</span>
-<span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl lin&quot;</span><span class="kw">&gt;</span>4 <span class="kw">&lt;/span&gt;</span>  TEXT$ <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>=<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl str&quot;</span><span class="kw">&gt;</span><span class="dv">&amp;quot;</span>Iteration number: <span class="dv">&amp;quot;</span><span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>+<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwc&quot;</span><span class="kw">&gt;</span>Str<span class="kw">&lt;/span&gt;</span>(i) <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>+<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl str&quot;</span><span class="kw">&gt;</span>~<span class="dv">&amp;quot;</span><span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl esc&quot;</span><span class="kw">&gt;</span>\n\n<span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl str&quot;</span><span class="kw">&gt;</span>Do you wish to continue?<span class="dv">&amp;quot;</span><span class="kw">&lt;/span&gt;</span>
-<span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl lin&quot;</span><span class="kw">&gt;</span>5 <span class="kw">&lt;/span&gt;</span>  UserChoice <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>=<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwc&quot;</span><span class="kw">&gt;</span>MessageRequester<span class="kw">&lt;/span&gt;</span>(<span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl str&quot;</span><span class="kw">&gt;</span><span class="dv">&amp;quot;</span>Countdown Dialog<span class="dv">&amp;quot;</span><span class="kw">&lt;/span&gt;</span>, TEXT$, <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwb&quot;</span><span class="kw">&gt;</span>#PB_MessageRequester_YesNo<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>|<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwb&quot;</span><span class="kw">&gt;</span>#PB_MessageRequester_Info<span class="kw">&lt;/span&gt;</span>)
-<span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl lin&quot;</span><span class="kw">&gt;</span>6 <span class="kw">&lt;/span&gt;</span>  <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>If<span class="kw">&lt;/span&gt;</span> UserChoice <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>=<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwb&quot;</span><span class="kw">&gt;</span>#PB_MessageRequester_No<span class="kw">&lt;/span&gt;</span>
-<span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl lin&quot;</span><span class="kw">&gt;</span>7 <span class="kw">&lt;/span&gt;</span>    <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>Break<span class="kw">&lt;/span&gt;</span>
-<span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl lin&quot;</span><span class="kw">&gt;</span>8 <span class="kw">&lt;/span&gt;</span>  <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>EndIf<span class="kw">&lt;/span&gt;</span>
-<span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl lin&quot;</span><span class="kw">&gt;</span>9 <span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>Next<span class="kw">&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</span>
-</code></pre></div>
+<pre class="sourceCode html" id="cb8"><code class="sourceCode html"><div class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">&lt;pre</span><span class="ot"> class=</span><span class="st">&quot;hl purebasic&quot;</span><span class="kw">&gt;&lt;code</span><span class="ot"> class=</span><span class="st">&quot;purebasic&quot;</span><span class="kw">&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl lin&quot;</span><span class="kw">&gt;</span>1 <span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl slc&quot;</span><span class="kw">&gt;</span>; PureBASIC 5.60 Example<span class="kw">&lt;/span&gt;</span></div>
+<div class="sourceLine" id="cb8-2" data-line-number="2"><span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl lin&quot;</span><span class="kw">&gt;</span>2 <span class="kw">&lt;/span&gt;</span></div>
+<div class="sourceLine" id="cb8-3" data-line-number="3"><span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl lin&quot;</span><span class="kw">&gt;</span>3 <span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>For<span class="kw">&lt;/span&gt;</span> i<span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>=<span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl num&quot;</span><span class="kw">&gt;</span>5<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>To<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl num&quot;</span><span class="kw">&gt;</span>1<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>Step<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>-<span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl num&quot;</span><span class="kw">&gt;</span>1<span class="kw">&lt;/span&gt;</span></div>
+<div class="sourceLine" id="cb8-4" data-line-number="4"><span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl lin&quot;</span><span class="kw">&gt;</span>4 <span class="kw">&lt;/span&gt;</span>  TEXT$ <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>=<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl str&quot;</span><span class="kw">&gt;</span><span class="dv">&amp;quot;</span>Iteration number: <span class="dv">&amp;quot;</span><span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>+<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwc&quot;</span><span class="kw">&gt;</span>Str<span class="kw">&lt;/span&gt;</span>(i) <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>+<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl str&quot;</span><span class="kw">&gt;</span>~<span class="dv">&amp;quot;</span><span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl esc&quot;</span><span class="kw">&gt;</span>\n\n<span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl str&quot;</span><span class="kw">&gt;</span>Do you wish to continue?<span class="dv">&amp;quot;</span><span class="kw">&lt;/span&gt;</span></div>
+<div class="sourceLine" id="cb8-5" data-line-number="5"><span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl lin&quot;</span><span class="kw">&gt;</span>5 <span class="kw">&lt;/span&gt;</span>  UserChoice <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>=<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwc&quot;</span><span class="kw">&gt;</span>MessageRequester<span class="kw">&lt;/span&gt;</span>(<span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl str&quot;</span><span class="kw">&gt;</span><span class="dv">&amp;quot;</span>Countdown Dialog<span class="dv">&amp;quot;</span><span class="kw">&lt;/span&gt;</span>, TEXT$, <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwb&quot;</span><span class="kw">&gt;</span>#PB_MessageRequester_YesNo<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>|<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwb&quot;</span><span class="kw">&gt;</span>#PB_MessageRequester_Info<span class="kw">&lt;/span&gt;</span>)</div>
+<div class="sourceLine" id="cb8-6" data-line-number="6"><span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl lin&quot;</span><span class="kw">&gt;</span>6 <span class="kw">&lt;/span&gt;</span>  <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>If<span class="kw">&lt;/span&gt;</span> UserChoice <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl opt&quot;</span><span class="kw">&gt;</span>=<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwb&quot;</span><span class="kw">&gt;</span>#PB_MessageRequester_No<span class="kw">&lt;/span&gt;</span></div>
+<div class="sourceLine" id="cb8-7" data-line-number="7"><span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl lin&quot;</span><span class="kw">&gt;</span>7 <span class="kw">&lt;/span&gt;</span>    <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>Break<span class="kw">&lt;/span&gt;</span></div>
+<div class="sourceLine" id="cb8-8" data-line-number="8"><span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl lin&quot;</span><span class="kw">&gt;</span>8 <span class="kw">&lt;/span&gt;</span>  <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>EndIf<span class="kw">&lt;/span&gt;</span></div>
+<div class="sourceLine" id="cb8-9" data-line-number="9"><span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl lin&quot;</span><span class="kw">&gt;</span>9 <span class="kw">&lt;/span&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;hl kwa&quot;</span><span class="kw">&gt;</span>Next<span class="kw">&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</span></div>
+<div class="sourceLine" id="cb8-10" data-line-number="10"></div></code></pre>
 <p>result preview:</p>
 <pre class="hl purebasic"><code class="purebasic"><span class="hl lin">1 </span><span class="hl slc">; PureBASIC 5.60 Example</span>
 <span class="hl lin">2 </span>

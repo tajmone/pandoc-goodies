@@ -1,6 +1,6 @@
 !comment(   "GitHub Alerts" pp-macros set   )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"GFM-Alerts.pp" v2.0 (2017-10-25) | PP v2.0
+"GFM-Alerts.pp" v2.1 (2017-11-21) | PP v2.0
 
 A set of macros for mimicking GitHub's Alerts (aka flash messages) within pandoc
 documents:
@@ -44,10 +44,8 @@ This file is part of "The Pandoc-Goodies PP-Macros Library":
 ````````````````````````````````````````````````````````````````````````````````
 !define(   _buildGFMAlerts   )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<div class="flash-messages">
-<div class="flash !ifdef(AlertType)(flash-!AlertType)">
+<div class="!ifdef(AlertType)(!AlertType)(Alert)">
 !1
-</div>
 </div>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -69,7 +67,7 @@ USAGE:
 ````````````````````````````````````````````````````````````````````````````````
 !define(   GFMAlert   )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-!undefine(AlertType)
+!define(   AlertType   )(Alert)
 !_buildGFMAlerts(!1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -85,7 +83,7 @@ Same usage, different output colors.
 
 !define(   GFMWarn   )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-!define(   AlertType   )(warn)
+!define(   AlertType   )(Warning)
 !_buildGFMAlerts(!1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -93,7 +91,7 @@ Same usage, different output colors.
 
 !define(   GFMError   )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-!define(   AlertType   )(error)
+!define(   AlertType   )(Error)
 !_buildGFMAlerts(!1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -101,16 +99,28 @@ Same usage, different output colors.
 
 !define(   GFMSuccess   )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-!define(   AlertType   )(success)
+!define(   AlertType   )(Success)
 !_buildGFMAlerts(!1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
+!define(   GFMAlertNote   )
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!define(   AlertType   )(Note)
+!_buildGFMAlerts(!1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+!comment
+````````````````````````````````````````````````````````````````````````````````
+!GFMAlertPlain is now just an alias to the new !GFMAlertNote --- the latter
+being the preferred syntax since it matches the actual class-name.
+````````````````````````````````````````````````````````````````````````````````
 !define(   GFMAlertPlain   )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-!define(   AlertType   )(plain)
-!_buildGFMAlerts(!1)
+!GFMAlertNote(!1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

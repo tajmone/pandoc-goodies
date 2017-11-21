@@ -1,6 +1,6 @@
 !comment( RUNTEST )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The RUNTEST macro is a shortcut for display the text emitted by each tested
+The RUNTEST macro is a shortcut for displaying the text emitted by each tested
 macro in three ways:
 
 1. Display the macro definition
@@ -28,8 +28,8 @@ result preview:
 
 !comment( RUNSIMPLETEST )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The RUNSIMPLETEST macro is a shortcut for display the text emitted by each
-tested macro in three ways:
+The RUNSIMPLETEST macro is a shortcut for displaying the text emitted by each
+tested macro in two ways:
 
 1. Display the macro definition
 2. Display the actual macro result

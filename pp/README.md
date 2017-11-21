@@ -1,7 +1,7 @@
 PP-Macros
 =========
 
-    PP v2.0
+    PP v2.1.5 | pandoc v2.0.2
 
 “**The Pandoc-Goodies PP-Macros Library**” — An ongoing collaborative effort to build a library of PP macros to extend pandoc’s workflow: use GFM Task Lists in pandoc document, external syntax highlighters, and much more.
 
@@ -36,7 +36,7 @@ The file [`macros.pp`](./macros/macros.pp) is the main macros file, which loads 
 About PP
 --------
 
-PP is a text preprocessor designed by Christophe Delord ([@CDSoft](https://github.com/CDSoft)) for pandoc (and more generally Markdown and reStructuredText). PP ships with some very powerful built-in macros for literate programming, diagrams (GraphViz, PlantUML and ditaa), and running scripts inside markdown source.
+PP is a text preprocessor designed by Christophe Delord ([@CDSoft](https://github.com/CDSoft)) for pandoc (and more generally Markdown and reStructuredText). PP ships with some very powerful built-in macros for literate programming, diagrams (GraphViz, PlantUML and ditaa), figures (Asymptote and R) and invoking scripts (Bash, Cmd, PowerShell, Python, Haskell and R) within markdown source files.
 
 But the great power of PP is it’s extensibility through user-defined macros, branching and conditional statements.
 
@@ -55,7 +55,9 @@ Requirements
 
 The current macros library requires PP version `>= 2.0`.
 
-PP is evolving rapidly thanks to Christophe’s kind dedication to users features requests. Future versions of PP might break backward compatibility of some macros, but great effort is taken to ensure that the macros of ths library should always work with the latest release of PP.
+PP is evolving rapidly thanks to Christophe’s kind dedication to users' features requests. Future versions of PP might break backward compatibility of some macros, but great effort is taken to ensure that the macros of ths library should always work with the latest release of PP.
+
+At the beginning of this page you find an opening line reporting the latest PP version used for testing the macros library. 
 
 You can download prebuilt binaries of the latest version of PP from the following link:
 
@@ -149,7 +151,8 @@ Examples:
 
 -   [`/test/GFM-TaskList.md`](./test/GFM-TaskList.md)
 -   [`/test/GFM-TaskList.html`](./test/GFM-TaskList.html) — [Live Demo Preview][Live GFM-TaskList]
--   [GitHub Pandoc HTML5 Template Preview](../templates/html5/github/GitHub-Template-Preview.html)
+-   [GitHub Pandoc HTML5 Template Local Preview]
+-   [GitHub Pandoc HTML5 Template Live Preview]
 
 GitHub Alerts
 -------------
@@ -164,13 +167,19 @@ A set of macros to create GitHub alerts (aka flash messages) within pandoc docum
 macros:
 
 -   `!GFMAlertsInlineCSS` — Inject required CSS
--   `!GFMAlert( CONTENTS )` — Default alert (blue)
--   `!GFMError( CONTENTS )` — Error alert (red)
--   `!GFMWarn( CONTENTS )` — Warning alert (yellow)
--   `!GFMSuccess( CONTENTS )` — Success alert (green)
--   `!GFMAlertPlain( CONTENTS )` — Plain alert (grey)
+-   `!GFMAlert( CONTENTS )` — **Alert** (blue)
+-   `!GFMError( CONTENTS )` — **Warning** (red)
+-   `!GFMWarn( CONTENTS )` — **Error** (yellow)
+-   `!GFMSuccess( CONTENTS )` — **Success** (green)
+-   `!GFMAlertNote( CONTENTS )` — **Note** (grey)
+-   `!GFMAlertPlain( CONTENTS )` — same as Note (alias of `!GFMAlertNote`)
 
-> **NOTE**: The “Plain” alert (`!GFMAlertPlain`) isn’t part of the original Primer-CSS alerts set. It was added to provide a more neutral, less appariscent alert box.
+> **CHANGES** --- Since `GFM-Alerts.pp` v2.1 the HTML tags and the CSS produced by these macros have changed: Alerts are now wrapped in a single `<div>`, and class names have changed.
+> 
+> Also, the new `!GFMAlertNote` macro replaces `!GFMAlertPlain` (which is kept as an alias).
+> 
+> The changes are backward compatible, so you don't need to change your  documents to keep using them.
+
 
 To render the alerts properly you’ll need the definitions found in “[`GFM-Alerts.css`](./macros/GFM-Alerts.css)”. You can either:
 
@@ -178,11 +187,24 @@ To render the alerts properly you’ll need the definitions found in “[`GFM-Al
 2.  Add the contents of “`GFM-Alerts.css`” to your pandoc template stylesheet.
 3.  Use the `!GFMAlertsInlineCSS` macro to inject “`GFM-Alerts.css`” as an inline CSS definition in the final document.
 
+>  __PANDOC v2 FENCED DIVS__ --- Pandoc v2.x users are adviced to use the new [fenced divs] syntax instead of these PP macros: fenced divs offer finer control over the final HTML, and pandoc can convert them to other formats too (unlike raw HTML injected into markdown source). The final result is exactly the same. See [`/test/GFM-Alerts.html`][Live Fenced Divs] for an example and more details.
+>  
+>  As for other markdown flavours or tools, these macros will continue to be useful. And of course, the  `!GFMAlertsInlineCSS` remains useful for all users.
+
+[fenced divs]: http://pandoc.org/MANUAL.html#extension-fenced_divs "Link to pandoc documentation on 'fenced-divs'"
+
+[Live Fenced Divs]: http://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/pp/test/GFM-Alerts.html#pandoc-new-fenced-divs "HTML Live Preview of GFM-Alerts vs pandoc fenced divs"
+
+<!--      -->
+
+> **NOTE** --- The "Note" alert (alias “Plain”, grey colors) isn’t part of the original Primer-CSS alerts set. It was added to provide a more neutral, less appariscent alert box.
+
 Examples:
 
 -   [`/test/GFM-Alerts.md`](./test/GFM-Alerts.md)
 -   [`/test/GFM-Alerts.html`](./test/GFM-Alerts.html) — [Live Demo Preview][Live GFM-Alerts]
--   [GitHub Pandoc HTML5 Template Preview](../templates/html5/github/GitHub-Template-Preview.html)
+-   [GitHub Pandoc HTML5 Template Local Preview]
+-   [GitHub Pandoc HTML5 Template Live Preview]
 
 Highlight
 ---------
@@ -256,7 +278,14 @@ Documentation and usage examples for the macros library is still work in progres
 
 -   [`../templates/html5/github/src/`](../templates/html5/github/src/)
 
-[Live Highlight]: http://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/pp/test/Highlight.html "HTML Live Preview of Highlight PP-Macros Test"
-[Live InlineFormatting]: http://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/pp/test/InlineFormatting.html "HTML Live Preview of Inline Formatting PP-Macros Test"
-[Live GFM-TaskList]: http://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/pp/test/GFM-TaskList.html "HTML Live Preview of GFM-TaskList PP-Macros Test"
-[Live GFM-Alerts]: http://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/pp/test/GFM-Alerts.html "HTML Live Preview of GFM-Alerts PP-Macros Test"
+[Live Highlight]: http://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/pp/test/Highlight.html "Live HTML Preview of Highlight PP-Macros Test"
+
+[Live InlineFormatting]: http://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/pp/test/InlineFormatting.html "Live HTML Preview of Inline Formatting PP-Macros Test"
+
+[Live GFM-TaskList]: http://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/pp/test/GFM-TaskList.html "Live HTML Preview of GFM-TaskList PP-Macros Test"
+
+[Live GFM-Alerts]: http://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/pp/test/GFM-Alerts.html "Live HTML Preview of GFM-Alerts PP-Macros Test"
+
+[GitHub Pandoc HTML5 Template Live Preview]: http://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/templates/html5/github/GitHub-Template-Preview.html "Live HTML Preview of GitHub Pandoc HTML5 Template"
+
+[GitHub Pandoc HTML5 Template Local Preview]: ../templates/html5/github/GitHub-Template-Preview.html "Local Preview of GitHub Pandoc HTML5 Template"

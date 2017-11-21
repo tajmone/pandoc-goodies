@@ -1,47 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title></title>
-  <style type="text/css">code{white-space: pre;}</style>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>GFM-TaskList Test</title>
   <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      div.line-block{white-space: pre-line;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+div.sourceLine, a.sourceLine { display: inline-block; min-height: 1.25em; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; }
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+div.sourceLine, a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource div.sourceLine, .numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource div.sourceLine::before, .numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; color: #aaaaaa;  padding-left: 4px; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; color: initial; }
+}
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.bn { color: #40a070; } /* BaseN */
+code span.fl { color: #40a070; } /* Float */
+code span.ch { color: #4070a0; } /* Char */
+code span.st { color: #4070a0; } /* String */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.ot { color: #007020; } /* Other */
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.fu { color: #06287e; } /* Function */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code span.cn { color: #880000; } /* Constant */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.im { } /* Import */
+code span.va { color: #19177c; } /* Variable */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.op { color: #666666; } /* Operator */
+code span.bu { } /* BuiltIn */
+code span.ex { } /* Extension */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.at { color: #7d9029; } /* Attribute */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
   </style>
   <link rel="stylesheet" href="github.css">
   <!--[if lt IE 9]>
@@ -49,57 +70,153 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   <![endif]-->
 </head>
 <body>
+<header>
+<h1 class="title">GFM-TaskList PP-Macros Test</h1>
+</header>
 <style type="text/css">
-/*  ==============================================================================
-                                 Primer CSS by GitHub                             
-    ==============================================================================
-    This file was adapted from the Primer CSS project:
+/*! "GFM-Alerts.css" v2.0 | 2017/11/21 | MIT License (MIT)
+    Adapted by Tristano Ajmone from "flash.scss" of Primer CSS by GitHub Inc.:
 
-    -- https://github.com/primer/primer-alerts/blob/master/lib/flash.scss
+    https://github.com/primer/primer/blob/master/modules/primer-alerts/lib/flash.scss
+    http://primercss.io/archive/alerts/
 
-    Copyright (c) 2016 GitHub Inc. Released under The MIT License (MIT).
-    ============================================================================== */
+    Copyright (c) 2017 Tristano Ajmone.
+    Copyright (c) 2017 GitHub Inc.
+*/
+.Alert,
+.Warning,
+.Error,
+.Success,
+.Note {
+  padding: 11px;
+  margin-bottom: 24px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px; }
+  .Alert p,
+  .Warning p,
+  .Error p,
+  .Success p,
+  .Note p {
+    margin-top: 0; }
+    .Alert p:last-child,
+    .Warning p:last-child,
+    .Error p:last-child,
+    .Success p:last-child,
+    .Note p:last-child {
+      margin-bottom: 0; }
 
-.flash {
-    position: relative;
-    padding: 16px;
-    color: #246;
-    background-color: #e2eef9;
-    border: 1px solid #bac6d3;
-    border-radius: 3px;
-}
-.flash p:last-child {
-    margin-bottom: 0;
-}
-.flash-messages {
-    margin-bottom: 24px;
-}
-.flash-warn {
-    color: #4c4a42;
-    background-color: #fff9ea;
-    border-color: #dfd8c2;
-}
-.flash-error {
-    color: #911;
-    background-color: #fcdede;
-    border-color: #d2b2b2;
-}
-.flash-success {
-    color: #22662c;
-    background-color: #e2f9e5;
-    border-color: #bad3be;
-}
-/* Custom additions not present in "flash.scss" ... */
-.flash-plain {
-    color: #4c4a42;
-    background-color: #f5f5f5;
-    border-color: #c1c1c1;
-}
-.flash p {
-    margin-top: 0;
-}
+.Alert {
+  color: #224466;
+  background-color: #E2EEF9;
+  border-color: #BAC6D3; }
+
+.Warning {
+  color: #4C4A42;
+  background-color: #FFF9EA;
+  border-color: #DFD8C2; }
+
+.Error {
+  color: #991111;
+  background-color: #FCDEDE;
+  border-color: #D2B2B2; }
+
+.Success {
+  color: #22662C;
+  background-color: #E2F9E5;
+  border-color: #BAD3BE; }
+
+.Note {
+  color: #2F363D;
+  background-color: #F6F8FA;
+  border-color: #D5D8DA; }
+
+.Alert h1,
+.Alert h2,
+.Alert h3,
+.Alert h4,
+.Alert h5,
+.Alert h6 {
+  color: #224466;
+  margin-bottom: 0; }
+
+.Warning h1,
+.Warning h2,
+.Warning h3,
+.Warning h4,
+.Warning h5,
+.Warning h6 {
+  color: #4C4A42;
+  margin-bottom: 0; }
+
+.Error h1,
+.Error h2,
+.Error h3,
+.Error h4,
+.Error h5,
+.Error h6 {
+  color: #991111;
+  margin-bottom: 0; }
+
+.Success h1,
+.Success h2,
+.Success h3,
+.Success h4,
+.Success h5,
+.Success h6 {
+  color: #22662C;
+  margin-bottom: 0; }
+
+.Note h1,
+.Note h2,
+.Note h3,
+.Note h4,
+.Note h5,
+.Note h6 {
+  color: #2F363D;
+  margin-bottom: 0; }
+
+.Alert h1:first-child,
+.Alert h2:first-child,
+.Alert h3:first-child,
+.Alert h4:first-child,
+.Alert h5:first-child,
+.Alert h6:first-child {
+  margin-top: 0; }
+
+.Warning h1:first-child,
+.Warning h2:first-child,
+.Warning h3:first-child,
+.Warning h4:first-child,
+.Warning h5:first-child,
+.Warning h6:first-child {
+  margin-top: 0; }
+
+.Error h1:first-child,
+.Error h2:first-child,
+.Error h3:first-child,
+.Error h4:first-child,
+.Error h5:first-child,
+.Error h6:first-child {
+  margin-top: 0; }
+
+.Success h1:first-child,
+.Success h2:first-child,
+.Success h3:first-child,
+.Success h4:first-child,
+.Success h5:first-child,
+.Success h6:first-child {
+  margin-top: 0; }
+
+.Note h1:first-child,
+.Note h2:first-child,
+.Note h3:first-child,
+.Note h4:first-child,
+.Note h5:first-child,
+.Note h6:first-child {
+  margin-top: 0; }
+
 </style>
-<h1 id="gfm-tasklist-pp-macros-test">GFM-TaskList PP-Macros Test</h1>
 <p>This is a run test of the GFM-TaskList pp-macros set.</p>
 <h2 id="files-list">Files List</h2>
 <ul>
@@ -124,25 +241,25 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>We need some CSS definitions for viewing Task Lists correctly. We’ll use the <code>!TaskListInlineCSS</code> macro to inject the contents of <code>GFM-TaskList.css</code> as an inline stylesheet:</p>
 <pre><code>!TaskListInlineCSS</code></pre>
 <p>this macro emits the following raw html:</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span>
-<span class="fl">.task-list-item</span> input <span class="kw">{</span>
-  <span class="kw">margin:</span> <span class="dt">0</span> <span class="dt">0.2em</span> <span class="dt">0.25em</span> <span class="dt">-1.6em</span><span class="kw">;</span>
-  <span class="kw">vertical-align:</span> <span class="dt">middle</span><span class="kw">;</span>
-<span class="kw">}</span>
-<span class="dv">:checked</span>+<span class="fl">.radio-label</span> <span class="kw">{</span>
-  <span class="kw">position:</span> <span class="dt">relative</span><span class="kw">;</span>
-  <span class="kw">z-index:</span> <span class="dt">1</span><span class="kw">;</span>
-  <span class="kw">border-color:</span> <span class="dt">#0366d6</span><span class="kw">;</span>
-<span class="kw">}</span>
-
-<span class="fl">.task-list-item</span> <span class="kw">{</span>
-  <span class="kw">list-style-type:</span> <span class="dt">none</span><span class="kw">;</span>
-<span class="kw">}</span>
-
-<span class="fl">.task-list-item</span>+<span class="fl">.task-list-item</span> <span class="kw">{</span>
-  <span class="kw">margin-top:</span> <span class="dt">3px</span><span class="kw">;</span>
-<span class="kw">}</span>
-<span class="kw">&lt;/style&gt;</span></code></pre></div>
+<pre class="sourceCode html" id="cb2"><code class="sourceCode html"><div class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span></div>
+<div class="sourceLine" id="cb2-2" data-line-number="2"><span class="fu">.task-list-item</span> input {</div>
+<div class="sourceLine" id="cb2-3" data-line-number="3">  <span class="kw">margin</span>: <span class="dv">0</span> <span class="dv">0.2em</span> <span class="dv">0.25em</span> <span class="dv">-1.6em</span>;</div>
+<div class="sourceLine" id="cb2-4" data-line-number="4">  <span class="kw">vertical-align</span>: <span class="dv">middle</span>;</div>
+<div class="sourceLine" id="cb2-5" data-line-number="5">}</div>
+<div class="sourceLine" id="cb2-6" data-line-number="6"><span class="in">:checked</span>+<span class="fu">.radio-label</span> {</div>
+<div class="sourceLine" id="cb2-7" data-line-number="7">  <span class="kw">position</span>: <span class="dv">relative</span>;</div>
+<div class="sourceLine" id="cb2-8" data-line-number="8">  <span class="kw">z-index</span>: <span class="dv">1</span>;</div>
+<div class="sourceLine" id="cb2-9" data-line-number="9">  <span class="kw">border-color</span>: <span class="dv">#0366d6</span>;</div>
+<div class="sourceLine" id="cb2-10" data-line-number="10">}</div>
+<div class="sourceLine" id="cb2-11" data-line-number="11"></div>
+<div class="sourceLine" id="cb2-12" data-line-number="12"><span class="fu">.task-list-item</span> {</div>
+<div class="sourceLine" id="cb2-13" data-line-number="13">  <span class="kw">list-style-type</span>: <span class="dv">none</span>;</div>
+<div class="sourceLine" id="cb2-14" data-line-number="14">}</div>
+<div class="sourceLine" id="cb2-15" data-line-number="15"></div>
+<div class="sourceLine" id="cb2-16" data-line-number="16"><span class="fu">.task-list-item</span>+<span class="fu">.task-list-item</span> {</div>
+<div class="sourceLine" id="cb2-17" data-line-number="17">  <span class="kw">margin-top</span>: <span class="dv">3px</span>;</div>
+<div class="sourceLine" id="cb2-18" data-line-number="18">}</div>
+<div class="sourceLine" id="cb2-19" data-line-number="19"><span class="kw">&lt;/style&gt;</span></div></code></pre>
 <style type="text/css">
 .task-list-item input {
   margin: 0 0.2em 0.25em -1.6em;
@@ -175,11 +292,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </code></pre>
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""checked=""> I’m a <em>checked</em> task
-</li>
+<p><input type="checkbox" disabled=""checked="">&thinsp;I'm a _checked_ task</li></p>
 <li class="task-list-item">
-<input type="checkbox" disabled=""> I’m an <em>unchecked</em> task
-</li>
+<p><input type="checkbox" disabled="">&thinsp;I'm an _unchecked_ task</li></p>
 </ul>
 <h3 id="nesting-task-lists-via-indentation">Nesting Task Lists via Indentation</h3>
 <p>A nested Task List example using brackets and indentation (2 spaces) to visually track sublists:</p>
@@ -194,30 +309,25 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </code></pre>
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""> Task 1
+<input type="checkbox" disabled="">&thinsp;Task 1
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""checked=""> SubTask 1
-</li>
+<p><input type="checkbox" disabled=""checked="">&thinsp;SubTask 1</li></p>
 <li class="task-list-item">
-<input type="checkbox" disabled=""> SubTask 2
+<input type="checkbox" disabled="">&thinsp;SubTask 2
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""checked=""> Sub-SubTask 1
-</li>
+<input type="checkbox" disabled=""checked="">&thinsp;Sub-SubTask 1</li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="task-list-item">
-<input type="checkbox" disabled=""checked=""> Task 2
-</li>
+<p><input type="checkbox" disabled=""checked="">&thinsp;Task 2</li></p>
 </ul>
 <p>The indentation-based approach simplifies keeping visual track of levels nesting, but it’s easy to loose count of opening and closing brackets.</p>
-<div class="flash-messages">
-<div class="flash">
+<div class="Alert">
 <p><strong>NOTE</strong>: Since sublists are passed via bracketed parameters, they’re stripped of leading and trailing whitespace, so indentantion will never break the markdown syntax (ie: four spaces indentation will not be mistaken for an <a href="http://pandoc.org/MANUAL.html#indented-code-blocks" title="See pandoc User Guide on &quot;Indented code blocks&quot;">indented code block</a>).</p>
-</div>
 </div>
 <h3 id="nesting-task-lists-via-fencing">Nesting Task Lists via Fencing</h3>
 <p>A nested Task List example using tildas to wrap sublists:</p>
@@ -236,24 +346,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </code></pre>
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""> Task 1
+<input type="checkbox" disabled="">&thinsp;Task 1
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""checked=""> SubTask 1
-</li>
+<p><input type="checkbox" disabled=""checked="">&thinsp;SubTask 1</li></p>
 <li class="task-list-item">
-<input type="checkbox" disabled=""> SubTask 2
+<input type="checkbox" disabled="">&thinsp;SubTask 2
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""checked=""> Sub-SubTask 1
-</li>
+<input type="checkbox" disabled=""checked="">&thinsp;Sub-SubTask 1</li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="task-list-item">
-<input type="checkbox" disabled=""> Task 2
-</li>
+<p><input type="checkbox" disabled="">&thinsp;Task 2</li></p>
 </ul>
 <p>This fenced approach can be more difficult to track visually, but there are less risks of ending up with orphan brackets.</p>
 <h3 id="nesting-task-lists-via-indentation-and-fencing">Nesting Task Lists via Indentation and Fencing</h3>
@@ -273,27 +380,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </code></pre>
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""> Task 1
+<input type="checkbox" disabled="">&thinsp;Task 1
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""checked=""> SubTask 1
-</li>
+<p><input type="checkbox" disabled=""checked="">&thinsp;SubTask 1</li></p>
 <li class="task-list-item">
-<input type="checkbox" disabled=""> SubTask 2
+<input type="checkbox" disabled="">&thinsp;SubTask 2
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""checked=""> Sub-SubTask 1
-</li>
+<input type="checkbox" disabled=""checked="">&thinsp;Sub-SubTask 1</li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="task-list-item">
-<input type="checkbox" disabled=""> Task 2
-</li>
+<p><input type="checkbox" disabled="">&thinsp;Task 2</li></p>
 </ul>
-<div class="flash-messages">
-<div class="flash flash-warn">
+<div class="Warning">
 <p><strong>WARNING</strong>: Unlike the <a href="#nesting-task-lists-via-indentation">indentantion-only approach</a>, this way of styling Task Lists will break formatting if indentation exceeds four spaces:</p>
 <pre><code>!TaskList
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -314,17 +417,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </code></pre>
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""> Task
+<input type="checkbox" disabled="">&thinsp;Task
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""checked=""> SubTask
+<input type="checkbox" disabled=""checked="">&thinsp;SubTask
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""checked=""> Sub-SubTask
+<input type="checkbox" disabled=""checked="">&thinsp;Sub-SubTask
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""checked=""> Sub-Sub-SubTask
-</li>
+<input type="checkbox" disabled=""checked="">&thinsp;Sub-Sub-SubTask</li>
 </ul>
 </li>
 <pre><code> ~~~~~~~~~~~~~
@@ -337,8 +439,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul>
 </li>
 </ul>
-<p>… because whitespace in fenced parameters is preserved, and pandoc will interpret four leading spaces as an <a href="http://pandoc.org/MANUAL.html#indented-code-blocks" title="See pandoc User Guide on &quot;Indented code blocks&quot;">indented code block</a>. Therefore use it only for Task Lists with limited nesting levels.</p>
-</div>
+… because whitespace in fenced parameters is preserved, and pandoc will interpret four leading spaces as an <a href="http://pandoc.org/MANUAL.html#indented-code-blocks" title="See pandoc User Guide on &quot;Indented code blocks&quot;">indented code block</a>. Therefore use it only for Task Lists with limited nesting levels.
 </div>
 </body>
 </html>
