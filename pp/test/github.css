@@ -591,3 +591,7 @@ kbd {
 hr {
   border-bottom-color: #eee;
 }
+
+pre.sourceCode {
+  overflow: auto;
+}
