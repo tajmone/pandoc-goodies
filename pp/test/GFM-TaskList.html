@@ -312,9 +312,11 @@ li.task-list-item ~ p {
 </code></pre>
 <ul class="task-list">
 <li class="task-list-item">
-<p><input type="checkbox" disabled=""checked="">&thinsp;I'm a _checked_ task</li></p>
+<input type="checkbox" disabled=""checked=""> I’m a <em>checked</em> task
+</li>
 <li class="task-list-item">
-<p><input type="checkbox" disabled="">&thinsp;I'm an _unchecked_ task</li></p>
+<input type="checkbox" disabled=""> I’m an <em>unchecked</em> task
+</li>
 </ul>
 <h3 id="nesting-task-lists-via-indentation">Nesting Task Lists via Indentation</h3>
 <p>A nested Task List example using brackets and indentation (2 spaces) to visually track sublists:</p>
@@ -329,21 +331,24 @@ li.task-list-item ~ p {
 </code></pre>
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled="">&thinsp;Task 1
+<input type="checkbox" disabled=""> Task 1
 <ul class="task-list">
 <li class="task-list-item">
-<p><input type="checkbox" disabled=""checked="">&thinsp;SubTask 1</li></p>
+<input type="checkbox" disabled=""checked=""> SubTask 1
+</li>
 <li class="task-list-item">
-<input type="checkbox" disabled="">&thinsp;SubTask 2
+<input type="checkbox" disabled=""> SubTask 2
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""checked="">&thinsp;Sub-SubTask 1</li>
-</ul>
+<input type="checkbox" disabled=""checked=""> Sub-SubTask 1
 </li>
 </ul>
 </li>
+</ul>
+</li>
 <li class="task-list-item">
-<p><input type="checkbox" disabled=""checked="">&thinsp;Task 2</li></p>
+<input type="checkbox" disabled=""checked=""> Task 2
+</li>
 </ul>
 <p>The indentation-based approach simplifies keeping visual track of levels nesting, but it’s easy to loose count of opening and closing brackets.</p>
 <div class="Alert">
@@ -366,21 +371,24 @@ li.task-list-item ~ p {
 </code></pre>
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled="">&thinsp;Task 1
+<input type="checkbox" disabled=""> Task 1
 <ul class="task-list">
 <li class="task-list-item">
-<p><input type="checkbox" disabled=""checked="">&thinsp;SubTask 1</li></p>
+<input type="checkbox" disabled=""checked=""> SubTask 1
+</li>
 <li class="task-list-item">
-<input type="checkbox" disabled="">&thinsp;SubTask 2
+<input type="checkbox" disabled=""> SubTask 2
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""checked="">&thinsp;Sub-SubTask 1</li>
-</ul>
+<input type="checkbox" disabled=""checked=""> Sub-SubTask 1
 </li>
 </ul>
 </li>
+</ul>
+</li>
 <li class="task-list-item">
-<p><input type="checkbox" disabled="">&thinsp;Task 2</li></p>
+<input type="checkbox" disabled=""> Task 2
+</li>
 </ul>
 <p>This fenced approach can be more difficult to track visually, but there are less risks of ending up with orphan brackets.</p>
 <h3 id="nesting-task-lists-via-indentation-and-fencing">Nesting Task Lists via Indentation and Fencing</h3>
@@ -400,21 +408,24 @@ li.task-list-item ~ p {
 </code></pre>
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled="">&thinsp;Task 1
+<input type="checkbox" disabled=""> Task 1
 <ul class="task-list">
 <li class="task-list-item">
-<p><input type="checkbox" disabled=""checked="">&thinsp;SubTask 1</li></p>
+<input type="checkbox" disabled=""checked=""> SubTask 1
+</li>
 <li class="task-list-item">
-<input type="checkbox" disabled="">&thinsp;SubTask 2
+<input type="checkbox" disabled=""> SubTask 2
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""checked="">&thinsp;Sub-SubTask 1</li>
-</ul>
+<input type="checkbox" disabled=""checked=""> Sub-SubTask 1
 </li>
 </ul>
 </li>
+</ul>
+</li>
 <li class="task-list-item">
-<p><input type="checkbox" disabled="">&thinsp;Task 2</li></p>
+<input type="checkbox" disabled=""> Task 2
+</li>
 </ul>
 <div class="Warning">
 <p><strong>WARNING</strong>: Unlike the <a href="#nesting-task-lists-via-indentation">indentantion-only approach</a>, this way of styling Task Lists will break formatting if indentation exceeds four spaces:</p>
@@ -437,20 +448,21 @@ li.task-list-item ~ p {
 </code></pre>
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled="">&thinsp;Task
+<input type="checkbox" disabled=""> Task
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""checked="">&thinsp;SubTask
+<input type="checkbox" disabled=""checked=""> SubTask
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""checked="">&thinsp;Sub-SubTask
+<input type="checkbox" disabled=""checked=""> Sub-SubTask
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""checked="">&thinsp;Sub-Sub-SubTask</li>
+<input type="checkbox" disabled=""checked=""> Sub-Sub-SubTask
+</li>
 </ul>
 </li>
 <pre><code> ~~~~~~~~~~~~~
- &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;&quot;checked=&quot;&quot;&gt;&amp;thinsp;Sub-Sub-Sub-SubTask&lt;/li&gt;
+ &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;&quot;checked=&quot;&quot;&gt;\ Sub-Sub-Sub-SubTask&lt;/li&gt;
 
 
  ~~~~~~~~~~~~~</code></pre>
@@ -459,7 +471,7 @@ li.task-list-item ~ p {
 </ul>
 </li>
 </ul>
-… because whitespace in fenced parameters is preserved, and pandoc will interpret four leading spaces as an <a href="http://pandoc.org/MANUAL.html#indented-code-blocks" title="See pandoc User Guide on &quot;Indented code blocks&quot;">indented code block</a>. Therefore use it only for Task Lists with limited nesting levels.
+<p>… because whitespace in fenced parameters is preserved, and pandoc will interpret four leading spaces as an <a href="http://pandoc.org/MANUAL.html#indented-code-blocks" title="See pandoc User Guide on &quot;Indented code blocks&quot;">indented code block</a>. Therefore use it only for Task Lists with limited nesting levels.</p>
 </div>
 </body>
 </html>
