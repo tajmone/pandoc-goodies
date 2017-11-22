@@ -6,6 +6,17 @@ NOTE: Obvious changes won't be logged -- eg: addition of "!import" statements
       Minor changes will not be logged either, because life is too short...
 
 ------------------------------------------------------------------------------
+                                  2017-11-22                                  
+------------------------------------------------------------------------------
+PP VERSION v2.1.5 | pandoc v2.0.2
+
+CHANGES:
+- "GFM-TaskList.pp" v2.1:
+  - "!Task" macro emits escaped non-breaking space ("\ ") instead of &thinsp;
+    HTML entity because HTML entities prevent pandoc v2 from parsing markdown
+    contents in raw HTML. See Issue #4088:
+    -- https://github.com/jgm/pandoc/issues/4088
+------------------------------------------------------------------------------
                                   2017-11-21                                  
 ------------------------------------------------------------------------------
 PP VERSION v2.1.5
@@ -34,6 +45,7 @@ CHANGES:
     pandoc v2 paragraphs are sneaking-in when using the Task-List macro).
 - "GFM-TaskList.css" v1.2:
   - Fixed a duplicate CSS line (just redundant, no behaviour changes).
+
 ADDED:
 - "GFM-Alerts.scss" v2.0:
   - First release (starts from v2.0 to mirror current project status).
