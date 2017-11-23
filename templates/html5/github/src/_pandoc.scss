@@ -1,0 +1,36 @@
+// ******************************************************************************
+// *                                                                            *
+// *                           Pandoc-Specific Styles                           *
+// *                                                                            *
+// ******************************************************************************
+
+// ------------------------------------------------------------------------------
+//                                Title & Subtitle                               
+// ------------------------------------------------------------------------------
+h1.title,
+p.subtitle {
+	text-align: center;
+}
+
+// If Title is followed by a Subtitle set Title margin-bottom to "0"
+h1.title.followed-by-subtitle {
+	margin-bottom: 0;
+}
+
+p.subtitle {
+	font-size: 1.5em;
+	font-weight: 600;
+	line-height: 1.25;
+	margin-top: 0;
+	margin-bottom: 16px;
+	padding-bottom: 0.3em;
+}
+
+// ------------------------------------------------------------------------------
+//                               Pandoc Line blocks                              
+// ------------------------------------------------------------------------------
+// As of v2.x pandoc no longer adds inline CSS to Line blocks, but relies on the
+// "line-block" class instead:
+div.line-block {
+  white-space: pre-line;
+}

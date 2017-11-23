@@ -1,0 +1,166 @@
+$--| GitHub HTML5 Pandoc Template" v2.0 | 2017/11/21
+<!DOCTYPE html>
+<!--
+==============================================================================
+           "GitHub HTML5 Pandoc Template" v2.0 — by Tristano Ajmone           
+==============================================================================
+Copyright © Tristano Ajmone, 2017, MIT License (MIT). Project's home:
+
+- https://github.com/tajmone/pandoc-goodies
+
+The CSS in this template reuses source code taken from the following projects:
+
+- GitHub Markdown CSS: Copyright © Sindre Sorhus, MIT License (MIT):
+  https://github.com/sindresorhus/github-markdown-css
+
+- Primer CSS: Copyright © 2016-2017 GitHub Inc., MIT License (MIT):
+  http://primercss.io/
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The MIT License 
+
+Copyright (c) Tristano Ajmone, 2017 (github.com/tajmone/pandoc-goodies)
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+Copyright (c) 2017 GitHub Inc.
+
+"GitHub Pandoc HTML5 Template" is Copyright (c) Tristano Ajmone, 2017, released
+under the MIT License (MIT); it contains readaptations of substantial portions
+of the following third party softwares:
+
+(1) "GitHub Markdown CSS", Copyright (c) Sindre Sorhus, MIT License (MIT).
+(2) "Primer CSS", Copyright (c) 2016 GitHub Inc., MIT License (MIT).
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+==============================================================================-->
+$-------------------------------------------------------------------------> lang
+<html$if(lang)$ lang="$lang$"$endif$$if(dir)$ dir="$dir$"$endif$>
+<head>
+$--=============================================================================
+$--                                METADATA                                   
+$--=============================================================================
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+$-----------------------------------------------------------------------> author
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+$-------------------------------------------------------------------------> date
+$if(date-meta)$
+  <meta name="dcterms.date" content="$date-meta$" />
+$endif$
+$---------------------------------------------------------------------> keywords
+$if(keywords)$
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+$endif$
+$------------------------------------------------------------------> description
+$if(description)$
+  <meta name="description" content="$description$">
+$endif$
+$------------------------------------------------------------------------> title
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+$--===========================================================================
+$--                            CSS STYLESHEETS                                
+$--===========================================================================
+$-- Here comes the placeholder (within double braces) that will be replaced
+$-- by the CSS file in the finalized template:
+  <style type="text/css">
+{{CSS-INJECT}}
+  </style>
+$-------------------------------------------------------------------------------
+  <style type="text/css">code{white-space: pre;}</style>
+$-------------------------------------------------------------------------------
+$if(quotes)$
+  <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
+$endif$
+$-------------------------------------------------------------> highlighting-css
+$if(highlighting-css)$
+  <style type="text/css">
+$highlighting-css$
+  </style>
+$endif$
+$--------------------------------------------------------------------------> css
+$for(css)$
+  <link rel="stylesheet" href="$css$">
+$endfor$
+$-------------------------------------------------------------------------> math
+$if(math)$
+  $math$
+$endif$
+$-------------------------------------------------------------------------------
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+$--------------------------------------------------------------> header-includes
+$for(header-includes)$
+  $header-includes$
+$endfor$
+$-------------------------------------------------------------------------------
+</head>
+<body>
+<article class="markdown-body">
+$---------------------------------------------------------------> include-before
+$for(include-before)$
+$include-before$
+$endfor$
+$-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> IF: title
+$if(title)$
+<header>
+<h1 class="title$if(subtitle)$ followed-by-subtitle$endif$">$title$</h1>
+$---------------------------------------------------------------------> subtitle
+$if(subtitle)$
+<p class="subtitle">$subtitle$</p>
+$endif$
+$-----------------------------------------------------------------------> author
+$for(author)$
+<p class="author">$author$</p>
+$endfor$
+$-------------------------------------------------------------------------> date
+$if(date)$
+<p class="date">$date$</p>
+$endif$
+$----------------------------------------------------------------------> summary
+$if(summary)$
+<div class="summary">
+$summary$
+</div>
+$endif$
+$-------------------------------------------------------------------------------
+</header>
+$endif$
+$--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< END IF: title
+$--------------------------------------------------------------------------> toc
+$if(toc)$
+<hr>
+<nav id="$idprefix$TOC">
+<h1 class="toc-title">$if(toc-title)$$toc-title$$else$Contents$endif$</h1>
+$toc$
+</nav>
+<hr>
+$endif$
+$-------------------------------------------------------------------------> body
+$body$
+$----------------------------------------------------------------> include-after
+$for(include-after)$
+$include-after$
+$endfor$
+$-------------------------------------------------------------------------------
+</article>
+</body>
+</html>

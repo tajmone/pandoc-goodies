@@ -1,65 +1,111 @@
 <!DOCTYPE html>
-<!--==============================================================================
-	           "GitHub HTML5 Pandoc Template" v1.2 — by Tristano Ajmone           
-	==============================================================================
-	(c) Tristano Ajmone, 2017, MIT License (MIT). Project's home repository:
+<!--
+==============================================================================
+           "GitHub HTML5 Pandoc Template" v2.0 — by Tristano Ajmone           
+==============================================================================
+Copyright © Tristano Ajmone, 2017, MIT License (MIT). Project's home:
 
-	- https://github.com/tajmone/pandoc-goodies
+- https://github.com/tajmone/pandoc-goodies
 
-	This template reuses source code taken from the following projects:
+The CSS in this template reuses source code taken from the following projects:
 
-	- GitHub Markdown CSS: © Sindre Sorhus, MIT License (MIT):
-	  https://github.com/sindresorhus/github-markdown-css
+- GitHub Markdown CSS: Copyright © Sindre Sorhus, MIT License (MIT):
+  https://github.com/sindresorhus/github-markdown-css
 
-	- Primer CSS: © 2016 GitHub Inc., MIT License (MIT):
-	  http://primercss.io/
-	==============================================================================-->
+- Primer CSS: Copyright © 2016-2017 GitHub Inc., MIT License (MIT):
+  http://primercss.io/
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The MIT License 
+
+Copyright (c) Tristano Ajmone, 2017 (github.com/tajmone/pandoc-goodies)
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+Copyright (c) 2017 GitHub Inc.
+
+"GitHub Pandoc HTML5 Template" is Copyright (c) Tristano Ajmone, 2017, released
+under the MIT License (MIT); it contains readaptations of substantial portions
+of the following third party softwares:
+
+(1) "GitHub Markdown CSS", Copyright (c) Sindre Sorhus, MIT License (MIT).
+(2) "Primer CSS", Copyright (c) 2016 GitHub Inc., MIT License (MIT).
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+==============================================================================-->
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <meta name="author" content="Tristano Ajmone">
-  <meta name="dcterms.date" content="April 16, 2017">
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Tristano Ajmone (tajmone@gmail.com)" />
+  <meta name="dcterms.date" content="2017/11/21" />
   <title>GitHub Pandoc HTML5 Template — Preview</title>
-  <style type="text/css">@font-face{font-family:octicons-link;src:url(data:font/woff;charset=utf-8;base64,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) format('woff')}.markdown-body{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#24292e;font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";font-size:16px;line-height:1.5;word-wrap:break-word;box-sizing:border-box;min-width:200px;max-width:980px;margin:0 auto;padding:45px}.markdown-body .octicon{display:inline-block;fill:currentColor;vertical-align:text-bottom}.markdown-body a{background-color:transparent;-webkit-text-decoration-skip:objects;color:#0366d6;text-decoration:none}.markdown-body a:active,.markdown-body a:hover{outline-width:0}.markdown-body h1{margin:.67em 0}.markdown-body img{border-style:none}.markdown-body svg:not(:root){overflow:hidden}.markdown-body code,.markdown-body kbd,.markdown-body pre{font-family:monospace,monospace}.markdown-body input{font:inherit;margin:0;overflow:visible;font-family:inherit;font-size:inherit;line-height:inherit}.markdown-body [type=checkbox]{box-sizing:border-box;padding:0}.markdown-body *{box-sizing:border-box}.markdown-body a:hover{text-decoration:underline}.markdown-body strong{font-weight:600}.markdown-body hr{box-sizing:content-box;overflow:hidden;background:0 0;border-bottom:1px solid #dfe2e5}.markdown-body hr::before{display:table;content:""}.markdown-body hr::after{display:table;clear:both;content:""}.markdown-body table{border-spacing:0;border-collapse:collapse;display:block;width:100%;overflow:auto}.markdown-body td,.markdown-body th{padding:0}.markdown-body blockquote{margin:0}.markdown-body ol ol,.markdown-body ul ol{list-style-type:lower-roman}.markdown-body ol ol ol,.markdown-body ol ul ol,.markdown-body ul ol ol,.markdown-body ul ul ol{list-style-type:lower-alpha}.markdown-body dd{margin-left:0}.markdown-body code{font-family:SFMono-Regular,Consolas,"Liberation Mono",Menlo,Courier,monospace}.markdown-body pre{font:12px SFMono-Regular,Consolas,"Liberation Mono",Menlo,Courier,monospace;word-wrap:normal}.markdown-body .pl-0{padding-left:0!important}.markdown-body .pl-1{padding-left:4px!important}.markdown-body .pl-2{padding-left:8px!important}.markdown-body .pl-3{padding-left:16px!important}.markdown-body .pl-4{padding-left:24px!important}.markdown-body .pl-5{padding-left:32px!important}.markdown-body .pl-6{padding-left:40px!important}.markdown-body::before{display:table;content:""}.markdown-body::after{display:table;clear:both;content:""}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:0}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e1e4e8;border:0}.markdown-body blockquote{padding:0 1em;color:#6a737d;border-left:.25em solid #dfe2e5}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd{font-size:11px;box-shadow:inset 0 -1px 0 #959da5}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#1b1f23;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1{padding-bottom:.3em;font-size:2em;border-bottom:1px solid #eaecef}.markdown-body h2{padding-bottom:.3em;font-size:1.5em;border-bottom:1px solid #eaecef}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#6a737d}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{margin-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:600}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table th{font-weight:600}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #dfe2e5}.markdown-body table tr{background-color:#fff;border-top:1px solid #c6cbd1}.markdown-body table tr:nth-child(2n){background-color:#f6f8fa}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body code{padding:.2em 0;margin:0;font-size:85%;background-color:rgba(27,31,35,.05);border-radius:3px}.markdown-body code::after,.markdown-body code::before{letter-spacing:-.2em;content:"\00a0"}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:0 0;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f6f8fa;border-radius:3px}.markdown-body pre code{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code::after,.markdown-body pre code::before{content:normal}.markdown-body .full-commit .btn-outline:not(:disabled):hover{color:#005cc5;border-color:#005cc5}.markdown-body kbd{display:inline-block;padding:3px 5px;font:11px SFMono-Regular,Consolas,"Liberation Mono",Menlo,Courier,monospace;line-height:10px;color:#444d56;vertical-align:middle;background-color:#fcfcfc;border:1px solid #c6cbd1;border-bottom-color:#959da5;border-radius:3px;box-shadow:inset 0 -1px 0 #959da5}.markdown-body :checked+.radio-label{position:relative;z-index:1;border-color:#0366d6}.markdown-body .task-list-item{list-style-type:none}.markdown-body .task-list-item+.task-list-item{margin-top:3px}.markdown-body .task-list-item input{margin:0 .2em .25em -1.6em;vertical-align:middle}.markdown-body hr{border-bottom-color:#eee}.flash{position:relative;padding:16px;color:#246;background-color:#e2eef9;border:1px solid #bac6d3;border-radius:3px}.flash p:last-child{margin-bottom:0}.flash-messages{margin-bottom:24px}.flash-warn{color:#4c4a42;background-color:#fff9ea;border-color:#dfd8c2}.flash-error{color:#911;background-color:#fcdede;border-color:#d2b2b2}.flash-success{color:#22662c;background-color:#e2f9e5;border-color:#bad3be}.flash-plain{color:#4c4a42;background-color:#f5f5f5;border-color:#c1c1c1}</style>
+  <style type="text/css">
+.markdown-body{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#24292e;font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";font-size:16px;line-height:1.5;word-wrap:break-word;box-sizing:border-box;min-width:200px;max-width:980px;margin:0 auto;padding:45px}.markdown-body a{color:#0366d6;background-color:transparent;text-decoration:none;-webkit-text-decoration-skip:objects}.markdown-body a:active,.markdown-body a:hover{outline-width:0}.markdown-body a:hover{text-decoration:underline}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body strong{font-weight:600}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1{font-size:2em;margin:.67em 0;padding-bottom:.3em;border-bottom:1px solid #eaecef}.markdown-body h2{padding-bottom:.3em;font-size:1.5em;border-bottom:1px solid #eaecef}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#6a737d}.markdown-body img{border-style:none}.markdown-body svg:not(:root){overflow:hidden}.markdown-body hr{box-sizing:content-box;height:.25em;margin:24px 0;padding:0;overflow:hidden;background-color:#e1e4e8;border:0}.markdown-body hr::before{display:table;content:""}.markdown-body hr::after{display:table;clear:both;content:""}.markdown-body input{margin:0;overflow:visible;font:inherit;font-family:inherit;font-size:inherit;line-height:inherit}.markdown-body [type=checkbox]{box-sizing:border-box;padding:0}.markdown-body *{box-sizing:border-box}.markdown-body blockquote{margin:0}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol ol,.markdown-body ul ol{list-style-type:lower-roman}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body ol ol ol,.markdown-body ol ul ol,.markdown-body ul ol ol,.markdown-body ul ul ol{list-style-type:lower-alpha}.markdown-body li>p{margin-top:16px}.markdown-body li+li{margin-top:.25em}.markdown-body dd{margin-left:0}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:600}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body code{font-family:SFMono-Regular,Consolas,"Liberation Mono",Menlo,Courier,monospace}.markdown-body pre{font:12px SFMono-Regular,Consolas,"Liberation Mono",Menlo,Courier,monospace;word-wrap:normal}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body blockquote{padding:0 1em;color:#6a737d;border-left:.25em solid #dfe2e5}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body table{display:block;width:100%;overflow:auto;border-spacing:0;border-collapse:collapse}.markdown-body table th{font-weight:600}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #dfe2e5}.markdown-body table tr{background-color:#fff;border-top:1px solid #c6cbd1}.markdown-body table tr:nth-child(2n){background-color:#f6f8fa}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body code{padding:.2em 0;margin:0;font-size:85%;background-color:rgba(27,31,35,.05);border-radius:3px}.markdown-body code::after,.markdown-body code::before{letter-spacing:-.2em;content:"\00a0"}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:0 0;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f6f8fa;border-radius:3px}.markdown-body pre code{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code::after,.markdown-body pre code::before{content:normal}.markdown-body .full-commit .btn-outline:not(:disabled):hover{color:#005cc5;border-color:#005cc5}.markdown-body kbd{box-shadow:inset 0 -1px 0 #959da5;display:inline-block;padding:3px 5px;font:11px/10px SFMono-Regular,Consolas,"Liberation Mono",Menlo,Courier,monospace;color:#444d56;vertical-align:middle;background-color:#fcfcfc;border:1px solid #c6cbd1;border-bottom-color:#959da5;border-radius:3px;box-shadow:inset 0 -1px 0 #959da5}.markdown-body :checked+.radio-label{position:relative;z-index:1;border-color:#0366d6}.markdown-body .task-list-item{list-style-type:none}.markdown-body .task-list-item+.task-list-item{margin-top:3px}.markdown-body .task-list-item input{margin:0 .2em .25em -1.6em;vertical-align:middle}.markdown-body::before{display:table;content:""}.markdown-body::after{display:table;clear:both;content:""}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.Alert,.Error,.Note,.Success,.Warning{padding:11px;margin-bottom:24px;border-style:solid;border-width:1px;border-radius:4px}.Alert p,.Error p,.Note p,.Success p,.Warning p{margin-top:0}.Alert p:last-child,.Error p:last-child,.Note p:last-child,.Success p:last-child,.Warning p:last-child{margin-bottom:0}.Alert{color:#246;background-color:#e2eef9;border-color:#bac6d3}.Warning{color:#4c4a42;background-color:#fff9ea;border-color:#dfd8c2}.Error{color:#911;background-color:#fcdede;border-color:#d2b2b2}.Success{color:#22662c;background-color:#e2f9e5;border-color:#bad3be}.Note{color:#2f363d;background-color:#f6f8fa;border-color:#d5d8da}.Alert h1,.Alert h2,.Alert h3,.Alert h4,.Alert h5,.Alert h6{color:#246;margin-bottom:0}.Warning h1,.Warning h2,.Warning h3,.Warning h4,.Warning h5,.Warning h6{color:#4c4a42;margin-bottom:0}.Error h1,.Error h2,.Error h3,.Error h4,.Error h5,.Error h6{color:#911;margin-bottom:0}.Success h1,.Success h2,.Success h3,.Success h4,.Success h5,.Success h6{color:#22662c;margin-bottom:0}.Note h1,.Note h2,.Note h3,.Note h4,.Note h5,.Note h6{color:#2f363d;margin-bottom:0}.Alert h1:first-child,.Alert h2:first-child,.Alert h3:first-child,.Alert h4:first-child,.Alert h5:first-child,.Alert h6:first-child,.Error h1:first-child,.Error h2:first-child,.Error h3:first-child,.Error h4:first-child,.Error h5:first-child,.Error h6:first-child,.Note h1:first-child,.Note h2:first-child,.Note h3:first-child,.Note h4:first-child,.Note h5:first-child,.Note h6:first-child,.Success h1:first-child,.Success h2:first-child,.Success h3:first-child,.Success h4:first-child,.Success h5:first-child,.Success h6:first-child,.Warning h1:first-child,.Warning h2:first-child,.Warning h3:first-child,.Warning h4:first-child,.Warning h5:first-child,.Warning h6:first-child{margin-top:0}h1.title,p.subtitle{text-align:center}h1.title.followed-by-subtitle{margin-bottom:0}p.subtitle{font-size:1.5em;font-weight:600;line-height:1.25;margin-top:0;margin-bottom:16px;padding-bottom:.3em}div.line-block{white-space:pre-line}
+  </style>
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+div.sourceLine, a.sourceLine { display: inline-block; min-height: 1.25em; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; }
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+div.sourceLine, a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource div.sourceLine, .numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource div.sourceLine::before, .numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; color: #aaaaaa;  padding-left: 4px; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; color: initial; }
+}
+code span.kw { color: #0000ff; } /* Keyword */
+code span.ch { color: #008080; } /* Char */
+code span.st { color: #008080; } /* String */
+code span.co { color: #008000; } /* Comment */
+code span.ot { color: #ff4000; } /* Other */
+code span.al { color: #ff0000; } /* Alert */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.wa { color: #008000; font-weight: bold; } /* Warning */
+code span.cn { } /* Constant */
+code span.sc { color: #008080; } /* SpecialChar */
+code span.vs { color: #008080; } /* VerbatimString */
+code span.ss { color: #008080; } /* SpecialString */
+code span.im { } /* Import */
+code span.va { } /* Variable */
+code span.cf { color: #0000ff; } /* ControlFlow */
+code span.op { } /* Operator */
+code span.bu { } /* BuiltIn */
+code span.ex { } /* Extension */
+code span.pp { color: #ff4000; } /* Preprocessor */
+code span.do { color: #008000; } /* Documentation */
+code span.an { color: #008000; } /* Annotation */
+code span.cv { color: #008000; } /* CommentVar */
+code span.at { } /* Attribute */
+code span.in { color: #008000; } /* Information */
   </style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
@@ -68,39 +114,98 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <body>
 <article class="markdown-body">
 <header>
-<h1 class="title">GitHub Pandoc HTML5 Template</h1>
-</header>
-<nav id="TOC">
+<h1 class="title followed-by-subtitle">GitHub Pandoc HTML5 Template</h1>
+<p class="subtitle">v2.0 (2017/11/21) MIT License</p>
+<div class="summary">
+<p>This is a preview of “<em>GitHub Pandoc HTML5 Template</em>” <strong>v2.0</strong>, © Tristano Ajmone 2017, MIT License (MIT).</p>
+<p>You can download it freely from the “<strong>Pandoc-Goodies</strong>” project:</p>
 <ul>
+<li><a href="https://github.com/tajmone/pandoc-goodies" class="uri">https://github.com/tajmone/pandoc-goodies</a></li>
+</ul>
+<div class="Warning">
+<p><strong>DISCLAIMER</strong> — This theme <em>is not</em> officialy endorsed by GitHub Inc.: it’s just a personal project by the author. The presence of the word “GitHub” in the template’s name only indicates that it mimicks the look and feel of how documents are previewed on <a href="https://github.com/" title="Visit GitHub.com">GitHub.com</a>, and <em>does not</em> imply any type of endorsement by, or affiliation to GitHub Inc. or any of its products — it’s “GitHub” as in “GitHubbish”, or GitHub-style.</p>
+<p>GITHUB® in an exclusive trademark registered in the United States by <a href="https://github.com/about" title="About GitHub, Inc.">GitHub, Inc.</a></p>
+</div>
+</div>
+</header>
+<hr>
+<nav id="TOC">
+<h1 class="toc-title">Contents</h1>
+<ul>
+<li><a href="#features">Features</a><ul>
+<li><a href="#requirements">Requirements</a></li>
+</ul></li>
 <li><a href="#standard-typography">Standard Typography</a><ul>
+<li><a href="#lists">Lists</a><ul>
+<li><a href="#ordered-lists">Ordered Lists</a></li>
+<li><a href="#bullet-lists">Bullet Lists</a></li>
+<li><a href="#task-lists">Task Lists</a></li>
+</ul></li>
 <li><a href="#definition-lists">Definition lists</a></li>
+<li><a href="#tables">Tables</a></li>
+<li><a href="#source-code-blocks">Source Code Blocks</a></li>
 </ul></li>
 <li><a href="#pandoc-markdown">Pandoc Markdown</a><ul>
-<li><a href="#line-blocks">Line blocks</a></li>
+<li><a href="#line-blocks">Line Blocks</a></li>
 </ul></li>
 <li><a href="#gfm-features">GFM Features</a><ul>
 <li><a href="#inline-text-elements">Inline text elements</a></li>
-<li><a href="#task-lists">Task Lists</a></li>
+<li><a href="#task-lists-1">Task Lists</a></li>
 </ul></li>
-<li><a href="#github-extended-css-features">GitHub Extended CSS Features</a><ul>
-<li><a href="#alerts">Alerts</a></li>
+<li><a href="#githubs-primer-css-features">GitHub’s Primer-CSS Features</a><ul>
+<li><a href="#alerts">Alerts</a><ul>
+<li><a href="#creating-alerts-via-fenced-divs">Creating Alerts Via Fenced-Divs</a></li>
+<li><a href="#creating-alerts-via-pp-macros">Creating Alerts Via PP Macros</a></li>
 </ul></li>
-<li><a href="#extra-template-variables">Extra Template Variables</a></li>
+</ul></li>
+<li><a href="#template-variables">Template Variables</a></li>
 </ul>
 </nav>
-<hr />
-<p>This is a preview of “<em>GitHub Pandoc HTML5 Template</em>” <strong>v1.1</strong>, © Tristano Ajmone 2017, MIT License (MIT).</p>
-<p><strong>CSS Styling</strong>: This template supports styling for all the standard markdown elements, some GitHub flavored markdown elements (task lists, etc.), and some of GitHub’s advanced CSS styling (alerts) via the custom pp macros of the <a href="https://github.com/tajmone/pandoc-goodies">Pandoc-Goodies</a> project.</p>
-<p><strong>Template Variables</strong>: This template supports all the standard pandoc template variables, but also allows overriding them with some custom variables. The template was adapted from the default html5 template that shipped with <mark><strong>pandoc v1.19.2.1</strong></mark>.</p>
+<hr>
+<h1 id="features">Features</h1>
+<p>This is a fully stand-alone pandoc HTML5 template (embedded CSS stylesheet). It’s ideal for creating single-file documentation for projects, even on <a href="https://pages.github.com/" title="More info on GitHub Pages">GitHub Pages</a>.</p>
+<p>The template mimicks the look and feel of <a href="https://github.com/">GitHub</a> documents previews — no 100% accuracy, just the GitHubbish feel. GitHub’s styling has changed over the course of time; this template picks and chooses from older and newer versions of GitHub’s styles and color schemes, according to the author preferences.</p>
+<p><strong>CSS Styling</strong> — This template supports styling for:</p>
+<ul>
+<li>all standard markdown elements</li>
+<li><a href="#pandoc-markdown">pandoc-flavoured markdown</a></li>
+<li><a href="#gfm-features">GitHub flavored markdown elements</a></li>
+<li>some of <a href="#githubs-primer-css-features">GitHub’s Primer-CSS advanced styles</a></li>
+<li>PP Macros from the “<strong><a href="https://github.com/tajmone/pandoc-goodies/tree/master/pp" title="Go to the Pandoc-Goodies PP-Macros Library">Pandoc-Goodies PP-Macros Library</a></strong>” project</li>
+</ul>
+<p><strong>Template Variables</strong> — This template supports all the standard pandoc template variables, plus some <a href="#template-variables">custom variables</a> for additional features (eg: <code>introduction</code> to show some text before the TOC, and <code>toc-title</code>).</p>
+<h2 id="requirements">Requirements</h2>
+<p>Minimum pandoc version required: v2.0</p>
+<p>The template was originally adapted from the default html5 template that shipped with <mark><strong>pandoc v1.19.2.1</strong></mark> and then adapted to work with <mark><strong>pandoc v2.0.2</strong></mark> (introducing backward-compatibility breaking changes).</p>
 <h1 id="standard-typography">Standard Typography</h1>
-<p>Lorem markdownum stagna <em>de spatiantes</em> mirabatur <strong>arboribus at nunc</strong>, somnus sanguine quosque <del>genusque addenda socia</del>.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> <mark>Plus ipsisque latent</mark>, genus, medio aut rima haberet.</p>
-<p>Quem palluerat, vulgaris pignora: <kbd>Crtl</kbd>+<kbd>Z</kbd>.<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a></p>
+<p>Lorem markdownum stagna <em>de spatiantes</em> mirabatur <strong>arboribus at nunc</strong>, somnus sanguine quosque <del>genusque addenda socia</del>.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> <mark>Plus ipsisque latent</mark>, genus, medio aut rima haberet.</p>
+<p>Quem palluerat, vulgaris pignora: <kbd>Crtl</kbd>+<kbd>Z</kbd>.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+<h1>
+H1 Heading
+</h1>
+<h2>
+H2 Heading
+</h2>
+<h3>
+H3 Heading
+</h3>
+<h4>
+H4 Heading
+</h4>
+<h5>
+H5 Heading
+</h5>
+<h6>
+H6 Heading
+</h6>
 <blockquote>
 <p>Et vult Ulixe nec mater moras veluti spatio omnia sub quemque ripas ubi. Nil non, sub nec, ubi ferant deus pacis Turni, parentum.</p>
 <blockquote>
-<p>Ut nobis Ampycides esset indigenae eiecit domini successibus Aiaci tecta nunc terris, Argolica videres est neque. Aeacides caloris, magna canes.<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a></p>
+<p>Ut nobis Ampycides esset indigenae eiecit domini successibus Aiaci tecta nunc terris, Argolica videres est neque. Aeacides caloris, magna canes.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
 </blockquote>
 </blockquote>
+<h2 id="lists">Lists</h2>
+<h3 id="ordered-lists">Ordered Lists</h3>
 <ol type="1">
 <li>Nec et tormenta tacitae decet aethere</li>
 <li>Nullamque corpus
@@ -111,6 +216,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ol></li>
 <li>Adit Symplegadas inque</li>
 </ol>
+<h3 id="bullet-lists">Bullet Lists</h3>
 <ul>
 <li>Dic pro captantur exitus quo viris infera</li>
 <li>Humanam tenderet
@@ -121,31 +227,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Lelex ad ira</li>
 <li>Inpositus cum genus extulit nec inseris ille</li>
 </ul>
-<h1>
-h1
-</h1>
-<h2>
-h2
-</h2>
-<h3>
-h3
-</h3>
-<h4>
-h4
-</h4>
-<h5>
-h5
-</h5>
-<h6>
-h6
-</h6>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co">#! python</span>
-
-<span class="co"># Fibonacci series</span>
-a, b <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span>
-<span class="cf">while</span> b <span class="op">&lt;</span> <span class="dv">200</span>:
-       <span class="bu">print</span> b,
-       a, b <span class="op">=</span> b, a<span class="op">+</span>b</code></pre></div>
+<h3 id="task-lists">Task Lists</h3>
+<ul class="task-list">
+<li class="task-list-item">
+<input type="checkbox" disabled=""checked=""> Nec et tormenta tacitae decet aethere
+</li>
+<li class="task-list-item">
+<input type="checkbox" disabled=""> Nullamque corpus
+<ul class="task-list">
+<li class="task-list-item">
+<input type="checkbox" disabled=""checked=""> Sic nunc naides dubiis
+</li>
+<li class="task-list-item">
+<input type="checkbox" disabled=""> Virgo forti ardent
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="definition-lists">Definition lists</h2>
 <dl>
 <dt>Term 1</dt>
@@ -157,6 +255,7 @@ a, b <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</sp
 <p>Ut sentesflumen, mea ira, et ubi manus silicem.</p>
 </dd>
 </dl>
+<h2 id="tables">Tables</h2>
 <table>
 <thead>
 <tr class="header">
@@ -176,124 +275,221 @@ a, b <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</sp
 <td>Cell</td>
 <td>Cell</td>
 </tr>
+<tr class="odd">
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+</tr>
 </tbody>
 </table>
+<h2 id="source-code-blocks">Source Code Blocks</h2>
+<pre class="sourceCode python" id="cb1"><code class="sourceCode python"><div class="sourceLine" id="cb1-1" data-line-number="1"><span class="co">#!/usr/bin/env python</span></div>
+<div class="sourceLine" id="cb1-2" data-line-number="2"><span class="co">&quot;&quot;&quot;</span></div>
+<div class="sourceLine" id="cb1-3" data-line-number="3"><span class="co">Print the Fibonacci Sequence to output.</span></div>
+<div class="sourceLine" id="cb1-4" data-line-number="4"><span class="co">By Alex E. Rodriguez; public domain:</span></div>
+<div class="sourceLine" id="cb1-5" data-line-number="5"><span class="co">https://github.com/arodriguez23434/arodriguez_2016_fibonacci</span></div>
+<div class="sourceLine" id="cb1-6" data-line-number="6"><span class="co">&quot;&quot;&quot;</span></div>
+<div class="sourceLine" id="cb1-7" data-line-number="7"><span class="kw">def</span> fibo(<span class="bu">int</span>):</div>
+<div class="sourceLine" id="cb1-8" data-line-number="8">    <span class="co">#Indices 0 &amp; 1 are pre-set; Addition begins at index 2</span></div>
+<div class="sourceLine" id="cb1-9" data-line-number="9">    fibo_list <span class="op">=</span> [<span class="dv">0</span>,<span class="dv">1</span>]<span class="op">;</span></div>
+<div class="sourceLine" id="cb1-10" data-line-number="10">    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>,<span class="bu">int</span>):</div>
+<div class="sourceLine" id="cb1-11" data-line-number="11">        <span class="co">#Add previous sum to previous largest integer: (a+b)=sum -&gt; (b+sum)=new_sum -&gt; ... then append to list</span></div>
+<div class="sourceLine" id="cb1-12" data-line-number="12">        fibo_list.append(fibo_list[i<span class="dv">-2</span>]<span class="op">+</span>fibo_list[i<span class="dv">-1</span>])<span class="op">;</span></div>
+<div class="sourceLine" id="cb1-13" data-line-number="13">    <span class="cf">return</span> fibo_list<span class="op">;</span></div>
+<div class="sourceLine" id="cb1-14" data-line-number="14"></div>
+<div class="sourceLine" id="cb1-15" data-line-number="15"><span class="bu">print</span>(fibo(<span class="dv">100</span>))<span class="op">;</span> <span class="co">#Print list </span></div></code></pre>
+<div class="Alert">
+<p><strong>HIGHLIGHT-STYLE</strong> — Source code is highlighted using either pandoc’s default style (<code>pygments</code>) or the style set at invocation by the <code>--highlight-style=STYLE|FILE</code> option. This document uses the <code>haddock</code> built-in style.</p>
+<p>The template’s embedded CSS doesn’t define the syntax coloring style, leaving you the freedom to use your own style definition files or pandoc’s built-in styles.</p>
+</div>
 <h1 id="pandoc-markdown">Pandoc Markdown</h1>
-<h2 id="line-blocks">Line blocks</h2>
-<div style="white-space: pre-line;">The limerick packs laughs anatomical
+<h2 id="line-blocks">Line Blocks</h2>
+<div class="line-block">The limerick packs laughs anatomical
 In space that is quite economical.
    But the good ones I’ve seen
    So seldom are clean
 And the clean ones so seldom are comical</div>
+<p><br />
+</p>
+<div class="Note">
+<p><strong>NOTE</strong> — Pandoc v2.x no longer adds inline CSS to Line blocks, it assigns them the “<code>line-block</code>” class instead, leaving it up to the end-user to define it in the CSS stylesheet. This templates covers Line blocks style definitions.</p>
+</div>
 <h1 id="gfm-features">GFM Features</h1>
 <h2 id="inline-text-elements">Inline text elements</h2>
-You can use the mark tag to <mark>highlight</mark> text.
-</p>
+<p>You can use the <code>&lt;mark&gt;</code> tag to <mark>highlight text</mark>.</p>
 <p><del>This line of text is meant to be treated as deleted text.</del></p>
-<p>Keystroke can be rendered with <code>&lt;key&gt;</code> tag: <kbd>Shift</kbd>+<kbd>U</kbd></p>
-<h2 id="task-lists">Task Lists</h2>
+<p>Keystroke can be rendered with <code>&lt;key&gt;</code> tag: <kbd>Shift</kbd>+<kbd>U</kbd>; or by using the <code>!kbd</code> PP macro from the <a href="https://github.com/tajmone/pandoc-goodies/tree/master/pp#inline-formatting" title="More info about the Inline Formatting macros set">Inline Formatting macros set</a>, eg: <code>!kbd(Ctrl)(Alt)(Canc)</code> to output <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Canc</kbd>.</p>
+<h2 id="task-lists-1">Task Lists</h2>
 <p>GFM Task Lists can be used within pandoc markdown documents through our custom pp macros. Example:</p>
 <pre><code>!TaskList(
 !Task[x][I&#39;m a _checked_ task]
 !Task[ ][I&#39;m an _unchecked_ task]
-)</code></pre>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!Task[x][I&#39;m a sub-task]
+!Task[ ][&lt;mark&gt;Mee too!&lt;/mark&gt;]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+)
+</code></pre>
 <p>… will produce:</p>
 <ul class="task-list">
 <li class="task-list-item">
-<input type="checkbox" disabled=""checked="">I’m a <em>checked</em> task
+<input type="checkbox" disabled=""checked=""> I’m a <em>checked</em> task
 </li>
 <li class="task-list-item">
-<input type="checkbox" disabled="">I’m an <em>unchecked</em> task
+<input type="checkbox" disabled=""> I’m an <em>unchecked</em> task
+<ul class="task-list">
+<li class="task-list-item">
+<input type="checkbox" disabled=""checked=""> I’m a sub-task
+</li>
+<li class="task-list-item">
+<input type="checkbox" disabled=""> <mark>Mee too!</mark>
 </li>
 </ul>
-<h1 id="github-extended-css-features">GitHub Extended CSS Features</h1>
+</li>
+</ul>
+<p>Markdown formatting in the macro parameters is properly rendered.</p>
+<h1 id="githubs-primer-css-features">GitHub’s Primer-CSS Features</h1>
 <h2 id="alerts">Alerts</h2>
-<p>Alerts (aka <em>flash messages</em>) are part of GitHub’s <strong>Primer CSS</strong>, and they are available in documents previews:</p>
+<p>Alerts (aka <em>flash messages</em>) are borrowed/inspired from <strong>Primer CSS</strong>, the library that handles all the styling of GitHub’s portal:</p>
 <ul>
-<li><a href="http://primercss.io/alerts/" class="uri">http://primercss.io/alerts/</a></li>
+<li><a href="http://primercss.io/archive/alerts/" class="uri">http://primercss.io/archive/alerts/</a></li>
 </ul>
-<p>These are the different type of alerts available, along with the custom pp-macros to generate them inside markdown source:</p>
-<div class="flash-messages">
-<div class="flash">
-<p><strong>Default alert</strong> — Created with the <code>!GFMAlert(TEXT)</code> pp macro.</p>
+<div class="Alert">
+<p><strong>Alert</strong> — I’m the “Alert” alert!</p>
 </div>
+<div class="Warning">
+<p><strong>Warning</strong> — I’m the “Warning” alert!</p>
 </div>
-<div class="flash-messages">
-<div class="flash flash-warn">
-<p><strong>Warning alert</strong> — Created with the <code>!GFMWarn(TEXT)</code> pp macro.</p>
+<div class="Error">
+<p><strong>Error</strong> — I’m the “Error” alert!</p>
 </div>
+<div class="Success">
+<p><strong>Success</strong> — I’m the “Success” alert!</p>
 </div>
-<div class="flash-messages">
-<div class="flash flash-error">
-<p><strong>Error alert</strong> — Created with the <code>!GFMError(TEXT)</code> pp macro.</p>
+<div class="Note">
+<p><strong>Note</strong> — I’m the “Note” alert!</p>
 </div>
-</div>
-<div class="flash-messages">
-<div class="flash flash-success">
-<p><strong>Success alert</strong> — Created with the <code>!GFMSuccess(TEXT)</code> pp macro.</p>
-</div>
-</div>
-<div class="flash-messages">
-<div class="flash flash-plain">
-<p><strong>Plain alert</strong> — Created with the <code>!GFMAlertPlain(TEXT)</code> pp macro.</p>
-<p>This alert is not part of the original set of GitHub Alerts, it’s a custom addition.</p>
-</div>
-</div>
-<p>The macro’s parameter will be treated as markdown content if pandoc’s <code>markdown_in_html_blocks</code> extension is enabled (default in pandoc markdown):</p>
-<pre><code>!GFMAlert(
-This alert contains __markdown__ formatting and _spans_ over &lt;mark&gt;multiple paragraphs&lt;/mark&gt;.
-
-Any `markdown` element and block can be placed inside the alert:
-
-- List item
-- List item
-- List item
-)</code></pre>
-<div class="flash-messages">
-<div class="flash flash-plain">
-<p>This alert contains <strong>markdown</strong> formatting and <em>spans</em> over <mark>multiple paragraphs</mark>.</p>
-<p>Any <code>markdown</code> element and block can be placed inside the alert:</p>
+<h3 id="creating-alerts-via-fenced-divs">Creating Alerts Via Fenced-Divs</h3>
+<p>This templates emulates Primer’s Alerts via custom <code>&lt;div&gt;</code> classes (case-sensitive):</p>
 <ul>
-<li>List item</li>
-<li>List item</li>
-<li>List item</li>
+<li><code>.Alert</code> (blue)</li>
+<li><code>.Warning</code> (yellow)</li>
+<li><code>.Error</code> (red)</li>
+<li><code>.Success</code> (green)</li>
+<li><code>.Note</code> (grey)</li>
+</ul>
+<p>You can use the above class-names with pandoc’s new <a href="http://pandoc.org/MANUAL.html#extension-fenced_divs" title="More info about pandoc fenced-divs syntax">fenced-divs</a> syntax to display alerts in your documents:</p>
+<pre><code>::::: Warning :::::::::::::::::::::::::::::::::::::::::
+**BEWARE** --- The grey `.Note` alert is a our own
+addition, it&#39;s not part of Primer-CSS&#39; original Alerts!
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+</code></pre>
+<p>… result:</p>
+<div class="Warning">
+<p><strong>BEWARE</strong> — The grey <code>.Note</code> alert is a our own addition, it’s not part of Primer-CSS’ original Alerts!</p>
+</div>
+<h3 id="creating-alerts-via-pp-macros">Creating Alerts Via PP Macros</h3>
+<p>Alternatively, you can create alerts using the PP macros from the <a href="https://github.com/tajmone/pandoc-goodies/tree/master/pp#github-alerts" title="More info about the Alerts macros set">GitHub Alerts macros set</a>:</p>
+<ul>
+<li><code>!GFMAlert( CONTENTS )</code> — <strong>Alert</strong> (blue)</li>
+<li><code>!GFMError( CONTENTS )</code> — <strong>Warning</strong> (red)</li>
+<li><code>!GFMWarn( CONTENTS )</code> — <strong>Error</strong> (yellow)</li>
+<li><code>!GFMSuccess( CONTENTS )</code> — <strong>Success</strong> (green)</li>
+<li><code>!GFMAlertNote( CONTENTS )</code> — <strong>Note</strong> (grey)</li>
+</ul>
+<p>Example:</p>
+<pre><code>!GFMAlert
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**ALERT** --- I&#39;m an alert created using a PP macro from the
+&quot;GitHub Alerts&quot; macros set.
+
+I can contain __markdown__ formatting and &lt;mark&gt;my contents
+may span over multiple paragraphs&lt;/mark&gt;.
+
+Any kind of markdown element and block may be placed inside
+`GFMAlert` macros:
+
+- Apples
+- Bananas
+- Oranges
+
+... including nested PP macros:
+
+!TaskList
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!Task[x][Delete `temp.bat`]
+!Task[ ][Press !kbd(Ctrl)(Z)]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+</code></pre>
+<p>… result:</p>
+<div class="Alert">
+<p><strong>ALERT</strong> — I’m an alert created using a PP macro from the “GitHub Alerts” macros set.</p>
+<p>I can contain <strong>markdown</strong> formatting and <mark>my contents may span over multiple paragraphs</mark>.</p>
+<p>Any kind of markdown element and block may be placed inside <code>GFMAlert</code> macros:</p>
+<ul>
+<li>Apples</li>
+<li>Bananas</li>
+<li>Oranges</li>
+</ul>
+<p>… including nested PP macros:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<input type="checkbox" disabled=""checked=""> Delete <code>temp.bat</code>
+</li>
+<li class="task-list-item">
+<input type="checkbox" disabled=""> Press <kbd>Ctrl</kbd>+<kbd>Z</kbd>
+</li>
 </ul>
 </div>
+<p>These are the different type of alerts available, along with the custom pp-macros used generate them:</p>
+<div class="Alert">
+<p><strong>Alert</strong> — Created with the <code>!GFMAlert()</code> PP macro.</p>
 </div>
-<h1 id="extra-template-variables">Extra Template Variables</h1>
-<p>Beside supporting all the standard pandoc variables (pandoc 1.19.2.1), some extra variables were added to the template to allow finer customization.</p>
-<p>The variables <code>title</code>, <code>author</code> and <code>date</code> all have a counterpart with the <code>docmeta-</code> prefix added to their name (ie: <code>docmeta-title</code>, <code>docmeta-author</code> and <code>docmeta-date</code>). These alternative variables are intended to be used in the <code>&lt;meta&gt;</code> elements of the <code>&lt;head&gt;</code> section in the html source. If an alternative <code>docmeta-</code> variable is found, it will be used instead of its default conterpart to fill the metadata; if not, the default (unprefixed) variable will be employed as usual.</p>
-<p>This can be exploited to produce a different text in the <code>&lt;title&gt;</code> tag and the actual document’s title, or to display authors names only in the source <code>&lt;meta&gt;</code> elements but not in the actual document (ie: by setting only the <code>docmeta-</code> variable).</p>
-<p>For an example of their usage, see the <a href="./src/preview.yaml"><code>preview.yaml</code></a> file in the <code>src</code> folder, and examine the template source code.</p>
-<p>The use of the alternative variables is completely optional, and by ignoring them the template will follow the conventional variables system of the default pandoc templates.</p>
+<div class="Warning">
+<p><strong>Warning</strong> — Created with the <code>!GFMWarn()</code> PP macro.</p>
+</div>
+<div class="Error">
+<p><strong>Error</strong> — Created with the <code>!GFMError()</code> PP macro.</p>
+</div>
+<div class="Success">
+<p><strong>Success</strong> — Created with the <code>!GFMSuccess()</code> PP macro.</p>
+</div>
+<div class="Note">
+<p><strong>Note</strong> — Created with the <code>!GFMAlertNote()</code> PP macro.</p>
+</div>
+<h1 id="template-variables">Template Variables</h1>
+<p>Beside supporting all the standard pandoc template variables (pandoc v2.0.2), some extra variables were added to the template to allow finer customization.</p>
 <table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 81%" />
+</colgroup>
 <thead>
 <tr class="header">
-<th>default var</th>
-<th>alternative var</th>
+<th>VAR NAME</th>
+<th>DESCRIPTION</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>title</code></td>
-<td><code>docmeta-title</code></td>
+<td><code>summary</code></td>
+<td>A block of text that will be displayed right before the TOC. Wrapped in <code>&lt;div class=&quot;summary&quot;&gt;</code></td>
 </tr>
 <tr class="even">
-<td><code>author</code></td>
-<td><code>docmeta-author</code></td>
-</tr>
-<tr class="odd">
-<td><code>date</code></td>
-<td><code>docmeta-date</code></td>
+<td><code>toc-title</code></td>
+<td>Title for Table of Contents (defaults to “Contents”)</td>
 </tr>
 </tbody>
 </table>
+<p>The <code>summary</code> text belongs to the <code>&lt;header&gt;</code> block, so it won’t be displayed unless <em>title</em> was definied. It will be placed after <em>authors</em> and <em>date</em>, and right before <em>Table of Contentes</em>. It will parsed as markdown, so it offers an easy way to add introductiory text directly in the document’s YAML header.</p>
+<p>You can see an example of the <code>summary</code> var at work right in this page.</p>
 <section class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Nec opus caecoque frondibus fervet.<a href="#fnref1">↩</a></p></li>
-<li id="fn2"><p>Hora sequantur <em>nimium exiguis et</em> in fit coniuge aures, adfuit.<a href="#fnref2">↩</a></p></li>
-<li id="fn3"><p>Turni, parentum. Ut nobis Ampycides esset indigenae eiecit domini successibus Aiaci tecta nunc terris, Argolica videres est neque. Aeacides caloris, magna canes.<a href="#fnref3">↩</a></p></li>
+<li id="fn1"><p>Nec opus caecoque frondibus fervet.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>Hora sequantur <em>nimium exiguis et</em> in fit coniuge aures, adfuit.<a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>Turni, parentum. Ut nobis Ampycides esset indigenae eiecit domini successibus Aiaci tecta nunc terris, Argolica videres est neque. Aeacides caloris, magna canes.<a href="#fnref3" class="footnote-back">↩</a></p></li>
 </ol>
 </section>
 </article>

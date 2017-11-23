@@ -1,6 +1,6 @@
 # Pandoc-Goodies
 
-    pandoc v1.19.2 -> v2.0.2 | PP v2.0
+    pandoc v2.0.2 | PP v2.1.5
 
 A tresure-box of resources for pandoc, pp and the Texts word processor.
 
@@ -10,11 +10,7 @@ Copyright © Tristano Ajmone 2017, [MIT License](./LICENSE).
 
 The project is still WIP and in its early stages, but a pandoc html5 template is ready for use, along with a growing pp-macros library.
 
-> **PANDOC 2 NOTE** — Resources are currently being ported to the new pandoc v2. At the beginning of each section’s `README` you’ll see mentioned the pandoc version number to which the resources are updated to.
-> 
-> The migration of the whole project to pandoc v2 might take a while. Sorry for the unconvenience, and keep visiting to check the project status.
-> 
-> Copies of the resources for pandoc v1 will be kept in subfolders, for projects which still might need them.
+> **PANDOC 2 READY** — All resources have been finally ported to work with the new pandoc v2.x release\! Copies of some resources for pandoc v1 will be kept in “`pandoc_v1`” subfolders, for projects which might still need them, but they will no longer be updated.
 
 -----
 

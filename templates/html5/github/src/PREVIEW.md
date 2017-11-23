@@ -1,10 +1,73 @@
---------------------------------
+!def(TEMPL_VER)(v2.0)
+!comment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"PREVIEW.md" v2.0 | 2017/11/21
+Tested with "GitHub HTML5 Pandoc Template" v2.0 | 2017/11/21
 
-This is a preview of “_GitHub Pandoc HTML5 Template_” __v1.1__, © Tristano Ajmone 2017, MIT License (MIT).
+This file holds the contents that will go in "../GitHub-Template-Preview.html"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-__CSS Styling__: This template supports styling for all the standard markdown elements, some GitHub flavored markdown elements (task lists, etc.), and some of GitHub's advanced CSS styling (alerts) via the custom pp macros of the [Pandoc-Goodies](https://github.com/tajmone/pandoc-goodies) project.
+---
+title:    GitHub Pandoc HTML5 Template
+subtitle: !TEMPL_VER \(2017/11/21\) MIT License
+# author:   Tristano Ajmone
+# date:   Nov 21, 2017
+lang: en
+toc-title: Contents
+# ============================= HTML META/HEADER ==============================
+# These variables are destined to the meta elements in the html head block.
+# Use them when you want to show author, date, etc., only in meta elements, or
+# you want different values to be displayed in the document and its metadata.
+# If these are not set, their equivalent vars (above) will be used instead.
+# -----------------------------------------------------------------------------
+pagetitle:   GitHub Pandoc HTML5 Template — Preview
+author-meta: Tristano Ajmone (tajmone@gmail.com)
+date-meta:   2017/11/21
+# =============================== SUMMARY TEXT ================================
+# If defined, the contents of `summary` key will be displayed right before TOC.
+# -----------------------------------------------------------------------------
+summary: |
+    This is a preview of “_GitHub Pandoc HTML5 Template_” **!TEMPL_VER**,
+    ©  Tristano Ajmone 2017, MIT License (MIT).
 
-__Template Variables__: This template supports all the standard pandoc template variables, but also allows overriding them with some custom variables. The template was adapted from the default html5 template that shipped with <mark>__pandoc v1.19.2.1__</mark>.
+    You can download it freely from the "__Pandoc-Goodies__" project:
+
+    - <https://github.com/tajmone/pandoc-goodies>
+
+    :::::::: Warning ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    __DISCLAIMER__ --- This theme _is not_ officialy endorsed by GitHub Inc.: it's just a personal project by the author.
+    The presence of the word "GitHub" in the template's name only indicates that it mimicks the look and feel of how documents are previewed on [GitHub.com], and _does not_ imply any type of endorsement by, or affiliation to GitHub Inc. or any of its products --- it's "GitHub" as in "GitHubbish", or GitHub-style.
+
+    GITHUB® in an exclusive trademark registered in the United States by [GitHub, Inc.] 
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+    [GitHub.com]: https://github.com/ "Visit GitHub.com"
+    [GitHub, Inc.]: https://github.com/about "About GitHub, Inc."
+...
+
+
+# Features
+
+This is a fully stand-alone pandoc HTML5 template (embedded CSS stylesheet).
+It's ideal for creating single-file documentation for projects, even on [GitHub Pages].
+
+The template mimicks the look and feel of [GitHub](https://github.com/) documents previews --- no 100% accuracy, just the GitHubbish feel. GitHub's styling has changed over the course of time; this template picks and chooses from older and newer versions of GitHub's styles and color schemes, according to the author preferences.
+
+__CSS Styling__ --- This template supports styling for:
+
+- all standard markdown elements
+- [pandoc-flavoured markdown][Pandoc Markdown]
+- [GitHub flavored markdown elements][GFM Features] 
+- some of [GitHub's Primer-CSS advanced styles][GitHub's Primer-CSS Features]
+- PP Macros from the "__[Pandoc-Goodies PP-Macros Library]__" project
+
+__Template Variables__ --- This template supports all the standard pandoc template variables, plus some [custom variables][Template Variables] for additional features (eg: `introduction` to show some text before the TOC, and `toc-title`). 
+
+## Requirements
+
+Minimum pandoc version required: v2.0
+
+The template was originally adapted from the default html5 template that shipped with <mark>__pandoc v1.19.2.1__</mark> and then adapted to work with <mark>__pandoc v2.0.2__</mark> (introducing backward-compatibility breaking changes).
 
 Standard Typography
 ===================
@@ -12,6 +75,13 @@ Standard Typography
 Lorem markdownum stagna *de spatiantes* mirabatur **arboribus at nunc**, somnus sanguine quosque ~~genusque addenda socia~~.[^1] <mark>Plus ipsisque latent</mark>, genus, medio aut rima haberet.
 
 Quem palluerat, vulgaris pignora: <kbd>Crtl</kbd>+<kbd>Z</kbd>.[^2]
+
+<h1>H1 Heading</h1>
+<h2>H2 Heading</h2>
+<h3>H3 Heading</h3>
+<h4>H4 Heading</h4>
+<h5>H5 Heading</h5>
+<h6>H6 Heading</h6>
 
 > Et vult Ulixe nec mater moras veluti spatio omnia sub quemque ripas ubi. Nil non, sub nec, ubi ferant deus pacis Turni, parentum.
 >
@@ -21,12 +91,19 @@ Quem palluerat, vulgaris pignora: <kbd>Crtl</kbd>+<kbd>Z</kbd>.[^2]
 [^2]: Hora sequantur *nimium exiguis et* in fit coniuge aures, adfuit.
 [^3]: Turni, parentum. Ut nobis Ampycides esset indigenae eiecit domini successibus Aiaci tecta nunc terris, Argolica videres est neque. Aeacides caloris, magna canes.
 
+Lists
+-----
+
+### Ordered Lists
+
 1.  Nec et tormenta tacitae decet aethere
 2.  Nullamque corpus
     1.  Sic nunc naides dubiis
     2.  Virgo forti ardent
     3.  Dic pro captantur exitus quo viris infera
 3.  Adit Symplegadas inque
+
+### Bullet Lists
 
 -   Dic pro captantur exitus quo viris infera
 -   Humanam tenderet
@@ -35,23 +112,16 @@ Quem palluerat, vulgaris pignora: <kbd>Crtl</kbd>+<kbd>Z</kbd>.[^2]
 -   Lelex ad ira
 -   Inpositus cum genus extulit nec inseris ille
 
-<h1>h1</h1>
-<h2>h2</h2>
-<h3>h3</h3>
-<h4>h4</h4>
-<h5>h5</h5>
-<h6>h6</h6>
+### Task Lists
 
-
-``` python
-#! python
-
-# Fibonacci series
-a, b = 0, 1
-while b < 200:
-       print b,
-       a, b = b, a+b
-```
+!TaskList(
+!Task[x][Nec et tormenta tacitae decet aethere]
+!Task[ ][Nullamque corpus]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!Task[x][Sic nunc naides dubiis]
+!Task[ ][Virgo forti ardent]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+)
 
 Definition lists
 ----------------
@@ -68,15 +138,50 @@ Term 2 with <mark>inline markup</mark>
 
     Ut sentesflumen, mea ira, et ubi manus silicem.
 
+
+
+Tables
+------
+
 | Header 1 | Header 2 | Header 3 |
 |----------|----------|----------|
 | Cell     | _Cell_   | __Cell__ |
 | `Cell`   | Cell     | Cell     |
+| Cell     | Cell     | Cell     |
+
+
+## Source Code Blocks
+
+
+``` python
+#!/usr/bin/env python
+"""
+Print the Fibonacci Sequence to output.
+By Alex E. Rodriguez; public domain:
+https://github.com/arodriguez23434/arodriguez_2016_fibonacci
+"""
+def fibo(int):
+    #Indices 0 & 1 are pre-set; Addition begins at index 2
+    fibo_list = [0,1];
+    for i in range(2,int):
+        #Add previous sum to previous largest integer: (a+b)=sum -> (b+sum)=new_sum -> ... then append to list
+        fibo_list.append(fibo_list[i-2]+fibo_list[i-1]);
+    return fibo_list;
+
+print(fibo(100)); #Print list 
+```
+
+::::::::: Alert :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+**HIGHLIGHT-STYLE** --- Source code is highlighted using either pandoc's default style (`pygments`) or the style set at invocation by the `--highlight-style=STYLE|FILE` option.
+This document uses the `haddock` built-in style.
+
+The template's embedded CSS doesn't define the syntax coloring style, leaving you the freedom to use your own style definition files or pandoc's built-in styles.
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Pandoc Markdown
 ===============
 
-Line blocks
+Line Blocks
 -----------
 
 | The limerick packs laughs anatomical
@@ -85,6 +190,11 @@ Line blocks
 |    So seldom are clean
 | And the clean ones so seldom are comical
 
+\
+
+::::::: Note ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+__NOTE__ --- Pandoc v2.x no longer adds inline CSS to Line blocks, it assigns them the "`line-block`" class instead, leaving it up to the end-user to define it in the CSS stylesheet. This templates covers Line blocks style definitions.
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 GFM Features
 ============
@@ -92,96 +202,206 @@ GFM Features
 Inline text elements
 --------------------
 
-You can use the mark tag to <mark>highlight</mark> text.</p>
+You can use the `<mark>` tag to <mark>highlight text</mark>.
 
 ~~This line of text is meant to be treated as deleted text.~~
 
-Keystroke can be rendered with `<key>` tag: <kbd>Shift</kbd>+<kbd>U</kbd>
+!def(kbdEx)(!kbd(Ctrl)(Alt)(Canc))
+
+Keystroke can be rendered with `<key>` tag: <kbd>Shift</kbd>+<kbd>U</kbd>; or by using the `!raw(!kbd)` PP macro from the [Inline Formatting macros set], eg: `!rawdef(kbdEx)` to output !kbdEx.
 
 Task Lists
------------
+----------
 
-GFM Task Lists can be used within pandoc markdown documents through our custom pp macros. Example:
-
-    !raw(
-    !TaskList(
-    !Task[x][I'm a _checked_ task]
-    !Task[ ][I'm an _unchecked_ task]
-    )
-    )
-
-... will produce:
-
+!def(tasklistEx)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 !TaskList(
 !Task[x][I'm a _checked_ task]
 !Task[ ][I'm an _unchecked_ task]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!Task[x][I'm a sub-task]
+!Task[ ][<mark>Mee too!</mark>]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 )
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-GitHub Extended CSS Features
+GFM Task Lists can be used within pandoc markdown documents through our custom pp macros. Example:
+
+```
+!rawdef(tasklistEx)
+```
+
+... will produce:
+
+!tasklistEx
+
+Markdown formatting in the macro parameters is properly rendered.
+
+GitHub's Primer-CSS Features
 ============================
 
 Alerts
 ------
 
-Alerts (aka _flash messages_) are part of GitHub's __Primer CSS__, and they are available in documents previews:
+Alerts (aka _flash messages_) are borrowed/inspired from __Primer CSS__, the library that handles all the styling of GitHub's portal:
 
--   <http://primercss.io/alerts/>
+-   <http://primercss.io/archive/alerts/>
 
-These are the different type of alerts available, along with the custom pp-macros to generate them inside markdown source:
+!def(alertGen)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:::::: !1
+**!1** --- I'm the "!1" alert!
+::::::::::::::::::::::
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-!GFMAlert(__Default alert__ — Created with the `!raw(!GFMAlert(TEXT))` pp macro.)
-
-!GFMWarn(__Warning alert__ — Created with the `!raw(!GFMWarn(TEXT))` pp macro.)
-
-!GFMError(__Error alert__ — Created with the `!raw(!GFMError(TEXT))` pp macro.)
-
-!GFMSuccess(__Success alert__ — Created with the `!raw(!GFMSuccess(TEXT))` pp macro.)
-
-!GFMAlertPlain(__Plain alert__ — Created with the `!raw(!GFMAlertPlain(TEXT))` pp macro.
-
-This alert is not part of the original set of GitHub Alerts, it's a custom addition.)
-
-The macro's parameter will be treated as markdown content if pandoc's `markdown_in_html_blocks` extension is enabled (default in pandoc markdown):
-
-    !raw(!GFMAlert(
-    This alert contains __markdown__ formatting and _spans_ over <mark>multiple paragraphs</mark>.
-
-    Any `markdown` element and block can be placed inside the alert:
-
-    - List item
-    - List item
-    - List item
-    ))
-
-!GFMAlert(
-This alert contains __markdown__ formatting and _spans_ over <mark>multiple paragraphs</mark>.
-
-Any `markdown` element and block can be placed inside the alert:
-
-- List item
-- List item
-- List item
-)
+!alertGen[Alert]
+!alertGen[Warning]
+!alertGen[Error]
+!alertGen[Success]
+!alertGen[Note]
 
 
 
-Extra Template Variables
-========================
+### Creating Alerts Via Fenced-Divs 
 
-Beside supporting all the standard pandoc variables (pandoc 1.19.2.1), some extra variables were added to the template to allow finer customization.
+This templates emulates Primer's Alerts via custom `<div>` classes (case-sensitive):
 
-The variables `title`, `author` and `date` all have a counterpart with the `docmeta-` prefix added to their name (ie: `docmeta-title`, `docmeta-author` and `docmeta-date`). These alternative variables are intended to be used in the `<meta>` elements of the `<head>` section in the html source. If an alternative `docmeta-` variable is found, it will be used instead of its default conterpart to fill the metadata; if not, the default (unprefixed) variable will be employed as usual.
+- `.Alert` (blue)
+- `.Warning` (yellow)
+- `.Error` (red)
+- `.Success` (green)
+- `.Note` (grey)
 
-This can be exploited to produce a different text in the `<title>` tag and the actual document’s title, or to display authors names only in the source `<meta>` elements but not in the actual document (ie: by setting only the `docmeta-` variable).
+You can use the above class-names with pandoc's new [fenced-divs] syntax to display alerts in your documents:
 
-For an example of their usage, see the [`preview.yaml`](./src/preview.yaml) file in the `src` folder, and examine the template source code.
+!def(alertEx)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::::: Warning :::::::::::::::::::::::::::::::::::::::::
+**BEWARE** --- The grey `.Note` alert is a our own
+addition, it's not part of Primer-CSS' original Alerts!
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The use of the alternative variables is completely optional, and by ignoring them the template will follow the conventional variables system of the default pandoc templates.
+```
+!alertEx
+```
+
+... result:
+
+!alertEx
 
 
-| default var | alternative var  |
-|-------------|------------------|
-| `title`     | `docmeta-title`  |
-| `author`    | `docmeta-author` |
-| `date`      | `docmeta-date`   |
-  
+
+### Creating Alerts Via PP Macros
+
+Alternatively, you can create alerts using the PP macros from the [GitHub Alerts macros set]:
+
+!raw
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-   `!GFMAlert( CONTENTS )` — **Alert** (blue)
+-   `!GFMError( CONTENTS )` — **Warning** (red)
+-   `!GFMWarn( CONTENTS )` — **Error** (yellow)
+-   `!GFMSuccess( CONTENTS )` — **Success** (green)
+-   `!GFMAlertNote( CONTENTS )` — **Note** (grey)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Example:
+
+!def(alertExPP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!GFMAlert
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**ALERT** --- I'm an alert created using a PP macro from the
+"GitHub Alerts" macros set.
+
+I can contain __markdown__ formatting and <mark>my contents
+may span over multiple paragraphs</mark>.
+
+Any kind of markdown element and block may be placed inside
+`GFMAlert` macros:
+
+- Apples
+- Bananas
+- Oranges
+
+... including nested PP macros:
+
+!TaskList
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!Task[x][Delete `temp.bat`]
+!Task[ ][Press !kbd(Ctrl)(Z)]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+```
+!rawdef(alertExPP)
+```
+
+... result:
+
+!alertExPP
+
+
+These are the different type of alerts available, along with the custom pp-macros used generate them:
+
+!GFMAlert
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Alert** --- Created with the `!raw(!GFMAlert())` PP macro.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!GFMWarn
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Warning** --- Created with the `!raw(!GFMWarn())` PP macro.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!GFMError
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Error** --- Created with the `!raw(!GFMError())` PP macro.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!GFMSuccess
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Success** --- Created with the `!raw(!GFMSuccess())` PP macro.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!GFMAlertNote
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Note** --- Created with the `!raw(!GFMAlertNote())` PP macro.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Template Variables
+==================
+
+Beside supporting all the standard pandoc template variables (pandoc v2.0.2), some extra variables were added to the template to allow finer customization.
+
++-------------+--------------------------------------------------------------+
+|   VAR NAME  |                         DESCRIPTION                          |
++=============+==============================================================+
+| `summary`   | A block of text that will be displayed right before the TOC. |
+|             | Wrapped in `<div class="summary">`                           |
++-------------+--------------------------------------------------------------+
+| `toc-title` | Title for Table of Contents (defaults to "Contents")         |
++-------------+--------------------------------------------------------------+
+
+The `summary` text belongs to the `<header>` block, so it won't be displayed unless _title_ was definied. It will be placed after _authors_ and _date_, and right before _Table of Contentes_. It will parsed as markdown, so it offers an easy way to add introductiory text directly in the document's YAML header.
+
+You can see an example of the `summary` var at work right in this page.
+
+
+!comment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         REFERENCE LINKS DEFINITIONS                          
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[GitHub Pages]: https://pages.github.com/ "More info on GitHub Pages"
+
+[Pandoc-Goodies PP-Macros Library]: https://github.com/tajmone/pandoc-goodies/tree/master/pp "Go to the Pandoc-Goodies PP-Macros Library"
+
+[Inline Formatting macros set]: https://github.com/tajmone/pandoc-goodies/tree/master/pp#inline-formatting "More info about the Inline Formatting macros set"
+
+[GitHub Alerts macros set]: https://github.com/tajmone/pandoc-goodies/tree/master/pp#github-alerts "More info about the Alerts macros set"
+
+[fenced-divs]: http://pandoc.org/MANUAL.html#extension-fenced_divs "More info about pandoc fenced-divs syntax"
