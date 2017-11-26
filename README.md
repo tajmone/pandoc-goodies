@@ -12,25 +12,26 @@ The project is still WIP and in its early stages, but a pandoc html5 template is
 
 > **PANDOC 2 READY** — All resources have been finally ported to work with the new pandoc v2.x release\! Copies of some resources for pandoc v1 will be kept in “`pandoc_v1`” subfolders, for projects which might still need them, but they will no longer be updated.
 
+
 -----
 
 **Table of Contents**
 
-<!-- #toc -->
+<!-- MarkdownTOC autolink="true" bracket="round" autoanchor="false" lowercase="true" lowercase_only_ascii="true" uri_encoding="true" -->
 
-  - [Available Goodies](#available-goodies)
-      - [Pandoc HTML5 Templates](#pandoc-html5-templates)
-      - [PP Macros](#pp-macros)
-      - [Skylighting CSS](#skylighting-css)
-  - [Third Party Code Credits](#third-party-code-credits)
-  - [Notes About Pandoc License](#notes-about-pandoc-license)
-      - [GPLv2 vs BSD-3](#gplv2-vs-bsd-3)
-          - [GNU General Public License v2.0](#gnu-general-public-license-v20)
-          - [BSD 3-clause “New” or “Revised” License](#bsd-3-clause-new-or-revised-license)
+- [Available Goodies](#available-goodies)
+    - [Pandoc HTML5 Templates](#pandoc-html5-templates)
+    - [PP Macros](#pp-macros)
+    - [Skylighting CSS](#skylighting-css)
+    - [Skylighting Themes](#skylighting-themes)
+- [Third Party Code Credits](#third-party-code-credits)
+- [Notes About Pandoc License](#notes-about-pandoc-license)
+    - [GPLv2 vs BSD-3](#gplv2-vs-bsd-3)
 
-<!-- /toc -->
+<!-- /MarkdownTOC -->
 
 -----
+
 
 # Available Goodies
 
@@ -58,6 +59,12 @@ The pp-macros section is an ongoing effort to create a collection of pp macros t
 The skylighting CSS section contains resources for styling code blocks in HTML format.
 
   - [Skylighting CSS](./skylighting-css)
+
+## Skylighting Themes
+
+The skylighting themes section contains resources for customizing syntax highlighting styles via KDE theme files (JSON).
+
+  - [Skylighting JSON Themes](./skylighting-themes)
 
 # Third Party Code Credits
 

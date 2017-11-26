@@ -128,7 +128,19 @@ TODO           text
 *.html5        linguist-language=HTML
 
 ## ===========================
+## KDE theme files (JSON)
+## ===========================
+*.theme        linguist-language=JSON
+# skylighting-themes/
+
+# NOTE: There is a potential conflict with Highlight themes which also have
+#       ".theme" extension (but are Lua files)! When both will be present in
+#       this repo, I'll have to resort to folder-based patterns...
+
+# Currently unused:
+## ===========================
 ## HIGHLIGHT LANGDEFS & THEMES
 ## ===========================
-*.lang         linguist-language=Lua
-*.theme        linguist-language=Lua
+# *.lang         linguist-language=Lua
+# *.theme        linguist-language=Lua
+

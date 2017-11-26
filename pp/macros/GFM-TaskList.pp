@@ -96,7 +96,7 @@ DECRIPTION: Macro to enclose all Tasks of a Task-List.
 
 
 
-!comment{   !Task                                            v2.0 | 2017-10-25 }
+!comment{   !Task                                            v2.1 | 2017-11-22 }
 ````````````````````````````````````````````````````````````````````````````````
 DECRIPTION: Macro to define single task-list items.
             The third parameter (optional) can be used to enclose a sublist
