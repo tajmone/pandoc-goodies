@@ -1,10 +1,9 @@
 {
     "metadata" : {
-        "revision" : 1,
-        "name" : "boilerplate",
-        "author" : "tajmone",
+        "name" : "theme boilerplate",
+        "author" : "Tristano Ajmone <tajmone@gmail.com>",
         "license" : "Unlicense",
-        "read-only" : true
+        "revision" : 2
     },
     "text-styles": {
         "Normal" : {
@@ -12,248 +11,217 @@
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "Keyword" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "Function" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "Variable" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "ControlFlow" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "Operator" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "BuiltIn" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "Extension" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "Preprocessor" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "Attribute" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "Char" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "SpecialChar" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "String" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "VerbatimString" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "SpecialString" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "Import" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "DataType" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "DecVal" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "BaseN" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "Float" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "Constant" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "Comment" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "Documentation" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "Annotation" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "CommentVar" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "RegionMarker" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "Information" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "Warning" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "Alert" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "Error" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         },
         "Others" : {
             "text-color" : "#ffffff",
             "background-color" : "#333333",
             "bold" : true,
             "italic" : true,
-            "underline" : true,
-            "strike-through" : true
+            "underline" : true
         }
    },
     "editor-colors": {
