@@ -4,21 +4,25 @@
 
 A collection of CSS/SCSS resources for styling code blocks syntax-highlighted by pandoc (HTML documents).
 
+
 -----
 
 **Table of Contents**
 
-<!-- #toc -->
+<!-- MarkdownTOC autolink="true" bracket="round" autoanchor="false" lowercase="true" lowercase_only_ascii="true" uri_encoding="true" depth="3" -->
 
-  - [Resources List](#resources-list)
-  - [Introduction](#introduction)
-  - [Appendixes](#appendixes)
-      - [Pandoc’s Syntax-Highlighting Engine](#pandocs-syntax-highlighting-engine)
-      - [Pandoc’s Supported Languages](#pandocs-supported-languages)
+- [Resources List](#resources-list)
+- [Introduction](#introduction)
+- [Breaking Changes](#breaking-changes)
+    - [Pandoc v2.0.4](#pandoc-v204)
+- [Appendixes](#appendixes)
+    - [Pandoc’s Syntax-Highlighting Engine](#pandoc%E2%80%99s-syntax-highlighting-engine)
+    - [Pandoc’s Supported Languages](#pandoc%E2%80%99s-supported-languages)
 
-<!-- /toc -->
+<!-- /MarkdownTOC -->
 
 -----
+
 
 # Resources List
 
@@ -32,6 +36,28 @@ Pandoc features a [built-in syntax highlighter](#pandocs-syntax-highlighting-eng
 Highlighted code blocks can optionally have line numbers, and it’s also possible to specify the starting line number.
 
 As of pandoc v2, it’s now possible to load dynamically custom syntax definitions and styles for highlighting, via the new `--syntax-definition=FILE` and `--highlight-style=STYLE|FILE` options.
+
+# Breaking Changes
+
+Beware of some important changes in pandoc v2.x relases regarding the way code is syntax highlighted. Some of these changes will require modification of custom CSS sytlesheets created for previous versions.
+
+## Pandoc v2.0.4 
+
+[Pandoc 2.0.4] introduced some changes in the html tags used for highlighting source code.
+
+Source lines now use `<a>` tag instead of `<div>`:
+ 
+pandoc 2.0–2.0.3:
+   
+``` html
+<div class="sourceLine">
+```
+   pandoc >=2.0.4:
+   
+``` html
+<a class="sourceLine">
+```
+
 
 # Appendixes
 
@@ -72,3 +98,7 @@ As of Pandoc 2.0.2, the number of supported languages/syntaxes is 123.
 | verilog      | XML        | xul            | YAML            | Yacc             |
 | zsh          | dot        | noweb          | rest            | sci              |
 | sed          | xorg       | xslt           |                 |                  |
+
+
+
+[Pandoc 2.0.4]: https://github.com/jgm/pandoc/releases/tag/2.0.4 "Go to pandoc 2.0.4 release page"

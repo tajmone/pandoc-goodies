@@ -1,6 +1,6 @@
 # Pandoc’s Built-in Styles
 
-    pandoc v2.0.2 | v1.19.2
+    pandoc v2.0.5 | v1.19.2
 
 In this folder you’ll find the standalone CSS stylesheets of pandoc’s eight built-in styles (syntax highlighting themes):
 
@@ -13,9 +13,13 @@ In this folder you’ll find the standalone CSS stylesheets of pandoc’s eight 
 7.  [`tango.css`](./tango.css)
 8.  [`zenburn.css`](./zenburn.css)
 
-The stylesheets were extracted from standalone HTML5 documents created with pandoc `v2.0.2`, using the `--highlight-style` option. A comment block with extra info was added at the beginning of each stylesheet.
+The stylesheets were extracted from standalone HTML5 documents created with pandoc `v2.0.5`, using the `--highlight-style` option. A comment block with extra info was added at the beginning of each stylesheet.
 
 They are intended as a examples and quick reference when developing custom styles (see [License](#license) section below).
+
+> __NOTE__ — pandoc v2.0.4 introduced some breaking changes in the way code is highlighted in html output. (For more info, see [parent folder's `README`][parent README])
+
+[parent README]: ../README.md#breaking-changes "Go to parent folder's README file"
 
 ## Pandoc v1 Styles
 

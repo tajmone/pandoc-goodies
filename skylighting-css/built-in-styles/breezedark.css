@@ -3,63 +3,75 @@
     ==============================================================================
     Style from the "Breeze Dark" KDE syntax highlighting theme.
   
-    This stylesheet was produced using Pandoc v2.0.2.
+    This stylesheet was produced using Pandoc v2.0.5.
   
     Pandoc is (c) 2006-2017 John MacFarlane (jgm@berkeley.edu).
     Released under the GPL, version 2 or greater. 
     ------------------------------------------------------------------------------
 */
-div.sourceLine, a.sourceLine { display: inline-block; min-height: 1.25em; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
 a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-div.sourceLine, a.sourceLine { text-indent: -1em; padding-left: 1em; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource div.sourceLine, .numberSource a.sourceLine
+pre.numberSource a.sourceLine
   { position: relative; }
-pre.numberSource div.sourceLine::before, .numberSource a.sourceLine::before
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
   { content: attr(data-line-number);
     position: absolute; left: -5em; text-align: right; vertical-align: baseline;
     border: none; pointer-events: all;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em; }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #7a7c7d; background-color: #232629; color: #7a7c7d;  padding-left: 4px; }
-pre, code { color: #cfcfc2; background-color: #232629; }
+    padding: 0 4px; width: 4em;
+    background-color: #232629;
+    color: #7a7c7d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #7a7c7d;  padding-left: 4px; }
+div.sourceCode
+  { color: #cfcfc2; background-color: #232629; }
 @media screen {
-a.sourceLine::before { text-decoration: underline; color: initial; }
+a.sourceLine::before { text-decoration: underline; }
 }
-code span.kw { color: #cfcfc2; } /* Keyword */
+code span. { color: #cfcfc2; } /* Normal */
+code span.al { color: #95da4c; } /* Alert */
+code span.an { color: #3f8058; } /* Annotation */
+code span.at { color: #2980b9; } /* Attribute */
+code span.bn { color: #f67400; } /* BaseN */
+code span.bu { color: #7f8c8d; } /* BuiltIn */
+code span.cf { color: #fdbc4b; } /* ControlFlow */
+code span.ch { color: #3daee9; } /* Char */
+code span.cn { color: #27aeae; } /* Constant */
+code span.co { color: #7a7c7d; } /* Comment */
+code span.cv { color: #7f8c8d; } /* CommentVar */
+code span.do { color: #a43340; } /* Documentation */
 code span.dt { color: #2980b9; } /* DataType */
 code span.dv { color: #f67400; } /* DecVal */
-code span.bn { color: #f67400; } /* BaseN */
-code span.fl { color: #f67400; } /* Float */
-code span.cn { color: #27aeae; } /* Constant */
-code span.ch { color: #3daee9; } /* Char */
-code span.sc { color: #3daee9; } /* SpecialChar */
-code span.st { color: #f44f4f; } /* String */
-code span.vs { color: #da4453; } /* VerbatimString */
-code span.ss { color: #da4453; } /* SpecialString */
-code span.im { color: #27ae60; } /* Import */
-code span.co { color: #7a7c7d; } /* Comment */
-code span.do { color: #a43340; } /* Documentation */
-code span.an { color: #3f8058; } /* Annotation */
-code span.cv { color: #7f8c8d; } /* CommentVar */
-code span.ot { color: #27ae60; } /* Other */
-code span.fu { color: #8e44ad; } /* Function */
-code span.va { color: #27aeae; } /* Variable */
-code span.cf { color: #fdbc4b; } /* ControlFlow */
-code span.op { color: #cfcfc2; } /* Operator */
-code span.bu { color: #7f8c8d; } /* BuiltIn */
-code span.ex { color: #0099ff; } /* Extension */
-code span.pp { color: #27ae60; } /* Preprocessor */
-code span.at { color: #2980b9; } /* Attribute */
-code span.re { color: #2980b9; } /* RegionMarker */
-code span.in { color: #c45b00; } /* Information */
-code span.wa { color: #da4453; } /* Warning */
-code span.al { color: #95da4c; } /* Alert */
 code span.er { color: #da4453; } /* Error */
-code span. { color: #cfcfc2; } /* Normal */
+code span.ex { color: #0099ff; } /* Extension */
+code span.fl { color: #f67400; } /* Float */
+code span.fu { color: #8e44ad; } /* Function */
+code span.im { color: #27ae60; } /* Import */
+code span.in { color: #c45b00; } /* Information */
+code span.kw { color: #cfcfc2; } /* Keyword */
+code span.op { color: #cfcfc2; } /* Operator */
+code span.ot { color: #27ae60; } /* Other */
+code span.pp { color: #27ae60; } /* Preprocessor */
+code span.re { color: #2980b9; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #da4453; } /* SpecialString */
+code span.st { color: #f44f4f; } /* String */
+code span.va { color: #27aeae; } /* Variable */
+code span.vs { color: #da4453; } /* VerbatimString */
+code span.wa { color: #da4453; } /* Warning */

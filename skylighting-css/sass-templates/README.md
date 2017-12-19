@@ -4,6 +4,14 @@
 
 Sass templates for creating custom syntax highlighting themes for pandoc v2.
 
+> __WARNING: The current Sass/CSS files in this folder will not work with pandoc `>= v2.0.4`!__ 
+> 
+> Pandoc v2.0.4 introduced some breaking changes in the way code is syntax highlighted in html documents. (For more info, see [parent folder's `README`][parent README])
+> 
+> I apologyze for the inconvenience, and I'll do my best to update them as soon as possible.
+
+[parent README]: ../README.md#breaking-changes "Go to parent folder's README file"
+
 -----
 
 **Table of Contents**
