@@ -1,6 +1,6 @@
 # Skylighting CSS
 
-    pandoc v2.0.2 | v1.19.2
+    pandoc v2.0.5 | v1.19.2
 
 A collection of CSS/SCSS resources for styling code blocks syntax-highlighted by pandoc (HTML documents).
 

@@ -1,6 +1,6 @@
 # Pandoc-Goodies
 
-    pandoc v2.0.2 | PP v2.1.5
+    pandoc v2.0.5 | PP v2.1.5
 
 A tresure-box of resources for pandoc, pp and the Texts word processor.
 
@@ -20,13 +20,13 @@ The project is still WIP and in its early stages, but a pandoc html5 template is
 <!-- MarkdownTOC autolink="true" bracket="round" autoanchor="false" lowercase="true" lowercase_only_ascii="true" uri_encoding="true" -->
 
 - [Available Goodies](#available-goodies)
-    - [Pandoc HTML5 Templates](#pandoc-html5-templates)
-    - [PP Macros](#pp-macros)
-    - [Skylighting CSS](#skylighting-css)
-    - [Skylighting Themes](#skylighting-themes)
+  - [Pandoc HTML5 Templates](#pandoc-html5-templates)
+  - [PP Macros](#pp-macros)
+  - [Skylighting CSS](#skylighting-css)
+  - [Skylighting Themes](#skylighting-themes)
 - [Third Party Code Credits](#third-party-code-credits)
 - [Notes About Pandoc License](#notes-about-pandoc-license)
-    - [GPLv2 vs BSD-3](#gplv2-vs-bsd-3)
+  - [GPLv2 vs BSD-3](#gplv2-vs-bsd-3)
 
 <!-- /MarkdownTOC -->
 

@@ -1,0 +1,214 @@
+/*
+    ==============================================================================
+                         Bare-Bones Pandoc Highlighting Theme                     
+    ==============================================================================
+    "bare-bones.scss" v2.1 (2017-12-28) | pandoc v2.0.5 | by Tristano Ajmone
+
+    This Sass template emulates the definitions and structure of pandoc's (v2.x)
+    built-in CSS styles (skylighting themes for syntax highlighting).
+
+    Based on pandoc's Breezedark built-in style.
+    
+    All possible syntax tokens covered. Defintions for the "Normal" token were
+    removed since pandoc doesn't use it.
+    
+    Use this file as a starting point for your custom themes: adjust it to your
+    needs and delete tokens that don't apply to the target language/syntax.
+
+    Released into the public domain according to the Unlicense terms:
+
+        http://unlicense.org/
+    
+    Credits and mentioning are not mandatory -- but they'd be highly appreciated!
+    ------------------------------------------------------------------------------
+*/
+a.sourceLine {
+    display: inline-block;
+    line-height: 1.25;
+    pointer-events: none;
+    color: inherit;
+    text-decoration: inherit;
+
+    &:empty {
+        height: 1.2em;
+        position: absolute;
+    }
+}
+
+.sourceCode {
+    overflow: visible;
+}
+
+code.sourceCode {
+    white-space: pre;
+    position: relative;
+}
+
+div.sourceCode {
+    margin: 1em 0;
+}
+
+pre.sourceCode {
+    margin: 0;
+}
+
+@media screen {
+
+    div.sourceCode {
+        overflow: auto;
+    }
+
+    a.sourceLine::before {
+        text-decoration: underline; // Line Numbers Underlining
+    }
+}
+
+@media print {
+    
+    code.sourceCode {
+        white-space: pre-wrap;
+    }
+    a.sourceLine {
+        text-indent: -1em;
+        padding-left: 1em;
+    }
+}
+
+pre.numberSource a.sourceLine {
+    position: relative;
+    
+    &:empty {
+        position: absolute;
+    }
+
+    &::before {
+        content: attr(data-line-number);
+        position: absolute;
+        left: -5em;
+        text-align: right;
+        vertical-align: baseline;
+        border: none;
+        pointer-events: all;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding: 0 4px;
+        width: 4em;
+        background-color: #232629;  // Line Numbers Gutter BG Color
+        color: #7a7c7d;             // Line Numbers Color
+    }
+}
+
+pre.numberSource {
+    margin-left: 3em;
+    border-left: 1px solid #7a7c7d; // Line Numbers Gutter Border
+    padding-left: 4px;
+}
+
+div.sourceCode {
+    color: #cfcfc2;                 // Base Color (ie: "Normal") 
+    background-color: #232629;      // Code Block BG Color (ie: Canvas BG)
+}
+
+// ==============================================================================
+//                                 Syntax Tokens                                 
+// ==============================================================================
+code {
+    & span {
+        &.al { /* Alert */
+            color: #95da4c;
+        }
+        &.an { /* Annotation */
+            color: #3f8058;
+        }
+        &.at { /* Attribute */
+            color: #2980b9;
+        }
+        &.bn { /* BaseN */
+            color: #f67400;
+        }
+        &.bu { /* BuiltIn */
+            color: #7f8c8d;
+        }
+        &.cf { /* ControlFlow */
+            color: #fdbc4b;
+        }
+        &.ch { /* Char */
+            color: #3daee9;
+        }
+        &.cn { /* Constant */
+            color: #27aeae;
+        }
+        &.co { /* Comment */
+            color: #7a7c7d;
+        }
+        &.cv { /* CommentVar */
+            color: #7f8c8d;
+        }
+        &.do { /* Documentation */
+            color: #a43340;
+        }
+        &.dt { /* DataType */
+            color: #2980b9;
+        }
+        &.dv { /* DecVal */
+            color: #f67400;
+        }
+        &.er { /* Error */
+            color: #da4453;
+        }
+        &.ex { /* Extension */
+            color: #0099ff;
+        }
+        &.fl { /* Float */
+            color: #f67400;
+        }
+        &.fu { /* Function */
+            color: #8e44ad;
+        }
+        &.im { /* Import */
+            color: #27ae60;
+        }
+        &.in { /* Information */
+            color: #c45b00;
+        }
+        &.kw { /* Keyword */
+            color: #cfcfc2;
+        }
+        &.op { /* Operator */
+            color: #cfcfc2;
+        }
+        &.ot { /* Other */
+            color: #27ae60;
+        }
+        &.pp { /* Preprocessor */
+            color: #27ae60;
+        }
+        &.re { /* RegionMarker */
+            color: #2980b9;
+        }
+        &.sc { /* SpecialChar */
+            color: #3daee9;
+        }
+        &.ss { /* SpecialString */
+            color: #da4453;
+        }
+        &.st { /* String */
+            color: #f44f4f;
+        }
+        &.va { /* Variable */
+            color: #27aeae;
+        }
+        &.vs { /* VerbatimString */
+            color: #da4453;
+        }
+        &.wa { /* Warning */
+            color: #da4453;
+        }
+    }
+}
+
+ 
