@@ -93,6 +93,8 @@ GFM Task Lists
 
 A set of macros to enable GitHub [Task Lists](https://help.github.com/articles/basic-writing-and-formatting-syntax/#task-lists) in pandoc documents.
 
+> __NOTE__ — A new __[task-list Lua filter]__ is now available at the __[lua-filters]__ pandoc project, allowing the use of GFM Task Lists in pandoc documents. This filter implements Task Lists via pandoc's AST, extending support of task lists to various input/output formats. It's therefore advisable to use the new __task-list__ filter instead of these PP macros (cleaner syntax and improved portability).
+
 macros:
 
 -   `!TaskList( LIST ELEMENTS )` — Genreate Task List enclosing-tags.
@@ -289,3 +291,8 @@ Documentation and usage examples for the macros library is still work in progres
 [GitHub Pandoc HTML5 Template Live Preview]: http://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/templates/html5/github/GitHub-Template-Preview.html "Live HTML Preview of GitHub Pandoc HTML5 Template"
 
 [GitHub Pandoc HTML5 Template Local Preview]: ../templates/html5/github/GitHub-Template-Preview.html "Local Preview of GitHub Pandoc HTML5 Template"
+
+
+[task-list lua filter]: https://github.com/pandoc/lua-filters/tree/master/task-list "Visit 'task-list' lua filter project page"
+
+[lua-filters]: https://github.com/pandoc/lua-filters "Visit lua-filters repository"
