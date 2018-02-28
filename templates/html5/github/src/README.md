@@ -1,6 +1,6 @@
 # GitHub Pandoc HTML5 Template Source Files
 
-    pandoc v2.0.2 | PP v2.1.5
+    pandoc v2.1.1 | PP v2.1.5
 
 Here are the source files to build the GitHub template and the template preview example, plus some wacth and cuild scripts to facilitate working with the sources.
 

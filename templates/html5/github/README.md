@@ -1,6 +1,6 @@
 # GitHub Pandoc HTML5 Template
 
-    GitHub Template v2.0 (2017/11/21) | pandoc v2.0.2
+    GitHub Template v2.1 (2018/02/28) | pandoc v2.1.1
 
 A pandoc html5 template mimicking GitHub’s documents preview. Supports extended GitHub Flavored Markdown features through custom pp-macros that leverage Raw HTML and GitHub’s CSS.
 
@@ -121,6 +121,8 @@ These template files are derivatives from the **Primer CSS** project’s modules
 
 # Changelog
 
+  - **v2.1** (2018-02-28)
+      - New `$charset$` template var to (optionally) override document enconding.
   - **v2.0** (2017-11-21)
       - Pandoc v2.x adaptation.
       - New system for building template from source files.

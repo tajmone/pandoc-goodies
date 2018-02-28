@@ -1,15 +1,16 @@
-!def(TEMPL_VER)(v2.0)
+!def( TEMPL_VER  )(       v2.1 )
+!def( TEMPL_DATE )( 2018-02-28 )
 !comment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"PREVIEW.md" v2.0 | 2017/11/21
-Tested with "GitHub HTML5 Pandoc Template" v2.0 | 2017/11/21
+"PREVIEW.md" v2.1 | 2018-02-28
+Tested with "GitHub HTML5 Pandoc Template" v2.1 | 2018/02/28
 
 This file holds the contents that will go in "../GitHub-Template-Preview.html"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ---
 title:    GitHub Pandoc HTML5 Template
-subtitle: !TEMPL_VER \(2017/11/21\) MIT License
+subtitle: !TEMPL_VER \(!TEMPL_DATE\) MIT License
 # author:   Tristano Ajmone
 # date:   Nov 21, 2017
 lang: en
@@ -22,9 +23,9 @@ toc-title: Contents
 # -----------------------------------------------------------------------------
 pagetitle:   GitHub Pandoc HTML5 Template — Preview
 author-meta: Tristano Ajmone (tajmone@gmail.com)
-date-meta:   2017/11/21
+date-meta:   !TEMPL_DATE
 # =============================== SUMMARY TEXT ================================
-# If defined, the contents of `summary` key will be displayed right before TOC.
+# If defined, the contents of `$summary$` key will be displayed right before TOC.
 # -----------------------------------------------------------------------------
 summary: |
     This is a preview of “_GitHub Pandoc HTML5 Template_” **!TEMPL_VER**,
@@ -61,7 +62,7 @@ __CSS Styling__ --- This template supports styling for:
 - some of [GitHub's Primer-CSS advanced styles][GitHub's Primer-CSS Features]
 - PP Macros from the "__[Pandoc-Goodies PP-Macros Library]__" project
 
-__Template Variables__ --- This template supports all the standard pandoc template variables, plus some [custom variables][Template Variables] for additional features (eg: `introduction` to show some text before the TOC, and `toc-title`). 
+__Template Variables__ --- This template supports all the standard pandoc template variables, plus some [custom variables][Template Variables] for additional features (eg: `introduction` to show some text before the TOC, and `$toc-title$`). 
 
 ## Requirements
 
@@ -377,18 +378,32 @@ Template Variables
 
 Beside supporting all the standard pandoc template variables (pandoc v2.0.2), some extra variables were added to the template to allow finer customization.
 
-+-------------+--------------------------------------------------------------+
-|   VAR NAME  |                         DESCRIPTION                          |
-+=============+==============================================================+
-| `summary`   | A block of text that will be displayed right before the TOC. |
-|             | Wrapped in `<div class="summary">`                           |
-+-------------+--------------------------------------------------------------+
-| `toc-title` | Title for Table of Contents (defaults to "Contents")         |
-+-------------+--------------------------------------------------------------+
++---------------+--------------------------------------------------------------------+------------+
+|    VAR NAME   |                            DESCRIPTION                             |  DEFAULT   |
++===============+====================================================================+============+
+| `$summary$`   | A block of text that will be displayed right before the TOC.<br /> | empty      |
+|               | Wrapped in `<div class="summary">`.                                |            |
++---------------+--------------------------------------------------------------------+------------+
+| `$toc-title$` | Title for Table of Contents.                                       | `Contents` |
++---------------+--------------------------------------------------------------------+------------+
+| `$charset$`   | Override document encoding.                                        | `utf-8`    |
++---------------+--------------------------------------------------------------------+------------+
 
-The `summary` text belongs to the `<header>` block, so it won't be displayed unless _title_ was definied. It will be placed after _authors_ and _date_, and right before _Table of Contentes_. It will parsed as markdown, so it offers an easy way to add introductiory text directly in the document's YAML header.
+The `$summary$` Variable
+------------------------
 
-You can see an example of the `summary` var at work right in this page.
+The `$summary$` text belongs to the `<header>` block, so it won't be displayed unless _title_ was definied. It will be placed after _authors_ and _date_, and right before _Table of Contentes_. It will parsed as markdown, so it offers an easy way to add introductiory text directly in the document's YAML header.
+
+You can see an example of the `$summary$` var at work right in this page.
+
+The `$charset$` Variable
+---------------------------
+
+I've added the `$charset$` variable because I was having trouble using the template inside the WebBrowser Control in a Windows application I created (a markdown file previewer that uses pandoc and this template to quickly render an html preview via WebBrowser Control). The programming language I used would only allow injecting HTML into the WebBrowser Control as UCS-2 enconded Unicode strings, even if pandoc's output was captured as UTF-8 --- ie., while I/O operations allow using different encondings, all internal string operations are restricted to UCS-2.
+
+The problem was fixed by setting `$charset$` to `windows-1251` when invoking pandoc from my Windows application (command line option `-V charset=windows-1251`), as the actual document presented to the WebBrowser Control would no longer be in UTF-8 but in UCS-2 due to internal conversion.
+
+Therefore I thought that there might be other scenarios which might require overriding the default charset encoding of the template because of encoding conversions occuring in a toolchain, protocol transmissions, or whatever. Even though UTF-8 is now the standard enconding for most source and output files when it comes to markdown and HTML, having this optional template variable allows handling edge cases.
 
 
 !comment

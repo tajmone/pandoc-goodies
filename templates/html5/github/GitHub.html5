@@ -1,8 +1,8 @@
-$--| GitHub HTML5 Pandoc Template" v2.0 | 2017/11/21
+$--| GitHub HTML5 Pandoc Template" v2.1 | 2018/02/28 | pandoc v2.1.1
 <!DOCTYPE html>
 <!--
 ==============================================================================
-           "GitHub HTML5 Pandoc Template" v2.0 — by Tristano Ajmone           
+           "GitHub HTML5 Pandoc Template" v2.1 — by Tristano Ajmone           
 ==============================================================================
 Copyright © Tristano Ajmone, 2017, MIT License (MIT). Project's home:
 
@@ -54,7 +54,7 @@ $-------------------------------------------------------------------------> lang
 $--=============================================================================
 $--                                METADATA                                   
 $--=============================================================================
-  <meta charset="utf-8" />
+  <meta charset="$if(charset)$$charset$$else$utf-8$endif$" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 $-----------------------------------------------------------------------> author
