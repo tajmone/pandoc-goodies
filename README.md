@@ -24,6 +24,7 @@ The project is still WIP and in its early stages, but a pandoc html5 template is
   - [PP Macros](#pp-macros)
   - [Skylighting CSS](#skylighting-css)
   - [Skylighting Themes](#skylighting-themes)
+- [Related Projects](#related-projects)
 - [Third Party Code Credits](#third-party-code-credits)
 - [Notes About Pandoc License](#notes-about-pandoc-license)
   - [GPLv2 vs BSD-3](#gplv2-vs-bsd-3)
@@ -65,6 +66,13 @@ The skylighting CSS section contains resources for styling code blocks in HTML f
 The skylighting themes section contains resources for customizing syntax highlighting styles via KDE theme files (JSON).
 
   - [Skylighting JSON Themes](./skylighting-themes)
+
+
+# Related Projects
+
+Here is a list of other pandoc-related projects which you might be interested in visiting:
+
+- [GitHub Pages Themes Magick] — Create a repo's GitHub Pages website from its `README.md` file via pandoc and pandoc templates (now supports pandoc v2).
 
 # Third Party Code Credits
 
@@ -121,3 +129,7 @@ A permissive license similar to the [BSD 2-Clause License](https://choosealicens
 | ✔ Distribution   |                                | ✘ Warranty  |
 | ✔ Modification   |                                |             |
 | ✔ Private use    |                                |             |
+
+
+[GitHub Pages Themes Magick]: https://tajmone.github.io/gh-themes-magick/ "Visit GitHub Pages Themes Magick website"
+[gh-themes-magick]: https://tajmone.github.io/gh-themes-magick/ "Visit GitHub Pages Themes Magick repository on GitHub"
