@@ -6,22 +6,27 @@ A pandoc html5 template mimicking GitHub’s documents preview. Supports extende
 
   - [Live GitHub HTML Preview](http://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/templates/html5/github/GitHub-Template-Preview.html)
 
+
 -----
 
 **Table of Contents**
 
-<!-- #toc -->
+<!-- MarkdownTOC autolink="true" bracket="round" autoanchor="false" lowercase="true" lowercase_only_ascii="true" uri_encoding="true" depth="3" -->
 
-  - [Features](#features)
-  - [License](#license)
-  - [Credits](#credits)
-      - [GitHub Markdown CSS](#github-markdown-css)
-      - [Primer CSS](#primer-css)
-  - [Changelog](#changelog)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Credits](#credits)
+  - [GitHub Markdown CSS](#github-markdown-css)
+  - [Primer CSS](#primer-css)
+- [Changelog](#changelog)
 
-<!-- /toc -->
+<!-- /MarkdownTOC -->
 
 -----
+
+
 
 # Features
 
@@ -57,6 +62,39 @@ These elements can be integrated in pandoc source documents via our custom pp-ma
 For a live preview, and the full list of template features, see:
 
   - [Live GitHub HTML Preview](http://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/templates/html5/github/GitHub-Template-Preview.html)
+
+# Installation
+
+In order to make the template available to pandoc system-wide, it should be copied to the `templates` subfolder in pandoc's data dir — on Windows, that would be `%APPDATA%\pandoc\templates\`; on \*nix it would be `~/.pandoc/templates/`. If you haven't installed any templates before, you'll have to create the `templates` folder yourself.
+
+On Windows, you can install/update the GitHub template via the batch script found in this folder:
+
+- [`INSTALL.bat`](./INSTALL.bat)
+
+Run it from the CMD or the File Explorer. The script will ask for confirmation before actually installing the template.
+
+# Usage
+
+Once the GitHub template is installed to pandoc's templates folder, you'll be able to use it from anywhere via the `--template=` option.
+
+Example:
+
+```bat
+pandoc --template=GitHub.html5 FILENAME.md -o FILENAME.html
+```
+
+The GitHub template is a fully self-contained single-file template (no external stylesheets, all CSS is embedded in the template), therefore the output HTML file it produces can be distributed without need of any dependencies.
+
+But if the document you are converting relies on external resources (images, additional CSS files, etc), and you want to produce a single-file HTML document, than you should use the `--self-contained` option:
+
+```bat
+pandoc --template=GitHub.html5 --self-contained FILENAME.md -o FILENAME.html
+```
+
+The `--self-contained` option will make pandoc use `data:` URIs to incorporate into the final document the contents of linked scripts, stylesheets, images, and videos. The advantage of a self-contained document is that it can be moved around as a single-file without breaking it. The downside is document size and redundancy: `data:` URIs resources are larger in size, and resources which appear more than once in the same document will be converted to a full `data:` URI at each occurence — for large images occuring more than once, this could be an issue.
+
+> __NOTE__ — the `--template` option already implies `--standalone`.
+
 
 # License
 
