@@ -21,6 +21,10 @@
 ## ----------------
 *.html5        text
 
+## Skylighting JSON Themes
+## -----------------------
+*.theme        text eol=lf
+
 ## Shell scripts
 ## -------------
 *.bat          text eol=crlf
@@ -42,12 +46,6 @@
 *.json         text
 *.xml          text
 *.xhtml        text
-
-## ===========================
-## HIGHLIGHT LANGDEFS & THEMES
-## ===========================
-*.lang         text
-*.theme        text
 
 # =================
 ## WEB-RELATED FILES
@@ -79,14 +77,21 @@ readme         text
 TODO           text
 
 ## ===================
-## CONFIGURATION FILES
+## Configuration files
 ## ===================
-
-## Git settings
-## ----------
+*.cnf          text
+*.conf         text
+*.config       text
+*.ini          text
+*.prefs        text
+.editorconfig  text
+## -------------
+## Git settings:
+## -------------
 .gitattributes text
 .gitconfig     text
 .gitignore     text
+.gitmodules    text eol=crlf
 
 # ------------------------------------------------------------------------------
 #                                  Binary Files                                 
@@ -130,8 +135,8 @@ TODO           text
 ## ===========================
 ## KDE theme files (JSON)
 ## ===========================
-*.theme        linguist-language=JSON
 # skylighting-themes/
+*.theme        linguist-language=JSON
 
 # NOTE: There is a potential conflict with Highlight themes which also have
 #       ".theme" extension (but are Lua files)! When both will be present in
