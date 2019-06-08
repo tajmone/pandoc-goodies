@@ -1,6 +1,6 @@
 !comment(   "Highlight" pp-macros set   )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"Highlight.pp" v2.1.1 (2017-10-26) | PP v2.0
+"Highlight.pp" v2.2 (2019-06-08) | PP v2.8
 
 A set of macros for integrating André Simon's Highlight syntax highlighter with
 pandoc documents:
@@ -192,7 +192,7 @@ highlight -f -S !1 --no-trailing-nl --validate-input !2 -i !TEMPFILE
 
 
 
-!comment{   !HighlightSh                                   v2.1 | 2017-10-25 }
+!comment{   !HighlightSh                                   v2.2 | 2019-06-08 }
 ``````````````````````````````````````````````````````````````````````````````
 DECRIPTION: The Shell version of !Highlight macro, automatically invoked by
             !Highlight after establishing the current context is Shell/Bash.
@@ -215,7 +215,7 @@ NOTES: To disable Shell expansion of the sourcecode block (and errors when
 !define(   HighlightSh   )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<pre class="hl !1"><code class="!1">!sh
+<pre class="hl !1"><code class="!1">!bash
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 cat <<'EOF' | highlight -f -S !1 --no-trailing-nl --validate-input !2
 !3

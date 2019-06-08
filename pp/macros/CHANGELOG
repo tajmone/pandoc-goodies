@@ -6,6 +6,15 @@ NOTE: Obvious changes won't be logged -- eg: addition of "!import" statements
       Minor changes will not be logged either, because life is too short...
 
 ------------------------------------------------------------------------------
+                                  2019-06-08                                  
+------------------------------------------------------------------------------
+PP VERSION v2.8 | pandoc v2.7.2
+
+CHANGES:
+- "Highlight.pp" v2.2:
+  - Use "!bash" macro instead of "!sh", for "!sh" no longer worked under Bash
+    for Windows.
+------------------------------------------------------------------------------
                                   2017-11-22                                  
 ------------------------------------------------------------------------------
 PP VERSION v2.1.5 | pandoc v2.0.2
