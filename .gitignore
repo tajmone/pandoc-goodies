@@ -33,8 +33,9 @@ ___*.*
 ## ==========================
 
 # Exclude Sass generated CSS and CSS Maps:
-skylighting-css/sass-templates/**/*.css
-skylighting-css/sass-templates/**/*.css.map
+/skylighting-css/sass-templates/**/*.css
+/skylighting-css/sass-templates/**/*.css.map
+/pp/macros/*.css.map
 
 # ==============================================================================
 #                                    Node.js
