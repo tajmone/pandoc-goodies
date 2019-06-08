@@ -1,6 +1,6 @@
 # Pandoc-Goodies
 
-    pandoc v2.0.5/v2.7.2 | PP v2.1.5
+    pandoc v2.7.2 | PP v2.8
 
 A tresure-box of resources for pandoc, pp and the Texts word processor.
 
@@ -10,7 +10,7 @@ Copyright © Tristano Ajmone 2017, [MIT License](./LICENSE).
 
 The project is still WIP and in its early stages, but a pandoc html5 template is ready for use, along with a growing pp-macros library.
 
-> **UPDATE IN PROGESS** — After over a year without updates, all repository assets are now being updated from pandoc v2.0.5 to v2.7.2, and from PP v2.1.5 to v2.8. The process might take some time for all assets need to be tested with the latest versions of the apps, obsolete assets need to be removed and new features need to be covered.
+> **PROJECT UPDATED** — After over a year without updates, all repository assets have been updated to pandoc v2.7.2 and PP v2.8. Minor tweaks were required to ensure that everything worked fine as before. Also, the project now uses Dart Sass, instead of Ruby Sass.
 
 -----
 
