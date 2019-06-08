@@ -5,72 +5,82 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>GFM-Alerts Test</title>
-  <style type="text/css">
+  <style>
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
-      div.line-block{white-space: pre-line;}
+      span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-  <style type="text/css">
-div.sourceLine, a.sourceLine { display: inline-block; min-height: 1.25em; }
+  <style>
+a.sourceLine { display: inline-block; line-height: 1.25; }
 a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-div.sourceLine, a.sourceLine { text-indent: -1em; padding-left: 1em; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource div.sourceLine, .numberSource a.sourceLine
-  { position: relative; }
-pre.numberSource div.sourceLine::before, .numberSource a.sourceLine::before
-  { content: attr(data-line-number);
-    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all;
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em; }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; color: #aaaaaa;  padding-left: 4px; }
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
 @media screen {
-a.sourceLine::before { text-decoration: underline; color: initial; }
+a.sourceLine::before { text-decoration: underline; }
 }
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
 code span.dt { color: #902000; } /* DataType */
 code span.dv { color: #40a070; } /* DecVal */
-code span.bn { color: #40a070; } /* BaseN */
-code span.fl { color: #40a070; } /* Float */
-code span.ch { color: #4070a0; } /* Char */
-code span.st { color: #4070a0; } /* String */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.ot { color: #007020; } /* Other */
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.fu { color: #06287e; } /* Function */
 code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code span.cn { color: #880000; } /* Constant */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.im { } /* Import */
-code span.va { color: #19177c; } /* Variable */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.op { color: #666666; } /* Operator */
-code span.bu { } /* BuiltIn */
 code span.ex { } /* Extension */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.at { color: #7d9029; } /* Attribute */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="github.css">
+  <link rel="stylesheet" href="github.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
 </head>
 <body>
-<header>
+<header id="title-block-header">
 <h1 class="title">GFM-Alerts PP-Macros Test</h1>
 </header>
 <p>This is a run test of the <strong>GFM-Alerts</strong> pp-macros set.</p>
@@ -100,150 +110,170 @@ code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Infor
 <p>We need the CSS definition for viewing alerts. We’ll use the <code>!GFMAlertsInlineCSS</code> macro to inject the contents of <code>GFM-Alerts.css</code> as an inline stylesheet:</p>
 <pre><code>!GFMAlertsInlineCSS</code></pre>
 <p>this macro emits the following raw html:</p>
-<pre class="sourceCode html" id="cb2"><code class="sourceCode html"><div class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span></div>
-<div class="sourceLine" id="cb2-2" data-line-number="2"><span class="co">/*! &quot;GFM-Alerts.css&quot; v2.0 | 2017/11/21 | MIT License (MIT)</span></div>
-<div class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">    Adapted by Tristano Ajmone from &quot;flash.scss&quot; of Primer CSS by GitHub Inc.:</span></div>
-<div class="sourceLine" id="cb2-4" data-line-number="4"></div>
-<div class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">    https://github.com/primer/primer/blob/master/modules/primer-alerts/lib/flash.scss</span></div>
-<div class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">    http://primercss.io/archive/alerts/</span></div>
-<div class="sourceLine" id="cb2-7" data-line-number="7"></div>
-<div class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">    Copyright (c) 2017 Tristano Ajmone.</span></div>
-<div class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">    Copyright (c) 2017 GitHub Inc.</span></div>
-<div class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">*/</span></div>
-<div class="sourceLine" id="cb2-11" data-line-number="11"><span class="fu">.Alert</span>,</div>
-<div class="sourceLine" id="cb2-12" data-line-number="12"><span class="fu">.Warning</span>,</div>
-<div class="sourceLine" id="cb2-13" data-line-number="13"><span class="fu">.Error</span>,</div>
-<div class="sourceLine" id="cb2-14" data-line-number="14"><span class="fu">.Success</span>,</div>
-<div class="sourceLine" id="cb2-15" data-line-number="15"><span class="fu">.Note</span> {</div>
-<div class="sourceLine" id="cb2-16" data-line-number="16">  <span class="kw">padding</span>: <span class="dv">11px</span>;</div>
-<div class="sourceLine" id="cb2-17" data-line-number="17">  <span class="kw">margin-bottom</span>: <span class="dv">24px</span>;</div>
-<div class="sourceLine" id="cb2-18" data-line-number="18">  <span class="kw">border-style</span>: <span class="dv">solid</span>;</div>
-<div class="sourceLine" id="cb2-19" data-line-number="19">  <span class="kw">border-width</span>: <span class="dv">1px</span>;</div>
-<div class="sourceLine" id="cb2-20" data-line-number="20">  <span class="kw">border-radius</span>: <span class="dv">4px</span>; }</div>
-<div class="sourceLine" id="cb2-21" data-line-number="21">  <span class="fu">.Alert</span> p,</div>
-<div class="sourceLine" id="cb2-22" data-line-number="22">  <span class="fu">.Warning</span> p,</div>
-<div class="sourceLine" id="cb2-23" data-line-number="23">  <span class="fu">.Error</span> p,</div>
-<div class="sourceLine" id="cb2-24" data-line-number="24">  <span class="fu">.Success</span> p,</div>
-<div class="sourceLine" id="cb2-25" data-line-number="25">  <span class="fu">.Note</span> p {</div>
-<div class="sourceLine" id="cb2-26" data-line-number="26">    <span class="kw">margin-top</span>: <span class="dv">0</span>; }</div>
-<div class="sourceLine" id="cb2-27" data-line-number="27">    <span class="fu">.Alert</span> p<span class="in">:last-child</span>,</div>
-<div class="sourceLine" id="cb2-28" data-line-number="28">    <span class="fu">.Warning</span> p<span class="in">:last-child</span>,</div>
-<div class="sourceLine" id="cb2-29" data-line-number="29">    <span class="fu">.Error</span> p<span class="in">:last-child</span>,</div>
-<div class="sourceLine" id="cb2-30" data-line-number="30">    <span class="fu">.Success</span> p<span class="in">:last-child</span>,</div>
-<div class="sourceLine" id="cb2-31" data-line-number="31">    <span class="fu">.Note</span> p<span class="in">:last-child</span> {</div>
-<div class="sourceLine" id="cb2-32" data-line-number="32">      <span class="kw">margin-bottom</span>: <span class="dv">0</span>; }</div>
-<div class="sourceLine" id="cb2-33" data-line-number="33"></div>
-<div class="sourceLine" id="cb2-34" data-line-number="34"><span class="fu">.Alert</span> {</div>
-<div class="sourceLine" id="cb2-35" data-line-number="35">  <span class="kw">color</span>: <span class="dv">#224466</span>;</div>
-<div class="sourceLine" id="cb2-36" data-line-number="36">  <span class="kw">background-color</span>: <span class="dv">#E2EEF9</span>;</div>
-<div class="sourceLine" id="cb2-37" data-line-number="37">  <span class="kw">border-color</span>: <span class="dv">#BAC6D3</span>; }</div>
-<div class="sourceLine" id="cb2-38" data-line-number="38"></div>
-<div class="sourceLine" id="cb2-39" data-line-number="39"><span class="fu">.Warning</span> {</div>
-<div class="sourceLine" id="cb2-40" data-line-number="40">  <span class="kw">color</span>: <span class="dv">#4C4A42</span>;</div>
-<div class="sourceLine" id="cb2-41" data-line-number="41">  <span class="kw">background-color</span>: <span class="dv">#FFF9EA</span>;</div>
-<div class="sourceLine" id="cb2-42" data-line-number="42">  <span class="kw">border-color</span>: <span class="dv">#DFD8C2</span>; }</div>
-<div class="sourceLine" id="cb2-43" data-line-number="43"></div>
-<div class="sourceLine" id="cb2-44" data-line-number="44"><span class="fu">.Error</span> {</div>
-<div class="sourceLine" id="cb2-45" data-line-number="45">  <span class="kw">color</span>: <span class="dv">#991111</span>;</div>
-<div class="sourceLine" id="cb2-46" data-line-number="46">  <span class="kw">background-color</span>: <span class="dv">#FCDEDE</span>;</div>
-<div class="sourceLine" id="cb2-47" data-line-number="47">  <span class="kw">border-color</span>: <span class="dv">#D2B2B2</span>; }</div>
-<div class="sourceLine" id="cb2-48" data-line-number="48"></div>
-<div class="sourceLine" id="cb2-49" data-line-number="49"><span class="fu">.Success</span> {</div>
-<div class="sourceLine" id="cb2-50" data-line-number="50">  <span class="kw">color</span>: <span class="dv">#22662C</span>;</div>
-<div class="sourceLine" id="cb2-51" data-line-number="51">  <span class="kw">background-color</span>: <span class="dv">#E2F9E5</span>;</div>
-<div class="sourceLine" id="cb2-52" data-line-number="52">  <span class="kw">border-color</span>: <span class="dv">#BAD3BE</span>; }</div>
-<div class="sourceLine" id="cb2-53" data-line-number="53"></div>
-<div class="sourceLine" id="cb2-54" data-line-number="54"><span class="fu">.Note</span> {</div>
-<div class="sourceLine" id="cb2-55" data-line-number="55">  <span class="kw">color</span>: <span class="dv">#2F363D</span>;</div>
-<div class="sourceLine" id="cb2-56" data-line-number="56">  <span class="kw">background-color</span>: <span class="dv">#F6F8FA</span>;</div>
-<div class="sourceLine" id="cb2-57" data-line-number="57">  <span class="kw">border-color</span>: <span class="dv">#D5D8DA</span>; }</div>
-<div class="sourceLine" id="cb2-58" data-line-number="58"></div>
-<div class="sourceLine" id="cb2-59" data-line-number="59"><span class="fu">.Alert</span> h1,</div>
-<div class="sourceLine" id="cb2-60" data-line-number="60"><span class="fu">.Alert</span> h2,</div>
-<div class="sourceLine" id="cb2-61" data-line-number="61"><span class="fu">.Alert</span> h3,</div>
-<div class="sourceLine" id="cb2-62" data-line-number="62"><span class="fu">.Alert</span> h4,</div>
-<div class="sourceLine" id="cb2-63" data-line-number="63"><span class="fu">.Alert</span> h5,</div>
-<div class="sourceLine" id="cb2-64" data-line-number="64"><span class="fu">.Alert</span> h6 {</div>
-<div class="sourceLine" id="cb2-65" data-line-number="65">  <span class="kw">color</span>: <span class="dv">#224466</span>;</div>
-<div class="sourceLine" id="cb2-66" data-line-number="66">  <span class="kw">margin-bottom</span>: <span class="dv">0</span>; }</div>
-<div class="sourceLine" id="cb2-67" data-line-number="67"></div>
-<div class="sourceLine" id="cb2-68" data-line-number="68"><span class="fu">.Warning</span> h1,</div>
-<div class="sourceLine" id="cb2-69" data-line-number="69"><span class="fu">.Warning</span> h2,</div>
-<div class="sourceLine" id="cb2-70" data-line-number="70"><span class="fu">.Warning</span> h3,</div>
-<div class="sourceLine" id="cb2-71" data-line-number="71"><span class="fu">.Warning</span> h4,</div>
-<div class="sourceLine" id="cb2-72" data-line-number="72"><span class="fu">.Warning</span> h5,</div>
-<div class="sourceLine" id="cb2-73" data-line-number="73"><span class="fu">.Warning</span> h6 {</div>
-<div class="sourceLine" id="cb2-74" data-line-number="74">  <span class="kw">color</span>: <span class="dv">#4C4A42</span>;</div>
-<div class="sourceLine" id="cb2-75" data-line-number="75">  <span class="kw">margin-bottom</span>: <span class="dv">0</span>; }</div>
-<div class="sourceLine" id="cb2-76" data-line-number="76"></div>
-<div class="sourceLine" id="cb2-77" data-line-number="77"><span class="fu">.Error</span> h1,</div>
-<div class="sourceLine" id="cb2-78" data-line-number="78"><span class="fu">.Error</span> h2,</div>
-<div class="sourceLine" id="cb2-79" data-line-number="79"><span class="fu">.Error</span> h3,</div>
-<div class="sourceLine" id="cb2-80" data-line-number="80"><span class="fu">.Error</span> h4,</div>
-<div class="sourceLine" id="cb2-81" data-line-number="81"><span class="fu">.Error</span> h5,</div>
-<div class="sourceLine" id="cb2-82" data-line-number="82"><span class="fu">.Error</span> h6 {</div>
-<div class="sourceLine" id="cb2-83" data-line-number="83">  <span class="kw">color</span>: <span class="dv">#991111</span>;</div>
-<div class="sourceLine" id="cb2-84" data-line-number="84">  <span class="kw">margin-bottom</span>: <span class="dv">0</span>; }</div>
-<div class="sourceLine" id="cb2-85" data-line-number="85"></div>
-<div class="sourceLine" id="cb2-86" data-line-number="86"><span class="fu">.Success</span> h1,</div>
-<div class="sourceLine" id="cb2-87" data-line-number="87"><span class="fu">.Success</span> h2,</div>
-<div class="sourceLine" id="cb2-88" data-line-number="88"><span class="fu">.Success</span> h3,</div>
-<div class="sourceLine" id="cb2-89" data-line-number="89"><span class="fu">.Success</span> h4,</div>
-<div class="sourceLine" id="cb2-90" data-line-number="90"><span class="fu">.Success</span> h5,</div>
-<div class="sourceLine" id="cb2-91" data-line-number="91"><span class="fu">.Success</span> h6 {</div>
-<div class="sourceLine" id="cb2-92" data-line-number="92">  <span class="kw">color</span>: <span class="dv">#22662C</span>;</div>
-<div class="sourceLine" id="cb2-93" data-line-number="93">  <span class="kw">margin-bottom</span>: <span class="dv">0</span>; }</div>
-<div class="sourceLine" id="cb2-94" data-line-number="94"></div>
-<div class="sourceLine" id="cb2-95" data-line-number="95"><span class="fu">.Note</span> h1,</div>
-<div class="sourceLine" id="cb2-96" data-line-number="96"><span class="fu">.Note</span> h2,</div>
-<div class="sourceLine" id="cb2-97" data-line-number="97"><span class="fu">.Note</span> h3,</div>
-<div class="sourceLine" id="cb2-98" data-line-number="98"><span class="fu">.Note</span> h4,</div>
-<div class="sourceLine" id="cb2-99" data-line-number="99"><span class="fu">.Note</span> h5,</div>
-<div class="sourceLine" id="cb2-100" data-line-number="100"><span class="fu">.Note</span> h6 {</div>
-<div class="sourceLine" id="cb2-101" data-line-number="101">  <span class="kw">color</span>: <span class="dv">#2F363D</span>;</div>
-<div class="sourceLine" id="cb2-102" data-line-number="102">  <span class="kw">margin-bottom</span>: <span class="dv">0</span>; }</div>
-<div class="sourceLine" id="cb2-103" data-line-number="103"></div>
-<div class="sourceLine" id="cb2-104" data-line-number="104"><span class="fu">.Alert</span> h1<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-105" data-line-number="105"><span class="fu">.Alert</span> h2<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-106" data-line-number="106"><span class="fu">.Alert</span> h3<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-107" data-line-number="107"><span class="fu">.Alert</span> h4<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-108" data-line-number="108"><span class="fu">.Alert</span> h5<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-109" data-line-number="109"><span class="fu">.Alert</span> h6<span class="in">:first-child</span> {</div>
-<div class="sourceLine" id="cb2-110" data-line-number="110">  <span class="kw">margin-top</span>: <span class="dv">0</span>; }</div>
-<div class="sourceLine" id="cb2-111" data-line-number="111"></div>
-<div class="sourceLine" id="cb2-112" data-line-number="112"><span class="fu">.Warning</span> h1<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-113" data-line-number="113"><span class="fu">.Warning</span> h2<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-114" data-line-number="114"><span class="fu">.Warning</span> h3<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-115" data-line-number="115"><span class="fu">.Warning</span> h4<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-116" data-line-number="116"><span class="fu">.Warning</span> h5<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-117" data-line-number="117"><span class="fu">.Warning</span> h6<span class="in">:first-child</span> {</div>
-<div class="sourceLine" id="cb2-118" data-line-number="118">  <span class="kw">margin-top</span>: <span class="dv">0</span>; }</div>
-<div class="sourceLine" id="cb2-119" data-line-number="119"></div>
-<div class="sourceLine" id="cb2-120" data-line-number="120"><span class="fu">.Error</span> h1<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-121" data-line-number="121"><span class="fu">.Error</span> h2<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-122" data-line-number="122"><span class="fu">.Error</span> h3<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-123" data-line-number="123"><span class="fu">.Error</span> h4<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-124" data-line-number="124"><span class="fu">.Error</span> h5<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-125" data-line-number="125"><span class="fu">.Error</span> h6<span class="in">:first-child</span> {</div>
-<div class="sourceLine" id="cb2-126" data-line-number="126">  <span class="kw">margin-top</span>: <span class="dv">0</span>; }</div>
-<div class="sourceLine" id="cb2-127" data-line-number="127"></div>
-<div class="sourceLine" id="cb2-128" data-line-number="128"><span class="fu">.Success</span> h1<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-129" data-line-number="129"><span class="fu">.Success</span> h2<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-130" data-line-number="130"><span class="fu">.Success</span> h3<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-131" data-line-number="131"><span class="fu">.Success</span> h4<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-132" data-line-number="132"><span class="fu">.Success</span> h5<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-133" data-line-number="133"><span class="fu">.Success</span> h6<span class="in">:first-child</span> {</div>
-<div class="sourceLine" id="cb2-134" data-line-number="134">  <span class="kw">margin-top</span>: <span class="dv">0</span>; }</div>
-<div class="sourceLine" id="cb2-135" data-line-number="135"></div>
-<div class="sourceLine" id="cb2-136" data-line-number="136"><span class="fu">.Note</span> h1<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-137" data-line-number="137"><span class="fu">.Note</span> h2<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-138" data-line-number="138"><span class="fu">.Note</span> h3<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-139" data-line-number="139"><span class="fu">.Note</span> h4<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-140" data-line-number="140"><span class="fu">.Note</span> h5<span class="in">:first-child</span>,</div>
-<div class="sourceLine" id="cb2-141" data-line-number="141"><span class="fu">.Note</span> h6<span class="in">:first-child</span> {</div>
-<div class="sourceLine" id="cb2-142" data-line-number="142">  <span class="kw">margin-top</span>: <span class="dv">0</span>; }</div>
-<div class="sourceLine" id="cb2-143" data-line-number="143"></div>
-<div class="sourceLine" id="cb2-144" data-line-number="144"><span class="kw">&lt;/style&gt;</span></div></code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="co">/*! &quot;GFM-Alerts.css&quot; v2.0 | 2017/11/21 | MIT License (MIT)</span></a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="co">    Adapted by Tristano Ajmone from &quot;flash.scss&quot; of Primer CSS by GitHub Inc.:</span></a>
+<a class="sourceLine" id="cb2-4" title="4"></a>
+<a class="sourceLine" id="cb2-5" title="5"><span class="co">    https://github.com/primer/primer/blob/master/modules/primer-alerts/lib/flash.scss</span></a>
+<a class="sourceLine" id="cb2-6" title="6"><span class="co">    http://primercss.io/archive/alerts/</span></a>
+<a class="sourceLine" id="cb2-7" title="7"></a>
+<a class="sourceLine" id="cb2-8" title="8"><span class="co">    Copyright (c) 2017 Tristano Ajmone.</span></a>
+<a class="sourceLine" id="cb2-9" title="9"><span class="co">    Copyright (c) 2017 GitHub Inc.</span></a>
+<a class="sourceLine" id="cb2-10" title="10"><span class="co">*/</span></a>
+<a class="sourceLine" id="cb2-11" title="11"><span class="fu">.Alert</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-12" title="12"><span class="fu">.Warning</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-13" title="13"><span class="fu">.Error</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-14" title="14"><span class="fu">.Success</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-15" title="15"><span class="fu">.Note</span> {</a>
+<a class="sourceLine" id="cb2-16" title="16">  <span class="kw">padding</span>: <span class="dv">11</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-17" title="17">  <span class="kw">margin-bottom</span>: <span class="dv">24</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-18" title="18">  <span class="kw">border-style</span>: <span class="dv">solid</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-19" title="19">  <span class="kw">border-width</span>: <span class="dv">1</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-20" title="20">  <span class="kw">border-radius</span>: <span class="dv">4</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-21" title="21">}</a>
+<a class="sourceLine" id="cb2-22" title="22"><span class="fu">.Alert</span> p<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-23" title="23"><span class="fu">.Warning</span> p<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-24" title="24"><span class="fu">.Error</span> p<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-25" title="25"><span class="fu">.Success</span> p<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-26" title="26"><span class="fu">.Note</span> p {</a>
+<a class="sourceLine" id="cb2-27" title="27">  <span class="kw">margin-top</span>: <span class="dv">0</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-28" title="28">}</a>
+<a class="sourceLine" id="cb2-29" title="29"><span class="fu">.Alert</span> p<span class="in">:last-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-30" title="30"><span class="fu">.Warning</span> p<span class="in">:last-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-31" title="31"><span class="fu">.Error</span> p<span class="in">:last-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-32" title="32"><span class="fu">.Success</span> p<span class="in">:last-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-33" title="33"><span class="fu">.Note</span> p<span class="in">:last-child</span> {</a>
+<a class="sourceLine" id="cb2-34" title="34">  <span class="kw">margin-bottom</span>: <span class="dv">0</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-35" title="35">}</a>
+<a class="sourceLine" id="cb2-36" title="36"></a>
+<a class="sourceLine" id="cb2-37" title="37"><span class="fu">.Alert</span> {</a>
+<a class="sourceLine" id="cb2-38" title="38">  <span class="kw">color</span>: <span class="cn">#224466</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-39" title="39">  <span class="kw">background-color</span>: <span class="cn">#E2EEF9</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-40" title="40">  <span class="kw">border-color</span>: <span class="cn">#BAC6D3</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-41" title="41">}</a>
+<a class="sourceLine" id="cb2-42" title="42"></a>
+<a class="sourceLine" id="cb2-43" title="43"><span class="fu">.Warning</span> {</a>
+<a class="sourceLine" id="cb2-44" title="44">  <span class="kw">color</span>: <span class="cn">#4C4A42</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-45" title="45">  <span class="kw">background-color</span>: <span class="cn">#FFF9EA</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-46" title="46">  <span class="kw">border-color</span>: <span class="cn">#DFD8C2</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-47" title="47">}</a>
+<a class="sourceLine" id="cb2-48" title="48"></a>
+<a class="sourceLine" id="cb2-49" title="49"><span class="fu">.Error</span> {</a>
+<a class="sourceLine" id="cb2-50" title="50">  <span class="kw">color</span>: <span class="cn">#991111</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-51" title="51">  <span class="kw">background-color</span>: <span class="cn">#FCDEDE</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-52" title="52">  <span class="kw">border-color</span>: <span class="cn">#D2B2B2</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-53" title="53">}</a>
+<a class="sourceLine" id="cb2-54" title="54"></a>
+<a class="sourceLine" id="cb2-55" title="55"><span class="fu">.Success</span> {</a>
+<a class="sourceLine" id="cb2-56" title="56">  <span class="kw">color</span>: <span class="cn">#22662C</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-57" title="57">  <span class="kw">background-color</span>: <span class="cn">#E2F9E5</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-58" title="58">  <span class="kw">border-color</span>: <span class="cn">#BAD3BE</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-59" title="59">}</a>
+<a class="sourceLine" id="cb2-60" title="60"></a>
+<a class="sourceLine" id="cb2-61" title="61"><span class="fu">.Note</span> {</a>
+<a class="sourceLine" id="cb2-62" title="62">  <span class="kw">color</span>: <span class="cn">#2F363D</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-63" title="63">  <span class="kw">background-color</span>: <span class="cn">#F6F8FA</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-64" title="64">  <span class="kw">border-color</span>: <span class="cn">#D5D8DA</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-65" title="65">}</a>
+<a class="sourceLine" id="cb2-66" title="66"></a>
+<a class="sourceLine" id="cb2-67" title="67"><span class="fu">.Alert</span> h1<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-68" title="68"><span class="fu">.Alert</span> h2<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-69" title="69"><span class="fu">.Alert</span> h3<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-70" title="70"><span class="fu">.Alert</span> h4<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-71" title="71"><span class="fu">.Alert</span> h5<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-72" title="72"><span class="fu">.Alert</span> h6 {</a>
+<a class="sourceLine" id="cb2-73" title="73">  <span class="kw">color</span>: <span class="cn">#224466</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-74" title="74">  <span class="kw">margin-bottom</span>: <span class="dv">0</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-75" title="75">}</a>
+<a class="sourceLine" id="cb2-76" title="76"></a>
+<a class="sourceLine" id="cb2-77" title="77"><span class="fu">.Warning</span> h1<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-78" title="78"><span class="fu">.Warning</span> h2<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-79" title="79"><span class="fu">.Warning</span> h3<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-80" title="80"><span class="fu">.Warning</span> h4<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-81" title="81"><span class="fu">.Warning</span> h5<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-82" title="82"><span class="fu">.Warning</span> h6 {</a>
+<a class="sourceLine" id="cb2-83" title="83">  <span class="kw">color</span>: <span class="cn">#4C4A42</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-84" title="84">  <span class="kw">margin-bottom</span>: <span class="dv">0</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-85" title="85">}</a>
+<a class="sourceLine" id="cb2-86" title="86"></a>
+<a class="sourceLine" id="cb2-87" title="87"><span class="fu">.Error</span> h1<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-88" title="88"><span class="fu">.Error</span> h2<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-89" title="89"><span class="fu">.Error</span> h3<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-90" title="90"><span class="fu">.Error</span> h4<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-91" title="91"><span class="fu">.Error</span> h5<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-92" title="92"><span class="fu">.Error</span> h6 {</a>
+<a class="sourceLine" id="cb2-93" title="93">  <span class="kw">color</span>: <span class="cn">#991111</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-94" title="94">  <span class="kw">margin-bottom</span>: <span class="dv">0</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-95" title="95">}</a>
+<a class="sourceLine" id="cb2-96" title="96"></a>
+<a class="sourceLine" id="cb2-97" title="97"><span class="fu">.Success</span> h1<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-98" title="98"><span class="fu">.Success</span> h2<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-99" title="99"><span class="fu">.Success</span> h3<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-100" title="100"><span class="fu">.Success</span> h4<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-101" title="101"><span class="fu">.Success</span> h5<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-102" title="102"><span class="fu">.Success</span> h6 {</a>
+<a class="sourceLine" id="cb2-103" title="103">  <span class="kw">color</span>: <span class="cn">#22662C</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-104" title="104">  <span class="kw">margin-bottom</span>: <span class="dv">0</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-105" title="105">}</a>
+<a class="sourceLine" id="cb2-106" title="106"></a>
+<a class="sourceLine" id="cb2-107" title="107"><span class="fu">.Note</span> h1<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-108" title="108"><span class="fu">.Note</span> h2<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-109" title="109"><span class="fu">.Note</span> h3<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-110" title="110"><span class="fu">.Note</span> h4<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-111" title="111"><span class="fu">.Note</span> h5<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-112" title="112"><span class="fu">.Note</span> h6 {</a>
+<a class="sourceLine" id="cb2-113" title="113">  <span class="kw">color</span>: <span class="cn">#2F363D</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-114" title="114">  <span class="kw">margin-bottom</span>: <span class="dv">0</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-115" title="115">}</a>
+<a class="sourceLine" id="cb2-116" title="116"></a>
+<a class="sourceLine" id="cb2-117" title="117"><span class="fu">.Alert</span> h1<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-118" title="118"><span class="fu">.Alert</span> h2<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-119" title="119"><span class="fu">.Alert</span> h3<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-120" title="120"><span class="fu">.Alert</span> h4<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-121" title="121"><span class="fu">.Alert</span> h5<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-122" title="122"><span class="fu">.Alert</span> h6<span class="in">:first-child</span> {</a>
+<a class="sourceLine" id="cb2-123" title="123">  <span class="kw">margin-top</span>: <span class="dv">0</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-124" title="124">}</a>
+<a class="sourceLine" id="cb2-125" title="125"></a>
+<a class="sourceLine" id="cb2-126" title="126"><span class="fu">.Warning</span> h1<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-127" title="127"><span class="fu">.Warning</span> h2<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-128" title="128"><span class="fu">.Warning</span> h3<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-129" title="129"><span class="fu">.Warning</span> h4<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-130" title="130"><span class="fu">.Warning</span> h5<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-131" title="131"><span class="fu">.Warning</span> h6<span class="in">:first-child</span> {</a>
+<a class="sourceLine" id="cb2-132" title="132">  <span class="kw">margin-top</span>: <span class="dv">0</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-133" title="133">}</a>
+<a class="sourceLine" id="cb2-134" title="134"></a>
+<a class="sourceLine" id="cb2-135" title="135"><span class="fu">.Error</span> h1<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-136" title="136"><span class="fu">.Error</span> h2<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-137" title="137"><span class="fu">.Error</span> h3<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-138" title="138"><span class="fu">.Error</span> h4<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-139" title="139"><span class="fu">.Error</span> h5<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-140" title="140"><span class="fu">.Error</span> h6<span class="in">:first-child</span> {</a>
+<a class="sourceLine" id="cb2-141" title="141">  <span class="kw">margin-top</span>: <span class="dv">0</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-142" title="142">}</a>
+<a class="sourceLine" id="cb2-143" title="143"></a>
+<a class="sourceLine" id="cb2-144" title="144"><span class="fu">.Success</span> h1<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-145" title="145"><span class="fu">.Success</span> h2<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-146" title="146"><span class="fu">.Success</span> h3<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-147" title="147"><span class="fu">.Success</span> h4<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-148" title="148"><span class="fu">.Success</span> h5<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-149" title="149"><span class="fu">.Success</span> h6<span class="in">:first-child</span> {</a>
+<a class="sourceLine" id="cb2-150" title="150">  <span class="kw">margin-top</span>: <span class="dv">0</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-151" title="151">}</a>
+<a class="sourceLine" id="cb2-152" title="152"></a>
+<a class="sourceLine" id="cb2-153" title="153"><span class="fu">.Note</span> h1<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-154" title="154"><span class="fu">.Note</span> h2<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-155" title="155"><span class="fu">.Note</span> h3<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-156" title="156"><span class="fu">.Note</span> h4<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-157" title="157"><span class="fu">.Note</span> h5<span class="in">:first-child</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-158" title="158"><span class="fu">.Note</span> h6<span class="in">:first-child</span> {</a>
+<a class="sourceLine" id="cb2-159" title="159">  <span class="kw">margin-top</span>: <span class="dv">0</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb2-160" title="160">}</a>
+<a class="sourceLine" id="cb2-161" title="161"></a>
+<a class="sourceLine" id="cb2-162" title="162"><span class="co">/*# sourceMappingURL=GFM-Alerts.css.map */</span></a>
+<a class="sourceLine" id="cb2-163" title="163"></a>
+<a class="sourceLine" id="cb2-164" title="164"><span class="kw">&lt;/style&gt;</span></a></code></pre></div>
 <style type="text/css">
 /*! "GFM-Alerts.css" v2.0 | 2017/11/21 | MIT License (MIT)
     Adapted by Tristano Ajmone from "flash.scss" of Primer CSS by GitHub Inc.:
@@ -263,44 +293,52 @@ code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Infor
   margin-bottom: 24px;
   border-style: solid;
   border-width: 1px;
-  border-radius: 4px; }
-  .Alert p,
-  .Warning p,
-  .Error p,
-  .Success p,
-  .Note p {
-    margin-top: 0; }
-    .Alert p:last-child,
-    .Warning p:last-child,
-    .Error p:last-child,
-    .Success p:last-child,
-    .Note p:last-child {
-      margin-bottom: 0; }
+  border-radius: 4px;
+}
+.Alert p,
+.Warning p,
+.Error p,
+.Success p,
+.Note p {
+  margin-top: 0;
+}
+.Alert p:last-child,
+.Warning p:last-child,
+.Error p:last-child,
+.Success p:last-child,
+.Note p:last-child {
+  margin-bottom: 0;
+}
 
 .Alert {
   color: #224466;
   background-color: #E2EEF9;
-  border-color: #BAC6D3; }
+  border-color: #BAC6D3;
+}
 
 .Warning {
   color: #4C4A42;
   background-color: #FFF9EA;
-  border-color: #DFD8C2; }
+  border-color: #DFD8C2;
+}
 
 .Error {
   color: #991111;
   background-color: #FCDEDE;
-  border-color: #D2B2B2; }
+  border-color: #D2B2B2;
+}
 
 .Success {
   color: #22662C;
   background-color: #E2F9E5;
-  border-color: #BAD3BE; }
+  border-color: #BAD3BE;
+}
 
 .Note {
   color: #2F363D;
   background-color: #F6F8FA;
-  border-color: #D5D8DA; }
+  border-color: #D5D8DA;
+}
 
 .Alert h1,
 .Alert h2,
@@ -309,7 +347,8 @@ code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Infor
 .Alert h5,
 .Alert h6 {
   color: #224466;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 .Warning h1,
 .Warning h2,
@@ -318,7 +357,8 @@ code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Infor
 .Warning h5,
 .Warning h6 {
   color: #4C4A42;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 .Error h1,
 .Error h2,
@@ -327,7 +367,8 @@ code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Infor
 .Error h5,
 .Error h6 {
   color: #991111;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 .Success h1,
 .Success h2,
@@ -336,7 +377,8 @@ code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Infor
 .Success h5,
 .Success h6 {
   color: #22662C;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 .Note h1,
 .Note h2,
@@ -345,7 +387,8 @@ code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Infor
 .Note h5,
 .Note h6 {
   color: #2F363D;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 .Alert h1:first-child,
 .Alert h2:first-child,
@@ -353,7 +396,8 @@ code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Infor
 .Alert h4:first-child,
 .Alert h5:first-child,
 .Alert h6:first-child {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 .Warning h1:first-child,
 .Warning h2:first-child,
@@ -361,7 +405,8 @@ code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Infor
 .Warning h4:first-child,
 .Warning h5:first-child,
 .Warning h6:first-child {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 .Error h1:first-child,
 .Error h2:first-child,
@@ -369,7 +414,8 @@ code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Infor
 .Error h4:first-child,
 .Error h5:first-child,
 .Error h6:first-child {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 .Success h1:first-child,
 .Success h2:first-child,
@@ -377,7 +423,8 @@ code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Infor
 .Success h4:first-child,
 .Success h5:first-child,
 .Success h6:first-child {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 .Note h1:first-child,
 .Note h2:first-child,
@@ -385,7 +432,10 @@ code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Infor
 .Note h4:first-child,
 .Note h5:first-child,
 .Note h6:first-child {
-  margin-top: 0; }
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=GFM-Alerts.css.map */
 
 </style>
 <h1 id="alerts-tests">Alerts Tests</h1>
@@ -393,9 +443,9 @@ code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Infor
 <p>macro used:</p>
 <pre><code>!GFMAlert(**Default** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
 <p>raw html output:</p>
-<pre class="sourceCode html" id="cb4"><code class="sourceCode html"><div class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;Alert&quot;</span><span class="kw">&gt;</span></div>
-<div class="sourceLine" id="cb4-2" data-line-number="2">**Default** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.</div>
-<div class="sourceLine" id="cb4-3" data-line-number="3"><span class="kw">&lt;/div&gt;</span></div></code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;Alert&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb4-2" title="2">**Default** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.</a>
+<a class="sourceLine" id="cb4-3" title="3"><span class="kw">&lt;/div&gt;</span></a></code></pre></div>
 <p>result preview:</p>
 <div class="Alert">
 <p><strong>Default</strong> — Lorem ipsum dolor sit amet, pri cu libris dicunt.</p>
@@ -404,9 +454,9 @@ code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Infor
 <p>macro used:</p>
 <pre><code>!GFMWarn(**Warning** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
 <p>raw html output:</p>
-<pre class="sourceCode html" id="cb6"><code class="sourceCode html"><div class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;Warning&quot;</span><span class="kw">&gt;</span></div>
-<div class="sourceLine" id="cb6-2" data-line-number="2">**Warning** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.</div>
-<div class="sourceLine" id="cb6-3" data-line-number="3"><span class="kw">&lt;/div&gt;</span></div></code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;Warning&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb6-2" title="2">**Warning** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.</a>
+<a class="sourceLine" id="cb6-3" title="3"><span class="kw">&lt;/div&gt;</span></a></code></pre></div>
 <p>result preview:</p>
 <div class="Warning">
 <p><strong>Warning</strong> — Lorem ipsum dolor sit amet, pri cu libris dicunt.</p>
@@ -415,9 +465,9 @@ code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Infor
 <p>macro used:</p>
 <pre><code>!GFMError(**Error** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
 <p>raw html output:</p>
-<pre class="sourceCode html" id="cb8"><code class="sourceCode html"><div class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;Error&quot;</span><span class="kw">&gt;</span></div>
-<div class="sourceLine" id="cb8-2" data-line-number="2">**Error** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.</div>
-<div class="sourceLine" id="cb8-3" data-line-number="3"><span class="kw">&lt;/div&gt;</span></div></code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;Error&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb8-2" title="2">**Error** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.</a>
+<a class="sourceLine" id="cb8-3" title="3"><span class="kw">&lt;/div&gt;</span></a></code></pre></div>
 <p>result preview:</p>
 <div class="Error">
 <p><strong>Error</strong> — Lorem ipsum dolor sit amet, pri cu libris dicunt.</p>
@@ -426,9 +476,9 @@ code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Infor
 <p>macro used:</p>
 <pre><code>!GFMSuccess(**Success** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
 <p>raw html output:</p>
-<pre class="sourceCode html" id="cb10"><code class="sourceCode html"><div class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;Success&quot;</span><span class="kw">&gt;</span></div>
-<div class="sourceLine" id="cb10-2" data-line-number="2">**Success** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.</div>
-<div class="sourceLine" id="cb10-3" data-line-number="3"><span class="kw">&lt;/div&gt;</span></div></code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb10-1" title="1"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;Success&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb10-2" title="2">**Success** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.</a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="kw">&lt;/div&gt;</span></a></code></pre></div>
 <p>result preview:</p>
 <div class="Success">
 <p><strong>Success</strong> — Lorem ipsum dolor sit amet, pri cu libris dicunt.</p>
@@ -440,9 +490,9 @@ code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Infor
 <p>macro used:</p>
 <pre><code>!GFMAlertNote(**Note** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
 <p>raw html output:</p>
-<pre class="sourceCode html" id="cb12"><code class="sourceCode html"><div class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;Note&quot;</span><span class="kw">&gt;</span></div>
-<div class="sourceLine" id="cb12-2" data-line-number="2">**Note** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.</div>
-<div class="sourceLine" id="cb12-3" data-line-number="3"><span class="kw">&lt;/div&gt;</span></div></code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb12-1" title="1"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;Note&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb12-2" title="2">**Note** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.</a>
+<a class="sourceLine" id="cb12-3" title="3"><span class="kw">&lt;/div&gt;</span></a></code></pre></div>
 <p>result preview:</p>
 <div class="Note">
 <p><strong>Note</strong> — Lorem ipsum dolor sit amet, pri cu libris dicunt.</p>
@@ -454,9 +504,9 @@ code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Infor
 <p>macro used:</p>
 <pre><code>!GFMAlertPlain(**Plain** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.)</code></pre>
 <p>raw html output:</p>
-<pre class="sourceCode html" id="cb14"><code class="sourceCode html"><div class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;Note&quot;</span><span class="kw">&gt;</span></div>
-<div class="sourceLine" id="cb14-2" data-line-number="2">**Plain** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.</div>
-<div class="sourceLine" id="cb14-3" data-line-number="3"><span class="kw">&lt;/div&gt;</span></div></code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb14-1" title="1"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;Note&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb14-2" title="2">**Plain** --- Lorem ipsum dolor sit amet, pri cu libris dicunt.</a>
+<a class="sourceLine" id="cb14-3" title="3"><span class="kw">&lt;/div&gt;</span></a></code></pre></div>
 <p>result preview:</p>
 <div class="Note">
 <p><strong>Plain</strong> — Lorem ipsum dolor sit amet, pri cu libris dicunt.</p>
@@ -494,6 +544,6 @@ code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Infor
 <p><strong>Success</strong> — This is a Success-Alert.</p>
 </div>
 <p>… which in the final HTML produces the following <code>&lt;div&gt;</code> tag:</p>
-<pre class="sourceCode html" id="cb17"><code class="sourceCode html"><div class="sourceLine" id="cb17-1" data-line-number="1"><span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;custom-id&quot;</span><span class="ot"> class=</span><span class="st">&quot;Success other-class&quot;</span><span class="kw">&gt;</span></div></code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb17-1" title="1"><span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;custom-id&quot;</span><span class="ot"> class=</span><span class="st">&quot;Success other-class&quot;</span><span class="kw">&gt;</span></a></code></pre></div>
 </body>
 </html>
