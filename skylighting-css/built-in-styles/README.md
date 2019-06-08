@@ -1,8 +1,8 @@
-# Pandoc’s Built-in Styles
+# Pandoc Built-in Styles
 
-    pandoc v2.0.5 | v1.19.2
+    pandoc v2.7.2 | v1.19.2
 
-In this folder you’ll find the standalone CSS stylesheets of pandoc’s eight built-in styles (syntax highlighting themes):
+In this folder you'll find the standalone CSS stylesheets of pandoc eight built-in styles (syntax highlighting themes):
 
 1.  [`breezedark.css`](./breezedark.css)
 2.  [`espresso.css`](./espresso.css)
@@ -13,55 +13,56 @@ In this folder you’ll find the standalone CSS stylesheets of pandoc’s eight 
 7.  [`tango.css`](./tango.css)
 8.  [`zenburn.css`](./zenburn.css)
 
-The stylesheets were extracted from standalone HTML5 documents created with pandoc `v2.0.5`, using the `--highlight-style` option. A comment block with extra info was added at the beginning of each stylesheet.
+The stylesheets were extracted from standalone HTML5 documents created with pandoc `v2.7.2`, using the `--highlight-style` option. A comment block with extra info was added at the beginning of each stylesheet.
 
-They are intended as a examples and quick reference when developing custom styles (see [License](#license) section below).
+They are intended as a examples and quick reference when developing custom styles (see [License section] below).
 
-> __NOTE__ — pandoc v2.0.4 introduced some breaking changes in the way code is highlighted in html output. (For more info, see [parent folder's `README`][parent README])
 
-[parent README]: ../README.md#breaking-changes "Go to parent folder's README file"
+> __NOTE__ — pandoc v2.0.4 introduced some breaking changes in the way code is highlighted in html output. (For more info, see [README in parent folder])
+
 
 ## Pandoc v1 Styles
 
-  - [`/pandoc_v1/`](./pandoc_v1/)
+- [`/pandoc_v1/`](./pandoc_v1/)
 
-In the “[`/pandoc_v1/`](./pandoc_v1/)” you’ll’ find the equivalent files for pandoc v1 — version 2 introduced some changes in syntax highlighting HTML tags and built-in styles’ CSS, so the old files are kept for projects that still require pandoc `v1.x`.
+In the "[`/pandoc_v1/`](./pandoc_v1/)" folder you'll find the equivalent files for pandoc v1 — version 2 introduced some changes in syntax highlighting HTML tags and built-in CSS styles, so the old files are kept for projects that still require pandoc `v1.x`.
 
-From [pandoc v2.0 release notes](https://github.com/jgm/pandoc/releases/tag/2.0):
+From [pandoc v2.0 release notes]:
 
-> The way highlighted code blocks are formatted in HTML has been changed (David Baynard), in ways that may require changes in hard-coded CSS affecting highlighting. (If you haven’t included hard-coded highlighting CSS in your template, you needn’t change anything.)
+> The way highlighted code blocks are formatted in HTML has been changed (David Baynard), in ways that may require changes in hard-coded CSS affecting highlighting. (If you haven't included hard-coded highlighting CSS in your template, you needn't change anything.)
 
-Most notably, line-numbered code dosen’t use HTML tables anymore.
+Most notably, line-numbered code dosen't use HTML tables anymore.
 
 # About The Styles
 
 ## Color Themes Inspiration
 
-Some info about the original themes these pandoc styles are based on (info taken from [skylighting source](https://github.com/jgm/skylighting/blob/master/src/Skylighting/Styles.hs) and further research).
+Some info about the original themes these pandoc styles are based on (info taken from [skylighting source code] and further research).
 
-  - **breezedark** — Style from the “Breeze Dark” KDE syntax highlighting theme.
-  - **espresso** — Style based on [ultraviolet](https://rubygems.org/gems/ultraviolet/versions/0.10.0)’s “[`espresso_libre.css`](https://github.com/spox/ultraviolet/blob/master/render/xhtml/files/css/espresso_libre.css)” (dark background)
-  - **haddock** — Style based on [Haddock](https://www.haskell.org/haddock/)’s source highlighting.
-  - **kate** — Style based on Kate’s default colors.
-  - **monochrome** — Style with no colors.
-  - **pygments** — Style based on [Pygments](http://pygments.org/)’ [default colors](https://bitbucket.org/birkenfeld/pygments-main/src/default/pygments/styles/default.py).
-  - **tango** — Style based on [Pygments](http://pygments.org/)’ “[tango](https://bitbucket.org/birkenfeld/pygments-main/src/default/pygments/styles/tango.py)” colors.
-  - **zenburn** — Style based on the popular “[Zenburn](http://kippura.org/zenburnpage/)” Vim color scheme.
+- **breezedark** — Style from the "Breeze Dark" KDE syntax highlighting theme.
+- **espresso** — Style based on [ultraviolet] &rarr; "[espresso_libre.css]" (dark background)
+- **haddock** — Style based on [Haddock]'s source highlighting.
+- **kate** — Style based on Kate's default colors.
+- **monochrome** — Style with no colors.
+- **pygments** — Style based on [Pygments] &rarr; [default colors].
+- **tango** — Style based on [Pygments] &rarr; "[tango]" colors.
+- **zenburn** — Style based on the popular "[Zenburn]" Vim color scheme.
+
 
 ## License
 
-  - [LICENSE](./LICENSE) — Pandoc license file.
-  - [GPL-2.0](./GPL-2.0) — GNU-GPL v2 license file.
+- [LICENSE](./LICENSE) — Pandoc license file.
+- [GPL-2.0](./GPL-2.0) — GNU-GPL v2 license file.
 
-Pandoc’s built-in styles are dynamically generated by the skylighting library — ie: the actual CSS stylesheets are not present in pandoc’s nor skylighting’s source code, but are generated programmatically from a set a hardcoded values. The code that generates them can be seen here:
+Pandoc built-in styles are dynamically generated by the skylighting library — ie: the actual CSS stylesheets are not present in pandoc nor skylighting source code, but are generated programmatically from a set a hardcoded values. The code that generates them can be seen here:
 
-  - <https://github.com/jgm/skylighting/blob/master/src/Skylighting/Styles.hs>
+- https://github.com/jgm/skylighting/blob/master/skylighting-core/src/Skylighting/Styles.hs
 
-The CSS stylesheets of the syntax styles (aka “themes”) fall under the same license governing pandoc: **GPL v2** (or greater).
+The CSS stylesheets of the syntax styles (aka "themes") fall under the same license governing pandoc: **GPL v2** (or greater).
 
-Pandoc’s built-in default templates are maintained on a repository of their own, and they are dual-licensed — under both the **GPL** (**v2** or higher, same as pandoc) and the **BSD 3-clause** (“New” or “Revised”) license:
+Pandoc built-in default templates are maintained on a repository of their own, and they are dual-licensed — under both the **GPL** (**v2** or higher, same as pandoc) and the **BSD 3-clause** ("New" or "Revised") license:
 
-  - <https://github.com/jgm/pandoc-templates>
+- https://github.com/jgm/pandoc-templates
 
 Even though pandoc templates are dual licensed, the actual CSS styles are not part of the HTML4/HTML5 templates, they are dynamically generated by pandoc and injected into the template when the following is encounterd:
 
@@ -71,4 +72,31 @@ Even though pandoc templates are dual licensed, the actual CSS styles are not pa
       </style>
     $endif$
 
-It’s therefore safer to assume that the introduction of the built-in CSS stylesheets in a template or a final document excludes the **BSD 3-clause** license option, leaving as the only viable choice the **GPL v2** (or greater) license which is common to both templates and stylesheets.
+It's therefore safer to assume that the introduction of the built-in CSS stylesheets in a template or a final document excludes the **BSD 3-clause** license option, leaving as the only viable choice the **GPL v2** (or greater) license which is common to both templates and stylesheets.
+
+
+<!-----------------------------------------------------------------------------
+                               REFERENCE LINKS                                
+------------------------------------------------------------------------------>
+
+[README in parent folder]: ../README.md#breaking-changes "Go to parent folder's README file"
+
+[pandoc v2.0 release notes]: https://github.com/jgm/pandoc/releases/tag/2.0 "View pandoc 2.0 release notes"
+
+[skylighting source code]: https://github.com/jgm/skylighting/blob/master/skylighting-core/src/Skylighting/Styles.hs
+
+<!-- upstream themes -->
+
+[default colors]: https://bitbucket.org/birkenfeld/pygments-main/src/default/pygments/styles/default.py
+[espresso_libre.css]: https://github.com/spox/ultraviolet/blob/master/render/xhtml/files/css/espresso_libre.css
+[Haddock]: https://www.haskell.org/haddock/
+[Pygments]: http://pygments.org/
+[tango]: https://bitbucket.org/birkenfeld/pygments-main/src/default/pygments/styles/tango.py
+[ultraviolet]: https://rubygems.org/gems/ultraviolet/versions/0.10.0
+[Zenburn]: http://kippura.org/zenburnpage/
+
+<!-- xrefs -->
+
+[License section]: #license "jump to section"
+
+<!-- EOF -->

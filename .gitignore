@@ -1,16 +1,43 @@
 # ==============================================================================
-#                                 PANDOC-GOODIES                                
+#                                 PANDOC-GOODIES
 # ==============================================================================
 # .gitignore definitions file for the pandoc-goodies project:
 #  -- https://github.com/tajmone/pandoc-goodies
 # ------------------------------------------------------------------------------
 
-### Sass ###
-# Cache Folder
-.sass-cache
+## ==========
+## Sass Cache
+## ==========
+## In case someone still uses Ruby Sass:
+.sass-cache/
+
+## ===============
+## Misc Work Files
+## ===============
+
+# Temporary/backup or removed files and folders:
+___*
+___*.*
+
+# Links and URLs
+*.lnk
+*.url
+
+# Binary executables
+*.exe
+*.app
+*.out
+
+## ==========================
+## Special Folders Exceptions
+## ==========================
+
+# Exclude Sass generated CSS and CSS Maps:
+skylighting-css/sass-templates/**/*.css
+skylighting-css/sass-templates/**/*.css.map
 
 # ==============================================================================
-#                                    Node.js                                    
+#                                    Node.js
 # ==============================================================================
 # Some build/batch/bash files require Node apps; since some users might rather
 # install them locally to the project instead of globally, these settings might
@@ -78,5 +105,78 @@ typings/
 # dotenv environment variables file
 .env
 
+# <<< End of https://www.gitignore.io/api/node
 
-# End of https://www.gitignore.io/api/node
+############################
+## COMMON IGNORE PATTERNS ##
+############################
+# Based on ".gitignore" created by:
+# https://www.gitignore.io/api/windows,linux,macos
+
+## Linux
+########
+
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted 
+file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+## macOS
+########
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+## Windows
+##########
+
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# End of https://www.gitignore.io/api/windows,linux,macos,purebasic

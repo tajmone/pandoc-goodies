@@ -1,6 +1,6 @@
 # Skylighting CSS
 
-    pandoc v2.0.5 | v1.19.2
+    pandoc v2.7.2 | v1.19.2
 
 A collection of CSS/SCSS resources for styling code blocks syntax-highlighted by pandoc (HTML documents).
 
@@ -9,15 +9,16 @@ A collection of CSS/SCSS resources for styling code blocks syntax-highlighted by
 
 **Table of Contents**
 
-<!-- MarkdownTOC autolink="true" bracket="round" autoanchor="false" lowercase="true" lowercase_only_ascii="true" uri_encoding="true" depth="3" -->
+
+<!-- MarkdownTOC autolink="true" bracket="round" autoanchor="false" lowercase="only_ascii" uri_encoding="true" levels="1,2,3,4" -->
 
 - [Resources List](#resources-list)
 - [Introduction](#introduction)
 - [Breaking Changes](#breaking-changes)
     - [Pandoc v2.0.4](#pandoc-v204)
 - [Appendixes](#appendixes)
-    - [Pandoc’s Syntax-Highlighting Engine](#pandoc%E2%80%99s-syntax-highlighting-engine)
-    - [Pandoc’s Supported Languages](#pandoc%E2%80%99s-supported-languages)
+    - [Pandoc's Syntax-Highlighting Engine](#pandocs-syntax-highlighting-engine)
+    - [Pandoc Highlighting Supported Languages](#pandoc-highlighting-supported-languages)
 
 <!-- /MarkdownTOC -->
 
@@ -26,16 +27,17 @@ A collection of CSS/SCSS resources for styling code blocks syntax-highlighted by
 
 # Resources List
 
-  - [`/built-in-styles/`](./built-in-styles/) — Standalone CSS files of pandoc’s eight built-in highlighting styles.
+  - [`/built-in-styles/`](./built-in-styles/) — Standalone CSS files of pandoc's eight built-in highlighting styles.
   - [`/sass-templates/`](./sass-templates/) — Sass templates for creating custom highlighting themes.
+
 
 # Introduction
 
-Pandoc features a [built-in syntax highlighter](#pandocs-syntax-highlighting-engine) with over 120 languages definitions ([full list](#pandocs-supported-languages)), and eight ready-to-use highlighting styles to choose from.
+Pandoc features a [built-in syntax highlighter] with over 120 languages definitions ([full list]), and eight ready-to-use highlighting styles to choose from.
 
-Highlighted code blocks can optionally have line numbers, and it’s also possible to specify the starting line number.
+Highlighted code blocks can optionally have line numbers, and it's also possible to specify the starting line number.
 
-As of pandoc v2, it’s now possible to load dynamically custom syntax definitions and styles for highlighting, via the new `--syntax-definition=FILE` and `--highlight-style=STYLE|FILE` options.
+As of pandoc v2, it's now possible to load dynamically custom syntax definitions and styles for highlighting, via the new `--syntax-definition=FILE` and `--highlight-style=STYLE|FILE` options.
 
 # Breaking Changes
 
@@ -52,7 +54,7 @@ pandoc 2.0–2.0.3:
 ``` html
 <div class="sourceLine">
 ```
-   pandoc >=2.0.4:
+pandoc >=2.0.4:
    
 ``` html
 <a class="sourceLine">
@@ -61,44 +63,63 @@ pandoc 2.0–2.0.3:
 
 # Appendixes
 
-## Pandoc’s Syntax-Highlighting Engine
+## Pandoc's Syntax-Highlighting Engine
 
-  - <https://github.com/jgm/skylighting>
+- https://github.com/jgm/skylighting
 
-Since [version 1.19.2](https://github.com/jgm/pandoc/releases/tag/1.19.2) (Jan 2017) pandoc switched its internal highlighting engine from [highlighting-kate](https://github.com/jgm/highlighting-kate) to [skylighting](https://github.com/jgm/skylighting).
-
-## Pandoc’s Supported Languages
-
-As of Pandoc 2.0.2, the number of supported languages/syntaxes is 123.
-
-|              |            |                |                 |                  |
-| ------------ | ---------- | -------------- | --------------- | ---------------- |
-| ABC          | ASN.1      | ASP            | ATS             | AWK              |
-| ActionScript | Ada        | Agda           | alertindent     | Apache           |
-| Bash         | BibTeX     | Boo            | C               | cs               |
-| C++          | CMake      | CSS            | changelog       | Clojure          |
-| Coffee       | ColdFusion | Common Lisp    | Curry           | D                |
-| dtd          | diff       | DjangoTemplate | dockerfile      | Doxygen          |
-| doxygenlua   | eiffel     | elixir         | email           | Erlang           |
-| fsharp       | Fortran    | GCC            | GLSL            | GNU Assembler    |
-| m4           | Go         | HTML           | Hamlet          | haskell          |
-| Haxe         | ini        | isoCpp         | Idris           | FASM             |
-| Nasm         | JSON       | JSP            | Java            | JavaScript       |
-| Javadoc      | Julia      | kotlin         | LLVM            | LaTeX            |
-| Lex          | LilyPond   | literateCurry  | literateHaskell | Lua              |
-| mips         | makefile   | markdown       | mathematica     | MATLAB           |
-| Maxima       | MediaWiki  | metafont       | modelines       | Modula-2         |
-| Modula-3     | Mono-Basic | OCaml          | Objective-C     | Objective C++    |
-| Octave       | OpenCL     | PHP            | Pascal          | Perl             |
-| Pike         | postscript | PowerShell     | prolog          | Pure             |
-| PureBASIC    | Python     | R              | RELAX NG        | RELAX NG Compact |
-| roff         | Ruby       | RHTML          | Rust            | SGML             |
-| SQL          | sqlmysql   | sqlpostgresql  | Scala           | Scheme           |
-| tcl          | tcsh       | texinfo        | mandoc          | vhdl             |
-| verilog      | XML        | xul            | YAML            | Yacc             |
-| zsh          | dot        | noweb          | rest            | sci              |
-| sed          | xorg       | xslt           |                 |                  |
+Since [version 1.19.2]  (Jan 2017) pandoc switched its internal highlighting engine from [highlighting-kate] to [skylighting].
 
 
+## Pandoc Highlighting Supported Languages
 
-[Pandoc 2.0.4]: https://github.com/jgm/pandoc/releases/tag/2.0.4 "Go to pandoc 2.0.4 release page"
+As of [v2.7.2], pandoc supports highlighting for 129 languages/syntaxes.
+
+|                 |              |               |                |               |
+|-----------------|--------------|---------------|----------------|---------------|
+| abc             | asn1         | asp           | ats            | awk           |
+| actionscript    | ada          | agda          | alertindent    | apache        |
+| bash            | bibtex       | boo           | c              | cs            |
+| cpp             | cmake        | css           | changelog      | clojure       |
+| coffee          | coldfusion   | commonlisp    | curry          | d             |
+| dtd             | default      | diff          | djangotemplate | dockerfile    |
+| doxygen         | doxygenlua   | eiffel        | elixir         | email         |
+| erlang          | fsharp       | fortran       | gcc            | glsl          |
+| gnuassembler    | m4           | go            | html           | hamlet        |
+| haskell         | haxe         | ini           | isocpp         | idris         |
+| fasm            | nasm         | j             | json           | jsp           |
+| java            | javascript   | javadoc       | julia          | kotlin        |
+| llvm            | latex        | lex           | lilypond       | literatecurry |
+| literatehaskell | lua          | mips          | makefile       | markdown      |
+| mathematica     | matlab       | maxima        | mediawiki      | metafont      |
+| modelines       | modula2      | modula3       | monobasic      | ocaml         |
+| objectivec      | objectivecpp | octave        | opencl         | php           |
+| povray          | pascal       | perl          | pike           | postscript    |
+| powershell      | prolog       | protobuf      | pure           | purebasic     |
+| python          | r            | relaxng       | relaxngcompact | roff          |
+| ruby            | rhtml        | rust          | sgml           | sml           |
+| sql             | sqlmysql     | sqlpostgresql | scala          | scheme        |
+| tcl             | tcsh         | texinfo       | mandoc         | typescript    |
+| vhdl            | verilog      | xml           | xul            | yaml          |
+| yacc            | zsh          | dot           | noweb          | rest          |
+| sci             | sed          | xorg          | xslt           |               |
+
+
+<!-----------------------------------------------------------------------------
+                               REFERENCE LINKS                                
+------------------------------------------------------------------------------>
+
+[highlighting-kate]: https://github.com/jgm/highlighting-kate "Visit repository"
+[skylighting]: https://github.com/jgm/skylighting "Visit repository"
+
+<!-- pandoc releases -->
+
+[version 1.19.2]: https://github.com/jgm/pandoc/releases/tag/1.19.2 "View pandoc 1.19.2 release notes"
+[Pandoc 2.0.4]: https://github.com/jgm/pandoc/releases/tag/2.0.4 "View pandoc 2.0.4 release notes"
+[v2.7.2]: https://github.com/jgm/pandoc/releases/tag/2.7.2 "View pandoc 2.7.2 release notes"
+
+<!-- xrefs -->
+
+[built-in syntax highlighter]: #pandocs-syntax-highlighting-engine "jump to section"
+[full list]: #pandoc-highlighting-supported-languages "jump to section"
+
+<!-- EOF -->

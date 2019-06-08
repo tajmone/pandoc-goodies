@@ -1,12 +1,12 @@
 # ==============================================================================
-#                            Line Endings Conversion                            
+#                            Line Endings Conversion
 # ==============================================================================
 # Set Git's default behaviour to text-files autodetection, in case users don't
 # have `core.autocrlf` set:
 * text=auto
 
 # ------------------------------------------------------------------------------
-#                    Text Files (EOL Normalization Settings)                    
+#                    Text Files (EOL Normalization Settings)
 # ------------------------------------------------------------------------------
 
 ## =================
@@ -52,7 +52,7 @@
 ## =================
 *.htm          text
 *.html         text
-*.css          text
+*.css          text eol=lf
 *.js           text
 *.sass         text
 *.scss         text
@@ -94,7 +94,7 @@ TODO           text
 .gitmodules    text eol=crlf
 
 # ------------------------------------------------------------------------------
-#                                  Binary Files                                 
+#                                  Binary Files
 # ------------------------------------------------------------------------------
 # Explicitly declare all files that are binary and shouldn't be modified by Git:
 
@@ -120,7 +120,7 @@ TODO           text
 *.zip          binary
 
 # ==============================================================================
-#                                GitHub Linguist                                
+#                                GitHub Linguist
 # ==============================================================================
 #  -- https://github.com/github/linguist
 # Manually define/override some extension so that GitHub's Linguist library can
@@ -148,4 +148,3 @@ TODO           text
 ## ===========================
 # *.lang         linguist-language=Lua
 # *.theme        linguist-language=Lua
-
