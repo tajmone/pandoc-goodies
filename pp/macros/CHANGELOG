@@ -1,12 +1,12 @@
 ==============================================================================
-                         PP-Macros Library CHANGELOG                          
+                         PP-Macros Library CHANGELOG
 ==============================================================================
 NOTE: Obvious changes won't be logged -- eg: addition of "!import" statements
       of newly created macros modules to "macros.pp" is given for granted.
       Minor changes will not be logged either, because life is too short...
 
 ------------------------------------------------------------------------------
-                                  2019-06-08                                  
+                                  2019-06-08
 ------------------------------------------------------------------------------
 PP VERSION v2.8 | pandoc v2.7.2
 
@@ -14,8 +14,13 @@ CHANGES:
 - "Highlight.pp" v2.2:
   - Use "!bash" macro instead of "!sh", for "!sh" no longer worked under Bash
     for Windows.
+
+REMOVED:
+- "GFM-TaskList.pp":
+   - Pandoc now supports GFM-like task lists natively, so these macros are no
+     longer needed.
 ------------------------------------------------------------------------------
-                                  2017-11-22                                  
+                                  2017-11-22
 ------------------------------------------------------------------------------
 PP VERSION v2.1.5 | pandoc v2.0.2
 
@@ -26,7 +31,7 @@ CHANGES:
     contents in raw HTML. See Issue #4088:
     -- https://github.com/jgm/pandoc/issues/4088
 ------------------------------------------------------------------------------
-                                  2017-11-21                                  
+                                  2017-11-21
 ------------------------------------------------------------------------------
 PP VERSION v2.1.5
 
@@ -62,7 +67,7 @@ ADDED:
     from. In the future all CSS files will be compiled from Sass sources
     because of easier maintainance.
 ------------------------------------------------------------------------------
-                                  2017-10-25                                  
+                                  2017-10-25
 ------------------------------------------------------------------------------
 PP VERSION v2.0
 
@@ -90,14 +95,14 @@ CHANGES:
   - Added support for nested Task Lists via optional third parameter
     (doesn't break backward compatibility with older version).
 ------------------------------------------------------------------------------
-                                  2017-07-05                                  
+                                  2017-07-05
 ------------------------------------------------------------------------------
 FIXED:
 - "Highlight.pp" v1.4 (2017-07-05): The macros were invoking "highlight.exe",
   now changed to "highlight" for cross platformness (thanks to @bpj for
   pointing it out).
 ------------------------------------------------------------------------------
-                                  2017-07-04                                  
+                                  2017-07-04
 ------------------------------------------------------------------------------
 PP VERSION v1.9.3
 
@@ -110,14 +115,14 @@ ADDED:
     on Windows but should also work on Linux.
 - "Highlight.pp" test files.
 ------------------------------------------------------------------------------
-                                  2017-04-18                                  
+                                  2017-04-18
 ------------------------------------------------------------------------------
 ADDED:
 - "GFM-TaskList.pp" v1.1.0:
   - Added "GFM-TaskList.css" stylesheet.
   - Added "!TaskListInlineCSS" macro to import "GFM-TaskList.css" as inline CSS.
 ------------------------------------------------------------------------------
-                                  2017-04-16                                  
+                                  2017-04-16
 ------------------------------------------------------------------------------
 PP VERSION v1.7-2
 
@@ -125,23 +130,23 @@ CHANGED:
 - "Highlight.pp" v1.2: Now cross-platform thanks to "!exec" built-in macro
   in PP v1.7-2 (used instead of "!cmd")
 ------------------------------------------------------------------------------
-                                  2017-04-14                                  
+                                  2017-04-14
 ------------------------------------------------------------------------------
 CHANGED:
 - "Highlight.pp" v1.1: Added "--validate-input" option to Highlight invocation
   (ie: test if input is text, and remove Unicode BOM). This prevents BOM chars
-  from showing up in the highlighted code when importing a file that has BOM. 
+  from showing up in the highlighted code when importing a file that has BOM.
 ------------------------------------------------------------------------------
-                                  2017-04-11                                  
+                                  2017-04-11
 ------------------------------------------------------------------------------
 ADDED:
-- "InlineFormatting.pp": A set of shortcut-macros for various standard html 
+- "InlineFormatting.pp": A set of shortcut-macros for various standard html
    inline elements:
    - "!kbd(KEY1)[(KEY2)(KEY3)(KEY4)]"
    - "!kbdInlineCSS": imports "kbd_GitHub.css" as inline CSS.
 - "kbd_GitHub.css": GitHub's <kbd> styling.
 ------------------------------------------------------------------------------
-                                  2017-04-10                                  
+                                  2017-04-10
 ------------------------------------------------------------------------------
 Now a "test" folder has been created for testing the various macros modules.
 
@@ -159,7 +164,7 @@ ADDED:
     https://github.com/primer/primer-alerts/blob/master/lib/flash.scss
     Copyright (c) 2016 GitHub Inc. Released under The MIT License (MIT).
 ------------------------------------------------------------------------------
-                                2017-04-09 (B)                                
+                                2017-04-09 (B)
 ------------------------------------------------------------------------------
 Updated all macros files to PP v1.4 (new features).
 All macros now have comments with version info and description.
@@ -171,7 +176,7 @@ instead of the old !include().
 - "GFM-TaskList.pp" v1.0.1
 - "Highlight.pp" v1.0.1
 ------------------------------------------------------------------------------
-                                2017-04-09 (A)                                
+                                2017-04-09 (A)
 ------------------------------------------------------------------------------
 First release, PP v1.3.
 - "macros.pp" v1.0

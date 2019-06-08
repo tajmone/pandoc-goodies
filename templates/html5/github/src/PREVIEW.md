@@ -70,8 +70,7 @@ Minimum pandoc version required: v2.0
 
 The template was originally adapted from the default html5 template that shipped with <mark>__pandoc v1.19.2.1__</mark> and then adapted to work with <mark>__pandoc v2.0.2__</mark> (introducing backward-compatibility breaking changes).
 
-Standard Typography
-===================
+# Standard Typography
 
 Lorem markdownum stagna *de spatiantes* mirabatur **arboribus at nunc**, somnus sanguine quosque ~~genusque addenda socia~~.[^1] <mark>Plus ipsisque latent</mark>, genus, medio aut rima haberet.
 
@@ -92,40 +91,34 @@ Quem palluerat, vulgaris pignora: <kbd>Crtl</kbd>+<kbd>Z</kbd>.[^2]
 [^2]: Hora sequantur *nimium exiguis et* in fit coniuge aures, adfuit.
 [^3]: Turni, parentum. Ut nobis Ampycides esset indigenae eiecit domini successibus Aiaci tecta nunc terris, Argolica videres est neque. Aeacides caloris, magna canes.
 
-Lists
------
+## Lists
 
 ### Ordered Lists
 
-1.  Nec et tormenta tacitae decet aethere
-2.  Nullamque corpus
-    1.  Sic nunc naides dubiis
-    2.  Virgo forti ardent
-    3.  Dic pro captantur exitus quo viris infera
-3.  Adit Symplegadas inque
+1. Nec et tormenta tacitae decet aethere
+2. Nullamque corpus
+    1. Sic nunc naides dubiis
+    2. Virgo forti ardent
+    3. Dic pro captantur exitus quo viris infera
+3. Adit Symplegadas inque
 
 ### Bullet Lists
 
--   Dic pro captantur exitus quo viris infera
--   Humanam tenderet
-    -   Est esset devoveas
-    -   Adit Symplegadas inque
--   Lelex ad ira
--   Inpositus cum genus extulit nec inseris ille
+- Dic pro captantur exitus quo viris infera
+- Humanam tenderet
+    - Est esset devoveas
+    - Adit Symplegadas inque
+- Lelex ad ira
+- Inpositus cum genus extulit nec inseris ille
 
 ### Task Lists
 
-!TaskList(
-!Task[x][Nec et tormenta tacitae decet aethere]
-!Task[ ][Nullamque corpus]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-!Task[x][Sic nunc naides dubiis]
-!Task[ ][Virgo forti ardent]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-)
+- [x] Nec et tormenta tacitae decet aethere
+- [ ] Nullamque corpus
+    + [x] Sic nunc naides dubiis
+    + [ ] Virgo forti ardent
 
-Definition lists
-----------------
+## Definition lists
 
 Term 1
 
@@ -141,8 +134,7 @@ Term 2 with <mark>inline markup</mark>
 
 
 
-Tables
-------
+## Tables
 
 | Header 1 | Header 2 | Header 3 |
 |----------|----------|----------|
@@ -179,11 +171,9 @@ This document uses the `haddock` built-in style.
 The template's embedded CSS doesn't define the syntax coloring style, leaving you the freedom to use your own style definition files or pandoc's built-in styles.
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Pandoc Markdown
-===============
+# Pandoc Markdown
 
-Line Blocks
------------
+## Line Blocks
 
 | The limerick packs laughs anatomical
 | In space that is quite economical.
@@ -197,11 +187,9 @@ Line Blocks
 __NOTE__ --- Pandoc v2.x no longer adds inline CSS to Line blocks, it assigns them the "`line-block`" class instead, leaving it up to the end-user to define it in the CSS stylesheet. This templates covers Line blocks style definitions.
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-GFM Features
-============
+# GFM Features
 
-Inline text elements
---------------------
+## Inline text elements
 
 You can use the `<mark>` tag to <mark>highlight text</mark>.
 
@@ -211,38 +199,10 @@ You can use the `<mark>` tag to <mark>highlight text</mark>.
 
 Keystroke can be rendered with `<key>` tag: <kbd>Shift</kbd>+<kbd>U</kbd>; or by using the `!raw(!kbd)` PP macro from the [Inline Formatting macros set], eg: `!rawdef(kbdEx)` to output !kbdEx.
 
-Task Lists
-----------
 
-!def(tasklistEx)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-!TaskList(
-!Task[x][I'm a _checked_ task]
-!Task[ ][I'm an _unchecked_ task]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-!Task[x][I'm a sub-task]
-!Task[ ][<mark>Mee too!</mark>]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# GitHub's Primer-CSS Features
 
-GFM Task Lists can be used within pandoc markdown documents through our custom pp macros. Example:
-
-```
-!rawdef(tasklistEx)
-```
-
-... will produce:
-
-!tasklistEx
-
-Markdown formatting in the macro parameters is properly rendered.
-
-GitHub's Primer-CSS Features
-============================
-
-Alerts
-------
+## Alerts
 
 Alerts (aka _flash messages_) are borrowed/inspired from __Primer CSS__, the library that handles all the styling of GitHub's portal:
 
@@ -324,14 +284,6 @@ Any kind of markdown element and block may be placed inside
 - Apples
 - Bananas
 - Oranges
-
-... including nested PP macros:
-
-!TaskList
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-!Task[x][Delete `temp.bat`]
-!Task[ ][Press !kbd(Ctrl)(Z)]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -373,8 +325,7 @@ These are the different type of alerts available, along with the custom pp-macro
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Template Variables
-==================
+# Template Variables
 
 Beside supporting all the standard pandoc template variables (pandoc v2.0.2), some extra variables were added to the template to allow finer customization.
 
@@ -389,15 +340,13 @@ Beside supporting all the standard pandoc template variables (pandoc v2.0.2), so
 | `$charset$`   | Override document encoding.                                        | `utf-8`    |
 +---------------+--------------------------------------------------------------------+------------+
 
-The `$summary$` Variable
-------------------------
+## The `$summary$` Variable
 
 The `$summary$` text belongs to the `<header>` block, so it won't be displayed unless _title_ was definied. It will be placed after _authors_ and _date_, and right before _Table of Contentes_. It will parsed as markdown, so it offers an easy way to add introductiory text directly in the document's YAML header.
 
 You can see an example of the `$summary$` var at work right in this page.
 
-The `$charset$` Variable
----------------------------
+## The `$charset$` Variable
 
 I've added the `$charset$` variable because I was having trouble using the template inside the WebBrowser Control in a Windows application I created (a markdown file previewer that uses pandoc and this template to quickly render an html preview via WebBrowser Control). The programming language I used would only allow injecting HTML into the WebBrowser Control as UCS-2 enconded Unicode strings, even if pandoc's output was captured as UTF-8 --- ie., while I/O operations allow using different encondings, all internal string operations are restricted to UCS-2.
 

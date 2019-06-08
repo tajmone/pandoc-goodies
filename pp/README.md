@@ -1,8 +1,8 @@
 # PP-Macros
 
-    PP v2.1.5 | pandoc v2.0.2
+    PP v2.8 | pandoc v2.7.2
 
-"**The Pandoc-Goodies PP-Macros Library**" — An ongoing collaborative effort to build a library of PP macros to extend pandoc's workflow: use GFM Task Lists in pandoc document, external syntax highlighters, and much more.
+"**The Pandoc-Goodies PP-Macros Library**" — An ongoing collaborative effort to build a library of PP macros to extend pandoc workflow: custom inline and block styling in pandoc documents, external syntax highlighters, interaction with external scripts and tools, and much more.
 
 Copyright © Tristano Ajmone 2017, [MIT License](../LICENSE).
 
@@ -18,7 +18,6 @@ Copyright © Tristano Ajmone 2017, [MIT License](../LICENSE).
     - [About PP](#about-pp)
 - [Requirements](#requirements)
 - [Available Macros](#available-macros)
-    - [GFM Task Lists](#gfm-task-lists)
     - [GitHub Alerts](#github-alerts)
     - [Highlight](#highlight)
     - [Inline Formatting](#inline-formatting)
@@ -47,17 +46,17 @@ PP is cross-platform and available as a single standalone binary file:
 - http://cdsoft.fr/pp/
 - http://cdsoft.fr/pp/download.html — precompiled binaries (all releases)
 
-For some introductiory tutorials on using PP, see:
+For some introductory tutorials on using PP, see:
 
 - https://github.com/tajmone/markdown-guide/tree/master/pp
 
 # Requirements
 
-The current macros library requires PP version `>= 2.0`.
+The current macros library requires PP version `>= 2.8`.
 
-PP is evolving rapidly thanks to Christophe's kind dedication to users' features requests. Future versions of PP might break backward compatibility of some macros, but great effort is taken to ensure that the macros of ths library should always work with the latest release of PP.
+PP is evolving rapidly thanks to Christophe's kind dedication to users' features requests. Future versions of PP might break backward compatibility of some macros, but I'll try to ensure that the macros of this library should always work with the latest release of PP.
 
-At the beginning of this page you find an opening line reporting the latest PP version used for testing the macros library. 
+At the beginning of this page you'll always find an opening line reporting the latest PP version used for testing the macros library. 
 
 You can download prebuilt binaries of the latest version of PP from the following link:
 
@@ -73,86 +72,17 @@ If you are looking for binaries of a specific release of PP, you can visit PP's 
 
 # Available Macros
 
-Currently, our PP macros library offers only macros targetting HTML output.
+Currently, our PP macros library offers only macros targeting HTML output.
 
 "**The Pandoc-Goodies PP-Macros Library**" is organized into separate module files ("pp-macros sets"), stored in the [`/macros/`](./macros/) folder:
 
 - `macros.pp` — the main module that loads all other modules:
     + [`GFM-Alerts.pp`](#github-alerts) — [Live Demo Preview][Live GFM-Alerts]
-    + [`GFM-TaskList.pp`](#gfm-task-lists) — [Live Demo Preview][Live GFM-TaskList]
     + [`Highlight.pp`](#highlight) — [Live Demo Preview][Live Highlight]
     + [`InlineFormatting.pp`](#inline-formatting) — [Live Demo Preview][Live InlineFormatting]
 
 > **NOTE**: Since the release of PP `v1.7-2` macros that were Windows-only are now cross-platform.
 
-## GFM Task Lists
-
-    GFM-TaskList.pp
-
-A set of macros to enable GitHub [Task Lists](https://help.github.com/articles/basic-writing-and-formatting-syntax/#task-lists) in pandoc documents.
-
-> __NOTE__ — A new __[task-list Lua filter]__ is now available at the __[lua-filters]__ pandoc project, allowing the use of GFM Task Lists in pandoc documents. This filter implements Task Lists via pandoc's AST, extending support of task lists to various input/output formats. It's therefore advisable to use the new __task-list__ filter instead of these PP macros (cleaner syntax and improved portability).
-
-macros:
-
-- `!TaskList( LIST ELEMENTS )` — Genreate Task List enclosing-tags.
-- `!Task(x| )( TASK TEXT )[( SUB-TASKLIST )]` — Generate a Task element and (optionally) initiate a sub-list.
-- `!TaskListInlineCSS` — Inject required CSS.
-
-> **NOTE**: Using square brackets for `!Task` parameters is adviced since it resembles the GFM syntax.
-
-Example usage:
-
-    !TaskList
-    ~~~~~~~~~~~~~~~~~~~~~~~
-    !Task[x][I'm a _checked_ task]
-    !Task[ ][I'm an _unchecked_ task]
-    ~~~~~~~~~~~~~~~~~~~~~~~
-
-Example of a nested Task List:
-
-    !TaskList
-    ~~~~~~~~~~~~~~~~~~~~~~~
-    !Task[ ][Task 1][
-      !Task[x][SubTask 1]
-      !Task[ ][SubTask 2][
-        !Task[x][Sub-SubTask 1]]]
-    !Task[x][Task 2]
-    ~~~~~~~~~~~~~~~~~~~~~~~
-
-… or, using fences to wrap last parameters, instead of brackets:
-
-    !TaskList
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    !Task[ ][Task 1]
-    ~~~~~~~~~~~~~~~~~~~~~~~~
-    !Task[x][SubTask 1]
-    !Task[ ][SubTask 2]
-    ~~~~~~~~~~~~~~~~~~~
-    !Task[x][Sub-SubTask 1]
-    ~~~~~~~~~~~~~~~~~~~
-    ~~~~~~~~~~~~~~~~~~~~~~~~
-    !Task[ ][Task 2]
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-In order to hyde the list items' bullet (so that only the checkbox is shown) you'll need the CSS definitions found in the `GFM-TaskList.css` file. You have different options:
-
-1. Add its contents to your custom stylesheet.
-2. Tell pandoc to import it via the `--css` option — you can exploit the `%PP_MACROS_PATH%` env var: `--css %PP_MACROS_PATH%GFM-TaskList.css`
-3. Inject it as an inline stylesheet via the `!raw(!TaskListInlineCSS)` macro (a quick and universal solution, if you don't mind CSS definitions within the document body).
-
-Without these CSS definitions the task list will still look acceptable, but having both a bullet and a checkbox for each entry is redundant.
-
-> **NOTES**: Markdown syntax within Task's `TASK TEXT` will be rendered correctly, provided pandoc's `markdown_in_html_blocks` extension is enabled (default in pandoc markdown).
->
-> Since "`GFM-TaskList.pp`" v2.0, nested Task Lists are rendered in the final HTML the proper way — ie: `<ul>` and `<li>` tags are nested in a syntactically correct manner.
-
-Examples:
-
-- [`/test/GFM-TaskList.md`](./test/GFM-TaskList.md)
-- [`/test/GFM-TaskList.html`](./test/GFM-TaskList.html) — [Live Demo Preview][Live GFM-TaskList]
-- [GitHub Pandoc HTML5 Template Local Preview]
-- [GitHub Pandoc HTML5 Template Live Preview]
 
 ## GitHub Alerts
 
@@ -182,11 +112,11 @@ macros:
 
 To render the alerts properly you'll need the definitions found in "[`GFM-Alerts.css`](./macros/GFM-Alerts.css)". You can either:
 
-1. Include "`GFM-Alerts.css`" in the final document via pandoc's `--css` option — you can exploit the `%PP_MACROS_PATH%` env var: `--css %PP_MACROS_PATH%GFM-Alerts.css`
+1. Include "`GFM-Alerts.css`" in the final document via pandoc `--css` option — you can exploit the `%PP_MACROS_PATH%` env var: `--css %PP_MACROS_PATH%GFM-Alerts.css`
 2. Add the contents of "`GFM-Alerts.css`" to your pandoc template stylesheet.
 3. Use the `!GFMAlertsInlineCSS` macro to inject "`GFM-Alerts.css`" as an inline CSS definition in the final document.
 
->  __PANDOC v2 FENCED DIVS__ --- Pandoc v2.x users are adviced to use the new [fenced divs] syntax instead of these PP macros: fenced divs offer finer control over the final HTML, and pandoc can convert them to other formats too (unlike raw HTML injected into markdown source). The final result is exactly the same. See [`/test/GFM-Alerts.html`][Live Fenced Divs] for an example and more details.
+>  __PANDOC v2 FENCED DIVS__ --- Pandoc v2.x users are advised to use the new [fenced divs] syntax instead of these PP macros: fenced divs offer finer control over the final HTML, and pandoc can convert them to other formats too (unlike raw HTML injected into markdown source). The final result is exactly the same. See [`/test/GFM-Alerts.html`][Live Fenced Divs] for an example and more details.
 >  
 >  As for other markdown flavours or tools, these macros will continue to be useful. And of course, the  `!GFMAlertsInlineCSS` remains useful for all users.
 
@@ -196,7 +126,7 @@ To render the alerts properly you'll need the definitions found in "[`GFM-Alerts
 
 <!--      -->
 
-> **NOTE** --- The "Note" alert (alias "Plain", grey colors) isn't part of the original Primer-CSS alerts set. It was added to provide a more neutral, less appariscent alert box.
+> **NOTE** --- The "Note" alert (alias "Plain", grey colours) isn't part of the original Primer-CSS alerts set. It was added to provide a more neutral, less showy alert box.
 
 Examples:
 
@@ -217,10 +147,10 @@ A set of macros for using André Simon's Highlight tool:
 macros:
 
 - `!HighlightFile(FILE)(LANG)[(OPTIONS)]` — imports and syntax-highlights and external file. Output is a raw html `<pre><code>` block.
-- `!Highlight(LANG)([OPTIONS])(CODE)` — syntax-higlights the block of source code passed as `CODE` parameter (using lines of tildas instread of brackets; see Note below).
-- `!HighlightInlineTheme(THEME)` — retrives a Highlight theme and injects its CSS version into the documents. A quick solution for theming Highlight code withouth having to import an external CSS file via pandoc.
+- `!Highlight(LANG)([OPTIONS])(CODE)` — syntax-highlights the block of source code passed as `CODE` parameter (using lines of tildes instead of brackets; see Note below).
+- `!HighlightInlineTheme(THEME)` — retrieves a Highlight theme and injects its CSS version into the documents. A quick solution for theming Highlight code without having to import an external CSS file via pandoc.
 
-> **NOTE 1**: The `CODE` parameter is passed between lines of tildas instead of brackets:
+> **NOTE 1**: The `CODE` parameter is passed between lines of tildes instead of brackets:
 >
 >       !Highlight( LANG )( OPTIONS )
 >       ~~~~~
@@ -230,7 +160,7 @@ macros:
 >
 > From PP's documentation:
 >
-> > The last argument can be enclosed between lines of tildas or backquotes (of the same length) instead of parenthesis, brackets or braces and. This is useful for literate programming, diagrams or scripts (see examples). Code block arguments are not stripped: spaces and blank lines are preserved.
+> > The last argument can be enclosed between lines of tildes or backticks (of the same length) instead of parenthesis, brackets or braces and. This is useful for literate programming, diagrams or scripts (see examples). Code block arguments are not stripped: spaces and blank lines are preserved.
 
 <!-- -->
 > **NOTE 2**: This macro, when run inside Windows CMD, creates a temporary file (named "`_pp-tempfileX.tmp`", where `X` is a numeric counter) in the macros folder (`/pp/macros/`) for each macro call in the document, to temporarily store the code to highlight. At each PP invocation the `X` counter is reset, and the previous temp files are written over. These temporary files are set to be ignored by Git, so you shouldn't worry about them.
@@ -238,7 +168,7 @@ macros:
 > When run inside Shell/Bash (including Git Bash for Windows) it doesn't write any temporary files to disk.
 
 <!-- -->
-> **NOTE 3**: You can use Highlight along with pandoc's built in syntax highlighter — pandoc only highlights markdown code blocks (fenced, or backticked) and will ignore the `<pre><code>` raw html blocks produced by Highlight.
+> **NOTE 3**: You can use Highlight along with pandoc built in syntax highlighter — pandoc only highlights markdown code blocks (fenced, or backticked) and will ignore the `<pre><code>` raw html blocks produced by Highlight.
 >
 > Pandoc automatically adds its own stylesheet for its highlighted code, the Highlight macro doesn't.
 >
