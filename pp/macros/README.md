@@ -3,15 +3,6 @@
     pandoc-goodies/pp/macros/
 
 
-----------------------------
-
-**Table of Contents**
-
-<!-- #toc -->
-<!-- /toc -->
-
-----------------------------
-
 # Files List
 
 
@@ -32,3 +23,5 @@
         * [`InlineFormatting.pp`](./InlineFormatting.pp) --- Macros definition module.
         * [`kbd_GitHub.css`](./kbd_GitHub.css) --- Stylesheet injected by `!kbdInlineCSS` macro.
 - [`SASS-BUILD.bat`](./SASS-BUILD.bat) --- Script to compile all Sass files to CSS.
+
+

@@ -1,12 +1,11 @@
 @ECHO OFF
-:: ------------------------------------------------------------------------------
-:: Invoke "SASS-BUILD.bat" script which force rebuilds the Sass project and also
-:: sets the options variable (%_OPTS%) required here.
-:: ------------------------------------------------------------------------------
-CALL SASS-BUILD.bat
+ECHO.
+ECHO 1) Force building SASS project...
+ECHO.
+CALL SASS --source-map --style=expanded .\GitHub.scss:.\GitHub.css
 ECHO.
 ECHO ------------------------------------------------------------------------------
 ECHO 2) Watching SASS project...
 ECHO.
-CALL SCSS --watch %_OPTS%
+CALL SASS --source-map --style=expanded --watch .\GitHub.scss:.\GitHub.css
 EXIT /B
