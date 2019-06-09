@@ -135,7 +135,7 @@ TODO           text
 ## ===========================
 ## KDE theme files (JSON)
 ## ===========================
-# skylighting-themes/
+# skylighting/themes/
 *.theme        linguist-language=JSON
 
 # NOTE: There is a potential conflict with Highlight themes which also have

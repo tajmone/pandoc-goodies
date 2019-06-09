@@ -1,78 +1,50 @@
-# Skylighting CSS
+# Skylighting Asssets
 
-    pandoc v2.7.2 | v1.19.2
-
-A collection of CSS/SCSS resources for styling code blocks syntax-highlighted by pandoc (HTML documents).
+This directory tree gathers various assets for [Skylighting], the syntax highlighter used by pandoc — currently only themes and stylesheets, but in the future it might host also additional syntax definitions.
 
 
 -----
 
 **Table of Contents**
 
+<!-- MarkdownTOC autolink="true" bracket="round" autoanchor="false" lowercase="only_ascii" uri_encoding="true" levels="1,2,3" -->
 
-<!-- MarkdownTOC autolink="true" bracket="round" autoanchor="false" lowercase="only_ascii" uri_encoding="true" levels="1,2,3,4" -->
-
-- [Resources List](#resources-list)
-- [Introduction](#introduction)
-- [Breaking Changes](#breaking-changes)
-    - [Pandoc v2.0.4](#pandoc-v204)
-- [Appendixes](#appendixes)
-    - [Pandoc's Syntax-Highlighting Engine](#pandocs-syntax-highlighting-engine)
-    - [Pandoc Highlighting Supported Languages](#pandoc-highlighting-supported-languages)
+- [Assets Lists](#assets-lists)
+- [Pandoc Highlighting Engine](#pandoc-highlighting-engine)
+    - [About Skilighting](#about-skilighting)
+    - [Supported Syntaxes](#supported-syntaxes)
 
 <!-- /MarkdownTOC -->
 
 -----
 
+# Assets Lists
 
-# Resources List
+- [`/css/`](./css/) — Sass & CSS resources for customizing HTML themes.
+- [`/themes/`](./themes/) — resources for KDE themes (JSON).
+- [`Tokens-Guide.md`](./Tokens-Guide.md) — description of skylighting tokens, form KDE/Kate documentation.
+- [`Tokens-CSS.md`](./Tokens-CSS.md) — lookup tables for theme tokens to CSS classes equivalences.
 
-  - [`/built-in-styles/`](./built-in-styles/) — Standalone CSS files of pandoc's eight built-in highlighting styles.
-  - [`/sass-templates/`](./sass-templates/) — Sass templates for creating custom highlighting themes.
+# Pandoc Highlighting Engine
 
-
-# Introduction
-
-Pandoc features a [built-in syntax highlighter] with over 120 languages definitions ([full list]), and eight ready-to-use highlighting styles to choose from.
+Pandoc features a [built-in syntax highlighter] with over 120 syntaxes definitions ([see full list]), and eight ready-to-use highlighting styles to choose from.
 
 Highlighted code blocks can optionally have line numbers, and it's also possible to specify the starting line number.
 
 As of pandoc v2, it's now possible to load dynamically custom syntax definitions and styles for highlighting, via the new `--syntax-definition=FILE` and `--highlight-style=STYLE|FILE` options.
 
-# Breaking Changes
 
-Beware of some important changes in pandoc v2.x relases regarding the way code is syntax highlighted. Some of these changes will require modification of custom CSS sytlesheets created for previous versions.
-
-## Pandoc v2.0.4 
-
-[Pandoc 2.0.4] introduced some changes in the html tags used for highlighting source code.
-
-Source lines now use `<a>` tag instead of `<div>`:
- 
-pandoc 2.0–2.0.3:
-   
-``` html
-<div class="sourceLine">
-```
-pandoc >=2.0.4:
-   
-``` html
-<a class="sourceLine">
-```
-
-
-# Appendixes
-
-## Pandoc's Syntax-Highlighting Engine
+## About Skilighting
 
 - https://github.com/jgm/skylighting
 
 Since [version 1.19.2]  (Jan 2017) pandoc switched its internal highlighting engine from [highlighting-kate] to [skylighting].
 
+## Supported Syntaxes
 
-## Pandoc Highlighting Supported Languages
+As of [v2.7.2], pandoc supports highlighting for 129 languages/syntaxes. You can query pandoc for the full list via:
 
-As of [v2.7.2], pandoc supports highlighting for 129 languages/syntaxes.
+    pandoc --list-highlight-languages
 
 |                 |              |               |                |               |
 |-----------------|--------------|---------------|----------------|---------------|
@@ -104,22 +76,22 @@ As of [v2.7.2], pandoc supports highlighting for 129 languages/syntaxes.
 | sci             | sed          | xorg          | xslt           |               |
 
 
+
 <!-----------------------------------------------------------------------------
-                               REFERENCE LINKS                                
+                               REFERENCE LINKS
 ------------------------------------------------------------------------------>
 
 [highlighting-kate]: https://github.com/jgm/highlighting-kate "Visit repository"
-[skylighting]: https://github.com/jgm/skylighting "Visit repository"
+[Skylighting]: https://github.com/jgm/skylighting "Visit Skylighting repository on GitHub"
 
 <!-- pandoc releases -->
 
 [version 1.19.2]: https://github.com/jgm/pandoc/releases/tag/1.19.2 "View pandoc 1.19.2 release notes"
-[Pandoc 2.0.4]: https://github.com/jgm/pandoc/releases/tag/2.0.4 "View pandoc 2.0.4 release notes"
 [v2.7.2]: https://github.com/jgm/pandoc/releases/tag/2.7.2 "View pandoc 2.7.2 release notes"
 
 <!-- xrefs -->
 
-[built-in syntax highlighter]: #pandocs-syntax-highlighting-engine "jump to section"
-[full list]: #pandoc-highlighting-supported-languages "jump to section"
+[built-in syntax highlighter]: #about-skilighting "jump to section"
+[see full list]: #supported-syntaxes "jump to section"
 
 <!-- EOF -->

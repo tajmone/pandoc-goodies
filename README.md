@@ -22,8 +22,7 @@ The project is still WIP and in its early stages, but a pandoc html5 template is
 - [Available Goodies](#available-goodies)
     - [Pandoc HTML5 Templates](#pandoc-html5-templates)
     - [PP Macros](#pp-macros)
-    - [Skylighting CSS](#skylighting-css)
-    - [Skylighting Themes](#skylighting-themes)
+    - [Skylighting Assets](#skylighting-assets)
 - [Related Projects](#related-projects)
 - [Third Party Code Credits](#third-party-code-credits)
 - [Notes About Pandoc License](#notes-about-pandoc-license)
@@ -37,16 +36,19 @@ The project is still WIP and in its early stages, but a pandoc html5 template is
 
 ## Pandoc HTML5 Templates
 
-Currently, the only template current available is:
+- [`/templates/html5/`](./templates/html5/)
+
+Currently, there's only one template available:
 
 - [GitHub Pandoc HTML5 Template](./templates/html5/github/)
 - HTML Preview: [Local](./templates/html5/github/GitHub-Template-Preview.html) | [via HTMLPreview.GitHub.io](http://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/templates/html5/github/GitHub-Template-Preview.html)
 
 ## PP Macros
 
+- [`/pp/`](./pp/) — The PP-Macros Library
+
 The pp-macros section is an ongoing effort to create a collection of pp macros to extend pandoc's markdown workflow by providing means to use GFM task lists in markdown source file, external syntax highlighters, and many more features.
 
-- [The PP-Macros Library](./pp/)
 
 > **About PP**: PP is a text preprocessor designed for Pandoc (and more generally Markdown and reStructuredText). It's cross-platform and available as a single standalone binary file:
 > 
@@ -54,17 +56,25 @@ The pp-macros section is an ongoing effort to create a collection of pp macros t
 > - http://cdsoft.fr/pp/
 > - https://github.com/tajmone/markdown-guide/tree/master/pp
 
-## Skylighting CSS
+## Skylighting Assets
 
-The skylighting CSS section contains resources for styling code blocks in HTML format.
+- [`/skylighting/`](./skylighting/)
 
-- [Skylighting CSS](./skylighting-css)
+This directory tree gathers various assets for [Skylighting], the syntax highlighter used by pandoc — currently only themes and stylesheets, but in the future it might host also additional syntax definitions.
 
-## Skylighting Themes
+### Skylighting CSS
+
+- [`/skylighting/css/`](./skylighting/css/)
+
+The skylighting CSS section contains resources for styling code blocks in HTML format — via CSS and Sass.
+
+
+### Skylighting Themes
+
+- [`/skylighting/themes/`](./skylighting/themes/)
 
 The skylighting themes section contains resources for customizing syntax highlighting styles via KDE theme files (JSON).
 
-- [Skylighting JSON Themes](./skylighting-themes)
 
 
 # Related Projects
@@ -98,7 +108,7 @@ You should be aware that the built-in syntax highlighting styles are not part of
 
 For a more detailed explanation regarding HTML templates and CSS styles, see:
 
-- [/skylighting-css/built-in-styles/README.md](./skylighting-css/built-in-styles/README.md#license)
+- [/skylighting/css/built-in-styles/README.md](./skylighting/css/built-in-styles/README.md#license)
 
 ## GPLv2 vs BSD-3
 
@@ -134,6 +144,7 @@ A permissive license similar to the [BSD 2-Clause License](https://choosealicens
                                REFERENCE LINKS                                
 ------------------------------------------------------------------------------>
 
+[Skylighting]: https://github.com/jgm/skylighting "Visit Skylighting repository on GitHub"
 [GitHub Pages Themes Magick]: https://tajmone.github.io/gh-themes-magick/ "Visit GitHub Pages Themes Magick website"
 [gh-themes-magick]: https://tajmone.github.io/gh-themes-magick/ "Visit GitHub Pages Themes Magick repository on GitHub"
 

@@ -14,7 +14,7 @@ Resources for customizing syntax highlighting styles via KDE theme files.
 - [Files List](#files-list)
 - [Introduction](#introduction)
 - [KDE vs Pandoc Themes](#kde-vs-pandoc-themes)
-    - [KDE Theme's Data Excess](#kde-themes-data-excess)
+    - [KDE Themes Data Excess](#kde-themes-data-excess)
 - [Theme Boilerplate](#theme-boilerplate)
     - [Usage Guidelines](#usage-guidelines)
         - [The "Normal" Style](#the-normal-style)
@@ -22,9 +22,6 @@ Resources for customizing syntax highlighting styles via KDE theme files.
         - [Base Colors and Line Numbers](#base-colors-and-line-numbers)
         - [Text Styles/Token Types](#text-stylestoken-types)
 - [References](#references)
-    - [Full List of Token Types](#full-list-of-token-types)
-    - [Token-Types to CSS-Classes](#token-types-to-css-classes)
-    - [CSS-Classes to Token-Types](#css-classes-to-token-types)
 
 <!-- /MarkdownTOC -->
 
@@ -36,7 +33,7 @@ Resources for customizing syntax highlighting styles via KDE theme files.
 - [`update.sh`][update] — script to autogenerate/update the JSON themes.
 - [`UNLICENSE`][UNLICENSE] — Public domain declaration for `boilerplate.theme`
 
-JSON files of pandoc's built-in themes:
+pandoc built-in KDE themes (JSON files):
 
 - [`builtin-breezedark.theme`][breezedark]
 - [`builtin-espresso.theme`][espresso]
@@ -70,7 +67,7 @@ You can find examples of KDE themes at:
 If you diff-compare the [pandoc Kate theme] to the [Kate theme on the KDE repository], you'll notice that the pandoc version doesn't contain the KDE JSON keys which are not used by pandoc, and that it also contains additional keys which are pandoc-specific. 
 
 
-## KDE Theme's Data Excess
+## KDE Themes Data Excess
 
 The problem with KDE syntax highlighting theme files is that they contain many keys which are not actually used by pandoc for highligthing. (See [Issue #4096])
 
@@ -261,96 +258,14 @@ For example, if you wanted Constants to be shown in red (`#ff0000`) and **bold**
         },
 ```
 
+For a full explanation of the role of each token, see:
+
+- [`../Tokens-Guide.md`](../Tokens-Guide.md)
+
 # References
 
 - https://github.com/jgm/skylighting
 - https://github.com/KDE/syntax-highlighting
-
-## Full List of Token Types
-
-The list of skylighting supported token types can be found in the "`Types.hs`" source file:
-
-- https://github.com/jgm/skylighting/blob/master/skylighting-core/src/Skylighting/Types.hs#L186
-
-Their HTML class-names equivalents can be found in the "`HTML.hs`" source file:
-
-- https://github.com/jgm/skylighting/blob/master/skylighting-core/src/Skylighting/Format/HTML.hs#L16
-
-## Token-Types to CSS-Classes
-
-Here is a reference table listing all the token types and their corresponding CSS class-names:
-
-|     TOKEN      | CLASS |
-|----------------|-------|
-| Normal         | ---   |
-| Alert          | `.al` |
-| Annotation     | `.an` |
-| Attribute      | `.at` |
-| BaseN          | `.bn` |
-| BuiltIn        | `.bu` |
-| Char           | `.ch` |
-| Comment        | `.co` |
-| CommentVar     | `.cv` |
-| Constant       | `.cn` |
-| ControlFlow    | `.cf` |
-| DataType       | `.dt` |
-| DecVal         | `.dv` |
-| Documentation  | `.do` |
-| Error          | `.er` |
-| Extension      | `.ex` |
-| Float          | `.fl` |
-| Function       | `.fu` |
-| Import         | `.im` |
-| Information    | `.in` |
-| Keyword        | `.kw` |
-| Operator       | `.op` |
-| Other          | `.ot` |
-| Preprocessor   | `.pp` |
-| RegionMarker   | `.re` |
-| SpecialChar    | `.sc` |
-| SpecialString  | `.ss` |
-| String         | `.st` |
-| Variable       | `.va` |
-| VerbatimString | `.vs` |
-| Warning        | `.wa` |
-
-## CSS-Classes to Token-Types
-
-Here is the same table as above, but ordered by CSS class-names:
-
-| CLASS |     TOKEN      |
-|-------|----------------|
-| ---   | Normal         |
-| `.al` | Alert          |
-| `.an` | Annotation     |
-| `.at` | Attribute      |
-| `.bn` | BaseN          |
-| `.bu` | BuiltIn        |
-| `.cf` | ControlFlow    |
-| `.ch` | Char           |
-| `.cn` | Constant       |
-| `.co` | Comment        |
-| `.cv` | CommentVar     |
-| `.do` | Documentation  |
-| `.dt` | DataType       |
-| `.dv` | DecVal         |
-| `.er` | Error          |
-| `.ex` | Extension      |
-| `.fl` | Float          |
-| `.fu` | Function       |
-| `.im` | Import         |
-| `.in` | Information    |
-| `.kw` | Keyword        |
-| `.op` | Operator       |
-| `.ot` | Other          |
-| `.pp` | Preprocessor   |
-| `.re` | RegionMarker   |
-| `.sc` | SpecialChar    |
-| `.ss` | SpecialString  |
-| `.st` | String         |
-| `.va` | Variable       |
-| `.vs` | VerbatimString |
-| `.wa` | Warning        |
 
 
 <!-----------------------------------------------------------------------------
@@ -361,9 +276,9 @@ Here is the same table as above, but ordered by CSS class-names:
 [pandoc Kate theme]: ./builtin-kate.theme "View local copy of the pandoc KDE theme"
 [theme boilerplate]: ./boilerplate.theme
 
-<!-- xrefs -->
+<!-- project files -->
 
-[skylighting token types]: #full-list-of-token-types "jump to section"
+[skylighting token types]: ../Tokens-Guide.md "See full description of token types"
 
 <!-- project files -->
 
