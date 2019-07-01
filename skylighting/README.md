@@ -1,4 +1,4 @@
-# Skylighting Asssets
+# Skylighting Assets
 
 This directory tree gathers various assets for [Skylighting], the syntax highlighter used by pandoc — currently only themes and stylesheets, but in the future it might host also additional syntax definitions.
 
