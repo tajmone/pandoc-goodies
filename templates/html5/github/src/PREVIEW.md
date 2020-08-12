@@ -1,9 +1,9 @@
-!def( TEMPL_VER  )(       v2.1 )
-!def( TEMPL_DATE )( 2018-02-28 )
+!def( TEMPL_VER  )(       v2.2 )
+!def( TEMPL_DATE )( 2020-08-12 )
 !comment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"PREVIEW.md" v2.1 | 2018-02-28
-Tested with "GitHub HTML5 Pandoc Template" v2.1 | 2018/02/28
+"PREVIEW.md" v2.2 | 2020-08-12
+Tested with "GitHub HTML5 Pandoc Template" v2.2 | 2020-08-12
 
 This file holds the contents that will go in "../GitHub-Template-Preview.html"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -39,7 +39,7 @@ summary: |
     __DISCLAIMER__ --- This theme _is not_ officialy endorsed by GitHub Inc.: it's just a personal project by the author.
     The presence of the word "GitHub" in the template's name only indicates that it mimicks the look and feel of how documents are previewed on [GitHub.com], and _does not_ imply any type of endorsement by, or affiliation to GitHub Inc. or any of its products --- it's "GitHub" as in "GitHubbish", or GitHub-style.
 
-    GITHUB® in an exclusive trademark registered in the United States by [GitHub, Inc.] 
+    GITHUB® in an exclusive trademark registered in the United States by [GitHub, Inc.]
     :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
     [GitHub.com]: https://github.com/ "Visit GitHub.com"
@@ -58,11 +58,11 @@ __CSS Styling__ --- This template supports styling for:
 
 - all standard markdown elements
 - [pandoc-flavoured markdown][Pandoc Markdown]
-- [GitHub flavored markdown elements][GFM Features] 
+- [GitHub flavored markdown elements][GFM Features]
 - some of [GitHub's Primer-CSS advanced styles][GitHub's Primer-CSS Features]
 - PP Macros from the "__[Pandoc-Goodies PP-Macros Library]__" project
 
-__Template Variables__ --- This template supports all the standard pandoc template variables, plus some [custom variables][Template Variables] for additional features (eg: `introduction` to show some text before the TOC, and `$toc-title$`). 
+__Template Variables__ --- This template supports all the standard pandoc template variables, plus some [custom variables][Template Variables] for additional features (eg: `introduction` to show some text before the TOC, and `$toc-title$`).
 
 ## Requirements
 
@@ -161,7 +161,7 @@ def fibo(int):
         fibo_list.append(fibo_list[i-2]+fibo_list[i-1]);
     return fibo_list;
 
-print(fibo(100)); #Print list 
+print(fibo(100)); #Print list
 ```
 
 ::::::::: Alert :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -223,7 +223,7 @@ Alerts (aka _flash messages_) are borrowed/inspired from __Primer CSS__, the lib
 
 
 
-### Creating Alerts Via Fenced-Divs 
+### Creating Alerts Via Fenced-Divs
 
 This templates emulates Primer's Alerts via custom `<div>` classes (case-sensitive):
 
@@ -357,7 +357,7 @@ Therefore I thought that there might be other scenarios which might require over
 
 !comment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                         REFERENCE LINKS DEFINITIONS                          
+                         REFERENCE LINKS DEFINITIONS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 [GitHub Pages]: https://pages.github.com/ "More info on GitHub Pages"

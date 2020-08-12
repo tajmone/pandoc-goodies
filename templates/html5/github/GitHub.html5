@@ -1,10 +1,10 @@
-$--| GitHub HTML5 Pandoc Template" v2.1 | 2018/02/28 | pandoc v2.1.1
+$--| GitHub HTML5 Pandoc Template" v2.2 | 2020/08/12 | pandoc v2.1.1
 <!DOCTYPE html>
 <!--
 ==============================================================================
-           "GitHub HTML5 Pandoc Template" v2.1 — by Tristano Ajmone           
+           "GitHub HTML5 Pandoc Template" v2.2 — by Tristano Ajmone
 ==============================================================================
-Copyright © Tristano Ajmone, 2017, MIT License (MIT). Project's home:
+Copyright © Tristano Ajmone, 2017-2020, MIT License (MIT). Project's home:
 
 - https://github.com/tajmone/pandoc-goodies
 
@@ -17,15 +17,15 @@ The CSS in this template reuses source code taken from the following projects:
   http://primercss.io/
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The MIT License 
+The MIT License
 
-Copyright (c) Tristano Ajmone, 2017 (github.com/tajmone/pandoc-goodies)
+Copyright (c) Tristano Ajmone, 2017-2020 (github.com/tajmone/pandoc-goodies)
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 Copyright (c) 2017 GitHub Inc.
 
-"GitHub Pandoc HTML5 Template" is Copyright (c) Tristano Ajmone, 2017, released
-under the MIT License (MIT); it contains readaptations of substantial portions
-of the following third party softwares:
+"GitHub Pandoc HTML5 Template" is Copyright (c) Tristano Ajmone, 2017-2020,
+released under the MIT License (MIT); it contains readaptations of substantial
+portions of the following third party softwares:
 
 (1) "GitHub Markdown CSS", Copyright (c) Sindre Sorhus, MIT License (MIT).
 (2) "Primer CSS", Copyright (c) 2016 GitHub Inc., MIT License (MIT).
@@ -52,7 +52,7 @@ $-------------------------------------------------------------------------> lang
 <html$if(lang)$ lang="$lang$"$endif$$if(dir)$ dir="$dir$"$endif$>
 <head>
 $--=============================================================================
-$--                                METADATA                                   
+$--                                METADATA
 $--=============================================================================
   <meta charset="$if(charset)$$charset$$else$utf-8$endif$" />
   <meta name="generator" content="pandoc" />
@@ -76,7 +76,7 @@ $endif$
 $------------------------------------------------------------------------> title
   <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
 $--===========================================================================
-$--                            CSS STYLESHEETS                                
+$--                            CSS STYLESHEETS
 $--===========================================================================
 $-- Here comes the placeholder (within double braces) that will be replaced
 $-- by the CSS file in the finalized template:
@@ -150,7 +150,7 @@ $if(toc)$
 <hr>
 <nav id="$idprefix$TOC">
 <h1 class="toc-title">$if(toc-title)$$toc-title$$else$Contents$endif$</h1>
-$toc$
+$table-of-contents$
 </nav>
 <hr>
 $endif$

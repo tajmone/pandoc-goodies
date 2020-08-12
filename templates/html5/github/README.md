@@ -1,6 +1,6 @@
 # GitHub Pandoc HTML5 Template
 
-    GitHub Template v2.1 (2018/02/28) | pandoc v2.1.1
+    GitHub Template v2.2 (2020/08/12) | pandoc v2.1.1
 
 A pandoc html5 template mimicking GitHub's documents preview. Supports extended GitHub Flavored Markdown features through custom pp-macros that leverage Raw HTML and GitHub's CSS.
 
@@ -101,36 +101,38 @@ The `--self-contained` option will make pandoc use `data:` URIs to incorporate i
 
 **GitHub HTML5 Panodc Template** is Copyright © Tristano Ajmone, 2017, released under [The MIT License](./LICENSE) (MIT):
 
-    MIT License
-    
-    Copyright (c) Tristano Ajmone, 2017 (github.com/tajmone/pandoc-goodies)
-    Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
-    Copyright (c) 2017 GitHub Inc.
-    
-    "GitHub Pandoc HTML5 Template" is Copyright (c) Tristano Ajmone, 2017, released
-    under the MIT License (MIT); it contains readaptations of substantial portions
-    of the following third party softwares:
-    
-    (1) "GitHub Markdown CSS", Copyright (c) Sindre Sorhus, MIT License (MIT).
-    (2) "Primer CSS", Copyright (c) 2016 GitHub Inc., MIT License (MIT).
-    
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-    
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
-    
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.
+```
+MIT License
+
+Copyright (c) Tristano Ajmone, 2017-2020 (github.com/tajmone/pandoc-goodies)
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+Copyright (c) 2017 GitHub Inc.
+
+"GitHub Pandoc HTML5 Template" is Copyright (c) Tristano Ajmone, 2017-2020,
+released under the MIT License (MIT); it contains readaptations of substantial
+portions of the following third party softwares:
+
+(1) "GitHub Markdown CSS", Copyright (c) Sindre Sorhus, MIT License (MIT).
+(2) "Primer CSS", Copyright (c) 2016 GitHub Inc., MIT License (MIT).
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
 
 # Credits
 
@@ -158,6 +160,8 @@ These template files are derivatives from the **Primer CSS** project's modules:
 
 # Changelog
 
+- **v2.2** (2020-08-12)
+      - Change TOC template variable from `$toc$` to `$table-of-contents$` in order to ensure proper behaviour in all contexts. (thanks to [David Hanak] for pointing this out — See [#10])
 - **v2.1** (2018-02-28)
       - New `$charset$` template var to (optionally) override document enconding.
 - **v2.0** (2017-11-21)
@@ -168,5 +172,17 @@ These template files are derivatives from the **Primer CSS** project's modules:
       - Added new custom Alert class "`flash-plain`" with greyish colors. (pp-macro: `!GFMAlertPlain()`).
 - **v1.0** (2017-04-09)
       - First release.
+
+<!-----------------------------------------------------------------------------
+                               REFERENCE LINKS
+------------------------------------------------------------------------------>
+
+<!-- issues -->
+
+[#10]: https://github.com/tajmone/pandoc-goodies/issues/10 "See Issue #10 — $table-of-contents$ instead of $toc$"
+
+<!-- people -->
+
+[David Hanak]: https://github.com/dhanak "View David Hanak's GitHub profile"
 
 <!-- EOF -->
