@@ -1,3 +1,9 @@
+# Kielipankki additions
+
+# temporary files from vim
+*.sw?
+
+
 # ==============================================================================
 #                                 PANDOC-GOODIES
 # ==============================================================================
@@ -119,7 +125,7 @@ typings/
 
 *~
 
-# temporary files which can be created if a process still has a handle open of a deleted 
+# temporary files which can be created if a process still has a handle open of a deleted
 file
 .fuse_hidden*
 
