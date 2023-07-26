@@ -1,16 +1,16 @@
-# Pandoc-Goodies
+# Kielipankki Course Material Template
 
-    pandoc v2.7.2 | PP v2.8
+This template is used when converting non-slide content (front page, tutorials,
+handouts...) to HTML for publishing.
 
-A tresure-box of resources for pandoc, pp and the Texts word processor.
+Original project
+[tajmone/pandoc-goodies](https://github.com/tajmone/pandoc-goodies) by Tristano
+Ajmone. See [template license](templates/html5/github/LICENSE) for all
+contributors to the actual HTML template.
 
-- https://github.com/tajmone/pandoc-goodies
-
-Copyright © Tristano Ajmone 2017, [MIT License](./LICENSE).
-
-The project is still WIP and in its early stages, but a pandoc html5 template is ready for use, along with a growing pp-macros library.
-
-> **PROJECT UPDATED** — After over a year without updates, all repository assets have been updated to pandoc v2.7.2 and PP v2.8. Minor tweaks were required to ensure that everything worked fine as before. Also, the project now uses Dart Sass, instead of Ruby Sass.
+Original author guaranteed compatibility with pandoc v2.7.2, but this has been
+successfully used with version 2.9.2.1 (the newest available from Ubuntu
+default apt repositories at the time of writing).
 
 -----
 
@@ -51,7 +51,7 @@ The pp-macros section is an ongoing effort to create a collection of pp macros t
 
 
 > **About PP**: PP is a text preprocessor designed for Pandoc (and more generally Markdown and reStructuredText). It's cross-platform and available as a single standalone binary file:
-> 
+>
 > - https://github.com/CDSoft/pp
 > - http://cdsoft.fr/pp/
 > - https://github.com/tajmone/markdown-guide/tree/master/pp
@@ -141,7 +141,7 @@ A permissive license similar to the [BSD 2-Clause License](https://choosealicens
 
 
 <!-----------------------------------------------------------------------------
-                               REFERENCE LINKS                                
+                               REFERENCE LINKS
 ------------------------------------------------------------------------------>
 
 [Skylighting]: https://github.com/jgm/skylighting "Visit Skylighting repository on GitHub"
