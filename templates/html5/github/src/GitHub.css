@@ -1,6 +1,6 @@
-@charset "UTF-8";
 /* github-markdown.css -- MIT License:
 
+   Copyright (c) 2023 Language Bank of Finland (kielipankki.fi)
    Copyright (c) 2017 Tristano Ajmone.
    Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
    Copyright (c) 2017 GitHub Inc.
@@ -18,7 +18,7 @@
   min-width: 200px;
   max-width: 980px;
   margin: 0 auto;
-  padding: 45px;
+  padding: 45px 0;
 }
 .markdown-body a {
   color: #0366d6;
@@ -112,7 +112,7 @@
   font-size: inherit;
   line-height: inherit;
 }
-.markdown-body [type=checkbox] {
+.markdown-body [type="checkbox"] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -253,7 +253,7 @@
 .markdown-body code::before,
 .markdown-body code::after {
   letter-spacing: -0.2em;
-  content: " ";
+  content: "\00a0";
 }
 .markdown-body pre {
   word-wrap: normal;
